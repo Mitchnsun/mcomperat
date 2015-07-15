@@ -1,0 +1,22 @@
+{
+  "name": "mc-resume",
+  "version": "1.0.0",
+  "description": "Matthieu Compérat Resume, Web & Mobile Lead Programmer",
+  "main": "js/cv.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://matthieu_comperat@bitbucket.org/matthieu_comperat/mcomperat.git"
+  },
+  "author": "Matthieu Compérat",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/matthieu_comperat/mcomperat#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-less": "^1.0.1",
+    "grunt-plato": "^1.2.1",
+    "jit-grunt": "^0.9.1"
+  }
+}
