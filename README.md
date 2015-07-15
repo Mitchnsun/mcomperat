@@ -22,6 +22,7 @@ This README documents steps are necessary to get your application up and running
 
 * `sudo npm install`
 * `bower install`
+* `grunt`
 
 ###### Configuration ######
 
