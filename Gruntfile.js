@@ -1,9 +1,10 @@
 module.exports = function(grunt) {
-	require('jit-grunt')(grunt);
-	
 	// Load plugins
 	grunt.loadNpmTasks('grunt-plato');
-
+	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-less');
+	grunt.loadNpmTasks('grunt-lesslint');
+	
 	// Configuration
 	grunt.initConfig({
 		plato : {
@@ -12,25 +13,38 @@ module.exports = function(grunt) {
 					'reports' : ['js/*.js']
 				},
 				options : {
-					exclude: /\.min\.js$/
+					exclude : /\.min\.js$/
 				}
 			}
 		},
-		less: {
-      development: {
-        options: {
-          compress: true,
-          yuicompress: true,
-          optimization: 2
-        },
-        files: {
-          "css/cv.css": "less/cv.less" // destination file and source file
-        }
-      }
-    },
+		less : {
+			development : {
+				options : {
+					compress : true,
+					yuicompress : true,
+					optimization : 2
+				},
+				files : {
+					"css/cv.css" : "less/cv.less" // destination file and source file
+				}
+			}
+		},
+		jshint : {
+			all : ['Gruntfile.js', 'js/cv.js']
+		},
+		lesslint : {
+			analysis : {
+				options : {
+				  csslint : {
+				    csslintrc : '.csslintrc'
+				  }
+				},
+				src : ['less/*.less']
+			}
+		}
 	});
-	
+
 	// Tasks
-	grunt.registerTask('default', ['less']);
-	grunt.registerTask('analysis', ['plato']);
-}; 
+	grunt.registerTask('default',  ['less']);
+	grunt.registerTask('analysis', ['plato', 'jshint', 'lesslint']);
+};
