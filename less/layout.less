@@ -12,13 +12,18 @@ ul, menu, dir {
 p {
   -webkit-margin-after: 0.5em;
 }
+h1 {
+  margin: 0;
+}
 
 /* LAYOUT CSS */
 #layout {
   padding-left: 30%; /* "left col (nav + list)" width */
   position: relative;
 }
-
+.posts {
+  padding-bottom: 1em;
+}
 .sidebar {
   position: fixed;
   top: 0;
@@ -112,7 +117,7 @@ p {
 .post-description {
   font-family: Georgia, "Cambria", serif;
   color: #444;
-  line-height: 1.8em;
+  line-height: 1.5em;
 }
 .post-meta {
   color: #999;
@@ -202,6 +207,6 @@ p {
 
 @media (max-width: 480px) {
   .content {
-    padding: 2em 1em 0;
+    padding: 1em 1em 0;
   }
 }
