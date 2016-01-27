@@ -3,19 +3,19 @@
     "firstname": "Matthieu",
     "lastname": "Compérat",
     "birthday": "13/02/1987",
-    "title": "Référent technique Mobile",
+    "title": "Web & Mobile Lead Programmer",
     "email": "matthieu.comperat@gmail.com",
     "link": {
-      "linkedin": "https://fr.linkedin.com/in/matthieucomperat",
+      "linkedin": "https://fr.linkedin.com/in/matthieucomperat/en",
       "bitbucket": "https://bitbucket.org/matthieu_comperat/"
     }
   },
 
   "work": {
-    "title": "Expériences professionnelles",
+    "title": "Work Experiences",
     "experiences": [
       {
-        "title": "Référent technique Web & Mobile",
+        "title": "Web & Mobile Lead Programmer",
         "city": "Paris",
         "country": "France",
         "company": "CGI",
@@ -42,48 +42,15 @@
         ],
         "description": [
           {
-            "text": "Projet Sephora :",
-            "list": ["Evolutions du site web-mobile de Sephora et création d'une version italienne (m.sephora.it)", "Evolutions de l’application iPad Color Profile", "Reprise et évolution de l’application iPhone MySephora", "Intégration et maintenance de la partie webmobile des applications iPhone et Android"]
+            "text": "Current project: Sephora website for smartphones with Backbone, underscore, jQuery and Dust. Exposing the data from the web services. Two web applications with Cordova based on Backbone.js framework."
           }, {
-            "text": "Responsabilités : Référent technique d'une équipe de deux développeurs",
-            "list": ["Cadrage technique des évolutions. Suivi et réalisation des évolutions avec une équipe de deux développeurs."]
+            "text": "Past projects:",
+            "list": ["Responsive website for Louis Vuitton as web developer.", "Web-application for Total in .Net environment. (HTML, CSS with Bootstrap from Twitter and jQuery)."]
           }
         ]
       }, {
-        "title": "Ingénieur en Technologie de l'Information",
-        "city": "Paris",
-        "country": "France",
-        "company": "CGI",
-        "tags": [
-          {
-            "name": "Web-application",
-            "ref": "html"
-          }, {
-            "name": "Backbone.js",
-            "ref": "js"
-          }, {
-            "name": "Responsive",
-            "ref": "css"
-          }, {
-            "name": "Dust.js",
-            "ref": "js"
-          }, {
-            "name": "Application iOS",
-            "ref": "ios"
-          }
-        ],
-        "description": [
-          {
-            "text": "Projet Sephora :",
-            "list": ["Réalisation du site web-mobile de Sephora", "Mise à jour de l’application iPhone de Sephora", "Reprise et évolution de l’application iPad Color Profile"]
-          }, {
-            "text": "Projet Louis Vuitton :",
-            "list": ["Réalisation de l’interface client Web du site à partir du socle ATG. Compatibilité pour toutes les tailles d’écran. Adaptation pour compatibilité IE8/7/6."]
-          }
-        ]
-      }, {
-        "title": "Analyste développeur mobile et web",
-        "context": "Stage projet de fin d'étude",
+        "title": "Web mobile analyst",
+        "context": "Final year project",
         "city": "Lyon",
         "country": "France",
         "company": "Logica",
@@ -107,15 +74,15 @@
         ],
         "description": [
           {
-            "text": "Intégrer la notion de CMS avec la mobilite"
+            "text": "CMS integration in the mobility"
           }, {
-            "text": "Réalisations :",
-            "list": ["Progiciel de gestion d’événements, en charge de la problématique de CMS, étude et test de CMS. Suivi de l'avant-vente du projet, étude de faisabilité, atelier de maturation, chiffrage du coût du projet.", "Participation aux développements d’applications iOS"]
+            "text": "Projects :",
+            "list": ["Software package of events management, responsible of CMS problematic, CMS studies and tests. Followed by pre-sales of the project feasibility study, ripening workshop, costing of the project cost.", "iOS developments"]
           }
         ]
       }, {
-        "title": "Analyste développeur",
-        "context": "Stage année de césure",
+        "title": "Intern in IT",
+        "context": "One-year internship",
         "city": "Pembroke Pines",
         "country": "USA",
         "company": "Daher-Socata",
@@ -142,12 +109,10 @@
         ],
         "description": [
           {
-            "text": "Découvrir et utiliser les différents langages"
+            "text": "Projects developped:",
+            "list": ["Web Application in a CRM (HTML, PHP, JavaScript-jQuery, and MySQL)", "iPad Application for the booth in Air Shows (Objective-C, Cocoa Touch)", "CMS Setting"]
           }, {
-            "text": "Réalisations :",
-            "list": ["Applications web dans un CRM", "Application iPad pour les salons aéronautiques", "Configuration d’un CMS"]
-          }, {
-            "text": "J’étais en complète autonomie pour découvrir les différents langages et pour développer les différentes applications. J’ai fourni le support aux utilisateurs après validation et assurer le transfert des applications au siège social en France. Mon but était de laisser une documentation claire pour les prochains développeurs."
+            "text": "I was in a complete autonomy to discover the different languages and to develop the different applications. I provided support to the users after acceptance-test and insured the transfer of the application to the head quarter in France."
           }
         ]
       }
@@ -158,10 +123,18 @@
     "title": "Education",
     "schools": [
       {
-        "title": "Ecole supérieure de Chimie, Physique et Electronique de Lyon (ESCPE)",
-        "context": "Electronique, Télécoms et informatique",
-        "specialty": "Majeur Systèmes Informatiques Distribués",
-        "description": "Bachelor obtenu en Juin 2009. Majeure SID (Systèmes informatiques distribuées) : Services Web (HTML/CSS/PHP), Java, Interconnexion et administration des réseaux, Graphes et Algorithmes."
+        "title": "CPE Lyon",
+        "context": "department of electronics, IT and Telecommunications,",
+        "specialty": "",
+        "description": [
+          {
+            "text": "Bachelor degree obtained in June 2009, Graduation at MSc Level in September 2012. 2 years full-time higher education in mathematics and science with languages and general studies, 3 years at higher education. Engineering school in France"
+          }, {
+            "text": "Main subjects: Programmation (C, C++), Databases, Digital and analogical electronics Signal and linear systems, Optics."
+          }, {
+            "text": "IT Specialization : HTML, PHP, Java, XML, Interconnection and administration of networks, Graphs and algorithms, Getting an award named “Best increase prospect” from the CCIL (Chamber of commerce and industry of Lyon) during Campus Creation 2008 contest. The target was to present an innovative product. Project: “Eau Parleur”"
+          }
+        ]
       }
     ]
   },
@@ -170,17 +143,17 @@
     "title": "Extras",
     "items": [
       {
-        "title": "Langues",
+        "title": "Languages",
         "text": "",
-        "list": ["Français : langue maternelle", "Anglais : courant - Niveau B2 FCE of Cambridge", "Espagnol : notions"]
+        "list": ["French : mother tongue", "English : Good level (spoken, written, reading) - FCE of Cambridge (B2)", "Spanish : basic knowledge"]
       }, {
-        "title": "Projets personnels",
+        "title": "Personal projects",
         "text": "",
-        "list": ["<a href=\"http://www.mcomper.at/lotofoot/\" target=\"_blank\">Lotofoot</a> : site de pari footbalistique entre amis", "Mon CV Web", "Jokari : une application Swift sur le Jokari"]
+        "list": ["<a href=\"http://www.mcomper.at/lotofoot/\" target=\"_blank\">Lotofoot</a> : Football betting website for friends", "My web resume", "Jokari : a Swift application for the Jokari"]
       }, {
         "title": "Sports",
         "text": "",
-        "list": ["Running", "Natation", "Vélo", "Ski"]
+        "list": ["Running", "Swimming", "Biking", "Ski"]
       }
     ]
   }

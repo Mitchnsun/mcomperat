@@ -161,7 +161,11 @@
         "title": "Ecole supérieure de Chimie, Physique et Electronique de Lyon (ESCPE)",
         "context": "Electronique, Télécoms et informatique",
         "specialty": "Majeur Systèmes Informatiques Distribués",
-        "description": "Bachelor obtenu en Juin 2009. Majeure SID (Systèmes informatiques distribuées) : Services Web (HTML/CSS/PHP), Java, Interconnexion et administration des réseaux, Graphes et Algorithmes."
+        "description": [
+          {
+            "text": "Bachelor obtenu en Juin 2009. Majeure SID (Systèmes informatiques distribuées) : Services Web (HTML/CSS/PHP), Java, Interconnexion et administration des réseaux, Graphes et Algorithmes."
+          }
+        ]
       }
     ]
   },
