@@ -5,7 +5,6 @@ This README documents steps are necessary to get your application up and running
 ### What is this repository for? ###
 
 * Web resume of Matthieu Compérat
-* v1.0 - Early 2014
 * [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
 ### How do I get set up? ###
@@ -41,3 +40,7 @@ This README documents steps are necessary to get your application up and running
 ### Who do I talk to? ###
 
 For any information, contact matthieu.comperat@gmail.com
+
+### Version ###
+* v2.0 - January 2016
+* v1.0 - Early 2014
