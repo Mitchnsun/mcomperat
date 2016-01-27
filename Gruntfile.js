@@ -52,7 +52,8 @@ module.exports = function(grunt) {
     uglify : {
       dist : {
         files : {
-          'dist/cv.min.js' : ['bower_components/jquery/dist/jquery.min.js',
+          'dist/cv.min.js' : ['bower_components/underscore/underscore.js',
+                              'bower_components/jquery/dist/jquery.js',
                               'bower_components/handlebars/handlebars.runtime.js',
                               'work/cv-tmpl.js',
                               'work/header.js',
