@@ -9,6 +9,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-handlebars');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-jsonlint');
 
   // Configuration
   grunt.initConfig({
@@ -69,6 +70,11 @@ module.exports = function(grunt) {
     jshint : {
       all : ['Gruntfile.js', 'js/cv.js']
     },
+    jsonlint: {
+      sample: {
+        src: ['assets/data/**/*.json']
+      }
+    },
     lesslint : {
       analysis : {
         options : {
@@ -93,5 +99,5 @@ module.exports = function(grunt) {
 
   // Tasks
   grunt.registerTask('default', ['handlebars', 'uglify', 'less', 'concat_css', 'copy']);
-  grunt.registerTask('analysis', ['plato', 'jshint', 'lesslint']);
+  grunt.registerTask('analysis', ['plato', 'jshint', 'jsonlint', 'lesslint']);
 };
