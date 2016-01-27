@@ -26,7 +26,8 @@ This README documents steps are necessary to get your application up and running
 
 ###### Configuration ######
 
-* Dependencies
+* To see which modules are outdated: `npm outdated`
+
 * Database configuration
 * How to run tests
 * Deployment instructions
@@ -34,7 +35,7 @@ This README documents steps are necessary to get your application up and running
 ### Contribution guidelines ###
 
 * Writing tests
-* Code review
+* Code review: `grunt analysis` - No Lint errors allowed
 * Other guidelines
 
 ### Who do I talk to? ###

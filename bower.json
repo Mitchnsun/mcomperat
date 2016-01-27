@@ -1,6 +1,6 @@
 {
   "name": "Matthieu Compérat",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "authors": [
     "matthieu_comperat <matthieu.comperat@gmail.com>"
   ],
@@ -17,6 +17,7 @@
   ],
   "dependencies": {
     "jquery": "~2.1.4",
-    "pure": "~0.6.0"
+    "pure": "~0.6.0",
+    "handlebars": "~4.0.5"
   }
 }
