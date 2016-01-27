@@ -4,7 +4,11 @@
     "lastname": "Compérat",
     "birthday": "13/02/1987",
     "title": "Référent technique Mobile",
-    "email": "matthieu.comperat@gmail.com"
+    "email": "matthieu.comperat@gmail.com",
+    "link": {
+      "linkedin": "https://fr.linkedin.com/in/matthieucomperat",
+      "bitbucket": "https://bitbucket.org/matthieu_comperat/"
+    }
   },
 
   "work": {
