@@ -43,7 +43,8 @@ module.exports = function(grunt) {
           }
         },
         files : {
-          "work/tmpl.js" : "tmpl/cv.html"
+          "work/cv-tmpl.js" : "tmpl/cv.html",
+          "work/header.js" : "tmpl/header.html"
         }
       }
     },
@@ -52,14 +53,15 @@ module.exports = function(grunt) {
         files : {
           'dist/cv.min.js' : ['bower_components/jquery/dist/jquery.min.js',
                               'bower_components/handlebars/handlebars.runtime.js',
-                              'work/tmpl.js',
+                              'work/cv-tmpl.js',
+                              'work/header.js',
                               'js/cv.js']
         }
       }
     },
     copy: {
       main: {
-        src: 'assets/*',
+        src: 'assets/**',
         dest: 'dist/'
       },
     },

@@ -1,7 +1,9 @@
 var lang = navigator.language || navigator.userLanguage;
 
-var template = this.tmpl.cv;
-$('.content').html(template({}));
+var headerTmpl = this.tmpl.header;
+$('.sidebar').html(headerTmpl({}));
+var cvTmpl = this.tmpl.cv;
+$('.content').html(cvTmpl({}));
 
 /* DOM Ready and events function */
 $(document).ready(function(){
