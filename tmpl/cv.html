@@ -61,22 +61,20 @@
   <h1 class="content-subhead">{{extra.title}}</h1>
 
   {{#each extra.items}}
-  <section class="post">
+  <section class="post compact {{print}}">
     <header class="post-header">
       <h2 class="post-title">{{title}}</h2>
     </header>
 
     <div class="post-description">
-      <p>
-        {{text}}
-        <ul>
-          {{#each list}}
-          <li>
-            {{{.}}}
-          </li>
-          {{/each}}
-        </ul>
-      </p>
+      {{text}}
+      <ul>
+        {{#each list}}
+        <li>
+          {{{.}}}
+        </li>
+        {{/each}}
+      </ul>
     </div>
   </section>
   {{/each}}
