@@ -176,15 +176,18 @@
       {
         "title": "Langues",
         "text": "",
-        "list": ["Français : langue maternelle", "Anglais : courant - Niveau B2 FCE of Cambridge", "Espagnol : notions"]
+        "list": ["Français : langue maternelle", "Anglais : courant - Niveau B2 FCE of Cambridge", "Espagnol : notions"],
+        "print": ""
       }, {
         "title": "Projets personnels",
         "text": "",
-        "list": ["<a href=\"http://www.mcomper.at/lotofoot/\" target=\"_blank\">Lotofoot</a> : site de pari footbalistique entre amis", "Mon CV Web", "Jokari : une application Swift sur le Jokari"]
+        "list": ["<a href=\"http://www.mcomper.at/lotofoot/\" target=\"_blank\">Lotofoot</a> : site de pari footbalistique entre amis", "Mon CV Web", "Jokari : une application Swift sur le Jokari"],
+        "print": "print-hidden"
       }, {
         "title": "Sports",
         "text": "",
-        "list": ["Running", "Natation", "Vélo", "Ski"]
+        "list": ["Running", "Natation", "Vélo", "Ski"],
+        "print": "print-hidden"
       }
     ]
   }

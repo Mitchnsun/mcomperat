@@ -145,15 +145,18 @@
       {
         "title": "Languages",
         "text": "",
-        "list": ["French : mother tongue", "English : Good level (spoken, written, reading) - FCE of Cambridge (B2)", "Spanish : basic knowledge"]
+        "list": ["French : mother tongue", "English : Good level (spoken, written, reading) - FCE of Cambridge (B2)", "Spanish : basic knowledge"],
+        "print": ""
       }, {
         "title": "Personal projects",
         "text": "",
-        "list": ["<a href=\"http://www.mcomper.at/lotofoot/\" target=\"_blank\">Lotofoot</a> : Football betting website for friends", "My web resume", "Jokari : a Swift application for the Jokari"]
+        "list": ["<a href=\"http://www.mcomper.at/lotofoot/\" target=\"_blank\">Lotofoot</a> : Football betting website for friends", "My web resume", "Jokari : a Swift application for the Jokari"],
+        "print": "print-hidden"
       }, {
         "title": "Sports",
         "text": "",
-        "list": ["Running", "Swimming", "Biking", "Ski"]
+        "list": ["Running", "Swimming", "Biking", "Ski"],
+        "print": "print-hidden"
       }
     ]
   }
