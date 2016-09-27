@@ -7,10 +7,8 @@ LANG = _.indexOf(SUPPORTED_LANG, LANG) === -1 ? "en" : LANG;
 $.getJSON(DATA_PATH + LANG + "/data.json", _.bind(templating, this));
 
 function templating(data) {
-  var headerTmpl = this.tmpl.header;
-  $('.sidebar').html(headerTmpl(data.person));
-  var cvTmpl = this.tmpl.cv;
-  $('.content').html(cvTmpl(data));
+  $('.sidebar').html(this.tmpl.header(data.person));
+  $('.content').html(this.tmpl.cv(data));
 }
 
 /* DOM Ready and events function */
