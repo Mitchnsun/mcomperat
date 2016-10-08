@@ -8,6 +8,9 @@
       <p class="post-meta">
         {{company}}, {{city}}, {{country}} {{#if context}} - {{context}}{{/if}}
       </p>
+      <p class="post-meta era">
+        {{start}} - {{end}}
+      </p>
       <p class="post-meta">
         {{#each tags}}
           <a href="#" class="post-category post-category-{{ref}}">{{name}}</a>
@@ -57,6 +60,7 @@
   </section>
   {{/each}}
 </div>
+
 <div class="posts">
   <h1 class="content-subhead">{{extra.title}}</h1>
 

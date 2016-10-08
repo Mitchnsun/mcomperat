@@ -19,6 +19,8 @@
         "city": "Paris",
         "country": "France",
         "company": "CGI",
+        "start": "Sept. 2012",
+        "end": "Sept. 2016",
         "tags": [
           {
             "name": "Web-application",
@@ -54,6 +56,8 @@
         "city": "Lyon",
         "country": "France",
         "company": "Logica",
+        "start": "Feb. 2012",
+        "end": "Aug. 2012",
         "tags": [
           {
             "name": "Web-application",
@@ -86,6 +90,8 @@
         "city": "Pembroke Pines",
         "country": "USA",
         "company": "Daher-Socata",
+        "start": "July 2010",
+        "end": "July 2011",
         "tags": [
           {
             "name": "HTML",

@@ -1,4 +1,4 @@
-{
+{ 
   "person": {
     "firstname": "Matthieu",
     "lastname": "Compérat",
@@ -19,6 +19,8 @@
         "city": "Paris",
         "country": "France",
         "company": "CGI",
+        "start": "Mai 2014",
+        "end": "Sept. 2016",
         "tags": [
           {
             "name": "Web-application",
@@ -58,6 +60,8 @@
         "city": "Paris",
         "country": "France",
         "company": "CGI",
+        "start": "Sept. 2012",
+        "end": "Mai 2014",
         "tags": [
           {
             "name": "Web-application",
@@ -94,6 +98,8 @@
         "city": "Lyon",
         "country": "France",
         "company": "Logica",
+        "start": "Fév. 2012",
+        "end": "Août 2012",
         "tags": [
           {
             "name": "Web-application",
@@ -126,6 +132,8 @@
         "city": "Pembroke Pines",
         "country": "USA",
         "company": "Daher-Socata",
+        "start": "Juil. 2010",
+        "end": "Juil. 2011",
         "tags": [
           {
             "name": "HTML",
@@ -170,7 +178,7 @@
         "specialty": "Majeur Systèmes Informatiques Distribués",
         "description": [
           {
-            "text": "Bachelor obtenu en Juin 2009. Majeure SID (Systèmes informatiques distribuées) : Services Web (HTML/CSS/PHP), Java, Interconnexion et administration des réseaux, Graphes et Algorithmes."
+            "text": "Diplomé en Septembre 2012. Bachelor obtenu en Juin 2009. Majeure SID (Systèmes informatiques distribuées) : Services Web (HTML/CSS/PHP), Java, Interconnexion et administration des réseaux, Graphes et Algorithmes."
           }
         ]
       }
