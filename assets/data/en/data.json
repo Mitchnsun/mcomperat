@@ -153,6 +153,11 @@
         "text": "",
         "list": ["French : mother tongue", "English : Good level (spoken, written, reading) - FCE of Cambridge (B2)", "Spanish : basic knowledge"],
         "print": ""
+      },{
+        "title": "Interests",
+        "text": "",
+        "list": ["Angular 1&2", "Swift", "TypeScript", "Reactjs", "Git", "MySQL"],
+        "print": ""
       }, {
         "title": "Personal projects",
         "text": "",
