@@ -43,7 +43,11 @@
         "description": [
           {
             "text": "Projet Sephora :",
-            "list": ["Evolutions du site web-mobile de Sephora et création d'une version italienne (m.sephora.it)", "Evolutions de l’application iPad Color Profile", "Reprise et évolution de l’application iPhone MySephora", "Intégration et maintenance de la partie webmobile des applications iPhone et Android"]
+            "list": [
+              "Evolutions du site web-mobile de Sephora et création d'une version italienne (m.sephora.it)",
+              "Evolutions des applications iOS internes, avec Cordova/Phone Gap (iPad Color Profile et iPhone MySephora)",
+              "Intégration et maintenance de la partie webmobile des applications iPhone et Android"
+            ]
           }, {
             "text": "Responsabilités : Référent technique d'une équipe de deux développeurs",
             "list": ["Cadrage technique des évolutions. Suivi et réalisation des évolutions avec une équipe de deux développeurs."]
@@ -63,6 +67,9 @@
             "ref": "js"
           }, {
             "name": "Responsive",
+            "ref": "css"
+          }, {
+            "name": "LESS",
             "ref": "css"
           }, {
             "name": "Dust.js",
@@ -133,7 +140,7 @@
             "name": "MySQL",
             "ref": "db"
           }, {
-            "name": "Cocoa Touch",
+            "name": "Objective-C",
             "ref": "ios"
           }, {
             "name": "Joomla",
@@ -177,6 +184,11 @@
         "title": "Langues",
         "text": "",
         "list": ["Français : langue maternelle", "Anglais : courant - Niveau B2 FCE of Cambridge", "Espagnol : notions"],
+        "print": ""
+      },{
+        "title": "Intérêts",
+        "text": "",
+        "list": ["Angular 1&2", "Swift", "TypeScript", "Reactjs", "MySQL"],
         "print": ""
       }, {
         "title": "Projets personnels",
