@@ -31,7 +31,7 @@ module.exports = function(grunt) {
         // Task-specific options go here.
       },
       all : {
-        src : ["bower_components/pure/pure-min.css", "work/layout.css", "work/print.css"],
+        src : ["node_modules/purecss/build/pure-min.css", "work/layout.css", "work/print.css"],
         dest : "dist/cv.css"
       },
     },
@@ -53,9 +53,9 @@ module.exports = function(grunt) {
     uglify : {
       dist : {
         files : {
-          'dist/cv.min.js' : ['bower_components/underscore/underscore.js',
-                              'bower_components/jquery/dist/jquery.js',
-                              'bower_components/handlebars/handlebars.runtime.js',
+          'dist/cv.min.js' : ['node_modules/underscore/underscore.js',
+                              'node_modules/jquery/dist/jquery.js',
+                              'node_modules/handlebars/dist/handlebars.runtime.js',
                               'work/cv-tmpl.js',
                               'work/header.js',
                               'js/cv.js']
