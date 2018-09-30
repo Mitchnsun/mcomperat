@@ -15,6 +15,90 @@
     "title": "Expériences professionnelles",
     "experiences": [
       {
+        "title": "Freelance Frontend Developer",
+        "city": "Paris",
+        "country": "France",
+        "company": "Club Med",
+        "start": "Juin 2017",
+        "end": "Présent",
+        "tags": [
+          {
+            "name": "ReactJS",
+            "ref": "js"
+          }, {
+            "name": "HTML5",
+            "ref": "html"
+          }, {
+            "name": "CSS3",
+            "ref": "css"
+          },  {
+            "name": "ES6",
+            "ref": "js"
+          }, {
+            "name": "Flow",
+            "ref": "js"
+          },  {
+            "name": "PostCSS",
+            "ref": "css"
+          }
+        ],
+        "description": [
+          {
+            "text": "Evolutions et refonte graphique sur l'espace client du site commercial"
+          }
+        ]
+      }, {
+        "title": "Freelance Frontend Developer",
+        "city": "Paris",
+        "country": "France",
+        "company": "Verifone",
+        "start": "Mars 2017",
+        "end": "Mai 2017",
+        "tags": [
+          {
+            "name": "AngularJS",
+            "ref": "js"
+          }, {
+            "name": "HTML5",
+            "ref": "html"
+          }, {
+            "name": "CSS3",
+            "ref": "css"
+          },  {
+            "name": "Bootstrap",
+            "ref": "css"
+          }
+        ],
+        "description": [
+          {
+            "text": "Réalisation de fonctionnalité sur leur outil interne"
+          }
+        ]
+      }, {
+        "title": "Freelance Web Developer",
+        "city": "Paris",
+        "country": "France",
+        "company": "L'Equipe",
+        "start": "Oct. 2016",
+        "end": "Fev. 2017",
+        "tags": [
+          {
+            "name": "SASS",
+            "ref": "css"
+          }, {
+            "name": "HTML5",
+            "ref": "html"
+          }, {
+            "name": "CSS3",
+            "ref": "css"
+          }
+        ],
+        "description": [
+          {
+            "text": "Intégration de la refonte graphique"
+          }
+        ]
+      }, {
         "title": "Référent technique Web & Mobile",
         "city": "Paris",
         "country": "France",

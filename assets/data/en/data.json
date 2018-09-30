@@ -15,6 +15,90 @@
     "title": "Work Experiences",
     "experiences": [
       {
+        "title": "Freelance Frontend Developer",
+        "city": "Paris",
+        "country": "France",
+        "company": "Club Med",
+        "start": "June 2017",
+        "end": "Present",
+        "tags": [
+          {
+            "name": "ReactJS",
+            "ref": "js"
+          }, {
+            "name": "HTML5",
+            "ref": "html"
+          }, {
+            "name": "CSS3",
+            "ref": "css"
+          },  {
+            "name": "ES6",
+            "ref": "js"
+          }, {
+            "name": "Flow",
+            "ref": "js"
+          },  {
+            "name": "PostCSS",
+            "ref": "css"
+          }
+        ],
+        "description": [
+          {
+            "text": "New features and graphic redesign of customer account"
+          }
+        ]
+      }, {
+        "title": "Freelance Frontend Developer",
+        "city": "Paris",
+        "country": "France",
+        "company": "Verifone",
+        "start": "Mar. 2017",
+        "end": "May 2017",
+        "tags": [
+          {
+            "name": "AngularJS",
+            "ref": "js"
+          }, {
+            "name": "HTML5",
+            "ref": "html"
+          }, {
+            "name": "CSS3",
+            "ref": "css"
+          },  {
+            "name": "Bootstrap",
+            "ref": "css"
+          }
+        ],
+        "description": [
+          {
+            "text": "Feature on the internal website"
+          }
+        ]
+      }, {
+        "title": "Freelance Web Developer",
+        "city": "Paris",
+        "country": "France",
+        "company": "L'Equipe",
+        "start": "Oct. 2016",
+        "end": "Feb. 2017",
+        "tags": [
+          {
+            "name": "SASS",
+            "ref": "css"
+          }, {
+            "name": "HTML5",
+            "ref": "html"
+          }, {
+            "name": "CSS3",
+            "ref": "css"
+          }
+        ],
+        "description": [
+          {
+            "text": "Graphic redesign integration"
+          }
+        ]
+      }, {
         "title": "Web & Mobile Lead Programmer",
         "city": "Paris",
         "country": "France",
