@@ -6,7 +6,7 @@ export default function Heading({person}) {
     <header className="App-header">
       <hgroup>
         <h1 className="brand-title">{person.firstname} {person.lastname}</h1>
-        <h2 className="brand-tagline">{person.title}</h2>
+        <h3 className="brand-tagline">{person.title}</h3>
       </hgroup>
       <div className="sidebar-details">
         <p>{person.birthday}</p>
