@@ -11,7 +11,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Heading person={data.person} />
+        <div className="App-sidebar">
+          <Heading person={data.person} />
+        </div>
         <div className="App-container">
           <PostList
             title={data.work.title}

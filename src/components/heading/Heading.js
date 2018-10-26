@@ -1,12 +1,13 @@
 import React from 'react';
 import LinkedInLogo from '../../assets/img/LinkedInSquare.png';
+import './Heading.css';
 
 export default function Heading({person}) {
   return (
     <header className="App-header">
       <hgroup>
-        <h1 className="brand-title">{person.firstname} {person.lastname}</h1>
-        <h3 className="brand-tagline">{person.title}</h3>
+        <h1 className="App-title">{person.firstname} {person.lastname}</h1>
+        <h2 className="App-tagline">{person.title}</h2>
       </hgroup>
       <div className="sidebar-details">
         <p>{person.birthday}</p>

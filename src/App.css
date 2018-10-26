@@ -3,7 +3,7 @@
   position: relative;
 }
 
-.App-header {
+.App-sidebar {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -17,10 +17,6 @@
   word-spacing: normal;
   vertical-align: top;
   text-rendering: auto;
-}
-
-.App-title {
-  font-size: 1.5em;
 }
 
 .App-container {
