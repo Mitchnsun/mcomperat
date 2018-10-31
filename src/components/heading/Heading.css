@@ -24,3 +24,23 @@
   margin-bottom: 10px;
   margin-right: 5px;
 }
+
+@media (max-width: 830px) {
+  .App-header {
+    text-align: center;
+    top: auto;
+    margin: 1em auto;
+    position: static;
+  }
+
+  .sidebar-details {
+ 	  text-align: center;
+    top: auto;
+    margin: 1em auto;
+    position: static;
+  }
+
+  .social-container {
+    display: none;
+  }
+}

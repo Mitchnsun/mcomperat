@@ -1,3 +1,21 @@
+a {
+  text-decoration: none;
+  color: rgb(142, 142, 214);
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+ul, menu, dir {
+  -webkit-margin-before: 0.5em;
+}
+p {
+  -webkit-margin-after: 0.5em;
+}
+h1 {
+  margin: 0;
+}
+
 .App {
   padding-left: 30%;
   position: relative;
@@ -27,4 +45,23 @@
   word-spacing: normal;
   vertical-align: top;
   text-rendering: auto;
+  padding: 2em 3em 0;
+}
+
+@media (max-width: 830px) {
+  .App {
+    padding: 0;
+  }
+
+  .App-sidebar {
+    width: 100%;
+    position: relative;
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .App-container {
+    padding: 1em 1em 0;
+  }
 }
