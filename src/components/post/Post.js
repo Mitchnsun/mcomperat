@@ -1,4 +1,6 @@
 import React from 'react';
+import Tag from '../tag/Tag';
+import './Post.css';
 
 export default function Post(props) {
   console.log(props);
@@ -15,7 +17,7 @@ export default function Post(props) {
         <p className="Post-meta">
           {props.tags ?
             props.tags.map( tag => {
-              return <a href="#" className={`Post-category Post-category-${tag.ref}`}>{tag.name}</a>;
+              return <Tag tag={tag.ref} name={tag.name} />;
             })
             : null
           }

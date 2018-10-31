@@ -1,0 +1,37 @@
+.Posts {
+  padding-bottom: 1em;
+}
+
+.Post {
+  padding-bottom: 0.5em;
+}
+
+.Post-title {
+  font-size: 1.3em;
+  color: #222;
+  margin-bottom: 0.2em;
+}
+
+.Post-avatar {
+  border-radius: 50px;
+  float: right;
+  margin-left: 1em;
+}
+
+.Post-description {
+  font-family: Georgia, "Cambria", serif;
+  color: #444;
+  line-height: 1.5em;
+}
+
+.Post-meta {
+  color: #999;
+  font-size: 90%;
+  padding-bottom : 5px;
+  margin: 0;
+  overflow: hidden;
+}
+
+.Post-meta.era {
+  font-size: 75%;
+}
