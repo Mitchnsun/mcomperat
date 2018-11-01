@@ -259,8 +259,13 @@
     "schools": [
       {
         "title": "Ecole supérieure de Chimie, Physique et Electronique de Lyon (ESCPE)",
+        "city": "Lyon",
+        "country": "France",
+        "company": "Ecole d'ingénieur",
         "context": "Electronique, Télécoms et informatique",
         "specialty": "Majeur Systèmes Informatiques Distribués",
+        "start": "2007",
+        "end": "2012",
         "description": [
           {
             "text": "Diplomé en Septembre 2012. Bachelor obtenu en Juin 2009. Majeure SID (Systèmes informatiques distribuées) : Services Web (HTML/CSS/PHP), Java, Interconnexion et administration des réseaux, Graphes et Algorithmes."

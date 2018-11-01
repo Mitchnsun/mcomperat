@@ -9,7 +9,7 @@ export default function Post(props) {
         <p className="Post-meta">
           {props.company}, {props.city}, {props.country} {props.context ? ` - ${props.context}`: ''}
         </p>
-        <p className="Post-meta era">
+        <p className="Post-meta Post-meta--era">
           {props.start} - {props.end}
         </p>
         <p className="Post-meta">

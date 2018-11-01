@@ -215,8 +215,13 @@
     "schools": [
       {
         "title": "CPE Lyon",
+        "city": "Lyon",
+        "country": "France",
+        "company": "Engineer School",
         "context": "department of electronics, IT and Telecommunications,",
         "specialty": "",
+        "start": "2007",
+        "end": "2012",
         "description": [
           {
             "text": "Bachelor degree obtained in June 2009, Graduation at MSc Level in September 2012. 2 years full-time higher education in mathematics and science with languages and general studies, 3 years at higher education. Engineering school in France"
