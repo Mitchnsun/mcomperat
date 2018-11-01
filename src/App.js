@@ -5,7 +5,6 @@ import PostList from './components/post/PostList';
 import PostExtra from './components/post/PostExtra';
 import dataFR from './assets/data/fr/data.json';
 import dataEN from './assets/data/en/data.json';
-import logo from './logo.svg';
 import './App.css';
 
 const SUPPORTED_LANG = ['fr-FR', 'en-US'];
@@ -40,8 +39,8 @@ class App extends Component {
           />
           <div className="Posts">
             <h2 className="Posts-header">{data.extra.title}</h2>
-            {data.extra.items.map( item => {
-              return <PostExtra {...item} />;
+            {data.extra.items.map( (item, i) => {
+              return <PostExtra {...item} key={`Extra${i}`} />;
             })}
           </div>
         </div>

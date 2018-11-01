@@ -2,7 +2,6 @@ import React from 'react';
 import Tag from '../tag/Tag';
 
 export default function Post(props) {
-  console.log(props);
   return (
     <section className="Post">
       <header className="Post-header">
@@ -15,8 +14,8 @@ export default function Post(props) {
         </p>
         <p className="Post-meta">
           {props.tags ?
-            props.tags.map( tag => {
-              return <Tag tag={tag.ref} name={tag.name} />;
+            props.tags.map( (tag, i) => {
+              return <Tag tag={tag.ref} name={tag.name} key={`Tag${i}`} />;
             })
             : null
           }
@@ -24,19 +23,19 @@ export default function Post(props) {
       </header>
 
       <div className="Post-description">
-        {props.description.map( item => {
+        {props.description.map( (item, i) => {
           return (
-            <p>
+            <div key={`PostDescription${i}`}>
               {item.text}
               {item.list ?
                 <ul>
-                  {item.list.map( text => {
-                    return <li>{text}</li>;
+                  {item.list.map( (text, ind) => {
+                    return <li key={`DescriptionText${ind}`}>{text}</li>;
                   })}
                 </ul>
                 : null
               }
-            </p>
+            </div>
           );
         })}
       </div>
