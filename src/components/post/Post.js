@@ -1,6 +1,5 @@
 import React from 'react';
 import Tag from '../tag/Tag';
-import './Post.css';
 
 export default function Post(props) {
   console.log(props);

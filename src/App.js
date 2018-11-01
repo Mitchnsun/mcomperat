@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 import Heading from './components/heading/Heading';
-import PostList from './components/post-list/PostList';
-import PostExtra from './components/post-extra/PostExtra';
+import PostList from './components/post/PostList';
+import PostExtra from './components/post/PostExtra';
 import data from './assets/data/fr/data.json';
 import logo from './logo.svg';
 import './App.css';
@@ -23,8 +23,8 @@ class App extends Component {
             title={data.education.title}
             list={data.education.schools}
           />
-          <div className="posts">
-            <h2 className="content-subhead">{data.extra.title}</h2>
+          <div className="Posts">
+            <h2 className="Posts-header">{data.extra.title}</h2>
             {data.extra.items.map( item => {
               return <PostExtra {...item} />;
             })}
