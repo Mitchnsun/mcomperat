@@ -12,7 +12,7 @@ export default function Post(props) {
         <p className="Post-meta Post-meta--era">
           {props.start} - {props.end}
         </p>
-        <p className="Post-meta">
+        <p className="Post-meta Post-meta--tags">
           {props.tags ?
             props.tags.map( (tag, i) => {
               return <Tag tag={tag.ref} name={tag.name} key={`Tag${i}`} />;
