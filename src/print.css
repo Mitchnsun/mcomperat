@@ -14,7 +14,8 @@
   h2 {
     font-size: 1em;
   }
-  .header {
+
+  .App-header {
     margin: .5em auto 0;
   }
   .print-hidden {
@@ -23,50 +24,54 @@
   .sidebar-details {
     margin: .5em auto;
   }
-  .content {
+  .App-container {
     padding: 1em 2em;
   }
-  .content-subhead {
+  .Posts-header {
     padding: .2em 0;
     margin-bottom: .3em;
     font-size: 1.1em;
     font-weight: 500;
     letter-spacing: .1em;
   }
-  .posts {
+  .Posts {
     padding-bottom: 0;
   }
-  .post {
+  .Post {
     padding-bottom: .2em;
   }
-  .compact {
-    ul {
-      margin: 0 auto .5em;
-      list-style-type: none;
-    }
-    .post-header {
-      float: left;
-      width: 30%;
-    }
-    .post-description {
-      float: left;
-      width: 70%;
-    }
+
+  .compact ul {
+    margin: 0 auto .5em;
+    list-style-type: none;
   }
-  .post-title {
+  .compact .Post-header {
+    float: left;
+    width: 30%;
+  }
+  .compact .Post-description {
+    float: left;
+    width: 70%;
+  }
+  .Post-title {
     font-size: 1em;
     margin-top: 0;
     margin-right: 5px;
     display: inline-block;
   }
-  .post-description {
+  .Post-description {
     font-size: .8em;
     line-height: 1em;
   }
-  .post-meta {
+  .Post-meta {
     display: inline-block;
     margin: 0;
     padding: 0;
     margin-bottom: -.2em;
+  }
+  .Post-meta--tags {
+    display: block;
+    margin-top: -.2em;
+    margin-bottom: .2em;
   }
 }

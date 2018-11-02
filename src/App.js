@@ -6,6 +6,7 @@ import PostExtra from './components/post/PostExtra';
 import dataFR from './assets/data/fr/data.json';
 import dataEN from './assets/data/en/data.json';
 import './App.css';
+import './print.css';
 
 const SUPPORTED_LANG = ['fr-FR', 'en-US'];
 const DATAS = {

@@ -12,7 +12,7 @@ ul, menu, dir {
 p {
   -webkit-margin-after: 0.5em;
 }
-h1 {
+h1, h2 {
   margin: 0;
 }
 
