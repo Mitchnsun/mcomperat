@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
 import Heading from './components/heading/Heading';
 import PostList from './components/post/PostList';
@@ -11,18 +11,18 @@ import './print.css';
 const SUPPORTED_LANG = ['fr-FR', 'en-US'];
 const DATAS = {
   'fr-FR': dataFR,
-  'en-US': dataEN
+  'en-US': dataEN,
 };
 
-class App extends Component {
-  getData() {
-    const navigatorLang = window.location.hash.replace('#','') || navigator.language || navigator.userLanguage;
-    const lang = SUPPORTED_LANG.indexOf(navigatorLang) === -1 ? 'fr-FR' : navigatorLang;
-    return DATAS[lang];
-  }
+function getData() {
+  const navigatorLang = window.location.hash.replace('#', '') || navigator.language || navigator.userLanguage;
+  const lang = SUPPORTED_LANG.indexOf(navigatorLang) === -1 ? 'fr-FR' : navigatorLang;
+  return DATAS[lang];
+}
 
+class App extends PureComponent {
   render() {
-    const data = this.getData();
+    const data = getData();
 
     return (
       <div className="App">
@@ -40,9 +40,7 @@ class App extends Component {
           />
           <div className="Posts">
             <h2 className="Posts-header">{data.extra.title}</h2>
-            {data.extra.items.map( (item, i) => {
-              return <PostExtra {...item} key={`Extra${i}`} />;
-            })}
+            {data.extra.items.map(item => <PostExtra {...item} key={item.toString()} />)}
           </div>
         </div>
       </div>

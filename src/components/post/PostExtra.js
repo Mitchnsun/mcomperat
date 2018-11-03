@@ -1,16 +1,18 @@
 import React from 'react';
 
-export default function PostExtra(props) {
+export default function PostExtra({
+  print, title, text, list,
+}) {
   return (
-    <section className={`Post ${props.print} compact`}>
+    <section className={`Post ${print} compact`}>
       <header className="Post-header">
-        <h2 className="Post-title">{props.title}</h2>
+        <h2 className="Post-title">{title}</h2>
       </header>
 
       <div className="Post-description">
-        {props.text}
+        {text}
         <ul>
-          {props.list.map( (text, i) => { return <li key={`ExtraText${i}`}>{text}</li>})}
+          {list.map(item => <li key={item.toString()}>{item}</li>)}
         </ul>
       </div>
     </section>
