@@ -9,6 +9,12 @@
   "author": "Matthieu Compérat",
   "license": "ISC",
   "homepage": "http://www.mcomper.at",
+  "engine-strict": true,
+  "engines": {
+    "node": "10.13",
+    "npm": "6.4",
+    "yarn": "1.10"
+  },
   "dependencies": {
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
