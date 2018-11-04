@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import uuidv4 from 'uuid/v4';
 
 import Heading from './components/heading/Heading';
 import PostList from './components/post/PostList';
@@ -14,15 +15,15 @@ const DATAS = {
   'en-US': dataEN,
 };
 
-function getData() {
-  const navigatorLang = window.location.hash.replace('#', '') || navigator.language || navigator.userLanguage;
-  const lang = SUPPORTED_LANG.indexOf(navigatorLang) === -1 ? 'fr-FR' : navigatorLang;
-  return DATAS[lang];
-}
-
 class App extends PureComponent {
+  getData() {
+    this.navigatorLang = window.location.hash.replace('#', '') || navigator.language || navigator.userLanguage;
+    const lang = SUPPORTED_LANG.indexOf(this.navigatorLang) === -1 ? 'fr-FR' : this.navigatorLang;
+    return DATAS[lang];
+  }
+
   render() {
-    const data = getData();
+    const data = this.getData();
 
     return (
       <div className="App">
@@ -35,7 +36,7 @@ class App extends PureComponent {
           <div className="Posts">
             <h2 className="Posts-header">{data.extra.title}</h2>
             {data.extra.items.map(item => (
-              <PostExtra {...item} key={item.toString()} />
+              <PostExtra {...item} key={uuidv4()} />
             ))}
           </div>
         </div>

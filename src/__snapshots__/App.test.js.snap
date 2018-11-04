@@ -1,0 +1,1513 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders for EN 1`] = `
+<div
+  className="App"
+>
+  <div
+    className="App-sidebar"
+  >
+    <header
+      className="App-header"
+    >
+      <hgroup>
+        <h1
+          className="App-title"
+        >
+          Matthieu
+           
+          Compérat
+        </h1>
+        <h2
+          className="App-tagline"
+        >
+          Web & Mobile Lead Programmer
+        </h2>
+      </hgroup>
+      <div
+        className="sidebar-details"
+      >
+        <p>
+          13/02/1987
+        </p>
+        <p>
+          matthieu.comperat@gmail.com
+        </p>
+      </div>
+      <div
+        className="social-container"
+      >
+        <a
+          href="https://bitbucket.org/matthieu_comperat/"
+          id="Bitbucket"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="View Matthieu Compérat's Bitbucket Profile"
+            src="data:image/png;base64,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"
+          />
+        </a>
+        <a
+          href="https://fr.linkedin.com/in/matthieucomperat/en"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="View Matthieu Compérat's profile on LinkedIn"
+            src="LinkedInSquare.png"
+          />
+        </a>
+      </div>
+    </header>
+  </div>
+  <div
+    className="App-container"
+  >
+    <div
+      className="Posts"
+    >
+      <h2
+        className="Posts-header"
+      >
+        Work Experiences
+      </h2>
+      <section
+        className="Post"
+      >
+        <header
+          className="Post-header"
+        >
+          <h3
+            className="Post-title"
+          >
+            Freelance Frontend Developer
+          </h3>
+          <p
+            className="Post-meta"
+          >
+            Club Med
+            , 
+            Paris
+            , 
+            France
+             
+            
+          </p>
+          <p
+            className="Post-meta Post-meta--era"
+          >
+            June 2017
+             - 
+            Present
+          </p>
+          <p
+            className="Post-meta Post-meta--tags"
+          >
+            <span
+              className="Tag Tag-js"
+            >
+              ReactJS
+            </span>
+            <span
+              className="Tag Tag-html"
+            >
+              HTML5
+            </span>
+            <span
+              className="Tag Tag-css"
+            >
+              CSS3
+            </span>
+            <span
+              className="Tag Tag-js"
+            >
+              ES6
+            </span>
+            <span
+              className="Tag Tag-js"
+            >
+              Flow
+            </span>
+            <span
+              className="Tag Tag-css"
+            >
+              PostCSS
+            </span>
+          </p>
+        </header>
+        <div
+          className="Post-description"
+        >
+          <div>
+            New features and graphic redesign of customer account
+          </div>
+        </div>
+      </section>
+      <section
+        className="Post"
+      >
+        <header
+          className="Post-header"
+        >
+          <h3
+            className="Post-title"
+          >
+            Freelance Frontend Developer
+          </h3>
+          <p
+            className="Post-meta"
+          >
+            Verifone
+            , 
+            Paris
+            , 
+            France
+             
+            
+          </p>
+          <p
+            className="Post-meta Post-meta--era"
+          >
+            Mar. 2017
+             - 
+            May 2017
+          </p>
+          <p
+            className="Post-meta Post-meta--tags"
+          >
+            <span
+              className="Tag Tag-js"
+            >
+              AngularJS
+            </span>
+            <span
+              className="Tag Tag-html"
+            >
+              HTML5
+            </span>
+            <span
+              className="Tag Tag-css"
+            >
+              CSS3
+            </span>
+            <span
+              className="Tag Tag-css"
+            >
+              Bootstrap
+            </span>
+          </p>
+        </header>
+        <div
+          className="Post-description"
+        >
+          <div>
+            Feature on the internal website
+          </div>
+        </div>
+      </section>
+      <section
+        className="Post"
+      >
+        <header
+          className="Post-header"
+        >
+          <h3
+            className="Post-title"
+          >
+            Freelance Web Developer
+          </h3>
+          <p
+            className="Post-meta"
+          >
+            L'Equipe
+            , 
+            Paris
+            , 
+            France
+             
+            
+          </p>
+          <p
+            className="Post-meta Post-meta--era"
+          >
+            Oct. 2016
+             - 
+            Feb. 2017
+          </p>
+          <p
+            className="Post-meta Post-meta--tags"
+          >
+            <span
+              className="Tag Tag-css"
+            >
+              SASS
+            </span>
+            <span
+              className="Tag Tag-html"
+            >
+              HTML5
+            </span>
+            <span
+              className="Tag Tag-css"
+            >
+              CSS3
+            </span>
+          </p>
+        </header>
+        <div
+          className="Post-description"
+        >
+          <div>
+            Graphic redesign integration
+          </div>
+        </div>
+      </section>
+      <section
+        className="Post"
+      >
+        <header
+          className="Post-header"
+        >
+          <h3
+            className="Post-title"
+          >
+            Web & Mobile Lead Programmer
+          </h3>
+          <p
+            className="Post-meta"
+          >
+            CGI
+            , 
+            Paris
+            , 
+            France
+             
+            
+          </p>
+          <p
+            className="Post-meta Post-meta--era"
+          >
+            Sept. 2012
+             - 
+            Sept. 2016
+          </p>
+          <p
+            className="Post-meta Post-meta--tags"
+          >
+            <span
+              className="Tag Tag-html"
+            >
+              Web-application
+            </span>
+            <span
+              className="Tag Tag-html"
+            >
+              HTML5
+            </span>
+            <span
+              className="Tag Tag-css"
+            >
+              CSS3
+            </span>
+            <span
+              className="Tag Tag-js"
+            >
+              Backbone.js
+            </span>
+            <span
+              className="Tag Tag-js"
+            >
+              Dust.js / Handlebar.js
+            </span>
+            <span
+              className="Tag Tag-js"
+            >
+              Phone Gap
+            </span>
+          </p>
+        </header>
+        <div
+          className="Post-description"
+        >
+          <div>
+            Current project: Sephora website for smartphones with Backbone, underscore, jQuery and Dust. Exposing the data from the web services. Two web applications with Cordova based on Backbone.js framework.
+          </div>
+          <div>
+            Past projects:
+            <ul>
+              <li>
+                Responsive website for Louis Vuitton as web developer.
+              </li>
+              <li>
+                Web-application for Total in .Net environment. (HTML, CSS with Bootstrap from Twitter and jQuery).
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section
+        className="Post"
+      >
+        <header
+          className="Post-header"
+        >
+          <h3
+            className="Post-title"
+          >
+            Web mobile analyst
+          </h3>
+          <p
+            className="Post-meta"
+          >
+            Logica
+            , 
+            Lyon
+            , 
+            France
+             
+             - Final year project
+          </p>
+          <p
+            className="Post-meta Post-meta--era"
+          >
+            Feb. 2012
+             - 
+            Aug. 2012
+          </p>
+          <p
+            className="Post-meta Post-meta--tags"
+          >
+            <span
+              className="Tag Tag-html"
+            >
+              Web-application
+            </span>
+            <span
+              className="Tag Tag-js"
+            >
+              jQuery Mobile
+            </span>
+            <span
+              className="Tag Tag-css"
+            >
+              Twitter Bootstrap
+            </span>
+            <span
+              className="Tag Tag-js"
+            >
+              Phone Gap
+            </span>
+            <span
+              className="Tag Tag-ios"
+            >
+              Cocoa Touch
+            </span>
+          </p>
+        </header>
+        <div
+          className="Post-description"
+        >
+          <div>
+            CMS integration in the mobility
+          </div>
+          <div>
+            Projects :
+            <ul>
+              <li>
+                Software package of events management, responsible of CMS problematic, CMS studies and tests. Followed by pre-sales of the project feasibility study, ripening workshop, costing of the project cost.
+              </li>
+              <li>
+                iOS developments
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section
+        className="Post"
+      >
+        <header
+          className="Post-header"
+        >
+          <h3
+            className="Post-title"
+          >
+            Intern in IT
+          </h3>
+          <p
+            className="Post-meta"
+          >
+            Daher-Socata
+            , 
+            Pembroke Pines
+            , 
+            USA
+             
+             - One-year internship
+          </p>
+          <p
+            className="Post-meta Post-meta--era"
+          >
+            July 2010
+             - 
+            July 2011
+          </p>
+          <p
+            className="Post-meta Post-meta--tags"
+          >
+            <span
+              className="Tag Tag-html"
+            >
+              HTML
+            </span>
+            <span
+              className="Tag Tag-back"
+            >
+              PHP
+            </span>
+            <span
+              className="Tag Tag-js"
+            >
+              jQuery
+            </span>
+            <span
+              className="Tag Tag-db"
+            >
+              MySQL
+            </span>
+            <span
+              className="Tag Tag-ios"
+            >
+              Cocoa Touch
+            </span>
+            <span
+              className="Tag Tag-"
+            >
+              Joomla
+            </span>
+          </p>
+        </header>
+        <div
+          className="Post-description"
+        >
+          <div>
+            Projects developped:
+            <ul>
+              <li>
+                Web Application in a CRM (HTML, PHP, JavaScript-jQuery, and MySQL)
+              </li>
+              <li>
+                iPad Application for the booth in Air Shows (Objective-C, Cocoa Touch)
+              </li>
+              <li>
+                CMS Setting
+              </li>
+            </ul>
+          </div>
+          <div>
+            I was in a complete autonomy to discover the different languages and to develop the different applications. I provided support to the users after acceptance-test and insured the transfer of the application to the head quarter in France.
+          </div>
+        </div>
+      </section>
+    </div>
+    <div
+      className="Posts"
+    >
+      <h2
+        className="Posts-header"
+      >
+        Education
+      </h2>
+      <section
+        className="Post"
+      >
+        <header
+          className="Post-header"
+        >
+          <h3
+            className="Post-title"
+          >
+            CPE Lyon
+          </h3>
+          <p
+            className="Post-meta"
+          >
+            Engineer School
+            , 
+            Lyon
+            , 
+            France
+             
+             - department of electronics, IT and Telecommunications,
+          </p>
+          <p
+            className="Post-meta Post-meta--era"
+          >
+            2007
+             - 
+            2012
+          </p>
+          <p
+            className="Post-meta Post-meta--tags"
+          />
+        </header>
+        <div
+          className="Post-description"
+        >
+          <div>
+            Bachelor degree obtained in June 2009, Graduation at MSc Level in September 2012. 2 years full-time higher education in mathematics and science with languages and general studies, 3 years at higher education. Engineering school in France
+          </div>
+          <div>
+            Main subjects: Programmation (C, C++), Databases, Digital and analogical electronics Signal and linear systems, Optics.
+          </div>
+          <div>
+            IT Specialization : HTML, PHP, Java, XML, Interconnection and administration of networks, Graphs and algorithms, Getting an award named “Best increase prospect” from the CCIL (Chamber of commerce and industry of Lyon) during Campus Creation 2008 contest. The target was to present an innovative product. Project: “Eau Parleur”
+          </div>
+        </div>
+      </section>
+    </div>
+    <div
+      className="Posts"
+    >
+      <h2
+        className="Posts-header"
+      >
+        Extras
+      </h2>
+      <section
+        className="Post  compact"
+      >
+        <header
+          className="Post-header"
+        >
+          <h2
+            className="Post-title"
+          >
+            Languages
+          </h2>
+        </header>
+        <div
+          className="Post-description"
+        >
+          
+          <ul>
+            <li>
+              French : mother tongue
+            </li>
+            <li>
+              English : Good level (spoken, written, reading) - FCE of Cambridge (B2)
+            </li>
+            <li>
+              Spanish : basic knowledge
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section
+        className="Post  compact"
+      >
+        <header
+          className="Post-header"
+        >
+          <h2
+            className="Post-title"
+          >
+            Interests
+          </h2>
+        </header>
+        <div
+          className="Post-description"
+        >
+          
+          <ul>
+            <li>
+              Angular 1&2
+            </li>
+            <li>
+              Swift
+            </li>
+            <li>
+              TypeScript
+            </li>
+            <li>
+              Reactjs
+            </li>
+            <li>
+              Git
+            </li>
+            <li>
+              MySQL
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section
+        className="Post print-hidden compact"
+      >
+        <header
+          className="Post-header"
+        >
+          <h2
+            className="Post-title"
+          >
+            Personal projects
+          </h2>
+        </header>
+        <div
+          className="Post-description"
+        >
+          
+          <ul>
+            <li>
+              &lt;a href="http://www.mcomper.at/lotofoot/" target="_blank"&gt;Lotofoot&lt;/a&gt; : Football betting website for friends
+            </li>
+            <li>
+              My web resume
+            </li>
+            <li>
+              Jokari : a Swift application for the Jokari
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section
+        className="Post print-hidden compact"
+      >
+        <header
+          className="Post-header"
+        >
+          <h2
+            className="Post-title"
+          >
+            Sports
+          </h2>
+        </header>
+        <div
+          className="Post-description"
+        >
+          
+          <ul>
+            <li>
+              Running
+            </li>
+            <li>
+              Swimming
+            </li>
+            <li>
+              Biking
+            </li>
+            <li>
+              Ski
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`App renders for FR 1`] = `
+<div
+  className="App"
+>
+  <div
+    className="App-sidebar"
+  >
+    <header
+      className="App-header"
+    >
+      <hgroup>
+        <h1
+          className="App-title"
+        >
+          Matthieu
+           
+          Compérat
+        </h1>
+        <h2
+          className="App-tagline"
+        >
+          Référent technique Mobile
+        </h2>
+      </hgroup>
+      <div
+        className="sidebar-details"
+      >
+        <p>
+          13/02/1987
+        </p>
+        <p>
+          matthieu.comperat@gmail.com
+        </p>
+      </div>
+      <div
+        className="social-container"
+      >
+        <a
+          href="https://bitbucket.org/matthieu_comperat/"
+          id="Bitbucket"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="View Matthieu Compérat's Bitbucket Profile"
+            src="data:image/png;base64,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"
+          />
+        </a>
+        <a
+          href="https://fr.linkedin.com/in/matthieucomperat"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="View Matthieu Compérat's profile on LinkedIn"
+            src="LinkedInSquare.png"
+          />
+        </a>
+      </div>
+    </header>
+  </div>
+  <div
+    className="App-container"
+  >
+    <div
+      className="Posts"
+    >
+      <h2
+        className="Posts-header"
+      >
+        Expériences professionnelles
+      </h2>
+      <section
+        className="Post"
+      >
+        <header
+          className="Post-header"
+        >
+          <h3
+            className="Post-title"
+          >
+            Freelance Frontend Developer
+          </h3>
+          <p
+            className="Post-meta"
+          >
+            Club Med
+            , 
+            Paris
+            , 
+            France
+             
+            
+          </p>
+          <p
+            className="Post-meta Post-meta--era"
+          >
+            Juin 2017
+             - 
+            Présent
+          </p>
+          <p
+            className="Post-meta Post-meta--tags"
+          >
+            <span
+              className="Tag Tag-js"
+            >
+              ReactJS
+            </span>
+            <span
+              className="Tag Tag-html"
+            >
+              HTML5
+            </span>
+            <span
+              className="Tag Tag-css"
+            >
+              CSS3
+            </span>
+            <span
+              className="Tag Tag-js"
+            >
+              ES6
+            </span>
+            <span
+              className="Tag Tag-js"
+            >
+              Flow
+            </span>
+            <span
+              className="Tag Tag-css"
+            >
+              PostCSS
+            </span>
+          </p>
+        </header>
+        <div
+          className="Post-description"
+        >
+          <div>
+            Evolutions et refonte graphique sur l'espace client du site commercial
+          </div>
+        </div>
+      </section>
+      <section
+        className="Post"
+      >
+        <header
+          className="Post-header"
+        >
+          <h3
+            className="Post-title"
+          >
+            Freelance Frontend Developer
+          </h3>
+          <p
+            className="Post-meta"
+          >
+            Verifone
+            , 
+            Paris
+            , 
+            France
+             
+            
+          </p>
+          <p
+            className="Post-meta Post-meta--era"
+          >
+            Mars 2017
+             - 
+            Mai 2017
+          </p>
+          <p
+            className="Post-meta Post-meta--tags"
+          >
+            <span
+              className="Tag Tag-js"
+            >
+              AngularJS
+            </span>
+            <span
+              className="Tag Tag-html"
+            >
+              HTML5
+            </span>
+            <span
+              className="Tag Tag-css"
+            >
+              CSS3
+            </span>
+            <span
+              className="Tag Tag-css"
+            >
+              Bootstrap
+            </span>
+          </p>
+        </header>
+        <div
+          className="Post-description"
+        >
+          <div>
+            Réalisation de fonctionnalité sur leur outil interne
+          </div>
+        </div>
+      </section>
+      <section
+        className="Post"
+      >
+        <header
+          className="Post-header"
+        >
+          <h3
+            className="Post-title"
+          >
+            Freelance Web Developer
+          </h3>
+          <p
+            className="Post-meta"
+          >
+            L'Equipe
+            , 
+            Paris
+            , 
+            France
+             
+            
+          </p>
+          <p
+            className="Post-meta Post-meta--era"
+          >
+            Oct. 2016
+             - 
+            Fev. 2017
+          </p>
+          <p
+            className="Post-meta Post-meta--tags"
+          >
+            <span
+              className="Tag Tag-css"
+            >
+              SASS
+            </span>
+            <span
+              className="Tag Tag-html"
+            >
+              HTML5
+            </span>
+            <span
+              className="Tag Tag-css"
+            >
+              CSS3
+            </span>
+          </p>
+        </header>
+        <div
+          className="Post-description"
+        >
+          <div>
+            Intégration de la refonte graphique
+          </div>
+        </div>
+      </section>
+      <section
+        className="Post"
+      >
+        <header
+          className="Post-header"
+        >
+          <h3
+            className="Post-title"
+          >
+            Référent technique Web & Mobile
+          </h3>
+          <p
+            className="Post-meta"
+          >
+            CGI
+            , 
+            Paris
+            , 
+            France
+             
+            
+          </p>
+          <p
+            className="Post-meta Post-meta--era"
+          >
+            Mai 2014
+             - 
+            Sept. 2016
+          </p>
+          <p
+            className="Post-meta Post-meta--tags"
+          >
+            <span
+              className="Tag Tag-html"
+            >
+              Web-application
+            </span>
+            <span
+              className="Tag Tag-html"
+            >
+              HTML5
+            </span>
+            <span
+              className="Tag Tag-css"
+            >
+              CSS3
+            </span>
+            <span
+              className="Tag Tag-js"
+            >
+              Backbone.js
+            </span>
+            <span
+              className="Tag Tag-js"
+            >
+              Dust.js / Handlebar.js
+            </span>
+            <span
+              className="Tag Tag-js"
+            >
+              Phone Gap
+            </span>
+          </p>
+        </header>
+        <div
+          className="Post-description"
+        >
+          <div>
+            Projet Sephora :
+            <ul>
+              <li>
+                Evolutions du site web-mobile de Sephora et création d'une version italienne (m.sephora.it)
+              </li>
+              <li>
+                Evolutions des applications iOS internes, avec Cordova/Phone Gap (iPad Color Profile et iPhone MySephora)
+              </li>
+              <li>
+                Intégration et maintenance de la partie webmobile des applications iPhone et Android
+              </li>
+            </ul>
+          </div>
+          <div>
+            Responsabilités : Référent technique d'une équipe de deux développeurs
+            <ul>
+              <li>
+                Cadrage technique des évolutions. Suivi et réalisation des évolutions avec une équipe de deux développeurs.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section
+        className="Post"
+      >
+        <header
+          className="Post-header"
+        >
+          <h3
+            className="Post-title"
+          >
+            Ingénieur en Technologie de l'Information
+          </h3>
+          <p
+            className="Post-meta"
+          >
+            CGI
+            , 
+            Paris
+            , 
+            France
+             
+            
+          </p>
+          <p
+            className="Post-meta Post-meta--era"
+          >
+            Sept. 2012
+             - 
+            Mai 2014
+          </p>
+          <p
+            className="Post-meta Post-meta--tags"
+          >
+            <span
+              className="Tag Tag-html"
+            >
+              Web-application
+            </span>
+            <span
+              className="Tag Tag-js"
+            >
+              Backbone.js
+            </span>
+            <span
+              className="Tag Tag-css"
+            >
+              Responsive
+            </span>
+            <span
+              className="Tag Tag-css"
+            >
+              LESS
+            </span>
+            <span
+              className="Tag Tag-js"
+            >
+              Dust.js
+            </span>
+            <span
+              className="Tag Tag-ios"
+            >
+              Application iOS
+            </span>
+          </p>
+        </header>
+        <div
+          className="Post-description"
+        >
+          <div>
+            Projet Sephora :
+            <ul>
+              <li>
+                Réalisation du site web-mobile de Sephora
+              </li>
+              <li>
+                Mise à jour de l’application iPhone de Sephora
+              </li>
+              <li>
+                Reprise et évolution de l’application iPad Color Profile
+              </li>
+            </ul>
+          </div>
+          <div>
+            Projet Louis Vuitton :
+            <ul>
+              <li>
+                Réalisation de l’interface client Web du site à partir du socle ATG. Compatibilité pour toutes les tailles d’écran. Adaptation pour compatibilité IE8/7/6.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section
+        className="Post"
+      >
+        <header
+          className="Post-header"
+        >
+          <h3
+            className="Post-title"
+          >
+            Analyste développeur mobile et web
+          </h3>
+          <p
+            className="Post-meta"
+          >
+            Logica
+            , 
+            Lyon
+            , 
+            France
+             
+             - Stage projet de fin d'étude
+          </p>
+          <p
+            className="Post-meta Post-meta--era"
+          >
+            Fév. 2012
+             - 
+            Août 2012
+          </p>
+          <p
+            className="Post-meta Post-meta--tags"
+          >
+            <span
+              className="Tag Tag-html"
+            >
+              Web-application
+            </span>
+            <span
+              className="Tag Tag-js"
+            >
+              jQuery Mobile
+            </span>
+            <span
+              className="Tag Tag-css"
+            >
+              Twitter Bootstrap
+            </span>
+            <span
+              className="Tag Tag-js"
+            >
+              Phone Gap
+            </span>
+            <span
+              className="Tag Tag-ios"
+            >
+              Cocoa Touch
+            </span>
+          </p>
+        </header>
+        <div
+          className="Post-description"
+        >
+          <div>
+            Intégrer la notion de CMS avec la mobilite
+          </div>
+          <div>
+            Réalisations :
+            <ul>
+              <li>
+                Progiciel de gestion d’événements, en charge de la problématique de CMS, étude et test de CMS. Suivi de l'avant-vente du projet, étude de faisabilité, atelier de maturation, chiffrage du coût du projet.
+              </li>
+              <li>
+                Participation aux développements d’applications iOS
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section
+        className="Post"
+      >
+        <header
+          className="Post-header"
+        >
+          <h3
+            className="Post-title"
+          >
+            Analyste développeur
+          </h3>
+          <p
+            className="Post-meta"
+          >
+            Daher-Socata
+            , 
+            Pembroke Pines
+            , 
+            USA
+             
+             - Stage année de césure
+          </p>
+          <p
+            className="Post-meta Post-meta--era"
+          >
+            Juil. 2010
+             - 
+            Juil. 2011
+          </p>
+          <p
+            className="Post-meta Post-meta--tags"
+          >
+            <span
+              className="Tag Tag-html"
+            >
+              HTML
+            </span>
+            <span
+              className="Tag Tag-back"
+            >
+              PHP
+            </span>
+            <span
+              className="Tag Tag-js"
+            >
+              jQuery
+            </span>
+            <span
+              className="Tag Tag-db"
+            >
+              MySQL
+            </span>
+            <span
+              className="Tag Tag-ios"
+            >
+              Objective-C
+            </span>
+            <span
+              className="Tag Tag-"
+            >
+              Joomla
+            </span>
+          </p>
+        </header>
+        <div
+          className="Post-description"
+        >
+          <div>
+            Découvrir et utiliser les différents langages
+          </div>
+          <div>
+            Réalisations :
+            <ul>
+              <li>
+                Applications web dans un CRM
+              </li>
+              <li>
+                Application iPad pour les salons aéronautiques
+              </li>
+              <li>
+                Configuration d’un CMS
+              </li>
+            </ul>
+          </div>
+          <div>
+            J’étais en complète autonomie pour découvrir les différents langages et pour développer les différentes applications. J’ai fourni le support aux utilisateurs après validation et assurer le transfert des applications au siège social en France. Mon but était de laisser une documentation claire pour les prochains développeurs.
+          </div>
+        </div>
+      </section>
+    </div>
+    <div
+      className="Posts"
+    >
+      <h2
+        className="Posts-header"
+      >
+        Education
+      </h2>
+      <section
+        className="Post"
+      >
+        <header
+          className="Post-header"
+        >
+          <h3
+            className="Post-title"
+          >
+            Ecole supérieure de Chimie, Physique et Electronique de Lyon (ESCPE)
+          </h3>
+          <p
+            className="Post-meta"
+          >
+            Ecole d'ingénieur
+            , 
+            Lyon
+            , 
+            France
+             
+             - Electronique, Télécoms et informatique
+          </p>
+          <p
+            className="Post-meta Post-meta--era"
+          >
+            2007
+             - 
+            2012
+          </p>
+          <p
+            className="Post-meta Post-meta--tags"
+          />
+        </header>
+        <div
+          className="Post-description"
+        >
+          <div>
+            Diplomé en Septembre 2012. Bachelor obtenu en Juin 2009. Majeure SID (Systèmes informatiques distribuées) : Services Web (HTML/CSS/PHP), Java, Interconnexion et administration des réseaux, Graphes et Algorithmes.
+          </div>
+        </div>
+      </section>
+    </div>
+    <div
+      className="Posts"
+    >
+      <h2
+        className="Posts-header"
+      >
+        Extras
+      </h2>
+      <section
+        className="Post  compact"
+      >
+        <header
+          className="Post-header"
+        >
+          <h2
+            className="Post-title"
+          >
+            Langues
+          </h2>
+        </header>
+        <div
+          className="Post-description"
+        >
+          
+          <ul>
+            <li>
+              Français : langue maternelle
+            </li>
+            <li>
+              Anglais : courant - Niveau B2 FCE of Cambridge
+            </li>
+            <li>
+              Espagnol : notions
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section
+        className="Post  compact"
+      >
+        <header
+          className="Post-header"
+        >
+          <h2
+            className="Post-title"
+          >
+            Intérêts
+          </h2>
+        </header>
+        <div
+          className="Post-description"
+        >
+          
+          <ul>
+            <li>
+              Angular 1&2
+            </li>
+            <li>
+              Swift
+            </li>
+            <li>
+              TypeScript
+            </li>
+            <li>
+              Reactjs
+            </li>
+            <li>
+              Git
+            </li>
+            <li>
+              MySQL
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section
+        className="Post print-hidden compact"
+      >
+        <header
+          className="Post-header"
+        >
+          <h2
+            className="Post-title"
+          >
+            Projets personnels
+          </h2>
+        </header>
+        <div
+          className="Post-description"
+        >
+          
+          <ul>
+            <li>
+              &lt;a href="http://www.mcomper.at/lotofoot/" target="_blank"&gt;Lotofoot&lt;/a&gt; : site de pari footbalistique entre amis
+            </li>
+            <li>
+              Mon CV Web
+            </li>
+            <li>
+              Jokari : une application Swift sur le Jokari
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section
+        className="Post print-hidden compact"
+      >
+        <header
+          className="Post-header"
+        >
+          <h2
+            className="Post-title"
+          >
+            Sports
+          </h2>
+        </header>
+        <div
+          className="Post-description"
+        >
+          
+          <ul>
+            <li>
+              Running
+            </li>
+            <li>
+              Natation
+            </li>
+            <li>
+              Vélo
+            </li>
+            <li>
+              Ski
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+`;

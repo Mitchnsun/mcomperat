@@ -4,17 +4,17 @@ import LinkedInLogo from '../../assets/img/LinkedInSquare.png';
 import './Heading.css';
 
 const propTypes = {
-  person: {
+  person: PropTypes.shape({
     firstname: PropTypes.string,
     lastname: PropTypes.string,
     title: PropTypes.string,
     birthday: PropTypes.string,
     email: PropTypes.string,
-    link: {
+    link: PropTypes.shape({
       bitbucket: PropTypes.string,
       linkedin: PropTypes.string,
-    },
-  },
+    }),
+  }),
 };
 
 export default function Heading({ person }) {

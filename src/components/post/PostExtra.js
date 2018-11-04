@@ -1,4 +1,5 @@
 import React from 'react';
+import uuidv4 from 'uuid/v4';
 
 export default function PostExtra({ print, title, text, list }) {
   return (
@@ -11,7 +12,7 @@ export default function PostExtra({ print, title, text, list }) {
         {text}
         <ul>
           {list.map(item => (
-            <li key={item.toString()}>{item}</li>
+            <li key={uuidv4()}>{item}</li>
           ))}
         </ul>
       </div>
