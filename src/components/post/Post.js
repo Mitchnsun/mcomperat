@@ -1,9 +1,7 @@
 import React from 'react';
 import Tag from '../tag/Tag';
 
-export default function Post({
-  title, company, city, country, context, start, end, tags, description,
-}) {
+export default function Post({ title, company, city, country, context, start, end, tags, description }) {
   return (
     <section className="Post">
       <header className="Post-header">
@@ -15,10 +13,7 @@ export default function Post({
           {start} - {end}
         </p>
         <p className="Post-meta Post-meta--tags">
-          {tags
-            ? tags.map(tag => <Tag tag={tag.ref} name={tag.name} key={tag.toString()} />)
-            : null
-          }
+          {tags ? tags.map(tag => <Tag tag={tag.ref} name={tag.name} key={tag.toString()} />) : null}
         </p>
       </header>
 
@@ -26,13 +21,13 @@ export default function Post({
         {description.map(item => (
           <div key={item.toString()}>
             {item.text}
-            {item.list
-              ? (
-                <ul>
-                  {item.list.map(text => <li key={text.toString()}>{text}</li>)}
-                </ul>
-              ) : null
-            }
+            {item.list ? (
+              <ul>
+                {item.list.map(text => (
+                  <li key={text.toString()}>{text}</li>
+                ))}
+              </ul>
+            ) : null}
           </div>
         ))}
       </div>

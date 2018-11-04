@@ -30,17 +30,13 @@ class App extends PureComponent {
           <Heading person={data.person} />
         </div>
         <div className="App-container">
-          <PostList
-            title={data.work.title}
-            list={data.work.experiences}
-          />
-          <PostList
-            title={data.education.title}
-            list={data.education.schools}
-          />
+          <PostList title={data.work.title} list={data.work.experiences} />
+          <PostList title={data.education.title} list={data.education.schools} />
           <div className="Posts">
             <h2 className="Posts-header">{data.extra.title}</h2>
-            {data.extra.items.map(item => <PostExtra {...item} key={item.toString()} />)}
+            {data.extra.items.map(item => (
+              <PostExtra {...item} key={item.toString()} />
+            ))}
           </div>
         </div>
       </div>
