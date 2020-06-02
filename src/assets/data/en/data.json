@@ -251,7 +251,7 @@
       }, {
         "title": "Personal projects",
         "text": "",
-        "list": ["<a href=\"http://www.mcomper.at/lotofoot/\" target=\"_blank\">Lotofoot</a> : Football betting website for friends", "My web resume", "Jokari : a Swift application for the Jokari"],
+        "list": ["Lotofoot : Football betting website for friends", "My web resume", "Jokari : a Swift application for the Jokari"],
         "print": "print-hidden"
       }, {
         "title": "Sports",

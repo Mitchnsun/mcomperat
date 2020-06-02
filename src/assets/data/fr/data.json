@@ -291,7 +291,7 @@
       }, {
         "title": "Projets personnels",
         "text": "",
-        "list": ["<a href=\"http://www.mcomper.at/lotofoot/\" target=\"_blank\">Lotofoot</a> : site de pari footbalistique entre amis", "Mon CV Web", "Jokari : une application Swift sur le Jokari"],
+        "list": ["Lotofoot : site de pari footbalistique entre amis", "Mon CV Web", "Jokari : une application Swift sur le Jokari"],
         "print": "print-hidden"
       }, {
         "title": "Sports",
