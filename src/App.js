@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import uuidv4 from 'uuid/v4';
+import { v4 as uuidv4 } from 'uuid';
 
 import Heading from './components/heading/Heading';
 import PostList from './components/post/PostList';
@@ -35,7 +35,7 @@ class App extends PureComponent {
           <PostList title={data.education.title} list={data.education.schools} />
           <div className="Posts">
             <h2 className="Posts-header">{data.extra.title}</h2>
-            {data.extra.items.map(item => (
+            {data.extra.items.map((item) => (
               <PostExtra {...item} key={uuidv4()} />
             ))}
           </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import uuidv4 from 'uuid/v4';
+import { v4 as uuidv4 } from 'uuid';
 
 export default function PostExtra({ print, title, text, list }) {
   return (
@@ -11,7 +11,7 @@ export default function PostExtra({ print, title, text, list }) {
       <div className="Post-description">
         {text}
         <ul>
-          {list.map(item => (
+          {list.map((item) => (
             <li key={uuidv4()}>{item}</li>
           ))}
         </ul>

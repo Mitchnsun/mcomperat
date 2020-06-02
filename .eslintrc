@@ -3,8 +3,9 @@
   "rules": {
     "prettier/prettier": "error",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "react/prefer-stateless-function": [0, { "ignorePureComponents": true }],
     "react/jsx-one-expression-per-line": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/prefer-stateless-function": [0, { "ignorePureComponents": true }],
     "react/prop-types": "off"
   },
   "plugins": ["prettier"],
