@@ -16,12 +16,36 @@
     "title": "Expériences professionnelles",
     "experiences": [
       {
+        "title": "Freelance Full-stack Developer",
+        "city": "Paris",
+        "country": "France",
+        "company": "ADSPL",
+        "start": "Juin 2018",
+        "end": "Juin 2020",
+        "tags": [
+          {
+            "name": "ReactJS",
+            "ref": "js"
+          }, {
+            "name": "NextJS",
+            "ref": "js"
+          }, {
+            "name": "NodeJS",
+            "ref": "js"
+          }
+        ],
+        "description": [
+          {
+            "text": "Développement d'un site pour le réglèment de la cotisation du syndicat UNAPL"
+          }
+        ]
+      }, {
         "title": "Freelance Frontend Developer",
         "city": "Paris",
         "country": "France",
         "company": "Club Med",
         "start": "Juin 2017",
-        "end": "Présent",
+        "end": "Janvier 2020",
         "tags": [
           {
             "name": "ReactJS",
@@ -39,8 +63,8 @@
             "name": "Flow",
             "ref": "js"
           },  {
-            "name": "PostCSS",
-            "ref": "css"
+            "name": "NextJS",
+            "ref": "js"
           }
         ],
         "description": [
@@ -286,17 +310,17 @@
       },{
         "title": "Intérêts",
         "text": "",
-        "list": ["Angular 1&2", "Swift", "TypeScript", "Reactjs", "Git", "MySQL"],
+        "list": ["ReactJS", "NodeJS", "TypeScript", "Git", "CSS"],
         "print": ""
       }, {
         "title": "Projets personnels",
         "text": "",
-        "list": ["Lotofoot : site de pari footbalistique entre amis", "Mon CV Web", "Jokari : une application Swift sur le Jokari"],
+        "list": ["Supersprint Résultat : Site d'affichage des résultat du Supersprint 20ième", "Mon CV Web", "Lotofoot : site de pari footbalistique entre amis"],
         "print": "print-hidden"
       }, {
         "title": "Sports",
         "text": "",
-        "list": ["Running", "Natation", "Vélo", "Ski"],
+        "list": ["Triathlon", "Surf"],
         "print": "print-hidden"
       }
     ]

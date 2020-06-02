@@ -11,9 +11,9 @@
   "homepage": "http://www.mcomper.at",
   "engine-strict": true,
   "engines": {
-    "node": "12.17.*",
-    "npm": "6.14.*",
-    "yarn": "1.22"
+    "node": "10.16.3",
+    "npm": "6.9.0",
+    "yarn": "1.22.0"
   },
   "dependencies": {
     "prop-types": "^15.7.2",
@@ -25,7 +25,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "yarn lint && react-scripts test --env=jsdom",
+    "test": "yarn lint && CI=true react-scripts test --env=jsdom",
+    "test:snapshot": "CI=true react-scripts test --env=jsdom -u",
     "eject": "react-scripts eject",
     "lint": "eslint --cache --ext .js ."
   },

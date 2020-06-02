@@ -16,12 +16,36 @@
     "title": "Work Experiences",
     "experiences": [
       {
+        "title": "Freelance Full-stack Developer",
+        "city": "Paris",
+        "country": "France",
+        "company": "ADSPL",
+        "start": "June 2018",
+        "end": "June 2020",
+        "tags": [
+          {
+            "name": "ReactJS",
+            "ref": "js"
+          }, {
+            "name": "NextJS",
+            "ref": "js"
+          }, {
+            "name": "NodeJS",
+            "ref": "js"
+          }
+        ],
+        "description": [
+          {
+            "text": "For the client UNAPL, development of a platform to collect their members' subscription"
+          }
+        ]
+      }, {
         "title": "Freelance Frontend Developer",
         "city": "Paris",
         "country": "France",
         "company": "Club Med",
         "start": "June 2017",
-        "end": "Present",
+        "end": "Jan. 2020",
         "tags": [
           {
             "name": "ReactJS",
@@ -246,17 +270,17 @@
       },{
         "title": "Interests",
         "text": "",
-        "list": ["Angular 1&2", "Swift", "TypeScript", "Reactjs", "Git", "MySQL"],
+        "list": ["ReactJS", "NodeJS", "TypeScript", "Git", "CSS"],
         "print": ""
       }, {
         "title": "Personal projects",
         "text": "",
-        "list": ["Lotofoot : Football betting website for friends", "My web resume", "Jokari : a Swift application for the Jokari"],
+        "list": ["Supersprint Result : site for the results of Supersprint 20ième", "My web resume", "Lotofoot : Football betting website for friends"],
         "print": "print-hidden"
       }, {
         "title": "Sports",
         "text": "",
-        "list": ["Running", "Swimming", "Biking", "Ski"],
+        "list": ["Triathlon", "Surf"],
         "print": "print-hidden"
       }
     ]
