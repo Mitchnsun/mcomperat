@@ -1,0 +1,328 @@
+{ 
+  "person": {
+    "firstname": "Matthieu",
+    "lastname": "Compérat",
+    "birthday": "13/02/1987",
+    "title": "Référent technique Mobile",
+    "email": "matthieu.comperat@gmail.com",
+    "link": {
+      "linkedin": "https://fr.linkedin.com/in/matthieucomperat",
+      "bitbucket": "https://bitbucket.org/matthieu_comperat/",
+      "github": "https://github.com/Mitchnsun"
+    }
+  },
+
+  "work": {
+    "title": "Expériences professionnelles",
+    "experiences": [
+      {
+        "title": "Freelance Full-stack Developer",
+        "city": "Paris",
+        "country": "France",
+        "company": "ADSPL",
+        "start": "Juin 2018",
+        "end": "Juin 2020",
+        "tags": [
+          {
+            "name": "ReactJS",
+            "ref": "js"
+          }, {
+            "name": "NextJS",
+            "ref": "js"
+          }, {
+            "name": "NodeJS",
+            "ref": "js"
+          }
+        ],
+        "description": [
+          {
+            "text": "Développement d'un site pour le réglèment de la cotisation du syndicat UNAPL"
+          }
+        ]
+      }, {
+        "title": "Freelance Frontend Developer",
+        "city": "Paris",
+        "country": "France",
+        "company": "Club Med",
+        "start": "Juin 2017",
+        "end": "Janvier 2020",
+        "tags": [
+          {
+            "name": "ReactJS",
+            "ref": "js"
+          }, {
+            "name": "HTML5",
+            "ref": "html"
+          }, {
+            "name": "CSS3",
+            "ref": "css"
+          },  {
+            "name": "ES6",
+            "ref": "js"
+          }, {
+            "name": "Flow",
+            "ref": "js"
+          },  {
+            "name": "NextJS",
+            "ref": "js"
+          }
+        ],
+        "description": [
+          {
+            "text": "Evolutions et refonte graphique sur l'espace client du site commercial"
+          }
+        ]
+      }, {
+        "title": "Freelance Frontend Developer",
+        "city": "Paris",
+        "country": "France",
+        "company": "Verifone",
+        "start": "Mars 2017",
+        "end": "Mai 2017",
+        "tags": [
+          {
+            "name": "AngularJS",
+            "ref": "js"
+          }, {
+            "name": "HTML5",
+            "ref": "html"
+          }, {
+            "name": "CSS3",
+            "ref": "css"
+          },  {
+            "name": "Bootstrap",
+            "ref": "css"
+          }
+        ],
+        "description": [
+          {
+            "text": "Réalisation de fonctionnalité sur leur outil interne"
+          }
+        ]
+      }, {
+        "title": "Freelance Web Developer",
+        "city": "Paris",
+        "country": "France",
+        "company": "L'Equipe",
+        "start": "Oct. 2016",
+        "end": "Fev. 2017",
+        "tags": [
+          {
+            "name": "SASS",
+            "ref": "css"
+          }, {
+            "name": "HTML5",
+            "ref": "html"
+          }, {
+            "name": "CSS3",
+            "ref": "css"
+          }
+        ],
+        "description": [
+          {
+            "text": "Intégration de la refonte graphique"
+          }
+        ]
+      }, {
+        "title": "Référent technique Web & Mobile",
+        "city": "Paris",
+        "country": "France",
+        "company": "CGI",
+        "start": "Mai 2014",
+        "end": "Sept. 2016",
+        "tags": [
+          {
+            "name": "Web-application",
+            "ref": "html"
+          }, {
+            "name": "HTML5",
+            "ref": "html"
+          }, {
+            "name": "CSS3",
+            "ref": "css"
+          }, {
+            "name": "Backbone.js",
+            "ref": "js"
+          }, {
+            "name": "Dust.js / Handlebar.js",
+            "ref": "js"
+          }, {
+            "name": "Phone Gap",
+            "ref": "js"
+          }
+        ],
+        "description": [
+          {
+            "text": "Projet Sephora :",
+            "list": [
+              "Evolutions du site web-mobile de Sephora et création d'une version italienne (m.sephora.it)",
+              "Evolutions des applications iOS internes, avec Cordova/Phone Gap (iPad Color Profile et iPhone MySephora)",
+              "Intégration et maintenance de la partie webmobile des applications iPhone et Android"
+            ]
+          }, {
+            "text": "Responsabilités : Référent technique d'une équipe de deux développeurs",
+            "list": ["Cadrage technique des évolutions. Suivi et réalisation des évolutions avec une équipe de deux développeurs."]
+          }
+        ]
+      }, {
+        "title": "Ingénieur en Technologie de l'Information",
+        "city": "Paris",
+        "country": "France",
+        "company": "CGI",
+        "start": "Sept. 2012",
+        "end": "Mai 2014",
+        "tags": [
+          {
+            "name": "Web-application",
+            "ref": "html"
+          }, {
+            "name": "Backbone.js",
+            "ref": "js"
+          }, {
+            "name": "Responsive",
+            "ref": "css"
+          }, {
+            "name": "LESS",
+            "ref": "css"
+          }, {
+            "name": "Dust.js",
+            "ref": "js"
+          }, {
+            "name": "Application iOS",
+            "ref": "ios"
+          }
+        ],
+        "description": [
+          {
+            "text": "Projet Sephora :",
+            "list": ["Réalisation du site web-mobile de Sephora", "Mise à jour de l’application iPhone de Sephora", "Reprise et évolution de l’application iPad Color Profile"]
+          }, {
+            "text": "Projet Louis Vuitton :",
+            "list": ["Réalisation de l’interface client Web du site à partir du socle ATG. Compatibilité pour toutes les tailles d’écran. Adaptation pour compatibilité IE8/7/6."]
+          }
+        ]
+      }, {
+        "title": "Analyste développeur mobile et web",
+        "context": "Stage projet de fin d'étude",
+        "city": "Lyon",
+        "country": "France",
+        "company": "Logica",
+        "start": "Fév. 2012",
+        "end": "Août 2012",
+        "tags": [
+          {
+            "name": "Web-application",
+            "ref": "html"
+          }, {
+            "name": "jQuery Mobile",
+            "ref": "js"
+          }, {
+            "name": "Twitter Bootstrap",
+            "ref": "css"
+          }, {
+            "name": "Phone Gap",
+            "ref": "js"
+          }, {
+            "name": "Cocoa Touch",
+            "ref": "ios"
+          }
+        ],
+        "description": [
+          {
+            "text": "Intégrer la notion de CMS avec la mobilite"
+          }, {
+            "text": "Réalisations :",
+            "list": ["Progiciel de gestion d’événements, en charge de la problématique de CMS, étude et test de CMS. Suivi de l'avant-vente du projet, étude de faisabilité, atelier de maturation, chiffrage du coût du projet.", "Participation aux développements d’applications iOS"]
+          }
+        ]
+      }, {
+        "title": "Analyste développeur",
+        "context": "Stage année de césure",
+        "city": "Pembroke Pines",
+        "country": "USA",
+        "company": "Daher-Socata",
+        "start": "Juil. 2010",
+        "end": "Juil. 2011",
+        "tags": [
+          {
+            "name": "HTML",
+            "ref": "html"
+          }, {
+            "name": "PHP",
+            "ref": "back"
+          }, {
+            "name": "jQuery",
+            "ref": "js"
+          }, {
+            "name": "MySQL",
+            "ref": "db"
+          }, {
+            "name": "Objective-C",
+            "ref": "ios"
+          }, {
+            "name": "Joomla",
+            "ref": ""
+          }
+        ],
+        "description": [
+          {
+            "text": "Découvrir et utiliser les différents langages"
+          }, {
+            "text": "Réalisations :",
+            "list": ["Applications web dans un CRM", "Application iPad pour les salons aéronautiques", "Configuration d’un CMS"]
+          }, {
+            "text": "J’étais en complète autonomie pour découvrir les différents langages et pour développer les différentes applications. J’ai fourni le support aux utilisateurs après validation et assurer le transfert des applications au siège social en France. Mon but était de laisser une documentation claire pour les prochains développeurs."
+          }
+        ]
+      }
+    ]
+  },
+
+  "education": {
+    "title": "Education",
+    "schools": [
+      {
+        "title": "Ecole supérieure de Chimie, Physique et Electronique de Lyon (ESCPE)",
+        "city": "Lyon",
+        "country": "France",
+        "company": "Ecole d'ingénieur",
+        "context": "Electronique, Télécoms et informatique",
+        "specialty": "Majeur Systèmes Informatiques Distribués",
+        "start": "2007",
+        "end": "2012",
+        "description": [
+          {
+            "text": "Diplomé en Septembre 2012. Bachelor obtenu en Juin 2009. Majeure SID (Systèmes informatiques distribuées) : Services Web (HTML/CSS/PHP), Java, Interconnexion et administration des réseaux, Graphes et Algorithmes."
+          }
+        ]
+      }
+    ]
+  },
+
+  "extra": {
+    "title": "Extras",
+    "items": [
+      {
+        "title": "Langues",
+        "text": "",
+        "list": ["Français : langue maternelle", "Anglais : courant - Niveau B2 FCE of Cambridge", "Espagnol : notions"],
+        "print": ""
+      },{
+        "title": "Intérêts",
+        "text": "",
+        "list": ["ReactJS", "NodeJS", "TypeScript", "Git", "CSS"],
+        "print": ""
+      }, {
+        "title": "Projets personnels",
+        "text": "",
+        "list": ["Supersprint Résultat : Site d'affichage des résultat du Supersprint 20ième", "Mon CV Web", "Lotofoot : site de pari footbalistique entre amis"],
+        "print": "print-hidden"
+      }, {
+        "title": "Sports",
+        "text": "",
+        "list": ["Triathlon", "Surf"],
+        "print": "print-hidden"
+      }
+    ]
+  }
+}

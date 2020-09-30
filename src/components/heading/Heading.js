@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import GithubLogo from '../../assets/img/github-logo';
-import LinkedInLogo from '../../assets/img/LinkedInSquare.png';
+import GithubLogo from '../../assets/icons/github-logo';
+import LinkedInLogo from '../../assets/icons/LinkedInSquare.png';
 import './Heading.css';
 
 const propTypes = {
