@@ -9,8 +9,8 @@ This README documents steps are necessary to get your application up and running
 * [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
 ###### Set up ######
-* `sudo npm install` | `yarn install`
-* `npm start` | `yarn start`
+* `yarn install`
+* `yarn start`
 
 ###### Configuration ######
 

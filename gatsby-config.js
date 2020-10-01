@@ -1,9 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
-    description:
-      'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
-    author: '@gatsbyjs',
+    title: 'Matthieu Compérat',
+    description: 'Matthieu Compérat Frontend developper ReactJS NextJS HTML5 CSS3',
+    author: '@Mitchnsun',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -33,6 +32,14 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: './src/assets/data/',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-styled-jsx',
+      options: {
+        optimizeForSpeed: true,
+        sourceMaps: false,
+        vendorPrefixes: true,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

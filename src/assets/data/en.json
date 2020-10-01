@@ -266,22 +266,22 @@
         "title": "Languages",
         "text": "",
         "list": ["French : mother tongue", "English : Good level (spoken, written, reading) - FCE of Cambridge (B2)", "Spanish : basic knowledge"],
-        "print": ""
+        "print": true
       },{
         "title": "Interests",
         "text": "",
         "list": ["ReactJS", "NodeJS", "TypeScript", "Git", "CSS"],
-        "print": ""
+        "print": true
       }, {
         "title": "Personal projects",
         "text": "",
         "list": ["Supersprint Result : site for the results of Supersprint 20ième", "My web resume", "Lotofoot : Football betting website for friends"],
-        "print": "print-hidden"
+        "print": false
       }, {
         "title": "Sports",
         "text": "",
         "list": ["Triathlon", "Surf"],
-        "print": "print-hidden"
+        "print": false
       }
     ]
   }

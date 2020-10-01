@@ -8,16 +8,15 @@ import PostExtra from '../components/post/PostExtra';
 import data from '../assets/data/fr.json';
 
 const FRPage = () => (
-  <Layout>
-    <SEO title="Home" />
+  <Layout person={data.person}>
+    <SEO title="CV" />
     <PostList title={data.work.title} list={data.work.experiences} />
     <PostList title={data.education.title} list={data.education.schools} />
-    <div className="Posts">
-      <h2 className="Posts-header">{data.extra.title}</h2>
+    <PostList title={data.extra.title}>
       {data.extra.items.map((item) => (
         <PostExtra {...item} key={uuidv4()} />
       ))}
-    </div>
+    </PostList>
   </Layout>
 );
 
