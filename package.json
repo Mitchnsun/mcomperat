@@ -1,6 +1,6 @@
 {
   "name": "mc-resume",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Matthieu Compérat Resume, Web & Mobile Lead Programmer",
   "repository": {
     "type": "git",
@@ -9,48 +9,43 @@
   "author": "Matthieu Compérat",
   "license": "ISC",
   "homepage": "http://www.mcomper.at",
-  "engine-strict": true,
-  "engines": {
-    "node": "12.17.0",
-    "npm": "6.14.5",
-    "yarn": "1.22.4"
-  },
   "dependencies": {
+    "gatsby": "^2.24.67",
+    "gatsby-plugin-offline": "^3.2.30",
+    "gatsby-plugin-react-helmet": "^3.3.12",
+    "gatsby-plugin-sharp": "^2.6.38",
+    "gatsby-plugin-styled-jsx": "^3.3.13",
+    "gatsby-source-filesystem": "^2.3.32",
+    "gatsby-transformer-json": "^2.4.13",
+    "gatsby-transformer-sharp": "^2.5.16",
     "prop-types": "^15.7.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
-    "uuid": "^8.1.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "yarn lint && CI=true react-scripts test --env=jsdom",
-    "test:snapshot": "CI=true react-scripts test --env=jsdom -u",
-    "eject": "react-scripts eject",
-    "lint": "eslint --cache --ext .js ."
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0",
+    "styled-jsx": "^3.3.0",
+    "uuid": "^8.3.0"
   },
   "devDependencies": {
-    "eslint": "6.6.0",
-    "eslint-config-airbnb": "^18.1.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-prettier": "^3.0.0",
-    "eslint-plugin-react": "^7.11.1",
-    "prettier": "^2.0.5",
-    "react-test-renderer": "^16.13.1"
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.2",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "prettier": "2.0.5"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "npm run lint && echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "lint": "eslint --cache --ext .js ."
   }
 }

@@ -306,22 +306,22 @@
         "title": "Langues",
         "text": "",
         "list": ["Français : langue maternelle", "Anglais : courant - Niveau B2 FCE of Cambridge", "Espagnol : notions"],
-        "print": ""
+        "print": true
       },{
         "title": "Intérêts",
         "text": "",
         "list": ["ReactJS", "NodeJS", "TypeScript", "Git", "CSS"],
-        "print": ""
+        "print": true
       }, {
         "title": "Projets personnels",
         "text": "",
         "list": ["Supersprint Résultat : Site d'affichage des résultat du Supersprint 20ième", "Mon CV Web", "Lotofoot : site de pari footbalistique entre amis"],
-        "print": "print-hidden"
+        "print": false
       }, {
         "title": "Sports",
         "text": "",
         "list": ["Triathlon", "Surf"],
-        "print": "print-hidden"
+        "print": false
       }
     ]
   }

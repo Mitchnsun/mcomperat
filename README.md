@@ -9,8 +9,8 @@ This README documents steps are necessary to get your application up and running
 * [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
 ###### Set up ######
-* `sudo npm install` | `yarn install`
-* `npm start` | `yarn start`
+* `yarn install`
+* `yarn start`
 
 ###### Configuration ######
 
@@ -31,6 +31,7 @@ This README documents steps are necessary to get your application up and running
 For any information, contact matthieu.comperat@gmail.com
 
 ### Version ###
+* v4.0 - October 2020 (Gatsby)
 * v3.0 - November 2018 (React)
 * v2.0 - January 2016
 * v1.0 - Early 2014
