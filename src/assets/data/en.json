@@ -3,10 +3,10 @@
     "firstname": "Matthieu",
     "lastname": "Compérat",
     "birthday": "13/02/1987",
-    "title": "Web & Mobile Lead Programmer",
+    "title": "Frontend developer",
     "email": "matthieu.comperat@gmail.com",
     "link": {
-      "linkedin": "https://fr.linkedin.com/in/matthieucomperat/en",
+      "linkedin": "https://www.linkedin.com/in/matthieucomperat/?locale=en_US",
       "bitbucket": "https://bitbucket.org/matthieu_comperat/",
       "github": "https://github.com/Mitchnsun"
     }
@@ -31,12 +31,26 @@
             "ref": "js"
           }, {
             "name": "NodeJS",
-            "ref": "js"
+            "ref": "back"
+          }, {
+            "name": "Firebase",
+            "ref": "db"
+          }, {
+            "name": "Cypress",
+            "ref": "test"
           }
         ],
         "description": [
           {
-            "text": "For the client UNAPL, development of a platform to collect their members' subscription"
+            "text": "For the client UNAPL, development of a platform to collect their members' subscription",
+            "list": [
+              "Create from scratch a website with memberspace and two payment methods (Credit Card, SEPA)",
+              "Backend with NodeJS and link to Firebase",
+              "Setting up end-to-end tests with Cypress",
+              "Evaluate the needs and writing specifications"
+            ]
+          }, {
+            "text": "Part-time mission"
           }
         ]
       }, {
@@ -51,10 +65,16 @@
             "name": "ReactJS",
             "ref": "js"
           }, {
+            "name": "GraphQL",
+            "ref": "js"
+          }, {
             "name": "HTML5",
             "ref": "html"
           }, {
             "name": "CSS3",
+            "ref": "css"
+          }, {
+            "name": "PostCSS",
             "ref": "css"
           },  {
             "name": "ES6",
@@ -63,13 +83,22 @@
             "name": "Flow",
             "ref": "js"
           },  {
-            "name": "PostCSS",
-            "ref": "css"
+            "name": "NextJS",
+            "ref": "js"
+          }, {
+            "name": "Accessibility",
+            "ref": "a11y"
           }
         ],
         "description": [
           {
-            "text": "New features and graphic redesign of customer account"
+            "text": "New features and graphic redesign of customer account",
+            "list": [
+              "Frontend team with Agile method on the new responsive site",
+              "Unit and Integration testing with Jest, Chai, Enzyme, Sinon",
+              "Flow typing, Git process, code reviews, continuous delivery & pair programming",
+              "Integration PostCSS, TailWind, CSS3"
+            ]
           }
         ]
       }, {
@@ -120,7 +149,38 @@
         ],
         "description": [
           {
-            "text": "Graphic redesign integration"
+            "text": "Integration of the new graphic charter",
+            "list": [
+              "HTML & CSS Integration (Mobile and desktop)",
+              "Works closely with the marketing team and the designers"
+            ]
+          }
+        ]
+      }, {
+        "title": "Mobile developer",
+        "city": "Paris",
+        "country": "France",
+        "company": "Geoks",
+        "start": "Dec. 2016",
+        "end": "Jan. 2017",
+        "tags": [
+          {
+            "name": "Cordova",
+            "ref": "js"
+          }, {
+            "name": "Backbone.js",
+            "ref": "js"
+          }, {
+            "name": "Less",
+            "ref": "css"
+          }, {
+            "name": "Handlebars.js",
+            "ref": "js"
+          }
+        ],
+        "description": [
+          {
+            "text": "Tracking activity application for an e-bike with Bluetooth LE and GPS"
           }
         ]
       }, {
@@ -128,7 +188,7 @@
         "city": "Paris",
         "country": "France",
         "company": "CGI",
-        "start": "Sept. 2012",
+        "start": "May 2014",
         "end": "Sept. 2016",
         "tags": [
           {
@@ -153,10 +213,59 @@
         ],
         "description": [
           {
-            "text": "Current project: Sephora website for smartphones with Backbone, underscore, jQuery and Dust. Exposing the data from the web services. Two web applications with Cordova based on Backbone.js framework."
+            "text": "Sephora website for smartphones",
+            "list": [
+              "Technical project framing for the evolutions. Monitoring and implementation of changes with a team of two developers",
+              "Makes a multi-language website (IT, PL, CZ, ES)",
+              "Application developments for iOS with Cordova/Phone Gap (iPad Color Profile et iPhone MySephora)",
+              "Webmobile part of iPhone & Android application: design integration and maintenance"
+            ]
           }, {
-            "text": "Past projects:",
-            "list": ["Responsive website for Louis Vuitton as web developer.", "Web-application for Total in .Net environment. (HTML, CSS with Bootstrap from Twitter and jQuery)."]
+            "text": "Responsabilities: Lead programmer with a team of two developers"
+          }
+        ]
+      }, {
+        "title": "Software engineer",
+        "city": "Paris",
+        "country": "France",
+        "company": "CGI",
+        "start": "Sept. 2012",
+        "end": "May 2014",
+        "tags": [
+          {
+            "name": "Web application",
+            "ref": "html"
+          }, {
+            "name": "Backbone.js",
+            "ref": "js"
+          }, {
+            "name": "Responsive",
+            "ref": "css"
+          }, {
+            "name": "LESS",
+            "ref": "css"
+          }, {
+            "name": "Dust.js",
+            "ref": "js"
+          }, {
+            "name": "iOS Application",
+            "ref": "ios"
+          }
+        ],
+        "description": [
+          {
+            "text": "Sephora project:",
+            "list": [
+              "Realisation of Sephora webmobile site",
+              "Update of Sephora's iPhone application",
+              "Update and maintain of Sephora's iPad application Color Profile"
+            ]
+          }, {
+            "text": "Louis Vuitton project:",
+            "list": [
+              "Development of the user interface for Louis Vuitton website from ATG base",
+              "Responsive design and compatibility with IE8/7/6."
+            ]
           }
         ]
       }, {
@@ -187,10 +296,11 @@
         ],
         "description": [
           {
-            "text": "CMS integration in the mobility"
-          }, {
-            "text": "Projects :",
-            "list": ["Software package of events management, responsible of CMS problematic, CMS studies and tests. Followed by pre-sales of the project feasibility study, ripening workshop, costing of the project cost.", "iOS developments"]
+            "text": "CMS integration in the mobility",
+            "list": [
+              "Software package of events management, responsible of CMS problematic, CMS studies and tests. Followed by pre-sales of the project feasibility study, ripening workshop, costing of the project cost.",
+              "iOS developments"
+            ]
           }
         ]
       }, {
@@ -224,8 +334,12 @@
         ],
         "description": [
           {
-            "text": "Projects developped:",
-            "list": ["Web Application in a CRM (HTML, PHP, JavaScript-jQuery, and MySQL)", "iPad Application for the booth in Air Shows (Objective-C, Cocoa Touch)", "CMS Setting"]
+            "text": "Learn and use different languages and frameworks",
+            "list": [
+              "Web Application in a CRM (HTML, PHP, JavaScript-jQuery, and MySQL)",
+              "iPad Application for the booth in Air Shows (Objective-C, Cocoa Touch)",
+              "CMS Setting"
+            ]
           }, {
             "text": "I was in a complete autonomy to discover the different languages and to develop the different applications. I provided support to the users after acceptance-test and insured the transfer of the application to the head quarter in France."
           }
