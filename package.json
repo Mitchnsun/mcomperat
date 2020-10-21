@@ -11,6 +11,7 @@
   "homepage": "http://www.mcomper.at",
   "dependencies": {
     "gatsby": "^2.24.67",
+    "gatsby-plugin-gtag": "^1.0.13",
     "gatsby-plugin-offline": "^3.2.30",
     "gatsby-plugin-react-helmet": "^3.3.12",
     "gatsby-plugin-sharp": "^2.6.38",
