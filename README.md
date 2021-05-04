@@ -10,7 +10,7 @@ This README documents steps are necessary to get your application up and running
 
 ###### Set up ######
 * `yarn install`
-* `yarn start`
+* `yarn start` or `yarn dev`
 
 ###### Configuration ######
 
