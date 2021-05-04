@@ -40,6 +40,7 @@
     "gatsby"
   ],
   "scripts": {
+    "dev": "npm run develop",
     "build": "gatsby build",
     "heroku-postbuild": "gatsby build",
     "develop": "gatsby develop",
