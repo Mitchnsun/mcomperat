@@ -56,10 +56,13 @@ typings/
 
 # gatsby files
 .cache/
-public
+public/
 
 # Mac files
 .DS_Store
+
+# Husky
+.husky/
 
 # Yarn
 yarn-error.log
