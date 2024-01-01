@@ -25,19 +25,19 @@
         "tags": [
           {
             "name": "ReactJS",
-            "ref": "js"
+            "cat": "js"
           }, {
             "name": "NextJS",
-            "ref": "js"
+            "cat": "js"
           }, {
             "name": "NodeJS",
-            "ref": "back"
+            "cat": "back"
           }, {
             "name": "Firebase",
-            "ref": "db"
+            "cat": "db"
           }, {
             "name": "Cypress",
-            "ref": "test"
+            "cat": "test"
           }
         ],
         "description": [
@@ -64,31 +64,31 @@
         "tags": [
           {
             "name": "React 16",
-            "ref": "js"
+            "cat": "js"
           }, {
             "name": "GraphQL",
-            "ref": "js"
+            "cat": "js"
           },{
             "name": "HTML5",
-            "ref": "html"
+            "cat": "html"
           }, {
             "name": "CSS3",
-            "ref": "css"
+            "cat": "css"
           }, {
             "name": "PostCSS",
-            "ref": "css"
+            "cat": "css"
           },{
             "name": "ES6",
-            "ref": "js"
+            "cat": "js"
           }, {
             "name": "Flow",
-            "ref": "js"
+            "cat": "js"
           },  {
             "name": "NextJS",
-            "ref": "js"
+            "cat": "js"
           }, {
             "name": "Accessibilité",
-            "ref": "a11y"
+            "cat": "a11y"
           }
         ],
         "description": [
@@ -112,16 +112,16 @@
         "tags": [
           {
             "name": "AngularJS",
-            "ref": "js"
+            "cat": "js"
           }, {
             "name": "HTML5",
-            "ref": "html"
+            "cat": "html"
           }, {
             "name": "CSS3",
-            "ref": "css"
+            "cat": "css"
           },  {
             "name": "Bootstrap",
-            "ref": "css"
+            "cat": "css"
           }
         ],
         "description": [
@@ -143,13 +143,13 @@
         "tags": [
           {
             "name": "SASS",
-            "ref": "css"
+            "cat": "css"
           }, {
             "name": "HTML5",
-            "ref": "html"
+            "cat": "html"
           }, {
             "name": "CSS3",
-            "ref": "css"
+            "cat": "css"
           }
         ],
         "description": [
@@ -171,16 +171,16 @@
         "tags": [
           {
             "name": "Cordova",
-            "ref": "js"
+            "cat": "js"
           }, {
             "name": "Backbone.js",
-            "ref": "js"
+            "cat": "js"
           }, {
             "name": "Less",
-            "ref": "css"
+            "cat": "css"
           }, {
             "name": "Handlebars.js",
-            "ref": "js"
+            "cat": "js"
           }
         ],
         "description": [
@@ -198,22 +198,22 @@
         "tags": [
           {
             "name": "Web-application",
-            "ref": "html"
+            "cat": "html"
           }, {
             "name": "HTML5",
-            "ref": "html"
+            "cat": "html"
           }, {
             "name": "CSS3",
-            "ref": "css"
+            "cat": "css"
           }, {
             "name": "Backbone.js",
-            "ref": "js"
+            "cat": "js"
           }, {
             "name": "Dust.js / Handlebar.js",
-            "ref": "js"
+            "cat": "js"
           }, {
             "name": "Phone Gap",
-            "ref": "js"
+            "cat": "js"
           }
         ],
         "description": [
@@ -239,22 +239,22 @@
         "tags": [
           {
             "name": "Web-application",
-            "ref": "html"
+            "cat": "html"
           }, {
             "name": "Backbone.js",
-            "ref": "js"
+            "cat": "js"
           }, {
             "name": "Responsive",
-            "ref": "css"
+            "cat": "css"
           }, {
             "name": "LESS",
-            "ref": "css"
+            "cat": "css"
           }, {
             "name": "Dust.js",
-            "ref": "js"
+            "cat": "js"
           }, {
             "name": "Application iOS",
-            "ref": "ios"
+            "cat": "ios"
           }
         ],
         "description": [
@@ -284,19 +284,19 @@
         "tags": [
           {
             "name": "Web-application",
-            "ref": "html"
+            "cat": "html"
           }, {
             "name": "jQuery Mobile",
-            "ref": "js"
+            "cat": "js"
           }, {
             "name": "Twitter Bootstrap",
-            "ref": "css"
+            "cat": "css"
           }, {
             "name": "Phone Gap",
-            "ref": "js"
+            "cat": "js"
           }, {
             "name": "Cocoa Touch",
-            "ref": "ios"
+            "cat": "ios"
           }
         ],
         "description": [
@@ -319,22 +319,22 @@
         "tags": [
           {
             "name": "HTML",
-            "ref": "html"
+            "cat": "html"
           }, {
             "name": "PHP",
-            "ref": "back"
+            "cat": "back"
           }, {
             "name": "jQuery",
-            "ref": "js"
+            "cat": "js"
           }, {
             "name": "MySQL",
-            "ref": "db"
+            "cat": "db"
           }, {
             "name": "Objective-C",
-            "ref": "ios"
+            "cat": "ios"
           }, {
             "name": "Joomla",
-            "ref": ""
+            "cat": ""
           }
         ],
         "description": [
