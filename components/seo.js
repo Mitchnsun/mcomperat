@@ -23,7 +23,6 @@ function SEO({ description, lang, meta, title }) {
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
       <link rel="canonical" href="https://mcomper.at/" />
-      {lang && <html lang={lang} />}
       {meta && meta.map((item, index) => (
         <meta key={index} {...item} />
       ))}

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Card from '../card/Card';
 import GithubLogo from '../assets/icons/github-logo';
 
@@ -14,7 +15,12 @@ const Heading = ({ person = {} }) => (
         ) : null}
         {person.link.linkedin ? (
           <a href={person.link.linkedin} target="_blank" rel="noopener noreferrer">
-            <img src="/LinkedInSquare.png" alt={`View ${person.firstname} ${person.lastname}'s profile on LinkedIn`} />
+            <Image 
+              src="/LinkedInSquare.png" 
+              alt={`View ${person.firstname} ${person.lastname}'s profile on LinkedIn`}
+              width={32}
+              height={32}
+            />
           </a>
         ) : null}
       </div>
