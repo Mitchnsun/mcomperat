@@ -37,7 +37,7 @@ For any information, contact matthieu.comperat@gmail.com
 
 ### Version
 
-- v5.0 - December 2024 (NextJS - SSR/SSG)
+- v5.0 - September 2025 (NextJS 13 - SSR/SSG)
 - v4.0 - October 2020 (Gatsby)
 - v3.0 - November 2018 (React)
 - v2.0 - January 2016
