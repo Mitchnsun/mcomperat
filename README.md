@@ -11,13 +11,15 @@ This README documents steps are necessary to get your application up and running
 
 ###### Set up
 
-- `yarn install`
-- `yarn start` or `yarn dev`
+- `npm install`
+- `npm run dev` for development
+- `npm run build` for production build  
+- `npm start` for production server
 
 ###### Configuration
 
 - To see which modules are outdated: `npm outdated`
-- Using yarn `yarn upgrade-interactive --latest`
+- Using npm `npm update`
 
 - Database configuration
 - How to run tests
@@ -35,6 +37,7 @@ For any information, contact matthieu.comperat@gmail.com
 
 ### Version
 
+- v5.0 - December 2024 (NextJS - SSR/SSG)
 - v4.0 - October 2020 (Gatsby)
 - v3.0 - November 2018 (React)
 - v2.0 - January 2016
