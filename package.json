@@ -10,7 +10,7 @@
   "license": "ISC",
   "homepage": "http://www.mcomper.at",
   "dependencies": {
-    "next": "^13.5.6",
+    "next": "^14.2.32",
     "prop-types": "^15.7.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
