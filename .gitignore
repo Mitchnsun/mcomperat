@@ -73,6 +73,14 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 
+# Yarn 4
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
 # NextJS
 .next/
 out/
