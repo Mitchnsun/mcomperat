@@ -1,12 +1,11 @@
 import React from 'react';
-import { v4 as uuidv4 } from 'uuid';
 import Post from './Post';
 
 const PostList = ({ title, list = [], children }) => (
   <>
     <div>
       <h2>{title}</h2>
-      {children || list.map((post) => <Post {...post} key={uuidv4()} />)}
+      {children || list.map((post, index) => <Post {...post} key={post.id || post.title || index} />)}
     </div>
     <style jsx>
       {`

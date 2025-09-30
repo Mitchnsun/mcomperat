@@ -1,16 +1,15 @@
 import React from 'react';
-import { v4 as uuidv4 } from 'uuid';
 
 const PostDescription = ({ description }) => (
   <>
     <article>
       {description.map((item) => (
-        <div key={uuidv4()}>
+        <div key={item.id || `desc-${description.indexOf(item)}`}>
           {item.text}
           {item.list ? (
             <ul>
               {item.list.map((text) => (
-                <li key={uuidv4()}>{text}</li>
+                <li key={`item-${item.list.indexOf(text)}`}>{text}</li>
               ))}
             </ul>
           ) : null}

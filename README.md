@@ -9,19 +9,19 @@ This README documents steps are necessary to get your application up and running
 - Web resume of Matthieu Compérat
 - [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
-###### Prerequisites
+### Prerequisites
 
 - Node.js 22+
 - Yarn 4+ (managed via corepack)
 
-###### Set up
+### Set up
 
 - `yarn install`
 - `yarn dev` for development
 - `yarn build` for production build  
 - `yarn start` for production server
 
-###### Configuration
+### Configuration
 
 - To see which modules are outdated: `yarn outdated`
 - Using yarn: `yarn upgrade-interactive`

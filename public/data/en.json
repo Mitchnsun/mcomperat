@@ -2,7 +2,6 @@
   "person": {
     "firstname": "Matthieu",
     "lastname": "Compérat",
-    "birthday": "13/02/1987",
     "title": "Frontend developer",
     "email": "matthieu.comperat@gmail.com",
     "link": {
@@ -221,7 +220,7 @@
               "Webmobile part of iPhone & Android application: design integration and maintenance"
             ]
           }, {
-            "text": "Responsabilities: Lead programmer with a team of two developers"
+            "text": "Responsibilities: Lead programmer with a team of two developers"
           }
         ]
       }, {
@@ -329,7 +328,7 @@
             "ref": "ios"
           }, {
             "name": "Joomla",
-            "ref": ""
+            "ref": "cms"
           }
         ],
         "description": [

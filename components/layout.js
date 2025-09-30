@@ -61,7 +61,7 @@ const Layout = ({ person, children }) => (
           }
         }
         @media (max-width: 480px) {
-          .main {
+          main {
             padding: 1em 1em 0;
           }
         }

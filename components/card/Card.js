@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Card = ({ firstname, lastname, title, birthday, email }) => (
+const Card = ({ firstname, lastname, title, email }) => (
   <>
     <hgroup>
       <h1>
@@ -9,7 +9,6 @@ const Card = ({ firstname, lastname, title, birthday, email }) => (
       <h2>{title}</h2>
     </hgroup>
     <div>
-      <p>{birthday}</p>
       <p>{email}</p>
     </div>
     <style jsx>

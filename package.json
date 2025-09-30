@@ -46,7 +46,6 @@
     "build": "next build",
     "start": "next start",
     "heroku-postbuild": "next build",
-    "export": "next export",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "test": "yarn lint",
     "lint": "eslint --cache --ext .js ."

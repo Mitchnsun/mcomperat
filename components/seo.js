@@ -15,7 +15,8 @@ function SEO({ description, lang, meta, title }) {
     <Head>
       <title>{title ? `${title} | ${siteMetadata.title}` : siteMetadata.title}</title>
       <meta name="description" content={metaDescription} />
-      <meta property="og:title" content={title} />
+      <meta property="og:title" content={title || siteMetadata.title} />
+      <meta name="twitter:title" content={title || siteMetadata.title} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary" />

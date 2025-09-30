@@ -1,5 +1,4 @@
 import React from 'react';
-import { v4 as uuidv4 } from 'uuid';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -13,8 +12,8 @@ function ENPage({ data }) {
       <PostList title={data.work.title} list={data.work.experiences} />
       <PostList title={data.education.title} list={data.education.schools} />
       <PostList title={data.extra.title}>
-        {data.extra.items.map((item) => (
-          <PostExtra {...item} key={uuidv4()} />
+        {data.extra.items.map((item, index) => (
+          <PostExtra {...item} key={item.title || index} />
         ))}
       </PostList>
     </Layout>

@@ -8,16 +8,16 @@ const Heading = ({ person = {} }) => (
     <header>
       <Card {...person} />
       <div>
-        {person.link.github ? (
+        {person.link?.github ? (
           <a id="Github" href={person.link.github} target="_blank" rel="noopener noreferrer">
             <GithubLogo />
           </a>
         ) : null}
-        {person.link.linkedin ? (
+        {person.link?.linkedin ? (
           <a href={person.link.linkedin} target="_blank" rel="noopener noreferrer">
             <Image 
               src="/LinkedInSquare.png" 
-              alt={`View ${person.firstname} ${person.lastname}'s profile on LinkedIn`}
+              alt={`View ${person.firstname ?? ''} ${person.lastname ?? ''}'s profile on LinkedIn`}
               width={32}
               height={32}
             />
