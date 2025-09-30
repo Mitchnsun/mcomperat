@@ -2,28 +2,19 @@ module.exports = {
   env: {
     browser: true,
     es6: true,
+    node: true,
   },
-  extends: ['plugin:react/recommended', 'plugin:react-hooks/recommended', 'airbnb'],
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
-  },
+  extends: [
+    'next/core-web-vitals',
+  ],
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: 11,
+    ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: ['react', 'prettier'],
   rules: {
-    'object-curly-newline': 'off',
-    'comma-dangle': 'off',
-    'prettier/prettier': 'error',
-    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
-    'react/jsx-one-expression-per-line': 'off',
-    'react/jsx-props-no-spreading': 'off',
-    'react/prefer-stateless-function': [0, { ignorePureComponents: true }],
+    'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
+    'import/no-extraneous-dependencies': 'off',
+    '@next/next/no-img-element': 'warn',
   },
 };

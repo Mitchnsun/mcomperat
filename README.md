@@ -9,15 +9,22 @@ This README documents steps are necessary to get your application up and running
 - Web resume of Matthieu Compérat
 - [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
-###### Set up
+### Prerequisites
+
+- Node.js 22+
+- Yarn 4+ (managed via corepack)
+
+### Set up
 
 - `yarn install`
-- `yarn start` or `yarn dev`
+- `yarn dev` for development
+- `yarn build` for production build  
+- `yarn start` for production server
 
-###### Configuration
+### Configuration
 
-- To see which modules are outdated: `npm outdated`
-- Using yarn `yarn upgrade-interactive --latest`
+- To see which modules are outdated: `yarn outdated`
+- Using yarn: `yarn upgrade-interactive`
 
 - Database configuration
 - How to run tests
@@ -35,6 +42,7 @@ For any information, contact matthieu.comperat@gmail.com
 
 ### Version
 
+- v5.0 - September 2025 (NextJS 13 - SSR/SSG)
 - v4.0 - October 2020 (Gatsby)
 - v3.0 - November 2018 (React)
 - v2.0 - January 2016

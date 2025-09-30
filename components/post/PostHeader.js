@@ -1,5 +1,4 @@
 import React from 'react';
-import { v4 as uuidv4 } from 'uuid';
 import Tag from '../tag/Tag';
 
 const PostHeader = ({ title, company, city, country, context, start, end, tags }) => (
@@ -13,7 +12,7 @@ const PostHeader = ({ title, company, city, country, context, start, end, tags }
         {start} - {end}
       </p>
       <p className="meta tags">
-        {tags ? tags.map((tag) => <Tag tag={tag.ref} name={tag.name} key={uuidv4()} />) : null}
+        {tags ? tags.map((tag) => <Tag tag={tag.ref} name={tag.name} key={tag.ref} />) : null}
       </p>
     </header>
     <style jsx>

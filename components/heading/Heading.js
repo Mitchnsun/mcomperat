@@ -1,21 +1,26 @@
 import React from 'react';
+import Image from 'next/image';
 import Card from '../card/Card';
-import GithubLogo from '../../assets/icons/github-logo';
-import LinkedInLogo from '../../assets/icons/LinkedInSquare.png';
+import GithubLogo from '../assets/icons/github-logo';
 
 const Heading = ({ person = {} }) => (
   <>
     <header>
       <Card {...person} />
       <div>
-        {person.link.github ? (
+        {person.link?.github ? (
           <a id="Github" href={person.link.github} target="_blank" rel="noopener noreferrer">
             <GithubLogo />
           </a>
         ) : null}
-        {person.link.linkedin ? (
+        {person.link?.linkedin ? (
           <a href={person.link.linkedin} target="_blank" rel="noopener noreferrer">
-            <img src={LinkedInLogo} alt={`View ${person.firstname} ${person.lastname}'s profile on LinkedIn`} />
+            <Image 
+              src="/LinkedInSquare.png" 
+              alt={`View ${person.firstname ?? ''} ${person.lastname ?? ''}'s profile on LinkedIn`}
+              width={32}
+              height={32}
+            />
           </a>
         ) : null}
       </div>

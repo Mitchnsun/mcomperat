@@ -56,7 +56,9 @@ typings/
 
 # gatsby files
 .cache/
-public/
+
+# NextJS public folder is tracked, unlike Gatsby
+# public/
 
 # Mac files
 .DS_Store
@@ -70,3 +72,15 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+
+# Yarn 4
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# NextJS
+.next/
+out/

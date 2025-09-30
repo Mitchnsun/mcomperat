@@ -1,6 +1,5 @@
 import React from 'react';
 import Heading from './heading/Heading';
-import './layout.css';
 
 const Layout = ({ person, children }) => (
   <>
@@ -11,7 +10,7 @@ const Layout = ({ person, children }) => (
       <div>
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
+          © {new Date().getFullYear()}, Built with <a href="https://nextjs.org">Next.js</a>
         </footer>
       </div>
     </div>
@@ -62,7 +61,7 @@ const Layout = ({ person, children }) => (
           }
         }
         @media (max-width: 480px) {
-          .main {
+          main {
             padding: 1em 1em 0;
           }
         }

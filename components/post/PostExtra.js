@@ -1,5 +1,4 @@
 import React from 'react';
-import { v4 as uuidv4 } from 'uuid';
 
 const PostExtra = ({ print, title, text, list }) => (
   <>
@@ -10,8 +9,8 @@ const PostExtra = ({ print, title, text, list }) => (
       <div>
         {text}
         <ul>
-          {list.map((item) => (
-            <li key={uuidv4()}>{item}</li>
+          {list.map((item, index) => (
+            <li key={index}>{item}</li>
           ))}
         </ul>
       </div>
@@ -52,8 +51,9 @@ const PostExtra = ({ print, title, text, list }) => (
             line-height: 1em;
           }
           ul {
-            margin: 0 auto O.5em;
+            margin: 0 auto 0.5em;
             list-style-type: none;
+          }
           }
         }
       `}

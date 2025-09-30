@@ -1,27 +1,26 @@
-{ 
+{
   "person": {
     "firstname": "Matthieu",
     "lastname": "Compérat",
-    "birthday": "13/02/1987",
     "title": "Frontend developer",
     "email": "matthieu.comperat@gmail.com",
     "link": {
-      "linkedin": "https://fr.linkedin.com/in/matthieucomperat",
+      "linkedin": "https://www.linkedin.com/in/matthieucomperat/?locale=en_US",
       "bitbucket": "https://bitbucket.org/matthieu_comperat/",
       "github": "https://github.com/Mitchnsun"
     }
   },
 
   "work": {
-    "title": "Expériences professionnelles",
+    "title": "Work Experiences",
     "experiences": [
       {
-        "title": "Freelance Développeur Full-stack",
+        "title": "Freelance Full-stack Developer",
         "city": "Paris",
         "country": "France",
         "company": "ADSPL",
-        "start": "Juin 2018",
-        "end": "Sept. 2020",
+        "start": "June 2018",
+        "end": "June 2020",
         "tags": [
           {
             "name": "ReactJS",
@@ -42,33 +41,32 @@
         ],
         "description": [
           {
-            "text": "Développement d'un site pour le réglèment de la cotisation du syndicat UNAPL (Espace client avec paiement).",
+            "text": "For the client UNAPL, development of a platform to collect their members' subscription",
             "list": [
-              "Développement site front avec un espace client et deux modes de paiement (CB & SEPA)",
-              "Développement Backend avec NodeJS et connecté à Firebase",
-              "Mise en place des tests automatisés, de unitaire (Jest) à E2E (Cypress)",
-              "Recueil du besoin et écriture des SFD"
+              "Create from scratch a website with memberspace and two payment methods (Credit Card, SEPA)",
+              "Backend with NodeJS and link to Firebase",
+              "Setting up end-to-end tests with Cypress",
+              "Evaluate the needs and writing specifications"
             ]
-          },
-          {
-            "text": "Mission réalisée en temps partiel"
+          }, {
+            "text": "Part-time mission"
           }
         ]
       }, {
-        "title": "Freelance Développeur Frontend",
+        "title": "Freelance Frontend Developer",
         "city": "Paris",
         "country": "France",
         "company": "Club Med",
-        "start": "Juin 2017",
+        "start": "June 2017",
         "end": "Jan. 2020",
         "tags": [
           {
-            "name": "React 16",
+            "name": "ReactJS",
             "ref": "js"
           }, {
             "name": "GraphQL",
             "ref": "js"
-          },{
+          }, {
             "name": "HTML5",
             "ref": "html"
           }, {
@@ -77,7 +75,7 @@
           }, {
             "name": "PostCSS",
             "ref": "css"
-          },{
+          },  {
             "name": "ES6",
             "ref": "js"
           }, {
@@ -87,28 +85,28 @@
             "name": "NextJS",
             "ref": "js"
           }, {
-            "name": "Accessibilité",
+            "name": "Accessibility",
             "ref": "a11y"
           }
         ],
         "description": [
           {
-            "text": "Evolutions et refonte graphique sur l'espace client du site commercial",
+            "text": "New features and graphic redesign of customer account",
             "list": [
-              "Equipes Front en Agile sur le nouveau site Responsive",
-              "Tests unitaire et d'intégration avec Jest, Chai, Enzyme, Sinon",
+              "Frontend team with Agile method on the new responsive site",
+              "Unit and Integration testing with Jest, Chai, Enzyme, Sinon",
               "Flow typing, Git process, code reviews, continuous delivery & pair programming",
-              "Integration PostCSS, Tailwind, CSS3"
+              "Integration PostCSS, TailWind, CSS3"
             ]
           }
         ]
       }, {
-        "title": "Freelance Développeur Frontend",
+        "title": "Freelance Frontend Developer",
         "city": "Paris",
         "country": "France",
         "company": "Verifone",
-        "start": "Mars 2017",
-        "end": "Mai 2017",
+        "start": "Mar. 2017",
+        "end": "May 2017",
         "tags": [
           {
             "name": "AngularJS",
@@ -126,20 +124,16 @@
         ],
         "description": [
           {
-            "text": "Réalisation de fonctionnalité sur leur outil interne",
-            "list": [
-              "Refonte front avec Angularjs et Bootstrap",
-              "Mise en place de Git Flow"
-            ]
+            "text": "Feature on the internal website"
           }
         ]
       }, {
-        "title": "Freelance Intégrateur Web",
+        "title": "Freelance Web Developer",
         "city": "Paris",
         "country": "France",
         "company": "L'Equipe",
         "start": "Oct. 2016",
-        "end": "Fev. 2017",
+        "end": "Feb. 2017",
         "tags": [
           {
             "name": "SASS",
@@ -154,15 +148,15 @@
         ],
         "description": [
           {
-            "text": "Intégration de la nouvelle charte graphique",
+            "text": "Integration of the new graphic charter",
             "list": [
-              "Intégration HTML et CSS (desktop et mobile)",
-              "Lien direct avec les graphistes et le marketing"
+              "HTML & CSS Integration (Mobile and desktop)",
+              "Works closely with the marketing team and the designers"
             ]
           }
         ]
       }, {
-        "title": "Développeur mobile",
+        "title": "Mobile developer",
         "city": "Paris",
         "country": "France",
         "company": "Geoks",
@@ -185,15 +179,15 @@
         ],
         "description": [
           {
-            "text": "Application de tracking d’activité de vélo électrique via Bluetooth LE et GPS"
+            "text": "Tracking activity application for an e-bike with Bluetooth LE and GPS"
           }
         ]
       }, {
-        "title": "Référent technique Web & Mobile",
+        "title": "Web & Mobile Lead Programmer",
         "city": "Paris",
         "country": "France",
         "company": "CGI",
-        "start": "Mai 2014",
+        "start": "May 2014",
         "end": "Sept. 2016",
         "tags": [
           {
@@ -218,27 +212,27 @@
         ],
         "description": [
           {
-            "text": "Sephora, site webmobile et applications",
+            "text": "Sephora website for smartphones",
             "list": [
-              "Cadrage technique des évolutions. Suivi et réalisation des évolutions avec une équipe de deux développeurs",
-              "Création de version multi-langues pour le site webmobile (IT, PL, CZ, ES)",
-              "Evolutions des applications iOS internes, avec Cordova/Phone Gap (iPad Color Profile et iPhone MySephora)",
-              "Intégration et maintenance de la partie webmobile des applications iPhone et Android"
+              "Technical project framing for the evolutions. Monitoring and implementation of changes with a team of two developers",
+              "Makes a multi-language website (IT, PL, CZ, ES)",
+              "Application developments for iOS with Cordova/Phone Gap (iPad Color Profile et iPhone MySephora)",
+              "Webmobile part of iPhone & Android application: design integration and maintenance"
             ]
           }, {
-            "text": "Responsabilités : Référent technique d'une équipe de deux développeurs"
+            "text": "Responsibilities: Lead programmer with a team of two developers"
           }
         ]
       }, {
-        "title": "Ingénieur en Technologie de l'Information",
+        "title": "Software engineer",
         "city": "Paris",
         "country": "France",
         "company": "CGI",
         "start": "Sept. 2012",
-        "end": "Mai 2014",
+        "end": "May 2014",
         "tags": [
           {
-            "name": "Web-application",
+            "name": "Web application",
             "ref": "html"
           }, {
             "name": "Backbone.js",
@@ -253,34 +247,34 @@
             "name": "Dust.js",
             "ref": "js"
           }, {
-            "name": "Application iOS",
+            "name": "iOS Application",
             "ref": "ios"
           }
         ],
         "description": [
           {
-            "text": "Projet Sephora :",
+            "text": "Sephora project:",
             "list": [
-              "Réalisation du site web-mobile de Sephora",
-              "Mise à jour de l’application iPhone de Sephora",
-              "Reprise et évolution de l’application iPad Color Profile"
+              "Realisation of Sephora webmobile site",
+              "Update of Sephora's iPhone application",
+              "Update and maintain of Sephora's iPad application Color Profile"
             ]
           }, {
-            "text": "Projet Louis Vuitton :",
+            "text": "Louis Vuitton project:",
             "list": [
-              "Réalisation de l’interface client Web du site à partir du socle ATG",
-              "Compatibilité pour toutes les tailles d’écran. Adaptation pour compatibilité IE8/7/6"
+              "Development of the user interface for Louis Vuitton website from ATG base",
+              "Responsive design and compatibility with IE8/7/6."
             ]
           }
         ]
       }, {
-        "title": "Analyste développeur mobile et web",
-        "context": "Stage projet de fin d'étude",
+        "title": "Web mobile analyst",
+        "context": "Final year project",
         "city": "Lyon",
         "country": "France",
         "company": "Logica",
-        "start": "Fév. 2012",
-        "end": "Août 2012",
+        "start": "Feb. 2012",
+        "end": "Aug. 2012",
         "tags": [
           {
             "name": "Web-application",
@@ -301,21 +295,21 @@
         ],
         "description": [
           {
-            "text": "Intégrer la notion de CMS avec la mobilite",
+            "text": "CMS integration in the mobility",
             "list": [
-              "Progiciel de gestion d’événements, en charge de la problématique de CMS, étude et test de CMS. Suivi de l'avant-vente du projet, étude de faisabilité, atelier de maturation, chiffrage du coût du projet.",
-              "Participation aux développements d’applications iOS"
+              "Software package of events management, responsible of CMS problematic, CMS studies and tests. Followed by pre-sales of the project feasibility study, ripening workshop, costing of the project cost.",
+              "iOS developments"
             ]
           }
         ]
       }, {
-        "title": "Analyste développeur",
-        "context": "Stage année de césure",
+        "title": "Intern in IT",
+        "context": "One-year internship",
         "city": "Pembroke Pines",
         "country": "USA",
         "company": "Daher-Socata",
-        "start": "Juil. 2010",
-        "end": "Juil. 2011",
+        "start": "July 2010",
+        "end": "July 2011",
         "tags": [
           {
             "name": "HTML",
@@ -330,23 +324,23 @@
             "name": "MySQL",
             "ref": "db"
           }, {
-            "name": "Objective-C",
+            "name": "Cocoa Touch",
             "ref": "ios"
           }, {
             "name": "Joomla",
-            "ref": ""
+            "ref": "cms"
           }
         ],
         "description": [
           {
-            "text": "Découvrir et utiliser les différents langages",
+            "text": "Learn and use different languages and frameworks",
             "list": [
-              "Applications web dans un CRM",
-              "Application iPad pour les salons aéronautiques",
-              "Configuration d’un CMS"
+              "Web Application in a CRM (HTML, PHP, JavaScript-jQuery, and MySQL)",
+              "iPad Application for the booth in Air Shows (Objective-C, Cocoa Touch)",
+              "CMS Setting"
             ]
           }, {
-            "text": "J’étais en complète autonomie pour découvrir les différents langages et pour développer les différentes applications. J’ai fourni le support aux utilisateurs après validation et assurer le transfert des applications au siège social en France. Mon but était de laisser une documentation claire pour les prochains développeurs."
+            "text": "I was in a complete autonomy to discover the different languages and to develop the different applications. I provided support to the users after acceptance-test and insured the transfer of the application to the head quarter in France."
           }
         ]
       }
@@ -357,17 +351,21 @@
     "title": "Education",
     "schools": [
       {
-        "title": "Ecole supérieure de Chimie, Physique et Electronique de Lyon (ESCPE)",
+        "title": "CPE Lyon",
         "city": "Lyon",
         "country": "France",
-        "company": "Ecole d'ingénieur",
-        "context": "Electronique, Télécoms et informatique",
-        "specialty": "Majeur Systèmes Informatiques Distribués",
+        "company": "Engineer School",
+        "context": "department of electronics, IT and Telecommunications,",
+        "specialty": "",
         "start": "2007",
         "end": "2012",
         "description": [
           {
-            "text": "Diplomé en Septembre 2012. Bachelor obtenu en Juin 2009. Majeure SID (Systèmes informatiques distribuées) : Services Web (HTML/CSS/PHP), Java, Interconnexion et administration des réseaux, Graphes et Algorithmes."
+            "text": "Bachelor degree obtained in June 2009, Graduation at MSc Level in September 2012. 2 years full-time higher education in mathematics and science with languages and general studies, 3 years at higher education. Engineering school in France"
+          }, {
+            "text": "Main subjects: Programmation (C, C++), Databases, Digital and analogical electronics Signal and linear systems, Optics."
+          }, {
+            "text": "IT Specialization : HTML, PHP, Java, XML, Interconnection and administration of networks, Graphs and algorithms, Getting an award named “Best increase prospect” from the CCIL (Chamber of commerce and industry of Lyon) during Campus Creation 2008 contest. The target was to present an innovative product. Project: “Eau Parleur”"
           }
         ]
       }
@@ -378,19 +376,19 @@
     "title": "Extras",
     "items": [
       {
-        "title": "Langues",
+        "title": "Languages",
         "text": "",
-        "list": ["Français : langue maternelle", "Anglais : courant - Niveau B2 FCE of Cambridge", "Espagnol : notions"],
+        "list": ["French : mother tongue", "English : Good level (spoken, written, reading) - FCE of Cambridge (B2)", "Spanish : basic knowledge"],
         "print": true
       },{
-        "title": "Intérêts",
+        "title": "Interests",
         "text": "",
         "list": ["ReactJS", "NodeJS", "TypeScript", "Git", "CSS"],
         "print": true
       }, {
-        "title": "Projets personnels",
+        "title": "Personal projects",
         "text": "",
-        "list": ["Supersprint Résultat : Site d'affichage des résultat du Supersprint 20ième", "Mon CV Web", "Lotofoot : site de pari footbalistique entre amis"],
+        "list": ["Supersprint Result : site for the results of Supersprint 20ième", "My web resume", "Lotofoot : Football betting website for friends"],
         "print": false
       }, {
         "title": "Sports",
