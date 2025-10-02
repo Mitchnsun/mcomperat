@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import SEO from '../components/seo';
 
-function Custom404() {
+const Custom404: React.FC = () => {
   return (
     <>
       <SEO title="404: Not found" />
@@ -13,6 +13,6 @@ function Custom404() {
       </div>
     </>
   );
-}
+};
 
 export default Custom404;

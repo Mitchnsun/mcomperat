@@ -1,6 +1,7 @@
 import React from 'react';
+import { TagProps } from '../../types';
 
-const BACKGROUND_COLOR = {
+const BACKGROUND_COLOR: Record<string, string> = {
   html: '#5aba59',
   css: '#4d85d1',
   js: '#e59539',
@@ -9,7 +10,7 @@ const BACKGROUND_COLOR = {
   db: '#6faedb',
 };
 
-const Tag = ({ name, tag }) => (
+const Tag: React.FC<TagProps> = ({ name, tag }) => (
   <>
     <span>{name}</span>
     <style jsx>

@@ -11,13 +11,17 @@
   "homepage": "http://www.mcomper.at",
   "dependencies": {
     "next": "^13.5.6",
-    "prop-types": "^15.7.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "styled-jsx": "^5.1.1",
-    "uuid": "^9.0.1"
+    "styled-jsx": "^5.1.1"
   },
   "devDependencies": {
+    "@types/node": "^24.6.2",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@types/styled-jsx": "^3.4.4",
+    "@typescript-eslint/eslint-plugin": "^8.45.0",
+    "@typescript-eslint/parser": "^8.45.0",
     "eslint": "^8.57.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-next": "^13.5.6",
@@ -29,7 +33,8 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
-    "prettier": "^3.1.0"
+    "prettier": "^3.1.0",
+    "typescript": "^5.9.3"
   },
   "keywords": [
     "nextjs",
@@ -46,9 +51,10 @@
     "build": "next build",
     "start": "next start",
     "heroku-postbuild": "next build",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "test": "yarn lint",
-    "lint": "eslint --cache --ext .js ."
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "test": "yarn lint && yarn type-check",
+    "lint": "eslint --cache --ext .js,.jsx,.ts,.tsx .",
+    "type-check": "tsc --noEmit"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"

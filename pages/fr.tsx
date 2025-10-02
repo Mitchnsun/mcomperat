@@ -1,11 +1,13 @@
 import React from 'react';
+import { GetStaticProps } from 'next';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import PostList from '../components/post/PostList';
 import PostExtra from '../components/post/PostExtra';
+import { PageProps, ResumeData } from '../types';
 
-function FRPage({ data }) {
+const FRPage: React.FC<PageProps> = ({ data }) => {
   return (
     <Layout person={data.person}>
       <SEO title="CV" lang="fr" />
@@ -18,15 +20,15 @@ function FRPage({ data }) {
       </PostList>
     </Layout>
   );
-}
+};
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps<PageProps> = async () => {
   const data = await import('../public/data/fr.json');
   return {
     props: {
-      data: data.default,
+      data: data.default as ResumeData,
     },
   };
-}
+};
 
 export default FRPage;

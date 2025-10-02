@@ -2,8 +2,9 @@ import React from 'react';
 import Image from 'next/image';
 import Card from '../card/Card';
 import GithubLogo from '../assets/icons/github-logo';
+import { HeadingProps } from '../../types';
 
-const Heading = ({ person = {} }) => (
+const Heading: React.FC<HeadingProps> = ({ person = {} }) => (
   <>
     <header>
       <Card {...person} />

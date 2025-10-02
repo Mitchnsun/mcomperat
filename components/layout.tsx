@@ -1,7 +1,8 @@
 import React from 'react';
 import Heading from './heading/Heading';
+import { LayoutProps } from '../types';
 
-const Layout = ({ person, children }) => (
+const Layout: React.FC<LayoutProps> = ({ person, children }) => (
   <>
     <div id="App">
       <nav>

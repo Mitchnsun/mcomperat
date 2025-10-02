@@ -1,11 +1,12 @@
 import React from 'react';
 import Post from './Post';
+import { PostListProps } from '../../types';
 
-const PostList = ({ title, list = [], children }) => (
+const PostList: React.FC<PostListProps> = ({ title, list = [], children }) => (
   <>
     <div>
       <h2>{title}</h2>
-      {children || list.map((post, index) => <Post {...post} key={post.id || post.title || index} />)}
+      {children || list.map((post, index) => <Post {...post} key={post.title || index} />)}
     </div>
     <style jsx>
       {`

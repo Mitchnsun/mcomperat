@@ -1,6 +1,7 @@
 import React from 'react';
+import { CardProps } from '../../types';
 
-const Card = ({ firstname, lastname, title, email }) => (
+const Card: React.FC<CardProps> = ({ firstname, lastname, title, email }) => (
   <>
     <hgroup>
       <h1>

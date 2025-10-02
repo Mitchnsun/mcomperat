@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import PropTypes from 'prop-types';
+import { SEOProps } from '../types';
 
 const siteMetadata = {
   title: 'Matthieu Compérat',
@@ -8,7 +8,7 @@ const siteMetadata = {
   author: '@Mitchnsun',
 };
 
-function SEO({ description, lang, meta, title }) {
+const SEO: React.FC<SEOProps> = ({ description, meta = [], title }) => {
   const metaDescription = description || siteMetadata.description;
 
   return (
@@ -21,7 +21,7 @@ function SEO({ description, lang, meta, title }) {
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:creator" content={siteMetadata.author} />
-      <meta name="twitter:title" content={title} />
+      <meta name="twitter:title" content={title || ''} />
       <meta name="twitter:description" content={metaDescription} />
       <link rel="canonical" href="https://mcomper.at/" />
       {meta && meta.map((item, index) => (
@@ -29,19 +29,6 @@ function SEO({ description, lang, meta, title }) {
       ))}
     </Head>
   );
-}
-
-SEO.defaultProps = {
-  lang: 'en',
-  meta: [],
-  description: '',
-};
-
-SEO.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
 };
 
 export default SEO;

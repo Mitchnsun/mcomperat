@@ -1,6 +1,7 @@
 import React from 'react';
+import { PostExtraProps } from '../../types';
 
-const PostExtra = ({ print, title, text, list }) => (
+const PostExtra: React.FC<PostExtraProps> = ({ print, title, text, list }) => (
   <>
     <section>
       <header>
@@ -53,7 +54,6 @@ const PostExtra = ({ print, title, text, list }) => (
           ul {
             margin: 0 auto 0.5em;
             list-style-type: none;
-          }
           }
         }
       `}

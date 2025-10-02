@@ -1,15 +1,16 @@
 import React from 'react';
+import { PostDescriptionProps } from '../../types';
 
-const PostDescription = ({ description }) => (
+const PostDescription: React.FC<PostDescriptionProps> = ({ description }) => (
   <>
     <article>
-      {description.map((item) => (
-        <div key={item.id || `desc-${description.indexOf(item)}`}>
+      {description.map((item, index) => (
+        <div key={item.id || `desc-${index}`}>
           {item.text}
           {item.list ? (
             <ul>
-              {item.list.map((text) => (
-                <li key={`item-${item.list.indexOf(text)}`}>{text}</li>
+              {item.list.map((text, listIndex) => (
+                <li key={`item-${index}-${listIndex}`}>{text}</li>
               ))}
             </ul>
           ) : null}
