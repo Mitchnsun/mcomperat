@@ -7,6 +7,7 @@ This migration has been successfully completed to transform a Next.js project us
 ## 🔧 Changes Made
 
 ### 1. TypeScript Dependencies Installation
+
 - `typescript`
 - `@types/react`
 - `@types/react-dom`
@@ -16,11 +17,13 @@ This migration has been successfully completed to transform a Next.js project us
 - `@typescript-eslint/eslint-plugin`
 
 ### 2. TypeScript Configuration
+
 - **tsconfig.json** : TypeScript configuration with Next.js and styled-jsx support
 - **next-env.d.ts** : Next.js and styled-jsx types
 - **types/index.ts** : Complete TypeScript interfaces definition
 
 ### 3. Migrated Components (.js → .tsx)
+
 - `components/tag/Tag.tsx`
 - `components/card/Card.tsx`
 - `components/post/PostDescription.tsx`
@@ -34,6 +37,7 @@ This migration has been successfully completed to transform a Next.js project us
 - `components/layout.tsx`
 
 ### 4. Migrated Pages (.js → .tsx)
+
 - `pages/_app.tsx`
 - `pages/_document.tsx`
 - `pages/404.tsx`
@@ -41,6 +45,7 @@ This migration has been successfully completed to transform a Next.js project us
 - `pages/en.tsx`
 
 ### 5. Defined Types
+
 - **Person** : Personal data
 - **Experience** : Professional experiences
 - **EducationItem** : Education
@@ -50,11 +55,13 @@ This migration has been successfully completed to transform a Next.js project us
 - **Props interfaces** : For all components
 
 ### 6. PropTypes Removal
+
 - Removal of `prop-types` dependency
 - Removal of all PropTypes definitions
 - Removal of PropTypes-related ESLint rules
 
 ### 7. Updated Scripts
+
 - **format** : Now includes .ts and .tsx
 - **lint** : TypeScript extensions support
 - **type-check** : New script for TypeScript verification

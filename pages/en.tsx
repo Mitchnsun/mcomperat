@@ -1,10 +1,10 @@
-import React from 'react';
 import { GetStaticProps } from 'next';
+import React from 'react';
 
 import Layout from '../components/layout';
-import SEO from '../components/seo';
-import PostList from '../components/post/PostList';
 import PostExtra from '../components/post/PostExtra';
+import PostList from '../components/post/PostList';
+import SEO from '../components/seo';
 import { PageProps, ResumeData } from '../types';
 
 const ENPage: React.FC<PageProps> = ({ data }) => {

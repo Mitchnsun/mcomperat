@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { CardProps } from '../../types';
 
 const Card: React.FC<CardProps> = ({ firstname, lastname, title, email }) => (

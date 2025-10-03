@@ -1,6 +1,7 @@
 import React from 'react';
-import Post from './Post';
+
 import { PostListProps } from '../../types';
+import Post from './Post';
 
 const PostList: React.FC<PostListProps> = ({ title, list = [], children }) => (
   <>

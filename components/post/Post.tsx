@@ -1,7 +1,8 @@
 import React from 'react';
-import PostHeader from './PostHeader';
-import PostDescription from './PostDescription';
+
 import { PostProps } from '../../types';
+import PostDescription from './PostDescription';
+import PostHeader from './PostHeader';
 
 const Post: React.FC<PostProps> = (props) => (
   <>

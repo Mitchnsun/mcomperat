@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { TagProps } from '../../types';
 
 const BACKGROUND_COLOR: Record<string, string> = {
@@ -21,7 +22,10 @@ const Tag: React.FC<TagProps> = ({ name, tag }) => (
           padding: 0.3em 1em;
           color: #fff;
           font-size: 80%;
-          background: ${BACKGROUND_COLOR[tag] || '#919191'};
+          background: ${
+            // eslint-disable-next-line security/detect-object-injection
+            BACKGROUND_COLOR[tag] || '#919191'
+          };
         }
       `}
     </style>

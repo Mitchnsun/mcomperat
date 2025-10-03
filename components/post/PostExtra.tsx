@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { PostExtraProps } from '../../types';
 
 const PostExtra: React.FC<PostExtraProps> = ({ print, title, text, list }) => (

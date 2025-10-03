@@ -18,8 +18,39 @@ This README documents steps are necessary to get your application up and running
 
 - `yarn install`
 - `yarn dev` for development
-- `yarn build` for production build  
+- `yarn build` for production build
 - `yarn start` for production server
+
+### Development Tools
+
+This project uses a comprehensive set of development tools to ensure code quality and consistency:
+
+#### ESLint Configuration
+
+- **ESLint 9** with modern flat config format (`eslint.config.js`)
+- **TypeScript support** with `@typescript-eslint` parser and plugin
+- **React/Next.js** rules with `eslint-config-next`
+- **Import management** with automatic sorting via `simple-import-sort`
+- **Unused imports detection** with `unused-imports` plugin
+- **Code quality** checks with `sonarjs` and `unicorn` plugins
+- **Security** vulnerability detection with `security` plugin
+- **Accessibility** rules with `jsx-a11y` plugin
+
+#### Prettier Configuration
+
+- **Automatic code formatting** with Prettier 3.6+
+- **Tailwind CSS class sorting** via `prettier-plugin-tailwindcss`
+- **Consistent styling** across JavaScript, TypeScript, JSON, and Markdown files
+
+#### Available Scripts
+
+- `yarn lint` - Run ESLint checks
+- `yarn lint --fix` - Auto-fix ESLint issues
+- `yarn format` - Format code with Prettier
+- `yarn test` - Run linting and type checking
+- `yarn type-check` - TypeScript type checking
+
+All code is automatically formatted on commit via `lint-staged` and `husky`.
 
 ### Configuration
 

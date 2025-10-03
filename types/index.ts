@@ -1,3 +1,5 @@
+import React from 'react';
+
 // Application data types
 export interface Person {
   firstname: string;
@@ -75,7 +77,7 @@ export interface ResumeData {
 
 // Component props types
 export interface HeadingProps {
-  person?: Person;
+  person: Person;
 }
 
 export interface CardProps {

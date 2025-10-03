@@ -1,10 +1,11 @@
-import React from 'react';
 import Image from 'next/image';
-import Card from '../card/Card';
-import GithubLogo from '../assets/icons/github-logo';
-import { HeadingProps } from '../../types';
+import React from 'react';
 
-const Heading: React.FC<HeadingProps> = ({ person = {} }) => (
+import { HeadingProps } from '../../types';
+import GithubLogo from '../assets/icons/github-logo';
+import Card from '../card/Card';
+
+const Heading: React.FC<HeadingProps> = ({ person }) => (
   <>
     <header>
       <Card {...person} />
@@ -16,8 +17,8 @@ const Heading: React.FC<HeadingProps> = ({ person = {} }) => (
         ) : null}
         {person.link?.linkedin ? (
           <a href={person.link.linkedin} target="_blank" rel="noopener noreferrer">
-            <Image 
-              src="/LinkedInSquare.png" 
+            <Image
+              src="/LinkedInSquare.png"
               alt={`View ${person.firstname ?? ''} ${person.lastname ?? ''}'s profile on LinkedIn`}
               width={32}
               height={32}

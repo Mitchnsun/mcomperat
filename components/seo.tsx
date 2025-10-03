@@ -1,5 +1,6 @@
-import React from 'react';
 import Head from 'next/head';
+import React from 'react';
+
 import { SEOProps } from '../types';
 
 const siteMetadata = {
@@ -24,9 +25,7 @@ const SEO: React.FC<SEOProps> = ({ description, meta = [], title }) => {
       <meta name="twitter:title" content={title || ''} />
       <meta name="twitter:description" content={metaDescription} />
       <link rel="canonical" href="https://mcomper.at/" />
-      {meta && meta.map((item, index) => (
-        <meta key={index} {...item} />
-      ))}
+      {meta && meta.map((item, index) => <meta key={index} {...item} />)}
     </Head>
   );
 };

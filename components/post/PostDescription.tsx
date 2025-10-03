@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { PostDescriptionProps } from '../../types';
 
 const PostDescription: React.FC<PostDescriptionProps> = ({ description }) => (

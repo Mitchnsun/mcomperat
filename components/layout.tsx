@@ -1,6 +1,7 @@
 import React from 'react';
-import Heading from './heading/Heading';
+
 import { LayoutProps } from '../types';
+import Heading from './heading/Heading';
 
 const Layout: React.FC<LayoutProps> = ({ person, children }) => (
   <>
