@@ -1,33 +1,30 @@
-import Head from 'next/head';
-import React from 'react';
+import { Metadata } from 'next';
 
-import { SEOProps } from '../types';
-
-const siteMetadata = {
+export const siteMetadata = {
   title: 'Matthieu Compérat',
   description: 'Matthieu Compérat Frontend developper ReactJS NextJS HTML5 CSS3',
   author: '@Mitchnsun',
 };
 
-const SEO: React.FC<SEOProps> = ({ description, meta = [], title }) => {
+export function generateMetadata(title?: string, description?: string): Metadata {
   const metaDescription = description || siteMetadata.description;
 
-  return (
-    <Head>
-      <title>{title ? `${title} | ${siteMetadata.title}` : siteMetadata.title}</title>
-      <meta name="description" content={metaDescription} />
-      <meta property="og:title" content={title || siteMetadata.title} />
-      <meta name="twitter:title" content={title || siteMetadata.title} />
-      <meta property="og:description" content={metaDescription} />
-      <meta property="og:type" content="website" />
-      <meta name="twitter:card" content="summary" />
-      <meta name="twitter:creator" content={siteMetadata.author} />
-      <meta name="twitter:title" content={title || ''} />
-      <meta name="twitter:description" content={metaDescription} />
-      <link rel="canonical" href="https://mcomper.at/" />
-      {meta && meta.map((item, index) => <meta key={index} {...item} />)}
-    </Head>
-  );
-};
-
-export default SEO;
+  return {
+    title: title ? `${title} | ${siteMetadata.title}` : siteMetadata.title,
+    description: metaDescription,
+    openGraph: {
+      title: title || siteMetadata.title,
+      description: metaDescription,
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary',
+      creator: siteMetadata.author,
+      title: title || siteMetadata.title,
+      description: metaDescription,
+    },
+    alternates: {
+      canonical: 'https://mcomper.at/',
+    },
+  };
+}

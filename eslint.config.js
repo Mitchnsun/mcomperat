@@ -68,7 +68,7 @@ export default [
       // Import rules
       'import/no-extraneous-dependencies': 'off',
       'import/order': 'off',
-      'import/no-unresolved': 'off', // Désactivé temporairement
+      'import/no-unresolved': 'off', // Temporarily disabled
       'import/no-cycle': 'error',
       'import/no-self-import': 'error',
 
