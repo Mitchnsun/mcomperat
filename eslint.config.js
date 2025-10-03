@@ -3,6 +3,7 @@ import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import importPlugin from 'eslint-plugin-import';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
+import nextPlugin from '@next/eslint-plugin-next';
 import prettier from 'eslint-plugin-prettier';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
@@ -43,6 +44,7 @@ export default [
     },
     plugins: {
       '@typescript-eslint': typescript,
+      '@next/next': nextPlugin,
       import: importPlugin,
       'jsx-a11y': jsxA11y,
       prettier: prettier,
@@ -55,6 +57,15 @@ export default [
       'unused-imports': unusedImports,
     },
     rules: {
+      // Next.js rules
+      ...nextPlugin.configs.recommended.rules,
+      ...nextPlugin.configs['core-web-vitals'].rules,
+
+      // React Hooks rules (v6.1.0 with React 19 support)
+      ...reactHooks.configs.recommended.rules,
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
+
       // React/Next.js rules
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
