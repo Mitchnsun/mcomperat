@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 export const siteMetadata = {
   title: 'Matthieu Compérat',
-  description: 'Matthieu Compérat Frontend developper ReactJS NextJS HTML5 CSS3',
+  description: 'Matthieu Compérat Frontend developer ReactJS NextJS HTML5 CSS3',
   author: '@Mitchnsun',
 };
 
