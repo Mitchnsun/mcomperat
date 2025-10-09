@@ -25,16 +25,20 @@
           {
             "name": "ReactJS",
             "ref": "js"
-          }, {
+          },
+          {
             "name": "NextJS",
             "ref": "js"
-          }, {
+          },
+          {
             "name": "NodeJS",
             "ref": "back"
-          }, {
+          },
+          {
             "name": "Firebase",
             "ref": "db"
-          }, {
+          },
+          {
             "name": "Cypress",
             "ref": "test"
           }
@@ -48,11 +52,13 @@
               "Setting up end-to-end tests with Cypress",
               "Evaluate the needs and writing specifications"
             ]
-          }, {
+          },
+          {
             "text": "Part-time mission"
           }
         ]
-      }, {
+      },
+      {
         "title": "Freelance Frontend Developer",
         "city": "Paris",
         "country": "France",
@@ -63,28 +69,36 @@
           {
             "name": "ReactJS",
             "ref": "js"
-          }, {
+          },
+          {
             "name": "GraphQL",
             "ref": "js"
-          }, {
+          },
+          {
             "name": "HTML5",
             "ref": "html"
-          }, {
+          },
+          {
             "name": "CSS3",
             "ref": "css"
-          }, {
+          },
+          {
             "name": "PostCSS",
             "ref": "css"
-          },  {
+          },
+          {
             "name": "ES6",
             "ref": "js"
-          }, {
+          },
+          {
             "name": "Flow",
             "ref": "js"
-          },  {
+          },
+          {
             "name": "NextJS",
             "ref": "js"
-          }, {
+          },
+          {
             "name": "Accessibility",
             "ref": "a11y"
           }
@@ -100,7 +114,8 @@
             ]
           }
         ]
-      }, {
+      },
+      {
         "title": "Freelance Frontend Developer",
         "city": "Paris",
         "country": "France",
@@ -111,13 +126,16 @@
           {
             "name": "AngularJS",
             "ref": "js"
-          }, {
+          },
+          {
             "name": "HTML5",
             "ref": "html"
-          }, {
+          },
+          {
             "name": "CSS3",
             "ref": "css"
-          },  {
+          },
+          {
             "name": "Bootstrap",
             "ref": "css"
           }
@@ -127,7 +145,8 @@
             "text": "Feature on the internal website"
           }
         ]
-      }, {
+      },
+      {
         "title": "Freelance Web Developer",
         "city": "Paris",
         "country": "France",
@@ -138,10 +157,12 @@
           {
             "name": "SASS",
             "ref": "css"
-          }, {
+          },
+          {
             "name": "HTML5",
             "ref": "html"
-          }, {
+          },
+          {
             "name": "CSS3",
             "ref": "css"
           }
@@ -155,7 +176,8 @@
             ]
           }
         ]
-      }, {
+      },
+      {
         "title": "Mobile developer",
         "city": "Paris",
         "country": "France",
@@ -166,13 +188,16 @@
           {
             "name": "Cordova",
             "ref": "js"
-          }, {
+          },
+          {
             "name": "Backbone.js",
             "ref": "js"
-          }, {
+          },
+          {
             "name": "Less",
             "ref": "css"
-          }, {
+          },
+          {
             "name": "Handlebars.js",
             "ref": "js"
           }
@@ -182,7 +207,8 @@
             "text": "Tracking activity application for an e-bike with Bluetooth LE and GPS"
           }
         ]
-      }, {
+      },
+      {
         "title": "Web & Mobile Lead Programmer",
         "city": "Paris",
         "country": "France",
@@ -193,19 +219,24 @@
           {
             "name": "Web-application",
             "ref": "html"
-          }, {
+          },
+          {
             "name": "HTML5",
             "ref": "html"
-          }, {
+          },
+          {
             "name": "CSS3",
             "ref": "css"
-          }, {
+          },
+          {
             "name": "Backbone.js",
             "ref": "js"
-          }, {
+          },
+          {
             "name": "Dust.js / Handlebar.js",
             "ref": "js"
-          }, {
+          },
+          {
             "name": "Phone Gap",
             "ref": "js"
           }
@@ -219,11 +250,13 @@
               "Application developments for iOS with Cordova/Phone Gap (iPad Color Profile et iPhone MySephora)",
               "Webmobile part of iPhone & Android application: design integration and maintenance"
             ]
-          }, {
+          },
+          {
             "text": "Responsibilities: Lead programmer with a team of two developers"
           }
         ]
-      }, {
+      },
+      {
         "title": "Software engineer",
         "city": "Paris",
         "country": "France",
@@ -234,19 +267,24 @@
           {
             "name": "Web application",
             "ref": "html"
-          }, {
+          },
+          {
             "name": "Backbone.js",
             "ref": "js"
-          }, {
+          },
+          {
             "name": "Responsive",
             "ref": "css"
-          }, {
+          },
+          {
             "name": "LESS",
             "ref": "css"
-          }, {
+          },
+          {
             "name": "Dust.js",
             "ref": "js"
-          }, {
+          },
+          {
             "name": "iOS Application",
             "ref": "ios"
           }
@@ -259,7 +297,8 @@
               "Update of Sephora's iPhone application",
               "Update and maintain of Sephora's iPad application Color Profile"
             ]
-          }, {
+          },
+          {
             "text": "Louis Vuitton project:",
             "list": [
               "Development of the user interface for Louis Vuitton website from ATG base",
@@ -267,7 +306,8 @@
             ]
           }
         ]
-      }, {
+      },
+      {
         "title": "Web mobile analyst",
         "context": "Final year project",
         "city": "Lyon",
@@ -279,16 +319,20 @@
           {
             "name": "Web-application",
             "ref": "html"
-          }, {
+          },
+          {
             "name": "jQuery Mobile",
             "ref": "js"
-          }, {
+          },
+          {
             "name": "Twitter Bootstrap",
             "ref": "css"
-          }, {
+          },
+          {
             "name": "Phone Gap",
             "ref": "js"
-          }, {
+          },
+          {
             "name": "Cocoa Touch",
             "ref": "ios"
           }
@@ -302,7 +346,8 @@
             ]
           }
         ]
-      }, {
+      },
+      {
         "title": "Intern in IT",
         "context": "One-year internship",
         "city": "Pembroke Pines",
@@ -314,19 +359,24 @@
           {
             "name": "HTML",
             "ref": "html"
-          }, {
+          },
+          {
             "name": "PHP",
             "ref": "back"
-          }, {
+          },
+          {
             "name": "jQuery",
             "ref": "js"
-          }, {
+          },
+          {
             "name": "MySQL",
             "ref": "db"
-          }, {
+          },
+          {
             "name": "Cocoa Touch",
             "ref": "ios"
-          }, {
+          },
+          {
             "name": "Joomla",
             "ref": "cms"
           }
@@ -339,7 +389,8 @@
               "iPad Application for the booth in Air Shows (Objective-C, Cocoa Touch)",
               "CMS Setting"
             ]
-          }, {
+          },
+          {
             "text": "I was in a complete autonomy to discover the different languages and to develop the different applications. I provided support to the users after acceptance-test and insured the transfer of the application to the head quarter in France."
           }
         ]
@@ -362,9 +413,11 @@
         "description": [
           {
             "text": "Bachelor degree obtained in June 2009, Graduation at MSc Level in September 2012. 2 years full-time higher education in mathematics and science with languages and general studies, 3 years at higher education. Engineering school in France"
-          }, {
+          },
+          {
             "text": "Main subjects: Programmation (C, C++), Databases, Digital and analogical electronics Signal and linear systems, Optics."
-          }, {
+          },
+          {
             "text": "IT Specialization : HTML, PHP, Java, XML, Interconnection and administration of networks, Graphs and algorithms, Getting an award named “Best increase prospect” from the CCIL (Chamber of commerce and industry of Lyon) during Campus Creation 2008 contest. The target was to present an innovative product. Project: “Eau Parleur”"
           }
         ]
@@ -378,19 +431,30 @@
       {
         "title": "Languages",
         "text": "",
-        "list": ["French : mother tongue", "English : Good level (spoken, written, reading) - FCE of Cambridge (B2)", "Spanish : basic knowledge"],
+        "list": [
+          "French : mother tongue",
+          "English : Good level (spoken, written, reading) - FCE of Cambridge (B2)",
+          "Spanish : basic knowledge"
+        ],
         "print": true
-      },{
+      },
+      {
         "title": "Interests",
         "text": "",
         "list": ["ReactJS", "NodeJS", "TypeScript", "Git", "CSS"],
         "print": true
-      }, {
+      },
+      {
         "title": "Personal projects",
         "text": "",
-        "list": ["Supersprint Result : site for the results of Supersprint 20ième", "My web resume", "Lotofoot : Football betting website for friends"],
+        "list": [
+          "Supersprint Result : site for the results of Supersprint 20ième",
+          "My web resume",
+          "Lotofoot : Football betting website for friends"
+        ],
         "print": false
-      }, {
+      },
+      {
         "title": "Sports",
         "text": "",
         "list": ["Triathlon", "Surf"],

@@ -84,7 +84,7 @@ This migration has been successfully completed to transform a Next.js project us
 
 ## 📁 Final Structure
 
-```
+```plaintext
 ├── types/
 │   └── index.ts                 # Centralized TypeScript definitions
 ├── components/

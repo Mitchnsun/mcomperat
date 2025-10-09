@@ -79,7 +79,13 @@ export default [
       // Import rules
       'import/no-extraneous-dependencies': 'off',
       'import/order': 'off',
-      'import/no-unresolved': 'off', // Temporarily disabled
+      'import/no-unresolved': [
+        'error',
+        {
+          commonjs: true,
+          caseSensitive: true,
+        },
+      ],
       'import/no-cycle': 'error',
       'import/no-self-import': 'error',
 
@@ -131,17 +137,12 @@ export default [
       'import/resolver': {
         typescript: {
           alwaysTryTypes: true,
+          project: './tsconfig.json',
         },
         node: {
           extensions: ['.js', '.jsx', '.ts', '.tsx'],
         },
       },
-    },
-  },
-  {
-    files: ['**/*.js', '**/*.jsx'],
-    rules: {
-      '@typescript-eslint/no-var-requires': 'off',
     },
   },
   {

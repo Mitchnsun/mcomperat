@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { PostHeaderProps } from '../../types';
-import Tag from '../tag/Tag';
+import { Tag } from '@/components/tag';
+import { PostHeaderProps } from '@/types';
 
 const PostHeader: React.FC<PostHeaderProps> = ({ title, company, city, country, context, start, end, tags }) => (
   <header>

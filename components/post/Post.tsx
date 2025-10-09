@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { PostProps } from '../../types';
+import { PostProps } from '@/types';
+
 import PostDescription from './PostDescription';
 import PostHeader from './PostHeader';
 

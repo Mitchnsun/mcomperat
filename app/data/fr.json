@@ -1,4 +1,4 @@
-{ 
+{
   "person": {
     "firstname": "Matthieu",
     "lastname": "Compérat",
@@ -25,16 +25,20 @@
           {
             "name": "ReactJS",
             "ref": "js"
-          }, {
+          },
+          {
             "name": "NextJS",
             "ref": "js"
-          }, {
+          },
+          {
             "name": "NodeJS",
             "ref": "back"
-          }, {
+          },
+          {
             "name": "Firebase",
             "ref": "db"
-          }, {
+          },
+          {
             "name": "Cypress",
             "ref": "test"
           }
@@ -53,7 +57,8 @@
             "text": "Mission réalisée en temps partiel"
           }
         ]
-      }, {
+      },
+      {
         "title": "Freelance Développeur Frontend",
         "city": "Paris",
         "country": "France",
@@ -64,28 +69,36 @@
           {
             "name": "React 16",
             "ref": "js"
-          }, {
+          },
+          {
             "name": "GraphQL",
             "ref": "js"
-          },{
+          },
+          {
             "name": "HTML5",
             "ref": "html"
-          }, {
+          },
+          {
             "name": "CSS3",
             "ref": "css"
-          }, {
+          },
+          {
             "name": "PostCSS",
             "ref": "css"
-          },{
+          },
+          {
             "name": "ES6",
             "ref": "js"
-          }, {
+          },
+          {
             "name": "Flow",
             "ref": "js"
-          },  {
+          },
+          {
             "name": "NextJS",
             "ref": "js"
-          }, {
+          },
+          {
             "name": "Accessibilité",
             "ref": "a11y"
           }
@@ -101,7 +114,8 @@
             ]
           }
         ]
-      }, {
+      },
+      {
         "title": "Freelance Développeur Frontend",
         "city": "Paris",
         "country": "France",
@@ -112,13 +126,16 @@
           {
             "name": "AngularJS",
             "ref": "js"
-          }, {
+          },
+          {
             "name": "HTML5",
             "ref": "html"
-          }, {
+          },
+          {
             "name": "CSS3",
             "ref": "css"
-          },  {
+          },
+          {
             "name": "Bootstrap",
             "ref": "css"
           }
@@ -126,13 +143,11 @@
         "description": [
           {
             "text": "Réalisation de fonctionnalité sur leur outil interne",
-            "list": [
-              "Refonte front avec Angularjs et Bootstrap",
-              "Mise en place de Git Flow"
-            ]
+            "list": ["Refonte front avec Angularjs et Bootstrap", "Mise en place de Git Flow"]
           }
         ]
-      }, {
+      },
+      {
         "title": "Freelance Intégrateur Web",
         "city": "Paris",
         "country": "France",
@@ -143,10 +158,12 @@
           {
             "name": "SASS",
             "ref": "css"
-          }, {
+          },
+          {
             "name": "HTML5",
             "ref": "html"
-          }, {
+          },
+          {
             "name": "CSS3",
             "ref": "css"
           }
@@ -154,13 +171,11 @@
         "description": [
           {
             "text": "Intégration de la nouvelle charte graphique",
-            "list": [
-              "Intégration HTML et CSS (desktop et mobile)",
-              "Lien direct avec les graphistes et le marketing"
-            ]
+            "list": ["Intégration HTML et CSS (desktop et mobile)", "Lien direct avec les graphistes et le marketing"]
           }
         ]
-      }, {
+      },
+      {
         "title": "Développeur mobile",
         "city": "Paris",
         "country": "France",
@@ -171,13 +186,16 @@
           {
             "name": "Cordova",
             "ref": "js"
-          }, {
+          },
+          {
             "name": "Backbone.js",
             "ref": "js"
-          }, {
+          },
+          {
             "name": "Less",
             "ref": "css"
-          }, {
+          },
+          {
             "name": "Handlebars.js",
             "ref": "js"
           }
@@ -187,7 +205,8 @@
             "text": "Application de tracking d’activité de vélo électrique via Bluetooth LE et GPS"
           }
         ]
-      }, {
+      },
+      {
         "title": "Référent technique Web & Mobile",
         "city": "Paris",
         "country": "France",
@@ -198,19 +217,24 @@
           {
             "name": "Web-application",
             "ref": "html"
-          }, {
+          },
+          {
             "name": "HTML5",
             "ref": "html"
-          }, {
+          },
+          {
             "name": "CSS3",
             "ref": "css"
-          }, {
+          },
+          {
             "name": "Backbone.js",
             "ref": "js"
-          }, {
+          },
+          {
             "name": "Dust.js / Handlebar.js",
             "ref": "js"
-          }, {
+          },
+          {
             "name": "Phone Gap",
             "ref": "js"
           }
@@ -224,11 +248,13 @@
               "Evolutions des applications iOS internes, avec Cordova/Phone Gap (iPad Color Profile et iPhone MySephora)",
               "Intégration et maintenance de la partie webmobile des applications iPhone et Android"
             ]
-          }, {
+          },
+          {
             "text": "Responsabilités : Référent technique d'une équipe de deux développeurs"
           }
         ]
-      }, {
+      },
+      {
         "title": "Ingénieur en Technologie de l'Information",
         "city": "Paris",
         "country": "France",
@@ -239,19 +265,24 @@
           {
             "name": "Web-application",
             "ref": "html"
-          }, {
+          },
+          {
             "name": "Backbone.js",
             "ref": "js"
-          }, {
+          },
+          {
             "name": "Responsive",
             "ref": "css"
-          }, {
+          },
+          {
             "name": "LESS",
             "ref": "css"
-          }, {
+          },
+          {
             "name": "Dust.js",
             "ref": "js"
-          }, {
+          },
+          {
             "name": "Application iOS",
             "ref": "ios"
           }
@@ -264,7 +295,8 @@
               "Mise à jour de l’application iPhone de Sephora",
               "Reprise et évolution de l’application iPad Color Profile"
             ]
-          }, {
+          },
+          {
             "text": "Projet Louis Vuitton :",
             "list": [
               "Réalisation de l’interface client Web du site à partir du socle ATG",
@@ -272,7 +304,8 @@
             ]
           }
         ]
-      }, {
+      },
+      {
         "title": "Analyste développeur mobile et web",
         "context": "Stage projet de fin d'étude",
         "city": "Lyon",
@@ -284,16 +317,20 @@
           {
             "name": "Web-application",
             "ref": "html"
-          }, {
+          },
+          {
             "name": "jQuery Mobile",
             "ref": "js"
-          }, {
+          },
+          {
             "name": "Twitter Bootstrap",
             "ref": "css"
-          }, {
+          },
+          {
             "name": "Phone Gap",
             "ref": "js"
-          }, {
+          },
+          {
             "name": "Cocoa Touch",
             "ref": "ios"
           }
@@ -307,7 +344,8 @@
             ]
           }
         ]
-      }, {
+      },
+      {
         "title": "Analyste développeur",
         "context": "Stage année de césure",
         "city": "Pembroke Pines",
@@ -319,19 +357,24 @@
           {
             "name": "HTML",
             "ref": "html"
-          }, {
+          },
+          {
             "name": "PHP",
             "ref": "back"
-          }, {
+          },
+          {
             "name": "jQuery",
             "ref": "js"
-          }, {
+          },
+          {
             "name": "MySQL",
             "ref": "db"
-          }, {
+          },
+          {
             "name": "Objective-C",
             "ref": "ios"
-          }, {
+          },
+          {
             "name": "Joomla",
             "ref": ""
           }
@@ -344,7 +387,8 @@
               "Application iPad pour les salons aéronautiques",
               "Configuration d’un CMS"
             ]
-          }, {
+          },
+          {
             "text": "J’étais en complète autonomie pour découvrir les différents langages et pour développer les différentes applications. J’ai fourni le support aux utilisateurs après validation et assurer le transfert des applications au siège social en France. Mon but était de laisser une documentation claire pour les prochains développeurs."
           }
         ]
@@ -379,19 +423,30 @@
       {
         "title": "Langues",
         "text": "",
-        "list": ["Français : langue maternelle", "Anglais : courant - Niveau B2 FCE of Cambridge", "Espagnol : notions"],
+        "list": [
+          "Français : langue maternelle",
+          "Anglais : courant - Niveau B2 FCE of Cambridge",
+          "Espagnol : notions"
+        ],
         "print": true
-      },{
+      },
+      {
         "title": "Intérêts",
         "text": "",
         "list": ["ReactJS", "NodeJS", "TypeScript", "Git", "CSS"],
         "print": true
-      }, {
+      },
+      {
         "title": "Projets personnels",
         "text": "",
-        "list": ["Supersprint Résultat : Site d'affichage des résultat du Supersprint 20ième", "Mon CV Web", "Lotofoot : site de pari footbalistique entre amis"],
+        "list": [
+          "Supersprint Résultat : Site d'affichage des résultat du Supersprint 20ième",
+          "Mon CV Web",
+          "Lotofoot : site de pari footbalistique entre amis"
+        ],
         "print": false
-      }, {
+      },
+      {
         "title": "Sports",
         "text": "",
         "list": ["Triathlon", "Surf"],

@@ -1,15 +1,15 @@
 import { Metadata } from 'next';
 import React from 'react';
 
-import Layout from '../../components/layout';
-import PostExtra from '../../components/post/PostExtra';
-import PostList from '../../components/post/PostList';
-import { generateMetadata as generateSEOMetadata } from '../../components/seo';
-import { ResumeData } from '../../types';
+import enData from '@/app/data/en.json';
+import Layout from '@/components/layout';
+import PostExtra from '@/components/post/PostExtra';
+import PostList from '@/components/post/PostList';
+import { generateMetadata as generateSEOMetadata } from '@/components/seo';
+import { ResumeData } from '@/types';
 
 async function getData(): Promise<ResumeData> {
-  const data = await import('../../public/data/en.json');
-  return data.default as ResumeData;
+  return enData as ResumeData;
 }
 
 export async function generateMetadata(): Promise<Metadata> {

@@ -25,6 +25,10 @@ export function generateMetadata(title?: string, description?: string): Metadata
     },
     alternates: {
       canonical: 'https://mcomper.at/',
+      languages: {
+        fr: 'https://mcomper.at/fr',
+        en: 'https://mcomper.at/en',
+      },
     },
   };
 }

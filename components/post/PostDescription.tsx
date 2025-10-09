@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { PostDescriptionProps } from '../../types';
+import { PostDescriptionProps } from '@/types';
 
 const PostDescription: React.FC<PostDescriptionProps> = ({ description }) => (
   <article className="pl-2 text-neutral-700 print:text-sm">
