@@ -73,6 +73,7 @@ For any information, contact matthieu.comperat@gmail.com
 
 ### Version
 
+- v6.0 - October 2025 (NextJS App Router - Tailwind)
 - v5.0 - September 2025 (NextJS 13 - SSR/SSG)
 - v4.0 - October 2020 (Gatsby)
 - v3.0 - November 2018 (React)
