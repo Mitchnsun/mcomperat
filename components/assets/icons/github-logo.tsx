@@ -1,6 +1,6 @@
 import React from 'react';
 
-const GithubLogo = () => (
+const GithubLogo: React.FC = () => (
   <svg fill="white" height="32" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true">
     <path
       fillRule="evenodd"

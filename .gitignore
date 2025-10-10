@@ -63,8 +63,8 @@ typings/
 # Mac files
 .DS_Store
 
-# Husky
-.husky/
+# Husky (keep hooks but ignore _/ directory)
+.husky/_
 
 # Yarn
 yarn-error.log
@@ -84,3 +84,7 @@ yarn-error.log
 # NextJS
 .next/
 out/
+
+# TypeScript incremental build info
+*.tsbuildinfo
+*.buildinfo
