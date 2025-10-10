@@ -5,8 +5,7 @@
     "title": "Frontend developer",
     "email": "matthieu.comperat@gmail.com",
     "link": {
-      "linkedin": "https://fr.linkedin.com/in/matthieucomperat",
-      "bitbucket": "https://bitbucket.org/matthieu_comperat/",
+      "linkedin": "https://www.linkedin.com/in/matthieucomperat/",
       "github": "https://github.com/Mitchnsun"
     }
   },
@@ -14,6 +13,143 @@
   "work": {
     "title": "Expériences professionnelles",
     "experiences": [
+      {
+        "title": "Freelance Développeur Frontend",
+        "city": "Saint-Jorioz",
+        "country": "France",
+        "company": "Greenweez",
+        "start": "Oct. 2023",
+        "end": "",
+        "tags": [
+          {
+            "name": "NextJS",
+            "ref": "js"
+          },
+          {
+            "name": "React 18",
+            "ref": "js"
+          },
+          {
+            "name": "React Query",
+            "ref": "js"
+          },
+          {
+            "name": "Tailwind CSS",
+            "ref": "css"
+          },
+          {
+            "name": "Jest",
+            "ref": "test"
+          },
+          {
+            "name": "Playwright",
+            "ref": "test"
+          }
+        ],
+        "description": [
+          {
+            "text": "Rôle de référent technique et gestion de release de www.greenweez.com. Optimisation des performances et du SEO avec réduction de taille de bundle et analyse d'appels API synchrones et asynchrones",
+            "list": [
+              "Migration vers React 18 & Next 13",
+              "Mise en place de tests E2E avec Playwright",
+              "Front: React/NextJs, Tailwind CSS, React Query, Jest, React Testing Library",
+              "Middleware: Apollo GraphQL",
+              "Design System: Lerna, Vite, Storybook 7"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Freelance Développeur Frontend",
+        "city": "Paris",
+        "country": "France",
+        "company": "Club Med",
+        "start": "Nov. 2021",
+        "end": "Juil. 2023",
+        "tags": [
+          {
+            "name": "TypeScript",
+            "ref": "js"
+          },
+          {
+            "name": "React 18",
+            "ref": "js"
+          },
+          {
+            "name": "Redux",
+            "ref": "js"
+          },
+          {
+            "name": "Ts.ED",
+            "ref": "js"
+          },
+          {
+            "name": "Tailwind CSS",
+            "ref": "css"
+          },
+          {
+            "name": "Jest",
+            "ref": "test"
+          },
+          {
+            "name": "Cypress",
+            "ref": "test"
+          }
+        ],
+        "description": [
+          {
+            "text": "Développement d'un outil de data visualisation pour l'interne et les partenaires",
+            "list": [
+              "TypeScript, React 18, Redux, Ts.ED, Node",
+              "Tests unitaires et d’intégration avec Jest, Cypress",
+              "Git process, code reviews, continuous delivery & pair programming",
+              "Intégration de Tailwind et CSS3"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Freelance Développeur Frontend",
+        "city": "Paris",
+        "country": "France",
+        "company": "Rakuten",
+        "start": "Nov. 2020",
+        "end": "Sept. 2021",
+        "tags": [
+          {
+            "name": "ReactJS",
+            "ref": "js"
+          },
+          {
+            "name": "NextJS",
+            "ref": "js"
+          },
+          {
+            "name": "Redux",
+            "ref": "js"
+          },
+          {
+            "name": "React Testing Library",
+            "ref": "test"
+          },
+          {
+            "name": "Cypress",
+            "ref": "test"
+          }
+        ],
+        "description": [
+          {
+            "text": "Intégration d'une messagerie instantanée entre un vendeur et un acheteur pour la partie vente d'occasion. Refonte du formulaire de mise en vente d’un produit pour la vente d’occasion",
+            "list": [
+              "Développement front avec ReactJS, NextJS, Redux, Tachyons",
+              "Mise en place d’une couverture de tests (unitaire et intégration) avec React Testing Library et Cypress",
+              "Utilisation de l’API Sendbird pour la messagerie",
+              "Une équipe en mode agile avec 2 dev front et 4 dev back pour la section de vente d’occasion",
+              "En dialogue permanent avec le web designer pour l’intégration"
+            ]
+          }
+        ]
+      },
       {
         "title": "Freelance Développeur Full-stack",
         "city": "Paris",
@@ -433,7 +569,7 @@
       {
         "title": "Intérêts",
         "text": "",
-        "list": ["ReactJS", "NodeJS", "TypeScript", "Git", "CSS"],
+        "list": ["NextJS", "ReactJS", "React Native", "TypeScript", "Tailwind CSS", "Git"],
         "print": true
       },
       {
@@ -442,6 +578,7 @@
         "list": [
           "Supersprint Résultat : Site d'affichage des résultat du Supersprint 20ième",
           "Mon CV Web",
+          "Go Cosmic Agency",
           "Lotofoot : site de pari footbalistique entre amis"
         ],
         "print": false

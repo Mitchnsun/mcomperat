@@ -8,7 +8,6 @@ export interface Person {
   email: string;
   link?: {
     linkedin?: string;
-    bitbucket?: string;
     github?: string;
   };
 }
