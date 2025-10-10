@@ -6,7 +6,6 @@
     "email": "matthieu.comperat@gmail.com",
     "link": {
       "linkedin": "https://www.linkedin.com/in/matthieucomperat/?locale=en_US",
-      "bitbucket": "https://bitbucket.org/matthieu_comperat/",
       "github": "https://github.com/Mitchnsun"
     }
   },
@@ -14,6 +13,89 @@
   "work": {
     "title": "Work Experiences",
     "experiences": [
+      {
+        "title": "Freelance Frontend Developer",
+        "city": "Saint-Jorioz",
+        "country": "France",
+        "company": "Greenweez",
+        "start": "Oct. 2023",
+        "end": "",
+        "tags": [
+          { "name": "NextJS", "ref": "js" },
+          { "name": "React 18", "ref": "js" },
+          { "name": "React Query", "ref": "js" },
+          { "name": "Tailwind CSS", "ref": "css" },
+          { "name": "Jest", "ref": "test" },
+          { "name": "Playwright", "ref": "test" }
+        ],
+        "description": [
+          {
+            "text": "Technical lead and release management of www.greenweez.com. Performance and SEO improvements by reducing bundle size and auditing synchronous and asynchronous API calls",
+            "list": [
+              "Migration to React 18 & Next 13",
+              "Set up E2E tests with Playwright",
+              "Frontend: React/Next.js, Tailwind CSS, React Query, Jest, React Testing Library",
+              "Middleware: Apollo GraphQL",
+              "Design System: Lerna, Vite, Storybook 7"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Freelance Frontend Developer",
+        "city": "Paris",
+        "country": "France",
+        "company": "Club Med",
+        "start": "Nov. 2021",
+        "end": "Jul. 2023",
+        "tags": [
+          { "name": "TypeScript", "ref": "js" },
+          { "name": "React 18", "ref": "js" },
+          { "name": "Redux", "ref": "js" },
+          { "name": "Ts.ED", "ref": "js" },
+          { "name": "Tailwind CSS", "ref": "css" },
+          { "name": "Jest", "ref": "test" },
+          { "name": "Cypress", "ref": "test" }
+        ],
+        "description": [
+          {
+            "text": "Development of a data visualization tool for internal users and partners",
+            "list": [
+              "TypeScript, React 18, Redux, Ts.ED, Node",
+              "Unit and integration testing with Jest and Cypress",
+              "Git process, code reviews, continuous delivery & pair programming",
+              "Tailwind and CSS3 integration"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Freelance Frontend Developer",
+        "city": "Paris",
+        "country": "France",
+        "company": "Rakuten",
+        "start": "Nov. 2020",
+        "end": "Sept. 2021",
+        "tags": [
+          { "name": "ReactJS", "ref": "js" },
+          { "name": "NextJS", "ref": "js" },
+          { "name": "Redux", "ref": "js" },
+          { "name": "React Testing Library", "ref": "test" },
+          { "name": "Cypress", "ref": "test" }
+        ],
+        "description": [
+          {
+            "text": "Built an instant messaging between a seller and a buyer for the second-hand marketplace. Redesigned the listing form for second-hand sales",
+            "list": [
+              "Frontend development with ReactJS, NextJS, Redux, Tachyons",
+              "Set up unit and integration tests with React Testing Library and Cypress",
+              "Used Sendbird API for messaging",
+              "Agile team with 2 frontend devs and 4 backend devs for the second-hand section",
+              "Close collaboration with the web designer for integration"
+            ]
+          }
+        ]
+      },
       {
         "title": "Freelance Full-stack Developer",
         "city": "Paris",
@@ -441,7 +523,7 @@
       {
         "title": "Interests",
         "text": "",
-        "list": ["ReactJS", "NodeJS", "TypeScript", "Git", "CSS"],
+        "list": ["NextJS", "ReactJS", "React Native", "TypeScript", "Tailwind CSS", "Git"],
         "print": true
       },
       {
@@ -450,6 +532,7 @@
         "list": [
           "Supersprint Result : site for the results of Supersprint 20ième",
           "My web resume",
+          "Go Cosmic Agency",
           "Lotofoot : Football betting website for friends"
         ],
         "print": false
