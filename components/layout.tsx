@@ -19,6 +19,10 @@ const Layout: React.FC<LayoutProps> = ({ person, children }) => (
         <a href="https://nextjs.org" className="text-brand hover:underline">
           Next.js
         </a>
+        , by&nbsp;
+        <a href="https://www.gocosmic.dev/" className="text-brand hover:underline">
+          Go Cosmic
+        </a>
       </footer>
     </div>
   </div>

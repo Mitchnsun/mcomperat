@@ -147,6 +147,7 @@ export default [
   },
   {
     ignores: [
+      'next-env.d.ts',
       'node_modules/**',
       '.next/**',
       'out/**',
