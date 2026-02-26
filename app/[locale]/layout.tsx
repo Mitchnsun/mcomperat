@@ -5,7 +5,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import React from 'react';
 
-import { routing } from '@/i18n/routing';
+import { type Locale, routing } from '@/i18n/routing';
 
 export default async function LocaleLayout({
   children,
@@ -16,7 +16,7 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
 
-  if (!routing.locales.includes(locale as 'fr' | 'en')) {
+  if (!routing.locales.includes(locale as Locale)) {
     notFound();
   }
 
