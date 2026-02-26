@@ -1,0 +1,10 @@
+{
+  "sections": {
+    "work": "Work Experiences",
+    "education": "Education",
+    "extras": "Extras"
+  },
+  "meta": {
+    "title": "Resume"
+  }
+}
