@@ -1,17 +1,9 @@
 import './globals.css';
 
-import type { Metadata } from 'next';
 import React from 'react';
 
-export const metadata: Metadata = {
-  title: 'Matthieu Compérat - Resume',
-  description: 'Web & Mobile Lead Programmer',
-};
-
+// Root layout is required for `not-found.tsx` at the root level.
+// HTML structure and locale context are provided by `app/[locale]/layout.tsx`.
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html>
-      <body>{children}</body>
-    </html>
-  );
+  return <>{children}</>;
 }

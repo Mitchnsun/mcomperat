@@ -1,0 +1,10 @@
+{
+  "sections": {
+    "work": "Expériences professionnelles",
+    "education": "Education",
+    "extras": "Extras"
+  },
+  "meta": {
+    "title": "CV"
+  }
+}

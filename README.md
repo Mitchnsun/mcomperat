@@ -1,9 +1,10 @@
 # Matthieu Compérat - Resume
 
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-[![Next.js](https://img.shields.io/badge/Next.js-15.5-black?logo=next.js)](https://nextjs.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue?logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.1-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
+[![next-intl](https://img.shields.io/badge/next--intl-4.x-blue?logo=next.js)](https://next-intl.dev/)
 
 A modern, responsive web resume built with Next.js App Router, TypeScript, and Tailwind CSS v4. This project showcases Matthieu Compérat's professional experience as a Frontend Developer.
 
@@ -11,7 +12,7 @@ A modern, responsive web resume built with Next.js App Router, TypeScript, and T
 
 - 🌐 **Internationalization**: Support for English and French languages
 - 📱 **Responsive Design**: Optimized for all device sizes
-- ⚡ **Modern Stack**: Next.js 15 with App Router, React 19, and TypeScript
+- ⚡ **Modern Stack**: Next.js 16 with App Router, React 19, and TypeScript
 - 🎨 **Tailwind CSS v4**: Latest Tailwind with native CSS @theme support
 - 🔧 **Developer Experience**: ESLint 9, Prettier, Husky, and lint-staged
 - 🚀 **Performance**: Server-side rendering and static generation capabilities
@@ -19,9 +20,10 @@ A modern, responsive web resume built with Next.js App Router, TypeScript, and T
 
 ## 🛠 Tech Stack
 
-- **Framework**: Next.js 15.5 with App Router
+- **Framework**: Next.js 16 with App Router
 - **Language**: TypeScript 5.9
 - **Styling**: Tailwind CSS 4.1 with PostCSS
+- **Internationalization**: next-intl 4.x
 - **Runtime**: React 19
 - **Package Manager**: Yarn 4+ (managed via corepack)
 - **Node.js**: 22+
@@ -75,8 +77,10 @@ yarn dev
 │   ├── layout.tsx         # Root layout component
 │   ├── page.tsx           # Homepage (redirects to /fr)
 │   ├── not-found.tsx      # 404 page
-│   ├── en/                # English pages
-│   └── fr/                # French pages
+│   ├── [locale]/          # Dynamic locale segment (fr, en)
+│   │   ├── layout.tsx     # Locale layout (NextIntlClientProvider)
+│   │   └── page.tsx       # Locale homepage
+│   └── data/              # Resume content data (en.json, fr.json)
 ├── components/            # Reusable React components
 │   ├── layout.tsx         # Layout components
 │   ├── seo.tsx           # SEO components
@@ -85,9 +89,16 @@ yarn dev
 │   ├── post/             # Blog post components
 │   ├── tag/              # Tag components
 │   └── assets/           # Component assets
+├── i18n/                  # next-intl configuration
+│   ├── routing.ts        # Locale routing (locales, defaultLocale)
+│   └── request.ts        # Server-side request config
+├── messages/              # Translation files (UI strings)
+│   ├── en.json           # English translations
+│   └── fr.json           # French translations
+├── proxy.ts              # next-intl proxy/middleware (locale routing)
 ├── public/               # Static assets
-│   └── data/            # JSON data files (en.json, fr.json)
 ├── types/               # TypeScript type definitions
+│   └── next-intl.d.ts   # Type-safe IntlMessages interface
 └── docs/                # Project documentation
 ```
 
@@ -122,10 +133,27 @@ This project uses a comprehensive set of development tools to ensure code qualit
 
 ## 🌐 Internationalization
 
-The project supports multiple languages through a file-based approach:
+The project uses [next-intl](https://next-intl.dev/) for internationalization with a hybrid approach:
 
-- **English**: `/en` routes with `public/data/en.json`
-- **French**: `/fr` routes with `public/data/fr.json`
+### UI Strings (next-intl)
+
+- **Translation files**: `messages/en.json` and `messages/fr.json` for UI labels (section titles, metadata, etc.)
+- **Routing**: Dynamic `[locale]` segment with `proxy.ts` handling locale detection and redirection
+- **Server-side**: `getTranslations()` for Server Components
+- **Client-side**: `NextIntlClientProvider` wraps locale layouts for client component access
+- **Type safety**: `IntlMessages` interface declared in `types/next-intl.d.ts`
+
+### Resume Content Data
+
+- **Data files**: `app/data/en.json` and `app/data/fr.json` for structured resume content (work experience, education, etc.)
+- Loaded via dynamic imports in Server Components
+
+### Configuration
+
+- **Supported locales**: `fr` (default), `en`
+- **Routing config**: `i18n/routing.ts` — defines available locales and default locale
+- **Request config**: `i18n/request.ts` — loads messages per locale on the server
+- **Proxy**: `proxy.ts` — handles locale routing (Next.js 16 convention, replaces `middleware.ts`)
 - **Default language**: French (homepage redirects to `/fr`)
 
 ## ⚙️ Configuration
@@ -188,6 +216,7 @@ For any questions or information, please contact:
 
 ## 📈 Version History
 
+- **v6.1** - February 2026: next-intl integration for type-safe internationalization
 - **v6.0** - October 2025: Next.js 15 App Router + Tailwind CSS v4
 - **v5.0** - September 2025: Next.js 13 with SSR/SSG
 - **v4.0** - October 2020: Gatsby migration
