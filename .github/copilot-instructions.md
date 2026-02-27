@@ -6,9 +6,10 @@ This is a modern, responsive web resume built with Next.js App Router, TypeScrip
 
 ## Tech Stack
 
-- **Framework**: Next.js 15.5+ with App Router
+- **Framework**: Next.js 16+ with App Router
 - **Language**: TypeScript 5.9+ with strict mode enabled
 - **Styling**: Tailwind CSS 4.1+ with native CSS @theme support
+- **Internationalization**: next-intl 4.x (type-safe i18n)
 - **Runtime**: React 19
 - **Package Manager**: Yarn 4+ (managed via corepack)
 - **Node.js**: 22+
@@ -21,15 +22,24 @@ This is a modern, responsive web resume built with Next.js App Router, TypeScrip
 │   ├── layout.tsx         # Root layout component
 │   ├── page.tsx           # Homepage (redirects to /fr)
 │   ├── not-found.tsx      # 404 page
-│   ├── en/                # English pages
-│   └── fr/                # French pages
+│   ├── [locale]/          # Dynamic locale segment (fr, en)
+│   │   ├── layout.tsx     # Locale layout (NextIntlClientProvider)
+│   │   └── page.tsx       # Locale homepage
+│   └── data/              # Resume content data (en.json, fr.json)
 ├── components/            # Reusable React components
 │   ├── layout.tsx         # Layout components
 │   ├── seo.tsx           # SEO components
 │   └── [various]/        # Feature-specific components
+├── i18n/                  # next-intl configuration
+│   ├── routing.ts        # Locale routing (locales, defaultLocale)
+│   └── request.ts        # Server-side request config
+├── messages/              # Translation files (UI strings)
+│   ├── en.json           # English translations
+│   └── fr.json           # French translations
+├── proxy.ts              # next-intl middleware (locale routing)
 ├── public/               # Static assets
-│   └── data/            # JSON data files (en.json, fr.json)
 ├── types/               # TypeScript type definitions
+│   └── next-intl.d.ts   # Type-safe IntlMessages interface
 └── docs/                # Project documentation
 ```
 
@@ -82,7 +92,7 @@ This is a modern, responsive web resume built with Next.js App Router, TypeScrip
 
 ### Component Structure
 
-- **Server Components** by default (Next.js 15 App Router)
+- **Server Components** by default (Next.js 16 App Router)
 - **Client Components** marked with `'use client'` directive when needed (for interactivity, hooks, styled-jsx)
 - Use functional components with TypeScript
 - Export component types from the same file when possible
@@ -115,9 +125,28 @@ Imports are automatically sorted by `simple-import-sort`:
 
 ## Internationalization
 
-- English: `/en` routes with `public/data/en.json`
-- French: `/fr` routes with `public/data/fr.json` (default language)
-- Homepage redirects to `/fr`
+The project uses [next-intl](https://next-intl.dev/) for type-safe internationalization:
+
+### Architecture
+
+- **Routing**: Dynamic `[locale]` segment with `proxy.ts` middleware (Next.js 16 convention)
+- **Locales**: `fr` (default), `en` — defined in `i18n/routing.ts`
+- **UI strings**: `messages/en.json` and `messages/fr.json` (section titles, metadata, labels)
+- **Resume data**: `app/data/en.json` and `app/data/fr.json` (structured resume content)
+- **Type safety**: `IntlMessages` interface in `types/next-intl.d.ts`
+
+### Usage Patterns
+
+- **Server Components**: Use `getTranslations('namespace')` from `next-intl/server`
+- **Client Components**: Use `useTranslations('namespace')` from `next-intl` (wrapped by `NextIntlClientProvider` in locale layout)
+- **Metadata**: Use `getTranslations` in `generateMetadata()` functions
+- **Static params**: Use `routing.locales` in `generateStaticParams()`
+
+### Adding a New Translation Key
+
+1. Add the key to both `messages/en.json` and `messages/fr.json`
+2. Update the `IntlMessages` interface in `types/next-intl.d.ts` if adding a new section
+3. Use `getTranslations('section')` (server) or `useTranslations('section')` (client) to access the key
 
 ## Testing Requirements
 
@@ -136,7 +165,7 @@ Imports are automatically sorted by `simple-import-sort`:
 1. **Code Quality**: Zero ESLint errors required
 2. **Type Safety**: Maintain TypeScript strict mode compliance
 3. **Formatting**: Automatic via Prettier on commit
-4. **Performance**: Use Next.js 15 features (Server Components, streaming)
+4. **Performance**: Use Next.js 16 features (Server Components, streaming)
 5. **Accessibility**: Follow WCAG guidelines, use semantic HTML
 6. **Security**: No security vulnerabilities (checked by ESLint)
 7. **SEO**: Use Next.js metadata API (`generateMetadata`)
@@ -147,8 +176,10 @@ Imports are automatically sorted by `simple-import-sort`:
 
 1. Create page in `app/[locale]/` directory
 2. Export async function for Server Component
-3. Add metadata via `generateMetadata()` function
-4. Import and use data from `public/data/[locale].json`
+3. Add metadata via `generateMetadata()` using `getTranslations` from `next-intl/server`
+4. Use `getTranslations('namespace')` for UI strings
+5. Import resume content data from `app/data/` via `getData(locale)` if needed
+6. Add `generateStaticParams` using `routing.locales` from `@/i18n/routing`
 
 ### Adding a New Component
 
