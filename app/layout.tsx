@@ -1,3 +1,5 @@
+import './globals.css';
+
 import React from 'react';
 
 // Root layout is required for `not-found.tsx` at the root level.

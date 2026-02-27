@@ -95,7 +95,7 @@ yarn dev
 ├── messages/              # Translation files (UI strings)
 │   ├── en.json           # English translations
 │   └── fr.json           # French translations
-├── proxy.ts              # next-intl middleware (locale routing)
+├── proxy.ts              # next-intl proxy/middleware (locale routing)
 ├── public/               # Static assets
 ├── types/               # TypeScript type definitions
 │   └── next-intl.d.ts   # Type-safe IntlMessages interface
@@ -138,7 +138,7 @@ The project uses [next-intl](https://next-intl.dev/) for internationalization wi
 ### UI Strings (next-intl)
 
 - **Translation files**: `messages/en.json` and `messages/fr.json` for UI labels (section titles, metadata, etc.)
-- **Routing**: Dynamic `[locale]` segment with `proxy.ts` middleware handling locale detection and redirection
+- **Routing**: Dynamic `[locale]` segment with `proxy.ts` handling locale detection and redirection
 - **Server-side**: `getTranslations()` for Server Components
 - **Client-side**: `NextIntlClientProvider` wraps locale layouts for client component access
 - **Type safety**: `IntlMessages` interface declared in `types/next-intl.d.ts`
@@ -153,7 +153,7 @@ The project uses [next-intl](https://next-intl.dev/) for internationalization wi
 - **Supported locales**: `fr` (default), `en`
 - **Routing config**: `i18n/routing.ts` — defines available locales and default locale
 - **Request config**: `i18n/request.ts` — loads messages per locale on the server
-- **Middleware**: `proxy.ts` — handles locale routing (Next.js 16 convention)
+- **Proxy**: `proxy.ts` — handles locale routing (Next.js 16 convention, replaces `middleware.ts`)
 - **Default language**: French (homepage redirects to `/fr`)
 
 ## ⚙️ Configuration

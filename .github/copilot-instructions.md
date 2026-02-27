@@ -36,7 +36,7 @@ This is a modern, responsive web resume built with Next.js App Router, TypeScrip
 ├── messages/              # Translation files (UI strings)
 │   ├── en.json           # English translations
 │   └── fr.json           # French translations
-├── proxy.ts              # next-intl middleware (locale routing)
+├── proxy.ts              # next-intl proxy/middleware (locale routing)
 ├── public/               # Static assets
 ├── types/               # TypeScript type definitions
 │   └── next-intl.d.ts   # Type-safe IntlMessages interface
@@ -129,7 +129,7 @@ The project uses [next-intl](https://next-intl.dev/) for type-safe international
 
 ### Architecture
 
-- **Routing**: Dynamic `[locale]` segment with `proxy.ts` middleware (Next.js 16 convention)
+- **Routing**: Dynamic `[locale]` segment with `proxy.ts` for locale detection/redirection (Next.js 16 convention)
 - **Locales**: `fr` (default), `en` — defined in `i18n/routing.ts`
 - **UI strings**: `messages/en.json` and `messages/fr.json` (section titles, metadata, labels)
 - **Resume data**: `app/data/en.json` and `app/data/fr.json` (structured resume content)

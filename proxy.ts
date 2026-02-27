@@ -1,5 +1,6 @@
-// `proxy.ts` is the Next.js 16 convention for routing middleware (renamed from `middleware.ts`).
-// It handles locale detection and redirects based on the routing configuration.
+// `proxy.ts` is the Next.js 16 file convention for routing middleware (replaces `middleware.ts`).
+// Handles locale detection and redirects via next-intl.
+// See: https://nextjs.org/docs/messages/middleware-to-proxy
 import createMiddleware from 'next-intl/middleware';
 
 import { routing } from './i18n/routing';
