@@ -2,4 +2,77 @@
 
 @theme {
   --color-brand: #8e8ed6;
+
+  /* Themed color tokens — values are overridden per [data-theme] below.
+     Defaults below mirror the `dark` theme. */
+  --color-bg: #0b0b10;
+  --color-sidebar: #0f0f17;
+  --color-card: #161622;
+  --color-card-hover: #1c1c2c;
+  --color-border: #25253a;
+  --color-accent: #8e8ed6;
+  --color-accent-dim: rgba(142, 142, 214, 0.12);
+  --color-text: #d8d8ee;
+  --color-text-muted: #6565a0;
+  --color-heading: #f0f0ff;
+
+  /* Themed font families — overridden per [data-theme]. */
+  --font-sans: var(--font-space-grotesk), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+}
+
+[data-theme='dark'] {
+  --color-bg: #0b0b10;
+  --color-sidebar: #0f0f17;
+  --color-card: #161622;
+  --color-card-hover: #1c1c2c;
+  --color-border: #25253a;
+  --color-accent: #8e8ed6;
+  --color-accent-dim: rgba(142, 142, 214, 0.12);
+  --color-text: #d8d8ee;
+  --color-text-muted: #6565a0;
+  --color-heading: #f0f0ff;
+  --font-sans: var(--font-space-grotesk), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+}
+
+[data-theme='clean'] {
+  --color-bg: #f0f0ec;
+  --color-sidebar: #ffffff;
+  --color-card: #ffffff;
+  --color-card-hover: #f7f7f4;
+  --color-border: #e2e2da;
+  --color-accent: #8e8ed6;
+  --color-accent-dim: rgba(142, 142, 214, 0.08);
+  --color-text: #1c1c24;
+  --color-text-muted: #8a8a92;
+  --color-heading: #0e0e18;
+  --font-sans: var(--font-dm-sans), system-ui, sans-serif;
+  --font-mono: var(--font-dm-mono), ui-monospace, monospace;
+}
+
+[data-theme='bold'] {
+  --color-bg: #fefefe;
+  --color-sidebar: #0e0e18;
+  --color-card: #fefefe;
+  --color-card-hover: #fafafa;
+  --color-border: #eaeaee;
+  --color-accent: #8e8ed6;
+  --color-accent-dim: rgba(142, 142, 214, 0.08);
+  --color-text: #0e0e18;
+  --color-text-muted: #7a7a88;
+  --color-heading: #06060e;
+  --font-sans: var(--font-syne), system-ui, sans-serif;
+  --font-mono: var(--font-inter), system-ui, sans-serif;
+}
+
+/* Smooth transition when switching themes. */
+html,
+body,
+*,
+*::before,
+*::after {
+  transition-property: background-color, color, border-color, fill, stroke;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
 }

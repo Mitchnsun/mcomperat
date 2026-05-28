@@ -40,6 +40,7 @@ export default [
         document: 'readonly',
         navigator: 'readonly',
         fetch: 'readonly',
+        localStorage: 'readonly',
       },
     },
     plugins: {
