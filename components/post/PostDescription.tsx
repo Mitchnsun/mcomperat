@@ -3,7 +3,7 @@ import React from 'react';
 import { PostDescriptionProps } from '@/types';
 
 const PostDescription: React.FC<PostDescriptionProps> = ({ description }) => (
-  <article className="pl-2 text-neutral-700 print:text-sm">
+  <article className="text-body pl-2 print:text-sm">
     {description.map((item, index) => (
       <div key={item.id || `desc-${index}`}>
         {item.text}

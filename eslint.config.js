@@ -40,6 +40,7 @@ export default [
         document: 'readonly',
         navigator: 'readonly',
         fetch: 'readonly',
+        localStorage: 'readonly',
       },
     },
     plugins: {
@@ -64,7 +65,6 @@ export default [
       // React Hooks rules (v6.1.0 with React 19 support)
       ...reactHooks.configs.recommended.rules,
       'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
 
       // React/Next.js rules
       'react/react-in-jsx-scope': 'off',

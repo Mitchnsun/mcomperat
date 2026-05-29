@@ -5,6 +5,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue?logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.1-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
 [![next-intl](https://img.shields.io/badge/next--intl-4.x-blue?logo=next.js)](https://next-intl.dev/)
+[![version](https://img.shields.io/badge/version-7.0-brightgreen)](package.json)
 
 A modern, responsive web resume built with Next.js App Router, TypeScript, and Tailwind CSS v4. This project showcases Matthieu Compérat's professional experience as a Frontend Developer.
 
@@ -13,10 +14,11 @@ A modern, responsive web resume built with Next.js App Router, TypeScript, and T
 - 🌐 **Internationalization**: Support for English and French languages
 - 📱 **Responsive Design**: Optimized for all device sizes
 - ⚡ **Modern Stack**: Next.js 16 with App Router, React 19, and TypeScript
-- 🎨 **Tailwind CSS v4**: Latest Tailwind with native CSS @theme support
+- 🎨 **Multi-Theme System**: Three themes (Dark, Clean, Bold) with persistent preference and flash-free switching
+- 🎛 **Tailwind CSS v4**: Native CSS `@theme` directive — no config file required
 - 🔧 **Developer Experience**: ESLint 9, Prettier, Husky, and lint-staged
 - 🚀 **Performance**: Server-side rendering and static generation capabilities
-- ♿ **Accessibility**: Built with accessibility best practices
+- ♿ **Accessibility**: Built with accessibility best practices, including `prefers-reduced-motion` support
 
 ## 🛠 Tech Stack
 
@@ -126,10 +128,29 @@ This project uses a comprehensive set of development tools to ensure code qualit
 
 ### Styling Architecture
 
-- **Tailwind CSS v4** with native CSS support
-- **Custom theme configuration** using CSS `@theme` directive
+- **Tailwind CSS v4** with native CSS support — no `tailwind.config.*` file
+- **Custom theme tokens** defined via the CSS `@theme` directive in `app/globals.css`
 - **PostCSS integration** with `@tailwindcss/postcss`
 - **Responsive design** utilities and components
+
+### Multi-Theme System
+
+The project ships three distinct visual themes switchable at runtime:
+
+| Theme | Key     | Description                                                               |
+| ----- | ------- | ------------------------------------------------------------------------- |
+| Dark  | `dark`  | Deep navy background with purple accents — Space Grotesk / JetBrains Mono |
+| Clean | `clean` | Off-white background, minimal — DM Sans / DM Mono                         |
+| Bold  | `bold`  | Yellow-green background with navy sidebar — Syne / Inter                  |
+
+Each theme is defined as a `[data-theme="…"]` selector block in `globals.css` that overrides the color and font CSS custom properties declared in `@theme`.
+
+**How it works:**
+
+- `hooks/useTheme.ts` — reads/writes the active theme to `localStorage` under the key `cv-theme` and sets `data-theme` on `<html>`.
+- `components/ui/ThemeToggle.tsx` — client component with a three-button radio group, visible on all screen sizes.
+- **Flash prevention** — an inline `<Script strategy="beforeInteractive">` in `app/[locale]/layout.tsx` reads `localStorage` and applies `data-theme` before React hydrates, preventing a flash of the default theme. `suppressHydrationWarning` is set on `<html>` to acknowledge the intentional server/client attribute mismatch.
+- **Reduced motion** — `@media (prefers-reduced-motion: reduce)` in `globals.css` disables all theme-switch transitions for users who opt out of animation.
 
 ## 🌐 Internationalization
 
@@ -216,6 +237,7 @@ For any questions or information, please contact:
 
 ## 📈 Version History
 
+- **v7.0** - May 2026: New design with 3-theme CSS system (Dark / Clean / Bold)
 - **v6.1** - February 2026: next-intl integration for type-safe internationalization
 - **v6.0** - October 2025: Next.js 15 App Router + Tailwind CSS v4
 - **v5.0** - September 2025: Next.js 13 with SSR/SSG
