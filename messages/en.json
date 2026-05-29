@@ -4,6 +4,11 @@
     "education": "Education",
     "extras": "Extras"
   },
+  "sidebar": {
+    "experiences": "Experiences",
+    "sections": "Sections",
+    "contact": "Contact"
+  },
   "meta": {
     "title": "Resume"
   }

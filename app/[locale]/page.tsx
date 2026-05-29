@@ -32,12 +32,25 @@ export default async function LocalePage({ params }: { params: Promise<{ locale:
   const { locale } = await params;
   const data = await getData(locale);
   const t = await getTranslations({ locale, namespace: 'sections' });
+  const tSidebar = await getTranslations({ locale, namespace: 'sidebar' });
+
+  const experiences = data.work.experiences.map((exp, index) => ({
+    id: `exp-${index}`,
+    company: exp.company,
+    year: /\d{4}/.exec(exp.start)?.[0] ?? '',
+  }));
+
+  const sections = [
+    { label: t('education'), href: '#education' },
+    { label: t('extras'), href: '#extras' },
+    { label: tSidebar('contact'), href: `mailto:${data.person.email}`, external: true },
+  ];
 
   return (
-    <Layout person={data.person}>
-      <PostList title={t('work')} list={data.work.experiences} />
-      <PostList title={t('education')} list={data.education.schools} />
-      <PostList title={t('extras')}>
+    <Layout person={data.person} experiences={experiences} sections={sections}>
+      <PostList title={t('work')} list={data.work.experiences} sectionId="work" idPrefix="exp" />
+      <PostList title={t('education')} list={data.education.schools} sectionId="education" />
+      <PostList title={t('extras')} sectionId="extras">
         {data.extra.items.map((item, index) => (
           <PostExtra {...item} key={item.title || index} />
         ))}
