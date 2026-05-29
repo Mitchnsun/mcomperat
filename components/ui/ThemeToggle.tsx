@@ -80,7 +80,7 @@ const ThemeToggle: React.FC<{ className?: string }> = ({ className }) => {
       role="radiogroup"
       aria-label="Theme"
       className={[
-        'border-border bg-card/80 inline-flex items-center gap-1 rounded-full border p-1 backdrop-blur',
+        'border-border bg-card inline-flex items-center gap-1 rounded-full border p-1 backdrop-blur',
         className ?? '',
       ]
         .filter(Boolean)
@@ -100,7 +100,7 @@ const ThemeToggle: React.FC<{ className?: string }> = ({ className }) => {
             className={[
               'inline-flex h-8 w-8 cursor-pointer items-center justify-center rounded-full',
               'focus-visible:ring-accent focus:outline-none focus-visible:ring-2',
-              isActive ? 'bg-accent text-white' : 'text-text-muted hover:bg-card-hover hover:text-text',
+              isActive ? 'bg-accent text-white' : 'text-body-muted hover:bg-card-hover hover:text-body',
             ].join(' ')}
           >
             {opt.icon}

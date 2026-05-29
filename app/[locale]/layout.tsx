@@ -81,13 +81,13 @@ export default async function LocaleLayout({
   ].join(' ');
 
   return (
-    <html lang={locale} data-theme="dark" className={fontClasses}>
+    <html lang={locale} data-theme="dark" className={fontClasses} suppressHydrationWarning>
       <head>
         <Script id="cv-theme-init" strategy="beforeInteractive">
           {NO_FLASH_SCRIPT}
         </Script>
       </head>
-      <body className="bg-bg text-text font-sans">
+      <body className="bg-bg text-body font-sans">
         <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
       </body>
     </html>
