@@ -4,6 +4,7 @@ import React, { useCallback, useMemo, useRef, useState } from 'react';
 
 import MainContent from '@/components/layout/MainContent';
 import Sidebar from '@/components/layout/Sidebar';
+import SidebarIdentity from '@/components/layout/SidebarIdentity';
 import { useScrollTracking } from '@/hooks/useScrollTracking';
 import { LayoutProps } from '@/types';
 
@@ -44,28 +45,31 @@ const Layout: React.FC<LayoutProps> = ({ person, experiences = [], sections = []
 
   return (
     <div className="cv-layout bg-bg text-body flex h-screen overflow-hidden print:block print:h-auto print:overflow-visible">
-      {/* Mobile hamburger */}
-      <button
-        type="button"
-        aria-label="Toggle navigation"
-        aria-expanded={isDrawerOpen}
-        onClick={() => setIsDrawerOpen((open) => !open)}
-        className="bg-card border-border focus-visible:ring-accent fixed top-3 left-3 z-50 inline-flex h-10 w-10 items-center justify-center rounded-md border md:hidden print:hidden"
-      >
-        <svg
-          aria-hidden="true"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+      {/* Mobile top bar: keeps the identity visible and toggles the drawer */}
+      <div className="bg-sidebar border-border fixed inset-x-0 top-0 z-40 flex h-16 items-center justify-between border-b px-4 md:hidden print:hidden">
+        <SidebarIdentity person={person} />
+        <button
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded={isDrawerOpen}
+          onClick={() => setIsDrawerOpen((open) => !open)}
+          className="bg-card border-border focus-visible:ring-accent inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-md border"
         >
-          {isDrawerOpen ? <path d="M18 6 6 18M6 6l12 12" /> : <path d="M3 12h18M3 6h18M3 18h18" />}
-        </svg>
-      </button>
+          <svg
+            aria-hidden="true"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            {isDrawerOpen ? <path d="M18 6 6 18M6 6l12 12" /> : <path d="M3 12h18M3 6h18M3 18h18" />}
+          </svg>
+        </button>
+      </div>
 
       {/* Backdrop for the mobile drawer */}
       {isDrawerOpen ? (
@@ -82,7 +86,7 @@ const Layout: React.FC<LayoutProps> = ({ person, experiences = [], sections = []
         aria-label="Primary"
         className={[
           'cv-sidebar bg-sidebar border-border z-40 w-[244px] shrink-0 overflow-y-auto border-r',
-          'fixed inset-y-0 left-0 h-screen transition-transform duration-300 ease-in-out md:static md:translate-x-0',
+          'fixed top-16 bottom-0 left-0 transition-transform duration-300 ease-in-out md:static md:inset-y-0 md:h-screen md:translate-x-0',
           isDrawerOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0',
           'print:hidden',
         ].join(' ')}
@@ -97,7 +101,7 @@ const Layout: React.FC<LayoutProps> = ({ person, experiences = [], sections = []
         />
       </nav>
 
-      <MainContent ref={mainRef}>
+      <MainContent ref={mainRef} className="pt-16 md:pt-0">
         <div className="p-4 lg:px-12 lg:py-8">{children}</div>
         <footer className="border-border text-body-muted border-t px-12 py-6 font-serif print:hidden">
           © {new Date().getFullYear()}, Built with&nbsp;

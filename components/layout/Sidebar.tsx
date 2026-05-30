@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import React from 'react';
 
 import GithubLogo from '@/components/assets/icons/github-logo';
+import SidebarIdentity from '@/components/layout/SidebarIdentity';
 import LangToggle from '@/components/ui/LangToggle';
 import ThemeToggle from '@/components/ui/ThemeToggle';
 import { getCompanyAccent } from '@/lib/companyColors';
@@ -28,25 +29,11 @@ const Sidebar: React.FC<SidebarProps> = ({
   onSectionClick,
 }) => {
   const t = useTranslations('sidebar');
-  const monogram = `${person.firstname?.[0] ?? ''}${person.lastname?.[0] ?? ''}`.toUpperCase();
 
   return (
     <div className="flex h-full flex-col gap-6 px-5 py-6">
-      {/* Identity */}
-      <header className="flex items-center gap-3">
-        <span
-          aria-hidden="true"
-          className="bg-accent flex h-11 w-11 shrink-0 items-center justify-center rounded-lg text-sm font-bold text-white"
-        >
-          {monogram}
-        </span>
-        <span className="leading-tight">
-          <span className="text-heading block text-base font-bold">
-            {person.firstname} {person.lastname}
-          </span>
-          <span className="text-body-muted block text-xs">{person.title}</span>
-        </span>
-      </header>
+      {/* Identity (hidden on mobile where it lives in the top bar) */}
+      <SidebarIdentity person={person} className="hidden md:flex" />
 
       {/* Experiences navigation */}
       {experiences.length > 0 ? (
