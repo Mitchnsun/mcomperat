@@ -1,5 +1,6 @@
 import './globals.css';
 
+import { DM_Mono, DM_Sans, Inter, JetBrains_Mono, Space_Grotesk, Syne } from 'next/font/google';
 import Script from 'next/script';
 import { getLocale } from 'next-intl/server';
 import React from 'react';
@@ -16,6 +17,44 @@ const NO_FLASH_SCRIPT = `(() => {
   }
 })();`;
 
+// Load all theme fonts up-front so switching themes never causes a FOUT.
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-space-grotesk',
+  display: 'swap',
+});
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  variable: '--font-jetbrains-mono',
+  display: 'swap',
+});
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '700'],
+  variable: '--font-dm-sans',
+  display: 'swap',
+});
+const dmMono = DM_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  variable: '--font-dm-mono',
+  display: 'swap',
+});
+const syne = Syne({
+  subsets: ['latin'],
+  weight: ['400', '600', '700', '800'],
+  variable: '--font-syne',
+  display: 'swap',
+});
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600'],
+  variable: '--font-inter',
+  display: 'swap',
+});
+
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   let locale = 'fr';
   try {
@@ -24,6 +63,15 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     // No locale context (e.g., root not-found page) — fall back to default locale.
   }
 
+  const fontClasses = [
+    spaceGrotesk.variable,
+    jetbrainsMono.variable,
+    dmSans.variable,
+    dmMono.variable,
+    syne.variable,
+    inter.variable,
+  ].join(' ');
+
   return (
     <html lang={locale} data-theme="dark" suppressHydrationWarning>
       <head>
@@ -31,7 +79,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           {NO_FLASH_SCRIPT}
         </Script>
       </head>
-      <body className="bg-bg text-body font-sans">{children}</body>
+      <body className={`${fontClasses} bg-bg text-body font-sans`}>{children}</body>
     </html>
   );
 }
