@@ -1,10 +1,10 @@
 'use client';
 
-import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 
 import GithubLogo from '@/components/assets/icons/github-logo';
+import LinkedinLogo from '@/components/assets/icons/linkedin-logo';
 import SidebarIdentity from '@/components/layout/SidebarIdentity';
 import LangToggle from '@/components/ui/LangToggle';
 import ThemeToggle from '@/components/ui/ThemeToggle';
@@ -115,27 +115,29 @@ const Sidebar: React.FC<SidebarProps> = ({
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`View ${person.firstname ?? ''} ${person.lastname ?? ''}'s GitHub profile`}
+              className="text-body-muted hover:text-body transition-colors"
             >
               <GithubLogo />
             </a>
           ) : null}
           {person.link?.linkedin ? (
-            <a href={person.link.linkedin} target="_blank" rel="noopener noreferrer">
-              <Image
-                src="/LinkedInSquare.png"
-                alt={`View ${person.firstname ?? ''} ${person.lastname ?? ''}'s profile on LinkedIn`}
-                width={28}
-                height={28}
-              />
+            <a
+              href={person.link.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`View ${person.firstname ?? ''} ${person.lastname ?? ''}'s LinkedIn profile`}
+              className="text-body-muted hover:text-body transition-colors"
+            >
+              <LinkedinLogo />
             </a>
           ) : null}
         </div>
       ) : null}
 
       {/* Toggles */}
-      <div className="border-border mt-auto flex flex-col gap-3 border-t pt-4 print:hidden">
-        <LangToggle />
-        <ThemeToggle />
+      <div className="border-border mt-auto flex flex-col gap-3 border-t py-4 print:hidden">
+        <LangToggle className="w-fit" />
+        <ThemeToggle className="w-fit" />
       </div>
     </div>
   );

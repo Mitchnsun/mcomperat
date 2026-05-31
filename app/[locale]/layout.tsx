@@ -1,6 +1,5 @@
 import { DM_Mono, DM_Sans, Inter, JetBrains_Mono, Space_Grotesk, Syne } from 'next/font/google';
 import { notFound } from 'next/navigation';
-import Script from 'next/script';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import React from 'react';
@@ -45,17 +44,6 @@ const inter = Inter({
   display: 'swap',
 });
 
-// Runs before React hydration to apply the stored theme and avoid a flash.
-const NO_FLASH_SCRIPT = `(() => {
-  try {
-    var t = localStorage.getItem('cv-theme');
-    if (t !== 'dark' && t !== 'clean' && t !== 'bold') t = 'dark';
-    document.documentElement.setAttribute('data-theme', t);
-  } catch (_) {
-    document.documentElement.setAttribute('data-theme', 'dark');
-  }
-})();`;
-
 export default async function LocaleLayout({
   children,
   params,
@@ -81,15 +69,8 @@ export default async function LocaleLayout({
   ].join(' ');
 
   return (
-    <html lang={locale} data-theme="dark" className={fontClasses} suppressHydrationWarning>
-      <head>
-        <Script id="cv-theme-init" strategy="beforeInteractive">
-          {NO_FLASH_SCRIPT}
-        </Script>
-      </head>
-      <body className="bg-bg text-body font-sans">
-        <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider messages={messages}>
+      <div className={fontClasses}>{children}</div>
+    </NextIntlClientProvider>
   );
 }
