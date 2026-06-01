@@ -10,12 +10,13 @@ import SkillsGrid from './SkillsGrid';
 
 interface HeroProps {
   person: Person;
-  locale: HeroLocale;
+  locale?: string;
 }
 
-const Hero: React.FC<HeroProps> = ({ person, locale }) => {
+const Hero: React.FC<HeroProps> = ({ person, locale = 'fr' }) => {
+  const heroLocale: HeroLocale = locale === 'en' ? 'en' : 'fr';
   const fullName = `${person.firstname} ${person.lastname}`;
-  const availability = locale === 'fr' ? 'Disponible · Freelance' : 'Available · Freelance';
+  const availability = heroLocale === 'fr' ? 'Disponible · Freelance' : 'Available · Freelance';
 
   return (
     <section className="hero-surface border-border bg-sidebar relative isolate mb-12 overflow-hidden rounded-[2rem] border px-6 py-8 md:px-10 md:py-10">
@@ -54,10 +55,10 @@ const Hero: React.FC<HeroProps> = ({ person, locale }) => {
             </p>
           </div>
 
-          <HeroStats locale={locale} />
+          <HeroStats locale={heroLocale} />
         </div>
 
-        <SkillsGrid locale={locale} />
+        <SkillsGrid locale={heroLocale} />
       </div>
     </section>
   );
