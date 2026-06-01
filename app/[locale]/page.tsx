@@ -2,6 +2,7 @@ import { type Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import React from 'react';
 
+import Hero from '@/components/hero/Hero';
 import Layout from '@/components/layout';
 import PostExtra from '@/components/post/PostExtra';
 import PostList from '@/components/post/PostList';
@@ -31,6 +32,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function LocalePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const data = await getData(locale);
+  const heroLocale = locale === 'en' ? 'en' : 'fr';
   const t = await getTranslations({ locale, namespace: 'sections' });
   const tSidebar = await getTranslations({ locale, namespace: 'sidebar' });
 
@@ -48,6 +50,7 @@ export default async function LocalePage({ params }: { params: Promise<{ locale:
 
   return (
     <Layout person={data.person} experiences={experiences} sections={sections}>
+      <Hero person={data.person} locale={heroLocale} />
       <PostList title={t('work')} list={data.work.experiences} sectionId="work" idPrefix="exp" />
       <PostList title={t('education')} list={data.education.schools} sectionId="education" />
       <PostList title={t('extras')} sectionId="extras">
