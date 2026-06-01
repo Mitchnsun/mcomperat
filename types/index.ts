@@ -86,7 +86,9 @@ export interface CardProps {
   email?: string;
 }
 
-export interface PostProps extends Experience {}
+export interface PostProps extends Experience {
+  id?: string;
+}
 
 export interface PostHeaderProps {
   title?: string;
@@ -107,6 +109,11 @@ export interface PostListProps {
   title: string;
   list?: (Experience | EducationItem)[];
   children?: React.ReactNode;
+  // Optional id set on the section wrapper so it can be targeted by anchors.
+  sectionId?: string;
+  // When set, each rendered Post gets an `${idPrefix}-${index}` id used for
+  // sidebar scroll-tracking and navigation.
+  idPrefix?: string;
 }
 
 export interface TagProps {
@@ -128,8 +135,25 @@ export interface SEOProps {
   title?: string;
 }
 
+// Sidebar navigation metadata
+export interface ExperienceNavItem {
+  id: string;
+  company: string;
+  year: string;
+}
+
+export interface SectionNavItem {
+  // Either an in-page anchor target (href like `#education`) or an external
+  // link (e.g. a mailto). `external` links open without smooth scroll.
+  label: string;
+  href: string;
+  external?: boolean;
+}
+
 export interface LayoutProps {
   person: Person;
+  experiences?: ExperienceNavItem[];
+  sections?: SectionNavItem[];
   children: React.ReactNode;
 }
 

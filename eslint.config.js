@@ -76,6 +76,12 @@ export default [
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
 
+      // TypeScript already verifies identifiers and unused vars at compile time
+      // (and `unused-imports` handles unused vars), so the base rules only
+      // produce false positives on DOM globals and type-signature params.
+      'no-undef': 'off',
+      'no-unused-vars': 'off',
+
       // Import rules
       'import/no-extraneous-dependencies': 'off',
       'import/order': 'off',

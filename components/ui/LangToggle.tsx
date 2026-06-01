@@ -1,0 +1,56 @@
+'use client';
+
+import { useLocale } from 'next-intl';
+import React, { useTransition } from 'react';
+
+import { usePathname, useRouter } from '@/i18n/navigation';
+import { type Locale, routing } from '@/i18n/routing';
+
+const LangToggle: React.FC<{ className?: string }> = ({ className }) => {
+  const locale = useLocale();
+  const pathname = usePathname();
+  const router = useRouter();
+  const [isPending, startTransition] = useTransition();
+
+  const switchLocale = (next: Locale) => {
+    if (next === locale) return;
+    startTransition(() => {
+      router.replace(pathname, { locale: next });
+    });
+  };
+
+  return (
+    <div
+      role="radiogroup"
+      aria-label="Language"
+      className={['border-border bg-card inline-flex items-center gap-1 rounded-full border p-1', className ?? '']
+        .filter(Boolean)
+        .join(' ')}
+    >
+      {routing.locales.map((value) => {
+        const isActive = locale === value;
+        const label = value.toUpperCase();
+        return (
+          <button
+            key={value}
+            type="button"
+            role="radio"
+            aria-checked={isActive}
+            aria-label={label}
+            disabled={isPending}
+            onClick={() => switchLocale(value)}
+            className={[
+              'inline-flex h-8 min-w-8 cursor-pointer items-center justify-center rounded-full px-3 text-xs font-semibold',
+              'focus-visible:ring-accent focus:outline-none focus-visible:ring-2',
+              isActive ? 'bg-accent text-white' : 'text-body-muted hover:bg-card-hover hover:text-body',
+            ].join(' ')}
+          >
+            {label}
+          </button>
+        );
+      })}
+    </div>
+  );
+};
+
+export default LangToggle;
