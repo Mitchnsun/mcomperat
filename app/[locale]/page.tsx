@@ -2,6 +2,7 @@ import { type Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import React from 'react';
 
+import Hero from '@/components/hero/Hero';
 import Layout from '@/components/layout';
 import PostExtra from '@/components/post/PostExtra';
 import PostList from '@/components/post/PostList';
@@ -48,6 +49,7 @@ export default async function LocalePage({ params }: { params: Promise<{ locale:
 
   return (
     <Layout person={data.person} experiences={experiences} sections={sections}>
+      <Hero person={data.person} locale={locale} />
       <PostList title={t('work')} list={data.work.experiences} sectionId="work" idPrefix="exp" />
       <PostList title={t('education')} list={data.education.schools} sectionId="education" />
       <PostList title={t('extras')} sectionId="extras">
