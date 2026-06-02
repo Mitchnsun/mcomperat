@@ -11,5 +11,9 @@
   },
   "meta": {
     "title": "Resume"
+  },
+  "hero": {
+    "availability": "Available · Freelance",
+    "skillsTitle": "Key skills"
   }
 }

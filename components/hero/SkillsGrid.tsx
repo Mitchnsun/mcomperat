@@ -4,11 +4,11 @@ import { getHeroSkillColor, getHeroSkills, getHeroSkillTint, type HeroLocale } f
 
 interface SkillsGridProps {
   locale: HeroLocale;
+  sectionTitle: string;
 }
 
-const SkillsGrid: React.FC<SkillsGridProps> = ({ locale }) => {
+const SkillsGrid: React.FC<SkillsGridProps> = ({ locale, sectionTitle }) => {
   const skills = getHeroSkills(locale);
-  const sectionTitle = locale === 'fr' ? 'Compétences clés' : 'Key skills';
 
   return (
     <div>

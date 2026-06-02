@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import React from 'react';
 
 import { type HeroLocale } from '@/app/data/heroSkills';
@@ -14,9 +15,9 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({ person, locale = 'fr' }) => {
+  const t = useTranslations('hero');
   const heroLocale: HeroLocale = locale === 'en' ? 'en' : 'fr';
   const fullName = `${person.firstname} ${person.lastname}`;
-  const availability = heroLocale === 'fr' ? 'Disponible · Freelance' : 'Available · Freelance';
 
   return (
     <section className="hero-surface border-border bg-sidebar relative isolate mb-12 overflow-hidden rounded-[2rem] border px-6 py-8 md:px-10 md:py-10">
@@ -25,7 +26,7 @@ const Hero: React.FC<HeroProps> = ({ person, locale = 'fr' }) => {
           <div className="flex flex-wrap items-center gap-3">
             <span className="bg-bg/70 text-heading border-border inline-flex items-center gap-2 rounded-full border px-4 py-2 text-[0.7rem] font-medium tracking-[0.24em] uppercase backdrop-blur-sm">
               <span aria-hidden="true" className="hero-status-dot" />
-              {availability}
+              {t('availability')}
             </span>
             <a
               href={`mailto:${person.email}`}
@@ -58,7 +59,7 @@ const Hero: React.FC<HeroProps> = ({ person, locale = 'fr' }) => {
           <HeroStats locale={heroLocale} />
         </div>
 
-        <SkillsGrid locale={heroLocale} />
+        <SkillsGrid locale={heroLocale} sectionTitle={t('skillsTitle')} />
       </div>
     </section>
   );
