@@ -5,6 +5,7 @@ import React, { useCallback, useMemo, useRef, useState } from 'react';
 import MainContent from '@/components/layout/MainContent';
 import Sidebar from '@/components/layout/Sidebar';
 import SidebarIdentity from '@/components/layout/SidebarIdentity';
+import YearTimeline from '@/components/timeline/YearTimeline';
 import { useScrollTracking } from '@/hooks/useScrollTracking';
 import { LayoutProps } from '@/types';
 
@@ -12,7 +13,14 @@ import { LayoutProps } from '@/types';
 // sticky timeline header.
 const SCROLL_OFFSET = 120;
 
-const Layout: React.FC<LayoutProps> = ({ person, experiences = [], sections = [], children }) => {
+const Layout: React.FC<LayoutProps> = ({
+  person,
+  experiences = [],
+  sections = [],
+  children,
+  timeline = [],
+  lang = 'fr',
+}) => {
   const mainRef = useRef<HTMLElement>(null);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
@@ -102,6 +110,9 @@ const Layout: React.FC<LayoutProps> = ({ person, experiences = [], sections = []
       </nav>
 
       <MainContent ref={mainRef} className="pt-16 md:pt-0">
+        {timeline.length > 0 ? (
+          <YearTimeline experiences={timeline} activeId={activeExpId} onExpClick={handleExpClick} lang={lang} />
+        ) : null}
         <div className="p-3 lg:p-6 xl:px-12">{children}</div>
         <footer className="border-border text-body-muted border-t px-12 py-6 font-serif print:hidden">
           © {new Date().getFullYear()}, Built with&nbsp;

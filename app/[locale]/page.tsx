@@ -8,7 +8,8 @@ import PostExtra from '@/components/post/PostExtra';
 import PostList from '@/components/post/PostList';
 import { generateMetadata as generateSEOMetadata } from '@/components/seo';
 import { routing } from '@/i18n/routing';
-import { type ResumeData } from '@/types';
+import { getCompanyAccent } from '@/lib/companyColors';
+import { type ExperienceTimelineData, type ResumeData } from '@/types';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -41,6 +42,14 @@ export default async function LocalePage({ params }: { params: Promise<{ locale:
     year: /\d{4}/.exec(exp.start)?.[0] ?? '',
   }));
 
+  const timeline: ExperienceTimelineData[] = data.work.experiences.map((exp, index) => ({
+    id: `exp-${index}`,
+    company: exp.company,
+    start: exp.start,
+    end: exp.end,
+    accent: getCompanyAccent(exp.company),
+  }));
+
   const sections = [
     { label: t('education'), href: '#education' },
     { label: t('extras'), href: '#extras' },
@@ -48,7 +57,13 @@ export default async function LocalePage({ params }: { params: Promise<{ locale:
   ];
 
   return (
-    <Layout person={data.person} experiences={experiences} sections={sections}>
+    <Layout
+      person={data.person}
+      experiences={experiences}
+      sections={sections}
+      timeline={timeline}
+      lang={locale as 'fr' | 'en'}
+    >
       <Hero person={data.person} locale={locale} />
       <PostList title={t('work')} list={data.work.experiences} sectionId="work" idPrefix="exp" />
       <PostList title={t('education')} list={data.education.schools} sectionId="education" />

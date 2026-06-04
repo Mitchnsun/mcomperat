@@ -150,11 +150,22 @@ export interface SectionNavItem {
   external?: boolean;
 }
 
+// Timeline (Gantt) metadata for an experience.
+export interface ExperienceTimelineData {
+  id: string;
+  company: string;
+  start: string; // ex: "Oct. 2023"
+  end: string; // ex: "Juil. 2023" ou "" pour le poste actuel
+  accent: string; // oklch(...) ou var(--color-accent)
+}
+
 export interface LayoutProps {
   person: Person;
   experiences?: ExperienceNavItem[];
   sections?: SectionNavItem[];
   children: React.ReactNode;
+  timeline?: ExperienceTimelineData[];
+  lang?: 'fr' | 'en';
 }
 
 export interface PageProps {
