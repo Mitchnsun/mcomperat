@@ -35,12 +35,12 @@ export const HERO_SKILLS: Record<HeroLocale, HeroSkill[]> = {
 
 export const HERO_STATS: Record<HeroLocale, HeroStat[]> = {
   fr: [
-    { label: "ans d'exp.", value: 14 },
+    { label: "ans d'exp.", value: 15 },
     { label: 'missions', value: 12 },
     { label: 'technos', value: 28, suffix: '+' },
   ],
   en: [
-    { label: 'years exp.', value: 14 },
+    { label: 'years exp.', value: 15 },
     { label: 'missions', value: 12 },
     { label: 'techs', value: 28, suffix: '+' },
   ],

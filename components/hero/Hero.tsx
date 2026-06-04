@@ -20,9 +20,9 @@ const Hero: React.FC<HeroProps> = ({ person, locale = 'fr' }) => {
   const fullName = `${person.firstname} ${person.lastname}`;
 
   return (
-    <section className="hero-surface border-border bg-sidebar relative isolate mb-12 overflow-hidden rounded-[2rem] border px-6 py-8 md:px-10 md:py-10">
-      <div className="relative z-10 grid gap-10 md:grid-cols-[minmax(0,1.2fr)_minmax(280px,360px)] md:items-start">
-        <div className="space-y-8">
+    <section className="hero-surface border-border bg-sidebar relative isolate mb-12 overflow-hidden rounded-4xl border px-3 py-4 md:px-6 md:py-8 xl:px-10 xl:py-10">
+      <div className="relative z-10 grid gap-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(280px,360px)] lg:items-start lg:gap-10">
+        <div className="space-y-4 lg:space-y-8">
           <div className="flex flex-wrap items-center gap-3">
             <span className="bg-bg/70 text-heading border-border inline-flex items-center gap-2 rounded-full border px-4 py-2 text-[0.7rem] font-medium tracking-[0.24em] uppercase backdrop-blur-sm">
               <span aria-hidden="true" className="hero-status-dot" />
@@ -37,16 +37,30 @@ const Hero: React.FC<HeroProps> = ({ person, locale = 'fr' }) => {
           </div>
 
           <div>
-            <h1 className="hero-name text-heading text-5xl leading-none tracking-[-0.08em] sm:text-6xl lg:text-7xl">
-              {Array.from(fullName).map((character, index) => (
-                <span
-                  key={`${character}-${index}`}
-                  className="hero-char"
-                  style={{ animationDelay: `${120 + index * 45}ms` }}
-                >
-                  {character === ' ' ? '\u00A0' : character}
-                </span>
-              ))}
+            <h1 className="hero-name text-heading text-4xl leading-none tracking-[-0.08em] sm:text-6xl lg:text-7xl">
+              {(() => {
+                let charIndex = 0;
+                const words = fullName.split(' ');
+                return words.map((word, wordIndex) => (
+                  <React.Fragment key={`word-${wordIndex}`}>
+                    <span className="inline-block whitespace-nowrap">
+                      {Array.from(word).map((character) => {
+                        const delayIndex = charIndex++;
+                        return (
+                          <span
+                            key={`${character}-${delayIndex}`}
+                            className="hero-char"
+                            style={{ animationDelay: `${120 + delayIndex * 45}ms` }}
+                          >
+                            {character}
+                          </span>
+                        );
+                      })}
+                    </span>
+                    {wordIndex < words.length - 1 ? ' ' : null}
+                  </React.Fragment>
+                ));
+              })()}
             </h1>
             <p className="text-body mt-5 text-lg sm:text-xl lg:text-2xl">
               {person.title}

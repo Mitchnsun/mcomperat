@@ -13,7 +13,7 @@ const SkillsGrid: React.FC<SkillsGridProps> = ({ locale, sectionTitle }) => {
   return (
     <div>
       <p className="text-body-muted mb-4 text-xs font-medium tracking-[0.3em] uppercase">{sectionTitle}</p>
-      <div className="hero-skills-grid grid gap-3 sm:grid-cols-2">
+      <div className="hero-skills-grid grid grid-cols-2 gap-3">
         {skills.map((skill, index) => (
           <article
             key={`${skill.label}-${skill.sub}`}
