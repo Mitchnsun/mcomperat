@@ -22,7 +22,7 @@ const SkillsGrid: React.FC<SkillsGridProps> = ({ locale, sectionTitle }) => {
               {
                 '--skill-color': getHeroSkillColor(skill.cat),
                 '--skill-tint': getHeroSkillTint(skill.cat),
-                animationDelay: `${360 + index * 90}ms`,
+                animationDelay: `${450 + index * 70}ms`,
               } as React.CSSProperties
             }
           >
