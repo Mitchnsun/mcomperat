@@ -6,6 +6,10 @@ interface IntlMessages {
     education: string;
     extras: string;
   };
+  hero: {
+    availability: string;
+    skillsTitle: string;
+  };
   meta: {
     title: string;
   };

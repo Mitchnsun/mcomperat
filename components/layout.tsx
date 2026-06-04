@@ -85,7 +85,7 @@ const Layout: React.FC<LayoutProps> = ({ person, experiences = [], sections = []
       <nav
         aria-label="Primary"
         className={[
-          'cv-sidebar bg-sidebar border-border z-40 w-[244px] shrink-0 overflow-y-auto border-r',
+          'cv-sidebar bg-sidebar border-border z-40 w-61 shrink-0 overflow-y-auto border-r',
           'fixed top-16 bottom-0 left-0 transition-transform duration-300 ease-in-out md:static md:inset-y-0 md:h-screen md:translate-x-0',
           isDrawerOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0',
           'print:hidden',
@@ -102,7 +102,7 @@ const Layout: React.FC<LayoutProps> = ({ person, experiences = [], sections = []
       </nav>
 
       <MainContent ref={mainRef} className="pt-16 md:pt-0">
-        <div className="p-4 lg:px-12 lg:py-8">{children}</div>
+        <div className="p-3 lg:p-6 xl:px-12">{children}</div>
         <footer className="border-border text-body-muted border-t px-12 py-6 font-serif print:hidden">
           © {new Date().getFullYear()}, Built with&nbsp;
           <a href="https://nextjs.org" className="text-brand hover:underline">
