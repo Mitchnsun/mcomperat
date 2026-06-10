@@ -3,7 +3,7 @@
 import { useTranslations } from 'next-intl';
 import React from 'react';
 
-import { Tag } from '@/components/tag';
+import { Tag } from '@/components/_archive/tag';
 import { PostHeaderProps } from '@/types';
 
 const PostHeader: React.FC<PostHeaderProps> = ({

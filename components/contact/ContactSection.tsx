@@ -1,0 +1,59 @@
+import React from 'react';
+
+import GithubLogo from '@/components/assets/icons/github-logo';
+import LinkedinLogo from '@/components/assets/icons/linkedin-logo';
+import SectionTitle from '@/components/ui/SectionTitle';
+import { type Person } from '@/types';
+
+interface ContactSectionProps {
+  title: string;
+  person: Person;
+  labels: { email: string; linkedin: string; github: string };
+}
+
+const linkClass =
+  'border-border bg-card-hover/40 hover:border-accent focus-visible:ring-accent flex items-center gap-3 rounded-2xl border p-4 transition-colors focus:outline-none focus-visible:ring-2';
+
+const ContactSection: React.FC<ContactSectionProps> = ({ title, person, labels }) => (
+  <section id="contact" className="scroll-mt-28 pb-4 print:pb-0">
+    <SectionTitle>{title}</SectionTitle>
+
+    <div className="grid gap-4 sm:grid-cols-3">
+      <a href={`mailto:${person.email}`} className={linkClass}>
+        <span aria-hidden="true" className="text-accent text-xl">
+          @
+        </span>
+        <span className="min-w-0">
+          <span className="text-body-muted block text-xs uppercase">{labels.email}</span>
+          <span className="text-body block truncate text-sm">{person.email}</span>
+        </span>
+      </a>
+
+      {person.link?.linkedin ? (
+        <a href={person.link.linkedin} target="_blank" rel="noopener noreferrer" className={linkClass}>
+          <span aria-hidden="true" className="text-accent">
+            <LinkedinLogo />
+          </span>
+          <span className="min-w-0">
+            <span className="text-body-muted block text-xs uppercase">{labels.linkedin}</span>
+            <span className="text-body block truncate text-sm">{labels.linkedin}</span>
+          </span>
+        </a>
+      ) : null}
+
+      {person.link?.github ? (
+        <a href={person.link.github} target="_blank" rel="noopener noreferrer" className={linkClass}>
+          <span aria-hidden="true" className="text-accent">
+            <GithubLogo />
+          </span>
+          <span className="min-w-0">
+            <span className="text-body-muted block text-xs uppercase">{labels.github}</span>
+            <span className="text-body block truncate text-sm">{labels.github}</span>
+          </span>
+        </a>
+      ) : null}
+    </div>
+  </section>
+);
+
+export default ContactSection;

@@ -1,13 +1,24 @@
 {
   "sections": {
     "work": "Expériences professionnelles",
+    "skills": "Compétences",
     "education": "Education",
-    "extras": "Extras"
+    "extras": "Extras",
+    "contact": "Contact"
   },
   "sidebar": {
     "experiences": "Expériences",
     "sections": "Sections",
     "contact": "Contact"
+  },
+  "experiences": {
+    "showMore": "Voir plus",
+    "showLess": "Voir moins"
+  },
+  "contact": {
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
   },
   "meta": {
     "title": "CV"

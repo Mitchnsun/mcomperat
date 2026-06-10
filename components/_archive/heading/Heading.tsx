@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 
 import GithubLogo from '@/components/assets/icons/github-logo';
-import { Card } from '@/components/card';
+import { Card } from '@/components/_archive/card';
 import { HeadingProps } from '@/types';
 
 const Heading: React.FC<HeadingProps> = ({ person }) => (

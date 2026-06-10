@@ -1,13 +1,24 @@
 {
   "sections": {
     "work": "Work Experiences",
+    "skills": "Skills",
     "education": "Education",
-    "extras": "Extras"
+    "extras": "Extras",
+    "contact": "Contact"
   },
   "sidebar": {
     "experiences": "Experiences",
     "sections": "Sections",
     "contact": "Contact"
+  },
+  "experiences": {
+    "showMore": "Show more",
+    "showLess": "Show less"
+  },
+  "contact": {
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
   },
   "meta": {
     "title": "Resume"

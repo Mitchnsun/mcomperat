@@ -205,3 +205,149 @@ body,
     animation: none;
   }
 }
+
+/* ---------------------------------------------------------------------------
+   Tag pills (components/ui/TagPill.tsx)
+   Colors are injected per category via --tag-bg / --tag-fg. Each theme renders
+   them differently: dark = outline, clean = light fill, bold = full fill.
+--------------------------------------------------------------------------- */
+.tag-pill {
+  display: inline-block;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.72rem;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.tag-pill.is-interactive {
+  cursor: pointer;
+}
+
+[data-theme='dark'] .tag-pill {
+  color: var(--tag-bg);
+  background: color-mix(in srgb, var(--tag-bg) 8%, transparent);
+  border-color: color-mix(in srgb, var(--tag-bg) 50%, transparent);
+}
+
+[data-theme='clean'] .tag-pill {
+  color: color-mix(in srgb, var(--tag-bg) 72%, #000);
+  background: color-mix(in srgb, var(--tag-bg) 15%, transparent);
+  border-color: color-mix(in srgb, var(--tag-bg) 25%, transparent);
+}
+
+[data-theme='bold'] .tag-pill {
+  color: var(--tag-fg);
+  background: var(--tag-bg);
+  border-color: var(--tag-bg);
+}
+
+.tag-pill.is-active {
+  color: var(--tag-fg);
+  background: var(--tag-bg);
+  border-color: var(--tag-bg);
+}
+
+.tag-pill.is-interactive:hover {
+  filter: brightness(1.08);
+}
+
+/* ---------------------------------------------------------------------------
+   Experience & education cards
+--------------------------------------------------------------------------- */
+.exp-card {
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  padding: 1rem 1.25rem;
+  background: color-mix(in srgb, var(--color-card-hover) 40%, transparent);
+}
+
+.exp-card.is-dimmed {
+  opacity: 0.45;
+}
+
+.exp-card.is-related {
+  border-color: var(--exp-accent);
+}
+
+.exp-card.is-overflow-hidden {
+  display: none;
+}
+
+[data-theme='dark'] .exp-card.is-active {
+  border-left: 2px solid var(--exp-accent);
+}
+
+[data-theme='clean'] .exp-card.is-active {
+  border-left: 2px solid var(--exp-accent);
+}
+
+[data-theme='bold'] .exp-card {
+  border-left: 3px solid transparent;
+}
+
+[data-theme='bold'] .exp-card.is-active,
+[data-theme='bold'] .exp-card:hover {
+  border-left-color: var(--exp-accent);
+}
+
+.exp-card__toggle {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  gap: 0.75rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.exp-card__chevron {
+  flex-shrink: 0;
+  color: var(--color-body-muted);
+  transition: transform 0.2s ease;
+}
+
+.exp-card__chevron.is-open {
+  transform: rotate(180deg);
+}
+
+.exp-card__body.is-collapsed {
+  display: none;
+}
+
+.edu-card {
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-accent);
+  border-radius: 1rem;
+  padding: 1rem 1.25rem;
+  background: color-mix(in srgb, var(--color-card-hover) 40%, transparent);
+}
+
+[data-theme='bold'] .edu-card {
+  border-left-width: 4px;
+  border-left-color: var(--color-heading);
+}
+
+/* Print: flatten cards and always reveal collapsed / overflow content. */
+@media print {
+  .exp-card,
+  .edu-card {
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    background: none;
+  }
+
+  .exp-card__chevron {
+    display: none;
+  }
+
+  .exp-card.is-dimmed {
+    opacity: 1;
+  }
+
+  .exp-card.is-overflow-hidden,
+  .exp-card__body.is-collapsed {
+    display: block;
+  }
+}

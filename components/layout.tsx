@@ -2,6 +2,7 @@
 
 import React, { useCallback, useMemo, useRef, useState } from 'react';
 
+import { ActiveExperienceProvider } from '@/components/layout/ActiveExperienceContext';
 import MainContent from '@/components/layout/MainContent';
 import Sidebar from '@/components/layout/Sidebar';
 import SidebarIdentity from '@/components/layout/SidebarIdentity';
@@ -102,7 +103,9 @@ const Layout: React.FC<LayoutProps> = ({ person, experiences = [], sections = []
       </nav>
 
       <MainContent ref={mainRef} className="pt-16 md:pt-0">
-        <div className="p-3 lg:p-6 xl:px-12">{children}</div>
+        <ActiveExperienceProvider value={activeExpId}>
+          <div className="p-3 lg:p-6 xl:px-12">{children}</div>
+        </ActiveExperienceProvider>
         <footer className="border-border text-body-muted border-t px-12 py-6 font-serif print:hidden">
           © {new Date().getFullYear()}, Built with&nbsp;
           <a href="https://nextjs.org" className="text-brand hover:underline">
