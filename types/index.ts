@@ -29,6 +29,7 @@ export interface Experience {
   country: string;
   company: string;
   context?: string;
+  freelance?: boolean;
   start: string;
   end: string;
   tags?: Tag[];
@@ -96,6 +97,7 @@ export interface PostHeaderProps {
   city?: string;
   country?: string;
   context?: string;
+  freelance?: boolean;
   start?: string;
   end?: string;
   tags?: Tag[];

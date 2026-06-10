@@ -3,9 +3,26 @@ import React from 'react';
 import { Tag } from '@/components/tag';
 import { PostHeaderProps } from '@/types';
 
-const PostHeader: React.FC<PostHeaderProps> = ({ title, company, city, country, context, start, end, tags }) => (
+const PostHeader: React.FC<PostHeaderProps> = ({
+  title,
+  company,
+  city,
+  country,
+  context,
+  freelance,
+  start,
+  end,
+  tags,
+}) => (
   <header>
-    <h3 className="text-heading text-xl font-bold print:mr-2 print:inline-block print:text-base">{title}</h3>
+    <div className="flex flex-wrap items-center gap-2 print:inline">
+      <h3 className="text-heading text-xl font-bold print:mr-2 print:inline-block print:text-base">{title}</h3>
+      {freelance ? (
+        <span className="border-brand/40 text-brand rounded-full border px-2 py-0.5 text-xs font-medium print:mr-2 print:inline-block">
+          Freelance
+        </span>
+      ) : null}
+    </div>
     <p className="text-body-muted overflow-hidden text-sm print:mr-2 print:inline-block">
       {company}, {city}, {country} {context ? ` - ${context}` : ''}
     </p>

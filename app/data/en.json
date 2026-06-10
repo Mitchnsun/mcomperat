@@ -14,125 +14,123 @@
     "title": "Work Experiences",
     "experiences": [
       {
-        "title": "Freelance Frontend Developer",
+        "title": "Frontend Tech Lead",
         "city": "Saint-Jorioz",
         "country": "France",
         "company": "Greenweez",
+        "freelance": true,
         "start": "Oct. 2023",
         "end": "",
         "tags": [
-          { "name": "NextJS", "ref": "js" },
-          { "name": "React 18", "ref": "js" },
-          { "name": "React Query", "ref": "js" },
+          { "name": "React 19", "ref": "js" },
+          { "name": "Next.js 15", "ref": "js" },
+          { "name": "TypeScript", "ref": "js" },
           { "name": "Tailwind CSS", "ref": "css" },
-          { "name": "Jest", "ref": "test" },
-          { "name": "Playwright", "ref": "test" }
+          { "name": "React Query", "ref": "js" },
+          { "name": "Apollo GraphQL", "ref": "js" },
+          { "name": "Playwright", "ref": "test" },
+          { "name": "Jest", "ref": "test" }
         ],
         "description": [
           {
-            "text": "Technical lead and release management of www.greenweez.com. Performance and SEO improvements by reducing bundle size and auditing synchronous and asynchronous API calls",
+            "text": "Frontend Tech Lead & Release Manager for the e-commerce site www.greenweez.com",
             "list": [
-              "Migration to React 18 & Next 13",
-              "Set up E2E tests with Playwright",
-              "Frontend: React/Next.js, Tailwind CSS, React Query, Jest, React Testing Library",
-              "Middleware: Apollo GraphQL",
-              "Design System: Lerna, Vite, Storybook 7"
+              "Technical lead on frontend evolutions for greenweez.com",
+              "Technical referent of a 4-developer team: scoping, code review, best practices and mentoring of 2 junior developers",
+              "Set up unit, integration and E2E tests with Jest, React Testing Library and Playwright",
+              "Improved performance, SEO, UI/UX and accessibility (50% reduction of the JavaScript bundle)",
+              "Migration to the Next.js App Router, React 18→19, Next 13→15 and Node.js 18→22",
+              "Referent for the UI/UX consistency of frontend features"
             ]
           }
         ]
       },
       {
-        "title": "Freelance Frontend Developer",
+        "title": "Frontend Developer",
         "city": "Paris",
         "country": "France",
         "company": "Club Med",
+        "freelance": true,
         "start": "Nov. 2021",
         "end": "Jul. 2023",
         "tags": [
           { "name": "TypeScript", "ref": "js" },
-          { "name": "React 18", "ref": "js" },
-          { "name": "Redux", "ref": "js" },
+          { "name": "React", "ref": "js" },
           { "name": "Ts.ED", "ref": "js" },
+          { "name": "Node", "ref": "back" },
           { "name": "Tailwind CSS", "ref": "css" },
           { "name": "Jest", "ref": "test" },
           { "name": "Cypress", "ref": "test" }
         ],
         "description": [
           {
-            "text": "Development of a data visualization tool for internal users and partners",
+            "text": "Data-visualization site for Club Med's internal teams and partners, integrated within the API team",
             "list": [
-              "TypeScript, React 18, Redux, Ts.ED, Node",
-              "Unit and integration testing with Jest and Cypress",
-              "Git process, code reviews, continuous delivery & pair programming",
-              "Tailwind and CSS3 integration"
+              "Referent for the UI/UX consistency of frontend features",
+              "Frontend development with React and Tailwind",
+              "Set up unit and integration tests with Jest and Cypress",
+              "Improved UI/UX and accessibility",
+              "Integrated within the API team (5 developers), in direct contact with users to improve data display",
+              "Agile practices: code reviews, pair programming and continuous delivery within a team of 8 developers (front & back)"
             ]
           }
         ]
       },
       {
-        "title": "Freelance Frontend Developer",
+        "title": "Frontend Developer",
         "city": "Paris",
         "country": "France",
         "company": "Rakuten",
+        "freelance": true,
         "start": "Nov. 2020",
         "end": "Sept. 2021",
         "tags": [
-          { "name": "ReactJS", "ref": "js" },
-          { "name": "NextJS", "ref": "js" },
+          { "name": "React", "ref": "js" },
+          { "name": "Next.js", "ref": "js" },
+          { "name": "TypeScript", "ref": "js" },
           { "name": "Redux", "ref": "js" },
+          { "name": "Material UI", "ref": "css" },
+          { "name": "Sendbird", "ref": "js" },
           { "name": "React Testing Library", "ref": "test" },
           { "name": "Cypress", "ref": "test" }
         ],
         "description": [
           {
-            "text": "Built an instant messaging between a seller and a buyer for the second-hand marketplace. Redesigned the listing form for second-hand sales",
+            "text": "Built an instant messaging feature between a seller and a buyer for the second-hand marketplace. Redesigned the product listing form for second-hand sales",
             "list": [
-              "Frontend development with ReactJS, NextJS, Redux, Tachyons",
-              "Set up unit and integration tests with React Testing Library and Cypress",
-              "Used Sendbird API for messaging",
-              "Agile team with 2 frontend devs and 4 backend devs for the second-hand section",
-              "Close collaboration with the web designer for integration"
+              "Frontend development with React.js, Next.js, Redux and Tachyons",
+              "Set up test coverage (unit and integration) with React Testing Library and Cypress",
+              "Used the Sendbird API for messaging",
+              "Agile team with 2 frontend developers and 4 backend developers for the second-hand section",
+              "Ongoing collaboration with the web designer for integration"
             ]
           }
         ]
       },
       {
-        "title": "Freelance Full-stack Developer",
+        "title": "Full-stack Developer",
         "city": "Paris",
         "country": "France",
         "company": "ADSPL",
+        "freelance": true,
         "start": "June 2018",
-        "end": "June 2020",
+        "end": "Sept. 2020",
         "tags": [
-          {
-            "name": "ReactJS",
-            "ref": "js"
-          },
-          {
-            "name": "NextJS",
-            "ref": "js"
-          },
-          {
-            "name": "NodeJS",
-            "ref": "back"
-          },
-          {
-            "name": "Firebase",
-            "ref": "db"
-          },
-          {
-            "name": "Cypress",
-            "ref": "test"
-          }
+          { "name": "React", "ref": "js" },
+          { "name": "GraphQL", "ref": "js" },
+          { "name": "NodeJS", "ref": "back" },
+          { "name": "Firebase", "ref": "db" },
+          { "name": "Jest", "ref": "test" },
+          { "name": "Cypress", "ref": "test" }
         ],
         "description": [
           {
-            "text": "For the client UNAPL, development of a platform to collect their members' subscription",
+            "text": "Platform to collect the membership fees of a union's members (member area with payment)",
             "list": [
-              "Create from scratch a website with memberspace and two payment methods (Credit Card, SEPA)",
-              "Backend with NodeJS and link to Firebase",
-              "Setting up end-to-end tests with Cypress",
-              "Evaluate the needs and writing specifications"
+              "Frontend development with a member area and two payment methods (credit card & SEPA)",
+              "Backend development with NodeJS connected to Firebase",
+              "Set up automated tests, from unit (Jest) to E2E (Cypress)",
+              "Requirements gathering and writing of functional specifications"
             ]
           },
           {
@@ -141,296 +139,212 @@
         ]
       },
       {
-        "title": "Freelance Frontend Developer",
+        "title": "Frontend Developer",
         "city": "Paris",
         "country": "France",
         "company": "Club Med",
+        "freelance": true,
         "start": "June 2017",
         "end": "Jan. 2020",
         "tags": [
-          {
-            "name": "ReactJS",
-            "ref": "js"
-          },
-          {
-            "name": "GraphQL",
-            "ref": "js"
-          },
-          {
-            "name": "HTML5",
-            "ref": "html"
-          },
-          {
-            "name": "CSS3",
-            "ref": "css"
-          },
-          {
-            "name": "PostCSS",
-            "ref": "css"
-          },
-          {
-            "name": "ES6",
-            "ref": "js"
-          },
-          {
-            "name": "Flow",
-            "ref": "js"
-          },
-          {
-            "name": "NextJS",
-            "ref": "js"
-          },
-          {
-            "name": "Accessibility",
-            "ref": "a11y"
-          }
+          { "name": "React 16", "ref": "js" },
+          { "name": "GraphQL", "ref": "js" },
+          { "name": "Next.js", "ref": "js" },
+          { "name": "Flow", "ref": "js" },
+          { "name": "PostCSS", "ref": "css" },
+          { "name": "ES6", "ref": "js" },
+          { "name": "CSS3", "ref": "css" },
+          { "name": "Accessibility", "ref": "a11y" }
         ],
         "description": [
           {
-            "text": "New features and graphic redesign of customer account",
+            "text": "New features and graphic redesign of the customer account on the commercial site (www.clubmed.fr)",
             "list": [
-              "Frontend team with Agile method on the new responsive site",
-              "Unit and Integration testing with Jest, Chai, Enzyme, Sinon",
-              "Flow typing, Git process, code reviews, continuous delivery & pair programming",
-              "Integration PostCSS, TailWind, CSS3"
+              "JavaScript development with React, Next.js, GraphQL, Redux and Flow",
+              "Integration with PostCSS, Tailwind and CSS3",
+              "Unit and integration tests with Jest, Chai, Enzyme and Sinon",
+              "Implementation of accessibility standards on the site",
+              "3 agile teams (Kanban) made up of 3 developers, 1 Product Owner and 1 QA",
+              "Team referent for inter-team communication"
             ]
           }
         ]
       },
       {
-        "title": "Freelance Frontend Developer",
+        "title": "Frontend Developer",
         "city": "Paris",
         "country": "France",
         "company": "Verifone",
+        "freelance": true,
         "start": "Mar. 2017",
         "end": "May 2017",
         "tags": [
-          {
-            "name": "AngularJS",
-            "ref": "js"
-          },
-          {
-            "name": "HTML5",
-            "ref": "html"
-          },
-          {
-            "name": "CSS3",
-            "ref": "css"
-          },
-          {
-            "name": "Bootstrap",
-            "ref": "css"
-          }
+          { "name": "AngularJS", "ref": "js" },
+          { "name": "HTML5", "ref": "html" },
+          { "name": "CSS3", "ref": "css" },
+          { "name": "Bootstrap", "ref": "css" },
+          { "name": "Java Spring", "ref": "back" }
         ],
         "description": [
           {
-            "text": "Feature on the internal website"
+            "text": "Intranet redesign",
+            "list": [
+              "Frontend redesign with AngularJS and Bootstrap",
+              "Set up Git Flow",
+              "Backend architecture in micro-services (Netflix) and Java Spring"
+            ]
           }
         ]
       },
       {
-        "title": "Freelance Web Developer",
+        "title": "Web Integrator",
         "city": "Paris",
         "country": "France",
         "company": "L'Equipe",
+        "freelance": true,
         "start": "Oct. 2016",
         "end": "Feb. 2017",
         "tags": [
-          {
-            "name": "SASS",
-            "ref": "css"
-          },
-          {
-            "name": "HTML5",
-            "ref": "html"
-          },
-          {
-            "name": "CSS3",
-            "ref": "css"
-          }
+          { "name": "SASS", "ref": "css" },
+          { "name": "HTML5", "ref": "html" },
+          { "name": "CSS3", "ref": "css" },
+          { "name": "jQuery", "ref": "js" },
+          { "name": "Grunt", "ref": "js" }
         ],
         "description": [
           {
             "text": "Integration of the new graphic charter",
-            "list": [
-              "HTML & CSS Integration (Mobile and desktop)",
-              "Works closely with the marketing team and the designers"
-            ]
+            "list": ["HTML and CSS integration (desktop and mobile)", "Direct link with designers and marketing"]
           }
         ]
       },
       {
-        "title": "Mobile developer",
+        "title": "Web & Mobile Developer",
         "city": "Paris",
         "country": "France",
         "company": "Geoks",
-        "start": "Dec. 2016",
+        "freelance": true,
+        "start": "Jan. 2017",
         "end": "Jan. 2017",
         "tags": [
-          {
-            "name": "Cordova",
-            "ref": "js"
-          },
-          {
-            "name": "Backbone.js",
-            "ref": "js"
-          },
-          {
-            "name": "Less",
-            "ref": "css"
-          },
-          {
-            "name": "Handlebars.js",
-            "ref": "js"
-          }
+          { "name": "Cordova", "ref": "js" },
+          { "name": "Backbone.js", "ref": "js" },
+          { "name": "Less", "ref": "css" },
+          { "name": "Handlebars.js", "ref": "js" },
+          { "name": "Underscore.js", "ref": "js" }
         ],
         "description": [
           {
-            "text": "Tracking activity application for an e-bike with Bluetooth LE and GPS"
+            "text": "Activity tracking application for an e-bike via Bluetooth LE and GPS",
+            "list": ["Hybrid application (Cordova.js) for iOS and Android"]
           }
         ]
       },
       {
-        "title": "Web & Mobile Lead Programmer",
+        "title": "Web & Mobile Tech Lead",
         "city": "Paris",
         "country": "France",
         "company": "CGI",
         "start": "May 2014",
         "end": "Sept. 2016",
         "tags": [
-          {
-            "name": "Web-application",
-            "ref": "html"
-          },
-          {
-            "name": "HTML5",
-            "ref": "html"
-          },
-          {
-            "name": "CSS3",
-            "ref": "css"
-          },
-          {
-            "name": "Backbone.js",
-            "ref": "js"
-          },
-          {
-            "name": "Dust.js / Handlebar.js",
-            "ref": "js"
-          },
-          {
-            "name": "Phone Gap",
-            "ref": "js"
-          }
+          { "name": "Backbone.js", "ref": "js" },
+          { "name": "RequireJS", "ref": "js" },
+          { "name": "Dust.js", "ref": "js" },
+          { "name": "Cordova", "ref": "js" },
+          { "name": "Handlebars", "ref": "js" },
+          { "name": "HTML5", "ref": "html" },
+          { "name": "CSS3", "ref": "css" }
         ],
         "description": [
           {
-            "text": "Sephora website for smartphones",
+            "text": "Sephora: technical scoping of evolutions. Monitoring and delivery of changes with a team of two developers",
             "list": [
-              "Technical project framing for the evolutions. Monitoring and implementation of changes with a team of two developers",
-              "Makes a multi-language website (IT, PL, CZ, ES)",
-              "Application developments for iOS with Cordova/Phone Gap (iPad Color Profile et iPhone MySephora)",
-              "Webmobile part of iPhone & Android application: design integration and maintenance"
+              "Evolutions of the Sephora web-mobile site and creation of multi-language versions (IT, PL, CZ, ES)",
+              "Evolutions of internal iOS applications with Cordova/Phone Gap (iPad Color Profile and iPhone MySephora)",
+              "Integration and maintenance of the web-mobile part of the iPhone and Android applications"
             ]
           },
           {
-            "text": "Responsibilities: Lead programmer with a team of two developers"
+            "text": "Responsibilities: technical referent of a team of two developers"
           }
         ]
       },
       {
-        "title": "Software engineer",
+        "title": "Information Technology Engineer",
+        "city": "Paris",
+        "country": "France",
+        "company": "CGI",
+        "start": "Nov. 2013",
+        "end": "May 2014",
+        "tags": [
+          { "name": "HTML5", "ref": "html" },
+          { "name": "CSS3", "ref": "css" },
+          { "name": "LESS", "ref": "css" },
+          { "name": "jQuery", "ref": "js" },
+          { "name": "Responsive", "ref": "css" }
+        ],
+        "description": [
+          {
+            "text": "Louis Vuitton: redesign of the Flash site into a responsive HTML5 and CSS3 site",
+            "list": [
+              "Built the website's web client interface from the ATG base",
+              "Compatibility for all screen sizes. Adapted for IE8/7/6 compatibility"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Information Technology Engineer",
         "city": "Paris",
         "country": "France",
         "company": "CGI",
         "start": "Sept. 2012",
-        "end": "May 2014",
+        "end": "Oct. 2013",
         "tags": [
-          {
-            "name": "Web application",
-            "ref": "html"
-          },
-          {
-            "name": "Backbone.js",
-            "ref": "js"
-          },
-          {
-            "name": "Responsive",
-            "ref": "css"
-          },
-          {
-            "name": "LESS",
-            "ref": "css"
-          },
-          {
-            "name": "Dust.js",
-            "ref": "js"
-          },
-          {
-            "name": "iOS Application",
-            "ref": "ios"
-          }
+          { "name": "Backbone.js", "ref": "js" },
+          { "name": "RequireJS", "ref": "js" },
+          { "name": "Dust.js", "ref": "js" },
+          { "name": "Cordova", "ref": "js" },
+          { "name": "HTML5", "ref": "html" },
+          { "name": "CSS3", "ref": "css" }
         ],
         "description": [
           {
-            "text": "Sephora project:",
+            "text": "Sephora: development of the web-mobile site (smartphone target only)",
             "list": [
-              "Realisation of Sephora webmobile site",
+              "Development of the Sephora web-mobile site",
               "Update of Sephora's iPhone application",
-              "Update and maintain of Sephora's iPad application Color Profile"
-            ]
-          },
-          {
-            "text": "Louis Vuitton project:",
-            "list": [
-              "Development of the user interface for Louis Vuitton website from ATG base",
-              "Responsive design and compatibility with IE8/7/6."
+              "Maintenance and evolution of the iPad Color Profile application"
             ]
           }
         ]
       },
       {
-        "title": "Web mobile analyst",
+        "title": "Web & Mobile Developer Analyst",
         "context": "Final year project",
         "city": "Lyon",
         "country": "France",
         "company": "Logica",
         "start": "Feb. 2012",
-        "end": "Aug. 2012",
+        "end": "Sept. 2012",
         "tags": [
-          {
-            "name": "Web-application",
-            "ref": "html"
-          },
-          {
-            "name": "jQuery Mobile",
-            "ref": "js"
-          },
-          {
-            "name": "Twitter Bootstrap",
-            "ref": "css"
-          },
-          {
-            "name": "Phone Gap",
-            "ref": "js"
-          },
-          {
-            "name": "Cocoa Touch",
-            "ref": "ios"
-          }
+          { "name": "jQuery Mobile", "ref": "js" },
+          { "name": "Twitter Bootstrap", "ref": "css" },
+          { "name": "Objective-C", "ref": "ios" }
         ],
         "description": [
           {
-            "text": "CMS integration in the mobility",
+            "text": "Integrate the notion of CMS with mobility",
             "list": [
-              "Software package of events management, responsible of CMS problematic, CMS studies and tests. Followed by pre-sales of the project feasibility study, ripening workshop, costing of the project cost.",
-              "iOS developments"
+              "Event management software package, in charge of the CMS problem: CMS study and testing. Pre-sales follow-up, feasibility study, maturation workshop and project cost estimation.",
+              "Participation in iOS application development"
             ]
           }
         ]
       },
       {
-        "title": "Intern in IT",
+        "title": "Web Developer Analyst",
         "context": "One-year internship",
         "city": "Pembroke Pines",
         "country": "USA",
@@ -438,42 +352,24 @@
         "start": "July 2010",
         "end": "July 2011",
         "tags": [
-          {
-            "name": "HTML",
-            "ref": "html"
-          },
-          {
-            "name": "PHP",
-            "ref": "back"
-          },
-          {
-            "name": "jQuery",
-            "ref": "js"
-          },
-          {
-            "name": "MySQL",
-            "ref": "db"
-          },
-          {
-            "name": "Cocoa Touch",
-            "ref": "ios"
-          },
-          {
-            "name": "Joomla",
-            "ref": "cms"
-          }
+          { "name": "HTML", "ref": "html" },
+          { "name": "CSS", "ref": "css" },
+          { "name": "PHP", "ref": "back" },
+          { "name": "jQuery", "ref": "js" },
+          { "name": "Objective-C", "ref": "ios" },
+          { "name": "Joomla", "ref": "cms" }
         ],
         "description": [
           {
-            "text": "Learn and use different languages and frameworks",
+            "text": "Discover the different languages and develop several applications in complete autonomy",
             "list": [
-              "Web Application in a CRM (HTML, PHP, JavaScript-jQuery, and MySQL)",
-              "iPad Application for the booth in Air Shows (Objective-C, Cocoa Touch)",
-              "CMS Setting"
+              "Web application in a CRM to manage the TBM aircraft maintenance center in Florida",
+              "iPad application for air shows",
+              "Configuration of a Joomla CMS"
             ]
           },
           {
-            "text": "I was in a complete autonomy to discover the different languages and to develop the different applications. I provided support to the users after acceptance-test and insured the transfer of the application to the head quarter in France."
+            "text": "I was in complete autonomy to discover the different languages and develop the various applications. I provided support to users after acceptance and ensured the transfer of the applications to the headquarters in France. My goal was to leave clear documentation for the next developers."
           }
         ]
       }
