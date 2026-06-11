@@ -203,7 +203,7 @@
         "company": "L'Equipe",
         "freelance": true,
         "start": "Oct. 2016",
-        "end": "Fev. 2017",
+        "end": "Fév. 2017",
         "tags": [
           { "name": "SASS", "ref": "css" },
           { "name": "HTML5", "ref": "html" },
