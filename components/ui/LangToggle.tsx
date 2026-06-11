@@ -5,6 +5,7 @@ import React, { useTransition } from 'react';
 
 import { usePathname, useRouter } from '@/i18n/navigation';
 import { type Locale, routing } from '@/i18n/routing';
+import { cn } from '@/lib/cn';
 
 const LangToggle: React.FC<{ className?: string }> = ({ className }) => {
   const locale = useLocale();
@@ -23,9 +24,7 @@ const LangToggle: React.FC<{ className?: string }> = ({ className }) => {
     <div
       role="radiogroup"
       aria-label="Language"
-      className={['border-border inline-flex items-center gap-1 rounded-full border p-1', className ?? '']
-        .filter(Boolean)
-        .join(' ')}
+      className={cn('border-border inline-flex items-center gap-1 rounded-full border p-1', className)}
     >
       {routing.locales.map((value) => {
         const isActive = locale === value;
@@ -39,11 +38,11 @@ const LangToggle: React.FC<{ className?: string }> = ({ className }) => {
             aria-label={label}
             disabled={isPending}
             onClick={() => switchLocale(value)}
-            className={[
+            className={cn(
               'inline-flex h-8 min-w-8 cursor-pointer items-center justify-center rounded-full px-3 text-xs font-semibold',
               'focus-visible:ring-accent focus:outline-none focus-visible:ring-2',
-              isActive ? 'bg-accent text-white' : 'text-body-muted hover:bg-card-hover hover:text-body',
-            ].join(' ')}
+              isActive ? 'bg-accent text-white' : 'text-body-muted hover:bg-card-hover hover:text-body'
+            )}
           >
             {label}
           </button>

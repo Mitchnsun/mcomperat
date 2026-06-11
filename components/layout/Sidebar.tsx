@@ -8,6 +8,7 @@ import LinkedinLogo from '@/components/assets/icons/linkedin-logo';
 import SidebarIdentity from '@/components/layout/SidebarIdentity';
 import LangToggle from '@/components/ui/LangToggle';
 import ThemeToggle from '@/components/ui/ThemeToggle';
+import { cn } from '@/lib/cn';
 import { getCompanyAccent } from '@/lib/companyColors';
 import { type ExperienceNavItem, type Person, type SectionNavItem } from '@/types';
 
@@ -50,11 +51,11 @@ const Sidebar: React.FC<SidebarProps> = ({
                     type="button"
                     aria-current={isActive ? 'true' : undefined}
                     onClick={() => onExpClick(exp.id)}
-                    className={[
+                    className={cn(
                       'flex w-full cursor-pointer items-center gap-2 rounded px-2 py-1.5 text-left text-sm',
                       'focus-visible:ring-accent focus:outline-none focus-visible:ring-2',
-                      isActive ? 'text-heading bg-card-hover font-semibold' : 'text-body-muted hover:text-body',
-                    ].join(' ')}
+                      isActive ? 'text-heading bg-card-hover font-semibold' : 'text-body-muted hover:text-body'
+                    )}
                   >
                     <span
                       aria-hidden="true"

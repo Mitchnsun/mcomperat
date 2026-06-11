@@ -4209,6 +4209,7 @@ __metadata:
     prettier-plugin-tailwindcss: "npm:^0.6.14"
     react: "npm:^19.2.0"
     react-dom: "npm:^19.2.0"
+    tailwind-merge: "npm:^3.6.0"
     tailwindcss: "npm:^4.1.14"
     typescript: "npm:^5.9.3"
   languageName: unknown
@@ -5638,6 +5639,13 @@ __metadata:
   dependencies:
     "@pkgr/core": "npm:^0.2.9"
   checksum: 10c0/cc4d446806688ae0d728ae7bb3f53176d065cf9536647fb85bdd721dcefbd7bf94874df6799ff61580f2b03a392659219b778a9254ad499f9a1f56c34787c235
+  languageName: node
+  linkType: hard
+
+"tailwind-merge@npm:^3.6.0":
+  version: 3.6.0
+  resolution: "tailwind-merge@npm:3.6.0"
+  checksum: 10c0/a728d929f4786bcb48641db4228cc8c006a7545491783a658fb4d24d177dab960620991d17805a047309228de50ab949ca8d9e112c30183da0432367796ae186
   languageName: node
   linkType: hard
 

@@ -25,7 +25,10 @@ const Hero: React.FC<HeroProps> = ({ person, locale = 'fr' }) => {
         <div className="space-y-4 lg:space-y-8">
           <div className="flex flex-wrap items-center gap-3">
             <span className="bg-bg/70 text-heading border-border inline-flex items-center gap-2 rounded-full border px-4 py-2 text-[0.7rem] font-medium tracking-[0.24em] uppercase backdrop-blur-sm">
-              <span aria-hidden="true" className="hero-status-dot" />
+              <span
+                aria-hidden="true"
+                className="animate-pulse-dot h-[7px] w-[7px] rounded-full bg-[oklch(0.66_0.18_145)] motion-reduce:animate-none"
+              />
               {t('availability')}
             </span>
             <a
@@ -49,7 +52,7 @@ const Hero: React.FC<HeroProps> = ({ person, locale = 'fr' }) => {
                         return (
                           <span
                             key={`${character}-${delayIndex}`}
-                            className="hero-char"
+                            className="animate-char-reveal inline-block motion-reduce:animate-none"
                             style={{ animationDelay: `${120 + delayIndex * 45}ms` }}
                           >
                             {character}
@@ -64,7 +67,10 @@ const Hero: React.FC<HeroProps> = ({ person, locale = 'fr' }) => {
             </h1>
             <h2 className="text-body mt-5 text-lg sm:text-xl lg:text-2xl">
               {person.title}
-              <span aria-hidden="true" className="hero-cursor text-brand ml-2 inline-block font-mono">
+              <span
+                aria-hidden="true"
+                className="text-brand animate-blink-cursor ml-2 inline-block font-mono motion-reduce:animate-none"
+              >
                 ▌
               </span>
             </h2>

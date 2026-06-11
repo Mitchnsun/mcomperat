@@ -3,6 +3,7 @@
 import React from 'react';
 
 import { type Theme, useTheme } from '@/hooks/useTheme';
+import { cn } from '@/lib/cn';
 
 type ThemeOption = {
   value: Theme;
@@ -79,9 +80,7 @@ const ThemeToggle: React.FC<{ className?: string }> = ({ className }) => {
     <div
       role="radiogroup"
       aria-label="Theme"
-      className={['border-border inline-flex items-center gap-1 rounded-full border p-1 backdrop-blur', className ?? '']
-        .filter(Boolean)
-        .join(' ')}
+      className={cn('border-border inline-flex items-center gap-1 rounded-full border p-1 backdrop-blur', className)}
     >
       {OPTIONS.map((opt) => {
         const isActive = theme === opt.value;
@@ -94,11 +93,11 @@ const ThemeToggle: React.FC<{ className?: string }> = ({ className }) => {
             aria-label={opt.label}
             title={opt.label}
             onClick={() => setTheme(opt.value)}
-            className={[
+            className={cn(
               'inline-flex h-8 w-8 cursor-pointer items-center justify-center rounded-full',
               'focus-visible:ring-accent focus:outline-none focus-visible:ring-2',
-              isActive ? 'bg-accent text-white' : 'text-body-muted hover:bg-card-hover hover:text-body',
-            ].join(' ')}
+              isActive ? 'bg-accent text-white' : 'text-body-muted hover:bg-card-hover hover:text-body'
+            )}
           >
             {opt.icon}
           </button>

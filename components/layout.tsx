@@ -7,6 +7,7 @@ import MainContent from '@/components/layout/MainContent';
 import Sidebar from '@/components/layout/Sidebar';
 import SidebarIdentity from '@/components/layout/SidebarIdentity';
 import { useScrollTracking } from '@/hooks/useScrollTracking';
+import { cn } from '@/lib/cn';
 import { LayoutProps } from '@/types';
 
 // Offset (px) applied when scrolling to a card so it is not hidden behind the
@@ -85,12 +86,12 @@ const Layout: React.FC<LayoutProps> = ({ person, experiences = [], sections = []
 
       <nav
         aria-label="Primary"
-        className={[
+        className={cn(
           'cv-sidebar bg-sidebar border-border z-40 w-61 shrink-0 overflow-y-auto border-r',
           'fixed top-16 bottom-0 left-0 transition-transform duration-300 ease-in-out md:static md:inset-y-0 md:h-screen md:translate-x-0',
           isDrawerOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0',
-          'print:hidden',
-        ].join(' ')}
+          'print:hidden'
+        )}
       >
         <Sidebar
           person={person}
