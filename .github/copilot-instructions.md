@@ -118,7 +118,12 @@ Imports are automatically sorted by `simple-import-sort`:
 ### Styling
 
 - **Tailwind CSS v4** with native CSS support
-- Use Tailwind utility classes
+- **Tailwind-first**: always prefer Tailwind utility classes over custom CSS rules.
+- `app/globals.css` is reserved for: `@theme`/`[data-theme]` token definitions, `@keyframes`/animation declarations, `::before`/`::after` pseudo-elements with complex values, and selectors Tailwind cannot express. Do not add component styles there.
+- **Per-theme overrides** → `theme-dark:`, `theme-clean:`, `theme-bold:` variants (defined via `@custom-variant` in `globals.css`).
+- **Per-instance dynamic values** → set a CSS custom property in `style` inline, reference it with an arbitrary Tailwind value: `border-(--exp-accent)`, `bg-[var(--skill-tint)]`.
+- **Long class lists** → extract into named `const` strings at module level (see `TagPill.tsx`, `ExperienceCard.tsx`).
+- **CSS variable shorthand** → prefer Tailwind v4 form `(--var-name)` over `[var(--var-name)]` for single-variable arbitrary values.
 - Custom theme via CSS `@theme` directive in `app/globals.css`
 - PostCSS integration with `@tailwindcss/postcss`
 - Classes automatically sorted by Prettier

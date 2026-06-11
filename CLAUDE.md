@@ -66,6 +66,20 @@ The previous component design lives in `components/_archive` and is **excluded f
 - Server Components by default; add `'use client'` only for interactivity/hooks.
 - ESLint enforces `sonarjs/cognitive-complexity` ≤ 15 and `no-duplicate-string` (threshold 3); `security/detect-object-injection` is a warning — existing dynamic-index access is annotated with eslint-disable comments explaining why it's safe.
 
+### Tailwind-first styling
+
+**Always prefer Tailwind utility classes over custom CSS.** `app/globals.css` is reserved exclusively for:
+
+- `@theme` / `[data-theme='…']` token definitions
+- `@keyframes` and animation declarations (`.hero-char`, `.hero-skill-item`, etc.)
+- Pseudo-elements (`::before`, `::after`) with complex values (gradients, generated content)
+- Selectors that Tailwind cannot express (e.g., descendant combinators not reachable via variants)
+
+**Per-theme overrides** → use `theme-dark:`, `theme-clean:`, `theme-bold:` variants.  
+**Per-instance dynamic values** → set a CSS custom property via `style` inline, reference it with an arbitrary Tailwind value (`border-(--exp-accent)`, `bg-[var(--skill-tint)]`).  
+**Long class lists** → extract into named `const` strings at module level (see `TagPill.tsx`, `ExperienceCard.tsx`).  
+**CSS variable shorthand** → prefer Tailwind v4 canonical form `(--var-name)` over `[var(--var-name)]` for single-variable values.
+
 ## AI Orchestration Workflow
 
 The orchestration rules defined for Copilot agents in [`.github/copilot-instructions.md`](.github/copilot-instructions.md) (annex) and [`docs/AI_WORKFLOW.md`](docs/AI_WORKFLOW.md) **apply equally to Claude agents**. Summary of what's expected:

@@ -37,7 +37,7 @@ const Hero: React.FC<HeroProps> = ({ person, locale = 'fr' }) => {
           </div>
 
           <div>
-            <h1 className="hero-name text-heading text-4xl leading-none tracking-[-0.08em] sm:text-6xl lg:text-7xl">
+            <h1 className="theme-dark:font-light theme-bold:font-extrabold text-heading text-4xl leading-none font-bold tracking-[-0.08em] sm:text-6xl lg:text-7xl">
               {(() => {
                 let charIndex = 0;
                 const words = fullName.split(' ');

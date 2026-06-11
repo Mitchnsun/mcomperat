@@ -32,6 +32,7 @@ interface RawExperience {
   country: string;
   company: string;
   context?: string;
+  freelance?: boolean;
   start: string;
   end: string;
   tags?: RawTag[];
@@ -104,6 +105,7 @@ function buildExperiences(): Experience[] {
       start: localizedDate(frExp.start, enExp.start),
       end: hasEnd ? localizedDate(frExp.end, enExp.end) : PRESENT,
       ...(frExp.context || enExp.context ? { context: localized(frExp.context ?? '', enExp.context ?? '') } : {}),
+      ...(frExp.freelance ? { freelance: true } : {}),
       tags: (frExp.tags ?? []).map((tag) => ({ name: tag.name, ref: tag.ref as Tag['ref'] })),
       desc: localized(combineText(frExp.description), combineText(enExp.description)),
       list: {

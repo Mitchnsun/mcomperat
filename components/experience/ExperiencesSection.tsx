@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useRef, useState } from 'react';
 
 import ExperienceCard from '@/components/experience/ExperienceCard';
 import { useActiveExperience } from '@/components/layout/ActiveExperienceContext';
@@ -34,14 +34,25 @@ const ExperiencesSection: React.FC<ExperiencesSectionProps> = ({
   const activeExpId = useActiveExperience();
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [showAll, setShowAll] = useState(false);
+  // Tracks when the mouse last physically moved. mouseenter fires both on genuine
+  // mouse movement and when scroll brings a card under a stationary cursor — only
+  // the former should activate the hover state.
+  const lastMouseMoveAt = useRef<number>(0);
 
   // Experiences sharing a tag with the currently hovered card.
+  // Experiences from the same company are intentionally excluded: consecutive roles at
+  // the same company share the same accent color, which makes the highlight indistinct
+  // and confusing. Showing cross-company matches is also more informative.
   const relatedIds = useMemo(() => {
     if (!hoveredId) return new Set<string>();
     const hovered = experiences.find((exp) => exp.id === hoveredId);
     if (!hovered) return new Set<string>();
     const hoveredTags = new Set(hovered.tags.map((tag) => tag.name));
-    return new Set(experiences.filter((exp) => exp.tags.some((tag) => hoveredTags.has(tag.name))).map((exp) => exp.id));
+    return new Set(
+      experiences
+        .filter((exp) => exp.company !== hovered.company && exp.tags.some((tag) => hoveredTags.has(tag.name)))
+        .map((exp) => exp.id)
+    );
   }, [hoveredId, experiences]);
 
   const matchesFilter = (exp: Experience) => !activeFilter || exp.tags.some((tag) => tag.name === activeFilter);
@@ -54,13 +65,17 @@ const ExperiencesSection: React.FC<ExperiencesSectionProps> = ({
     <section id="work" className="scroll-mt-28 pb-4 print:pb-0">
       <SectionTitle>{title}</SectionTitle>
 
-      <div className="flex flex-col gap-4 print:gap-2">
+      <div
+        className="flex flex-col print:gap-2"
+        onMouseMove={() => {
+          lastMouseMoveAt.current = performance.now();
+        }}
+      >
         {experiences.map((exp, index) => {
           const isFilterMatch = matchesFilter(exp);
-          const isRelated = Boolean(hoveredId) && exp.id !== hoveredId && relatedIds.has(exp.id);
-          const isDimmed =
-            (Boolean(activeFilter) && !isFilterMatch) ||
-            (Boolean(hoveredId) && exp.id !== hoveredId && !relatedIds.has(exp.id));
+          const isHovered = exp.id === hoveredId;
+          const isRelated = Boolean(hoveredId) && !isHovered && relatedIds.has(exp.id);
+          const isDimmed = Boolean(activeFilter) && !isFilterMatch;
           const isOverflow = index >= INITIAL_VISIBLE && !expandList;
 
           return (
@@ -69,14 +84,18 @@ const ExperiencesSection: React.FC<ExperiencesSectionProps> = ({
               exp={exp}
               lang={lang}
               isActive={exp.id === activeExpId}
+              isHovered={isHovered}
               isRelated={isRelated}
               isDimmed={isDimmed}
               defaultExpanded={index < DEFAULT_EXPANDED_COUNT}
               activeFilter={activeFilter}
               onTagClick={onTagClick}
-              onMouseEnter={() => setHoveredId(exp.id)}
+              onMouseEnter={() => {
+                if (performance.now() - lastMouseMoveAt.current > 50) return;
+                setHoveredId(exp.id);
+              }}
               onMouseLeave={() => setHoveredId(null)}
-              className={isOverflow ? 'is-overflow-hidden' : undefined}
+              className={isOverflow ? 'hidden print:block' : undefined}
             />
           );
         })}
