@@ -36,7 +36,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ title, person, labels }
           </span>
           <span className="min-w-0">
             <span className="text-body-muted block text-xs uppercase">{labels.linkedin}</span>
-            <span className="text-body block truncate text-sm">{labels.linkedin}</span>
+            <span className="text-body block truncate text-sm">{person.link.linkedin.replace(/^https?:\/\//, '')}</span>
           </span>
         </a>
       ) : null}
@@ -48,7 +48,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ title, person, labels }
           </span>
           <span className="min-w-0">
             <span className="text-body-muted block text-xs uppercase">{labels.github}</span>
-            <span className="text-body block truncate text-sm">{labels.github}</span>
+            <span className="text-body block truncate text-sm">{person.link.github.replace(/^https?:\/\//, '')}</span>
           </span>
         </a>
       ) : null}

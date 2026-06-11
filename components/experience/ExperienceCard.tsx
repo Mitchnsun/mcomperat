@@ -80,7 +80,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
         'scroll-mt-28',
         className,
         isDimmed && 'opacity-45 print:opacity-100',
-        isRelated && 'border-(--exp-accent)',
+        isRelated && 'border-l-(--exp-accent)',
         isActive || isHovered ? CARD_ACTIVE_BORDER : CARD_IDLE_BOLD_BORDER
       )}
     >

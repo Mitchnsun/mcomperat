@@ -34,7 +34,13 @@ const IDLE = [DARK_IDLE, CLEAN_IDLE, BOLD_IDLE].join(' ');
 const TagPill: React.FC<TagPillProps> = ({ name, tagRef, onClick, active = false, className }) => {
   const color = getTagColor(tagRef);
   const style = { '--tag-bg': color.bg, '--tag-fg': color.fg } as React.CSSProperties;
-  const classes = cn(BASE, active ? FILLED : IDLE, onClick && 'cursor-pointer hover:brightness-125', className);
+  const classes = cn(
+    BASE,
+    active ? FILLED : IDLE,
+    onClick &&
+      'cursor-pointer hover:brightness-125 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--tag-bg)]',
+    className
+  );
 
   if (onClick) {
     return (

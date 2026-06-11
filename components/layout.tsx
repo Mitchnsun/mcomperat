@@ -54,7 +54,7 @@ const Layout: React.FC<LayoutProps> = ({ person, experiences = [], sections = []
           aria-label="Toggle navigation"
           aria-expanded={isDrawerOpen}
           onClick={() => setIsDrawerOpen((open) => !open)}
-          className="bg-card border-border focus-visible:ring-accent inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-md border"
+          className="border-border focus-visible:ring-accent inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-md border"
         >
           <svg
             aria-hidden="true"
