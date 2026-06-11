@@ -15,5 +15,10 @@
   "hero": {
     "availability": "Disponible · Freelance",
     "skillsTitle": "Compétences clés"
+  },
+  "post": {
+    "badge": {
+      "freelance": "Freelance"
+    }
   }
 }
