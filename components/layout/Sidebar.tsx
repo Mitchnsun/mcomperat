@@ -58,11 +58,15 @@ const Sidebar: React.FC<SidebarProps> = ({
                   >
                     <span
                       aria-hidden="true"
-                      className="h-2 w-2 shrink-0 rounded-full"
-                      style={{
-                        backgroundColor: getCompanyAccent(exp.company),
-                        opacity: isActive ? 1 : 0.45,
-                      }}
+                      className="h-2 w-2 shrink-0 rounded-full border"
+                      style={
+                        isActive
+                          ? {
+                              backgroundColor: getCompanyAccent(exp.company),
+                              borderColor: getCompanyAccent(exp.company),
+                            }
+                          : { backgroundColor: 'transparent', borderColor: 'currentColor' }
+                      }
                     />
                     <span className="flex-1 truncate">{exp.company}</span>
                     {exp.year ? <span className="text-body-muted text-xs tabular-nums">{exp.year}</span> : null}

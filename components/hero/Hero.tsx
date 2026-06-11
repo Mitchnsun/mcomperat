@@ -62,12 +62,12 @@ const Hero: React.FC<HeroProps> = ({ person, locale = 'fr' }) => {
                 ));
               })()}
             </h1>
-            <p className="text-body mt-5 text-lg sm:text-xl lg:text-2xl">
+            <h2 className="text-body mt-5 text-lg sm:text-xl lg:text-2xl">
               {person.title}
               <span aria-hidden="true" className="hero-cursor text-brand ml-2 inline-block font-mono">
                 ▌
               </span>
-            </p>
+            </h2>
           </div>
 
           <HeroStats locale={heroLocale} />

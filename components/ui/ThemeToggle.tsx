@@ -79,10 +79,7 @@ const ThemeToggle: React.FC<{ className?: string }> = ({ className }) => {
     <div
       role="radiogroup"
       aria-label="Theme"
-      className={[
-        'border-border bg-card inline-flex items-center gap-1 rounded-full border p-1 backdrop-blur',
-        className ?? '',
-      ]
+      className={['border-border inline-flex items-center gap-1 rounded-full border p-1 backdrop-blur', className ?? '']
         .filter(Boolean)
         .join(' ')}
     >
