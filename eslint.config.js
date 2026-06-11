@@ -155,6 +155,7 @@ export default [
     ignores: [
       'next-env.d.ts',
       'node_modules/**',
+      'components/_archive/**',
       '.next/**',
       'out/**',
       'dist/**',

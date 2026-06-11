@@ -23,7 +23,7 @@ const LangToggle: React.FC<{ className?: string }> = ({ className }) => {
     <div
       role="radiogroup"
       aria-label="Language"
-      className={['border-border bg-card inline-flex items-center gap-1 rounded-full border p-1', className ?? '']
+      className={['border-border inline-flex items-center gap-1 rounded-full border p-1', className ?? '']
         .filter(Boolean)
         .join(' ')}
     >

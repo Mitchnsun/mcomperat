@@ -37,7 +37,7 @@ const Hero: React.FC<HeroProps> = ({ person, locale = 'fr' }) => {
           </div>
 
           <div>
-            <h1 className="hero-name text-heading text-4xl leading-none tracking-[-0.08em] sm:text-6xl lg:text-7xl">
+            <h1 className="theme-dark:font-light theme-bold:font-extrabold text-heading text-4xl leading-none font-bold tracking-[-0.08em] sm:text-6xl lg:text-7xl">
               {(() => {
                 let charIndex = 0;
                 const words = fullName.split(' ');
@@ -62,12 +62,12 @@ const Hero: React.FC<HeroProps> = ({ person, locale = 'fr' }) => {
                 ));
               })()}
             </h1>
-            <p className="text-body mt-5 text-lg sm:text-xl lg:text-2xl">
+            <h2 className="text-body mt-5 text-lg sm:text-xl lg:text-2xl">
               {person.title}
               <span aria-hidden="true" className="hero-cursor text-brand ml-2 inline-block font-mono">
                 ▌
               </span>
-            </p>
+            </h2>
           </div>
 
           <HeroStats locale={heroLocale} />

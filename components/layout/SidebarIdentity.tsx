@@ -15,20 +15,22 @@ const SidebarIdentity: React.FC<SidebarIdentityProps> = ({ person, className }) 
   const monogram = `${person.firstname?.[0] ?? ''}${person.lastname?.[0] ?? ''}`.toUpperCase();
 
   return (
-    <header className={['flex items-center gap-3', className ?? ''].filter(Boolean).join(' ')}>
-      <span
-        aria-hidden="true"
-        className="bg-accent flex h-11 w-11 shrink-0 items-center justify-center rounded-lg text-sm font-bold text-white"
-      >
-        {monogram}
-      </span>
-      <span className="leading-tight">
-        <span className="text-heading block text-base font-bold">
-          {person.firstname} {person.lastname}
+    <>
+      <header className={['flex items-center gap-3', className ?? ''].filter(Boolean).join(' ')}>
+        <span
+          aria-hidden="true"
+          className="border-body-muted text-body-muted shadow-body-muted/50 flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border text-sm font-bold shadow"
+        >
+          {monogram}
         </span>
-        <span className="text-body-muted block text-xs">{person.title}</span>
-      </span>
-    </header>
+        <span className="leading-tight">
+          <span className="text-heading block text-base font-bold">
+            {person.firstname} {person.lastname}
+          </span>
+        </span>
+      </header>
+      <p className="text-body-muted block text-xs leading-tight">{person.title}</p>
+    </>
   );
 };
 

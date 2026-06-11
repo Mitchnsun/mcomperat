@@ -1,5 +1,10 @@
 @import 'tailwindcss';
 
+/* Theme-aware ancestor variants — usable on any component with theme-dark:, theme-clean:, theme-bold: prefixes. */
+@custom-variant theme-dark (&:where([data-theme='dark'] *));
+@custom-variant theme-clean (&:where([data-theme='clean'] *));
+@custom-variant theme-bold (&:where([data-theme='bold'] *));
+
 @theme {
   --color-brand: #8e8ed6;
 
@@ -100,18 +105,6 @@ body,
     radial-gradient(circle at bottom left, rgba(142, 142, 214, 0.12), transparent 38%);
 }
 
-.hero-name {
-  font-weight: 700;
-}
-
-[data-theme='dark'] .hero-name {
-  font-weight: 300;
-}
-
-[data-theme='bold'] .hero-name {
-  font-weight: 800;
-}
-
 .hero-char {
   display: inline-block;
   opacity: 0;
@@ -129,21 +122,6 @@ body,
   border-radius: 999px;
   background: oklch(0.66 0.18 145);
   animation: pulse-dot 2s infinite;
-}
-
-.hero-skill-card {
-  border: 1px solid var(--skill-color);
-  background: var(--skill-tint);
-}
-
-[data-theme='dark'] .hero-skill-card {
-  box-shadow:
-    0 0 0 1px color-mix(in srgb, var(--skill-color) 25%, transparent),
-    0 24px 48px -32px var(--skill-color);
-}
-
-[data-theme='bold'] .hero-skill-card {
-  box-shadow: 4px 4px 0 0 color-mix(in srgb, var(--skill-color) 55%, transparent);
 }
 
 .hero-skill-item {
