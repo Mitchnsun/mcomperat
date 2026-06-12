@@ -161,18 +161,7 @@ body,
   }
 }
 
-/* ---- Monogram badge — base structure & transitions ---- */
-.sidebar-monogram {
-  overflow: hidden;
-  transition:
-    color 300ms ease,
-    border-color 300ms ease,
-    box-shadow 250ms ease,
-    transform 250ms ease,
-    gap 250ms ease;
-}
-
-/* ---- Monogram glow (dark theme only, disabled when user prefers reduced motion) ---- */
+/* ---- Monogram badge — glow keyframe (dark theme only) ---- */
 @media (prefers-reduced-motion: no-preference) {
   @keyframes mono-dark-breathe {
     0%,
@@ -181,36 +170,7 @@ body,
     }
 
     50% {
-      box-shadow: 0 0 16px 5px oklch(0.6 0.22 290 / 0.55);
+      box-shadow: 0 0 12px 4px oklch(0.6 0.22 290 / 0.55);
     }
-  }
-
-  [data-theme='dark'] .sidebar-monogram {
-    animation: mono-dark-breathe 3.4s ease-in-out infinite;
-  }
-
-  [data-theme='dark'] .sidebar-monogram:hover {
-    box-shadow: 0 0 20px 6px oklch(0.6 0.22 290 / 0.7) !important;
-    border-color: oklch(0.72 0.22 290);
-  }
-
-  [data-theme='clean'] .sidebar-monogram:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 14px -2px oklch(0 0 0 / 0.14);
-    gap: 3px;
-  }
-
-  [data-theme='bold'] .sidebar-monogram {
-    overflow: visible;
-    transition:
-      color 300ms ease,
-      border-color 300ms ease,
-      box-shadow 250ms ease,
-      transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
-      gap 250ms ease;
-  }
-
-  [data-theme='bold'] .sidebar-monogram:hover {
-    transform: perspective(200px) rotateY(360deg) scale(1.1);
   }
 }
