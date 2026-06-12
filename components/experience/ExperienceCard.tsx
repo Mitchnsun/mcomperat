@@ -19,7 +19,7 @@ export interface ExperienceCardProps {
   defaultExpanded?: boolean;
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
-  activeFilter?: string | null;
+  activeFilters?: string[];
   onTagClick?: (tagName: string) => void;
   className?: string;
 }
@@ -55,7 +55,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
   defaultExpanded = false,
   onMouseEnter,
   onMouseLeave,
-  activeFilter = null,
+  activeFilters = [],
   onTagClick,
   className,
 }) => {
@@ -129,7 +129,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
               name={tag.name}
               tagRef={tag.ref}
               onClick={onTagClick}
-              active={activeFilter === tag.name}
+              active={activeFilters.includes(tag.name)}
             />
           ))}
         </div>

@@ -1,11 +1,13 @@
 import { type Experience } from '@/types';
 
 /**
- * Returns true if the experience matches the active filter (or if there is no filter).
+ * Returns how many of the experience's tags are present in the active filters array.
+ * A result of 0 means the experience doesn't match any selected filter.
+ * Used to sort and dim experience cards when one or more filters are active.
  */
-export function matchesFilter(exp: Experience, filter: string | null): boolean {
-  if (!filter) return true;
-  return exp.tags.some((tag) => tag.name === filter);
+export function countMatchingTags(exp: Experience, filters: string[]): number {
+  if (filters.length === 0) return 0;
+  return exp.tags.filter((tag) => filters.includes(tag.name)).length;
 }
 
 /**

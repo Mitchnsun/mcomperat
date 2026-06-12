@@ -5,17 +5,23 @@ import React from 'react';
 
 import TagPill from '@/components/ui/TagPill';
 
-interface FilterBarProps {
-  tagName: string;
-  tagRef: string;
-  count: number;
-  total: number;
-  onClear: () => void;
+export interface FilterBarTag {
+  name: string;
+  ref: string;
 }
 
-// Banner displayed above the experience list when a tag filter is active.
-// Shows the active tag, a clear button, and a match counter.
-const FilterBar: React.FC<FilterBarProps> = ({ tagName, tagRef, count, total, onClear }) => {
+interface FilterBarProps {
+  tags: FilterBarTag[];
+  count: number;
+  total: number;
+  onRemove: (tagName: string) => void;
+  onClearAll: () => void;
+}
+
+// Banner displayed above the experience list when one or more tag filters are active.
+// Shows each active tag as a clickable pill (click removes that filter), a clear-all
+// button, and a match counter.
+const FilterBar: React.FC<FilterBarProps> = ({ tags, count, total, onRemove, onClearAll }) => {
   const t = useTranslations('filter');
 
   return (
@@ -43,13 +49,15 @@ const FilterBar: React.FC<FilterBarProps> = ({ tagName, tagRef, count, total, on
       {/* Label */}
       <span className="text-body-muted text-xs font-semibold tracking-widest uppercase">{t('filteredBy')}</span>
 
-      {/* Active tag pill — clicking it also clears the filter */}
-      <TagPill name={tagName} tagRef={tagRef} onClick={onClear} active />
+      {/* One pill per active tag — clicking it removes that specific filter */}
+      {tags.map((tag) => (
+        <TagPill key={tag.name} name={tag.name} tagRef={tag.ref} onClick={onRemove} active />
+      ))}
 
-      {/* Explicit clear button */}
+      {/* Explicit clear-all button */}
       <button
         type="button"
-        onClick={onClear}
+        onClick={onClearAll}
         className="text-body-muted hover:text-body focus-visible:ring-accent rounded px-2 py-0.5 text-xs focus:outline-none focus-visible:ring-2"
       >
         × {t('clear')}

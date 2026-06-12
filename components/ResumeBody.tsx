@@ -1,7 +1,8 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
+import { flushSync } from 'react-dom';
 
 import ContactSection from '@/components/contact/ContactSection';
 import EducationSection from '@/components/education/EducationSection';
@@ -15,26 +16,48 @@ interface ResumeBodyProps {
   lang: Lang;
 }
 
+// Wrap a state update in a View Transition when the API is available, so card
+// reordering is animated. Falls back to a plain setState on unsupported browsers.
+function withViewTransition(apply: () => void): void {
+  if (typeof document !== 'undefined' && document.startViewTransition) {
+    document.startViewTransition(() => flushSync(apply));
+  } else {
+    apply();
+  }
+}
+
 // Client container holding the cross-section filter state: clicking a tag (in a
-// skill group or an experience card) filters the experience timeline.
+// skill group or an experience card) toggles it in the activeFilters array,
+// which sorts and dims the experience timeline accordingly.
 const ResumeBody: React.FC<ResumeBodyProps> = ({ data, lang }) => {
   const tSections = useTranslations('sections');
   const tExperiences = useTranslations('experiences');
   const tContact = useTranslations('contact');
 
-  const [activeFilter, setActiveFilter] = useState<string | null>(null);
+  const [activeFilters, setActiveFilters] = useState<string[]>([]);
+  const prevFilterCountRef = useRef(0);
 
   const handleTagClick = useCallback((tagName: string) => {
-    setActiveFilter((current) => (current === tagName ? null : tagName));
+    withViewTransition(() =>
+      setActiveFilters((current) =>
+        current.includes(tagName) ? current.filter((n) => n !== tagName) : [...current, tagName]
+      )
+    );
   }, []);
 
-  // Scroll to the top of the experiences section whenever a filter is activated
-  // (i.e. when activeFilter transitions to a non-null value).
+  const handleClearFilters = useCallback(() => {
+    withViewTransition(() => setActiveFilters([]));
+  }, []);
+
+  // Scroll to the experiences section only when the first filter is activated
+  // (transition from 0 → ≥1). Subsequent tag additions do not re-scroll.
   useEffect(() => {
-    if (activeFilter !== null) {
+    const prev = prevFilterCountRef.current;
+    prevFilterCountRef.current = activeFilters.length;
+    if (prev === 0 && activeFilters.length > 0) {
       document.getElementById('work')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-  }, [activeFilter]);
+  }, [activeFilters]);
 
   return (
     <div className="flex flex-col gap-12 print:gap-4">
@@ -42,8 +65,9 @@ const ResumeBody: React.FC<ResumeBodyProps> = ({ data, lang }) => {
         title={tSections('work')}
         experiences={data.experiences}
         lang={lang}
-        activeFilter={activeFilter}
+        activeFilters={activeFilters}
         onTagClick={handleTagClick}
+        onClearFilters={handleClearFilters}
         showMoreLabel={tExperiences('showMore')}
         showLessLabel={tExperiences('showLess')}
       />
@@ -52,7 +76,7 @@ const ResumeBody: React.FC<ResumeBodyProps> = ({ data, lang }) => {
         title={tSections('skills')}
         groups={data.skills}
         lang={lang}
-        activeFilter={activeFilter}
+        activeFilters={activeFilters}
         onTagClick={handleTagClick}
       />
 

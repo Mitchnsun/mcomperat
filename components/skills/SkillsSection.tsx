@@ -11,11 +11,11 @@ interface SkillsSectionProps {
   title: string;
   groups: SkillGroup[];
   lang: Lang;
-  activeFilter: string | null;
+  activeFilters: string[];
   onTagClick: (tagName: string) => void;
 }
 
-const SkillsSection: React.FC<SkillsSectionProps> = ({ title, groups, lang, activeFilter, onTagClick }) => (
+const SkillsSection: React.FC<SkillsSectionProps> = ({ title, groups, lang, activeFilters, onTagClick }) => (
   <section id="skills" className="scroll-mt-28 pb-4 print:pb-0">
     <SectionTitle>{title}</SectionTitle>
 
@@ -32,7 +32,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ title, groups, lang, acti
                 name={tag.name}
                 tagRef={tag.ref}
                 onClick={onTagClick}
-                active={activeFilter === tag.name}
+                active={activeFilters.includes(tag.name)}
               />
             ))}
           </div>
