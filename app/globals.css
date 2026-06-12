@@ -160,3 +160,223 @@ body,
     box-shadow: 0 0 0 0 oklch(0.66 0.18 145 / 0);
   }
 }
+
+/* ---- Monogram badge — base structure & transitions ---- */
+.sidebar-monogram {
+  overflow: hidden;
+  transition:
+    color 300ms ease,
+    border-color 300ms ease,
+    box-shadow 250ms ease,
+    transform 250ms ease,
+    gap 250ms ease;
+}
+
+.sidebar-monogram .mono-letter {
+  display: inline-block;
+}
+
+/* ---- Monogram animations (disabled when user prefers reduced motion) ---- */
+@media (prefers-reduced-motion: no-preference) {
+  /* ===== DARK — Neon power-on ===== */
+  @keyframes mono-dark-on {
+    0% {
+      opacity: 0;
+      box-shadow: none;
+    }
+
+    15% {
+      opacity: 0.5;
+      box-shadow: 0 0 6px 2px oklch(0.6 0.22 290 / 0.6);
+    }
+
+    25% {
+      opacity: 0.1;
+      box-shadow: none;
+    }
+
+    55% {
+      opacity: 0.8;
+      box-shadow: 0 0 10px 3px oklch(0.6 0.22 290 / 0.65);
+    }
+
+    70% {
+      opacity: 0.4;
+      box-shadow: 0 0 4px 1px oklch(0.6 0.22 290 / 0.3);
+    }
+
+    85% {
+      opacity: 1;
+      box-shadow: 0 0 14px 4px oklch(0.6 0.22 290 / 0.6);
+    }
+
+    100% {
+      opacity: 1;
+      box-shadow: 0 0 8px 2px oklch(0.6 0.22 290 / 0.35);
+    }
+  }
+
+  @keyframes mono-dark-breathe {
+    0%,
+    100% {
+      box-shadow: 0 0 6px 1px oklch(0.6 0.22 290 / 0.3);
+    }
+
+    50% {
+      box-shadow: 0 0 16px 5px oklch(0.6 0.22 290 / 0.55);
+    }
+  }
+
+  @keyframes mono-flicker {
+    0% {
+      opacity: 0;
+    }
+
+    10% {
+      opacity: 0.7;
+    }
+
+    15% {
+      opacity: 0;
+    }
+
+    45% {
+      opacity: 0;
+    }
+
+    55% {
+      opacity: 0.9;
+    }
+
+    60% {
+      opacity: 0.1;
+    }
+
+    75% {
+      opacity: 1;
+    }
+
+    80% {
+      opacity: 0.5;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  [data-theme='dark'] .sidebar-monogram {
+    animation:
+      mono-dark-on 1.15s ease-out both,
+      mono-dark-breathe 3.4s ease-in-out 1.15s infinite;
+  }
+
+  [data-theme='dark'] .sidebar-monogram .mono-letter {
+    animation: mono-flicker 1.1s steps(4, end) both;
+  }
+
+  [data-theme='dark'] .sidebar-monogram:hover {
+    box-shadow: 0 0 20px 6px oklch(0.6 0.22 290 / 0.7) !important;
+    border-color: oklch(0.72 0.22 290);
+  }
+
+  /* ===== CLEAN — Soft sequential rise ===== */
+  @keyframes mono-clean-box {
+    from {
+      opacity: 0;
+      transform: scale(0.82);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes mono-rise {
+    from {
+      opacity: 0;
+      transform: translateY(110%);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  [data-theme='clean'] .sidebar-monogram {
+    overflow: hidden;
+    animation: mono-clean-box 0.6s cubic-bezier(0.2, 0.7, 0.3, 1) both;
+  }
+
+  [data-theme='clean'] .sidebar-monogram .mono-letter {
+    animation: mono-rise 0.55s cubic-bezier(0.2, 0.7, 0.3, 1) both;
+  }
+
+  [data-theme='clean'] .sidebar-monogram .mono-c {
+    animation-delay: 120ms;
+  }
+
+  [data-theme='clean'] .sidebar-monogram:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px -2px oklch(0 0 0 / 0.14);
+    gap: 3px;
+  }
+
+  /* ===== BOLD — Stamp ===== */
+  @keyframes mono-bold-stamp {
+    0% {
+      opacity: 0;
+      transform: scale(1.45) rotate(-9deg);
+    }
+
+    70% {
+      transform: scale(1.03) rotate(1deg);
+    }
+
+    100% {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+    }
+  }
+
+  @keyframes mono-pop {
+    0% {
+      opacity: 0;
+      transform: translateY(8px) scale(0.8);
+    }
+
+    65% {
+      transform: translateY(-4px) scale(1.08);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  [data-theme='bold'] .sidebar-monogram {
+    overflow: visible;
+    animation: mono-bold-stamp 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    transition:
+      color 300ms ease,
+      border-color 300ms ease,
+      box-shadow 250ms ease,
+      transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+      gap 250ms ease;
+  }
+
+  [data-theme='bold'] .sidebar-monogram .mono-letter {
+    animation: mono-pop 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  }
+
+  [data-theme='bold'] .sidebar-monogram .mono-c {
+    animation-delay: 80ms;
+  }
+
+  [data-theme='bold'] .sidebar-monogram:hover {
+    transform: perspective(200px) rotateY(360deg) scale(1.1);
+  }
+}
