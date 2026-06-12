@@ -17,6 +17,11 @@ interface IntlMessages {
     showMore: string;
     showLess: string;
   };
+  filter: {
+    filteredBy: string;
+    clear: string;
+    missions: string;
+  };
   contact: {
     email: string;
     linkedin: string;
@@ -28,5 +33,10 @@ interface IntlMessages {
   };
   meta: {
     title: string;
+  };
+  post: {
+    badge: {
+      freelance: string;
+    };
   };
 }

@@ -15,6 +15,11 @@
     "showMore": "Show more",
     "showLess": "Show less"
   },
+  "filter": {
+    "filteredBy": "Filtered by",
+    "clear": "Clear",
+    "missions": "missions"
+  },
   "contact": {
     "email": "Email",
     "linkedin": "LinkedIn",

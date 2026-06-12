@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
 import ContactSection from '@/components/contact/ContactSection';
 import EducationSection from '@/components/education/EducationSection';
@@ -27,6 +27,14 @@ const ResumeBody: React.FC<ResumeBodyProps> = ({ data, lang }) => {
   const handleTagClick = useCallback((tagName: string) => {
     setActiveFilter((current) => (current === tagName ? null : tagName));
   }, []);
+
+  // Scroll to the top of the experiences section whenever a filter is activated
+  // (i.e. when activeFilter transitions to a non-null value).
+  useEffect(() => {
+    if (activeFilter !== null) {
+      document.getElementById('work')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [activeFilter]);
 
   return (
     <div className="flex flex-col gap-12 print:gap-4">

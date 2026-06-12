@@ -3,8 +3,10 @@
 import React, { useMemo, useRef, useState } from 'react';
 
 import ExperienceCard from '@/components/experience/ExperienceCard';
+import FilterBar from '@/components/experience/FilterBar';
 import { useActiveExperience } from '@/components/layout/ActiveExperienceContext';
 import SectionTitle from '@/components/ui/SectionTitle';
+import { findTagRef } from '@/lib/tagUtils';
 import { type Experience, type Lang } from '@/types';
 
 interface ExperiencesSectionProps {
@@ -61,9 +63,26 @@ const ExperiencesSection: React.FC<ExperiencesSectionProps> = ({
   const expandList = showAll || Boolean(activeFilter);
   const hasOverflow = experiences.length > INITIAL_VISIBLE;
 
+  // Derived values for the FilterBar.
+  const activeTagRef = useMemo(() => findTagRef(experiences, activeFilter ?? ''), [experiences, activeFilter]);
+  const matchCount = useMemo(
+    () => experiences.filter((exp) => exp.tags.some((tag) => tag.name === activeFilter)).length,
+    [experiences, activeFilter]
+  );
+
   return (
     <section id="work" className="scroll-mt-28 pb-4 print:pb-0">
       <SectionTitle>{title}</SectionTitle>
+
+      {activeFilter && activeTagRef ? (
+        <FilterBar
+          tagName={activeFilter}
+          tagRef={activeTagRef}
+          count={matchCount}
+          total={experiences.length}
+          onClear={() => onTagClick(activeFilter)}
+        />
+      ) : null}
 
       <div
         className="flex flex-col print:gap-2"
