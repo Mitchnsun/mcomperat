@@ -2,6 +2,8 @@
 
 import React from 'react';
 
+import { cn } from '@/lib/cn';
+
 interface MainContentProps {
   children: React.ReactNode;
   className?: string;
@@ -12,9 +14,7 @@ interface MainContentProps {
 const MainContent = React.forwardRef<HTMLElement, MainContentProps>(({ children, className }, ref) => (
   <main
     ref={ref}
-    className={['cv-main flex-1 overflow-y-auto print:h-auto print:overflow-visible', 'h-screen', className ?? '']
-      .filter(Boolean)
-      .join(' ')}
+    className={cn('cv-main flex-1 overflow-y-auto print:h-auto print:overflow-visible', 'h-screen', className)}
   >
     {children}
   </main>

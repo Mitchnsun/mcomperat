@@ -24,6 +24,12 @@
   /* Themed font families — overridden per [data-theme]. */
   --font-sans: var(--font-space-grotesk), system-ui, sans-serif;
   --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+
+  /* Hero animations — exposed as `animate-*` utilities. */
+  --animate-char-reveal: char-reveal 0.6s cubic-bezier(0.2, 0.7, 0.3, 1) both;
+  --animate-skill-reveal: skill-reveal 0.6s cubic-bezier(0.2, 0.7, 0.3, 1) both;
+  --animate-blink-cursor: blink-cursor 1s steps(2, start) infinite;
+  --animate-pulse-dot: pulse-dot 2s infinite;
 }
 
 [data-theme='dark'] {
@@ -105,32 +111,12 @@ body,
     radial-gradient(circle at bottom left, rgba(142, 142, 214, 0.12), transparent 38%);
 }
 
-.hero-char {
-  display: inline-block;
-  opacity: 0;
-  transform: translateY(0.55em);
-  animation: char-reveal 0.6s cubic-bezier(0.2, 0.7, 0.3, 1) both;
-}
-
-.hero-cursor {
-  animation: blink-cursor 1s steps(2, start) infinite;
-}
-
-.hero-status-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 999px;
-  background: oklch(0.66 0.18 145);
-  animation: pulse-dot 2s infinite;
-}
-
-.hero-skill-item {
-  opacity: 0;
-  transform: translateY(18px);
-  animation: skill-reveal 0.6s cubic-bezier(0.2, 0.7, 0.3, 1) both;
-}
-
 @keyframes char-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(0.55em);
+  }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -138,6 +124,11 @@ body,
 }
 
 @keyframes skill-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -167,19 +158,5 @@ body,
 
   100% {
     box-shadow: 0 0 0 0 oklch(0.66 0.18 145 / 0);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero-char,
-  .hero-skill-item {
-    animation: none;
-    opacity: 1;
-    transform: none;
-  }
-
-  .hero-cursor,
-  .hero-status-dot {
-    animation: none;
   }
 }

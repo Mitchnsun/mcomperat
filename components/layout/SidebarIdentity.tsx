@@ -2,6 +2,7 @@
 
 import React from 'react';
 
+import { cn } from '@/lib/cn';
 import { type Person } from '@/types';
 
 interface SidebarIdentityProps {
@@ -16,7 +17,7 @@ const SidebarIdentity: React.FC<SidebarIdentityProps> = ({ person, className }) 
 
   return (
     <>
-      <header className={['flex items-center gap-3', className ?? ''].filter(Boolean).join(' ')}>
+      <header className={cn('flex items-center gap-3', className)}>
         <span
           aria-hidden="true"
           className="border-body-muted text-body-muted shadow-body-muted/50 flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border text-sm font-bold shadow"
