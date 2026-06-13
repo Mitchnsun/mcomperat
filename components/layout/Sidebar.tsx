@@ -5,11 +5,10 @@ import React from 'react';
 
 import GithubLogo from '@/components/assets/icons/github-logo';
 import LinkedinLogo from '@/components/assets/icons/linkedin-logo';
+import ExperienceRoulette from '@/components/layout/ExperienceRoulette';
 import SidebarIdentity from '@/components/layout/SidebarIdentity';
 import LangToggle from '@/components/ui/LangToggle';
 import ThemeToggle from '@/components/ui/ThemeToggle';
-import { cn } from '@/lib/cn';
-import { getCompanyAccent } from '@/lib/companyColors';
 import { type ExperienceNavItem, type Person, type SectionNavItem } from '@/types';
 
 interface SidebarProps {
@@ -42,43 +41,7 @@ const Sidebar: React.FC<SidebarProps> = ({
           <p className="text-body-muted mb-2 text-[0.65rem] font-semibold tracking-widest uppercase">
             {t('experiences')}
           </p>
-          <ul className="space-y-0.5">
-            {experiences.map((exp) => {
-              const isActive = exp.id === activeExpId;
-              return (
-                <li key={exp.id}>
-                  <button
-                    type="button"
-                    aria-current={isActive ? 'true' : undefined}
-                    onClick={() => onExpClick(exp.id)}
-                    className={cn(
-                      'flex w-full cursor-pointer items-center gap-2 rounded px-2 py-1.5 text-left text-sm',
-                      'focus-visible:ring-accent focus:outline-none focus-visible:ring-2',
-                      {
-                        'text-heading bg-card-hover font-semibold': isActive,
-                        'text-body-muted hover:text-body': !isActive,
-                      }
-                    )}
-                  >
-                    <span
-                      aria-hidden="true"
-                      className="h-2 w-2 shrink-0 rounded-full border"
-                      style={
-                        isActive
-                          ? {
-                              backgroundColor: getCompanyAccent(exp.company),
-                              borderColor: getCompanyAccent(exp.company),
-                            }
-                          : { backgroundColor: 'transparent', borderColor: 'currentColor' }
-                      }
-                    />
-                    <span className="flex-1 truncate">{exp.company}</span>
-                    {exp.year ? <span className="text-body-muted text-xs tabular-nums">{exp.year}</span> : null}
-                  </button>
-                </li>
-              );
-            })}
-          </ul>
+          <ExperienceRoulette experiences={experiences} activeExpId={activeExpId} onExpClick={onExpClick} />
         </nav>
       ) : null}
 
