@@ -1,12 +1,13 @@
 'use client';
 
-import React, { useMemo, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 
 import ExperienceCard from '@/components/experience/ExperienceCard';
 import FilterBar from '@/components/experience/FilterBar';
 import { useActiveExperience } from '@/components/layout/ActiveExperienceContext';
 import SectionTitle from '@/components/ui/SectionTitle';
 import { cn } from '@/lib/cn';
+import { experienceReveal } from '@/lib/experienceReveal';
 import { countMatchingTags, findTagRef } from '@/lib/tagUtils';
 import { type Experience, type Lang } from '@/types';
 
@@ -77,6 +78,17 @@ const ExperiencesSection: React.FC<ExperiencesSectionProps> = ({
   // When filtering, every match must be visible regardless of the show-more state.
   const expandList = showAll || hasFilters;
   const hasOverflow = experiences.length > INITIAL_VISIBLE;
+
+  // Keep the reveal bridge in sync so Layout can expand the list before scrolling
+  // to an experience that is currently hidden by the overflow clamp (display:none).
+  // The check uses the original data index, not the filtered order, so it remains
+  // correct after the filter is cleared in the same flushSync call.
+  useEffect(() => {
+    experienceReveal.setOverflowState(
+      (id) => !showAll && experiences.findIndex((e) => e.id === id) >= INITIAL_VISIBLE,
+      () => setShowAll(true)
+    );
+  }, [showAll, experiences]);
 
   // Tags to display in the FilterBar. Unknown refs keep a neutral fallback color
   // so users can still see and clear active filters that don't map back cleanly.

@@ -19,7 +19,7 @@ const ExtrasSection: React.FC<ExtrasSectionProps> = ({ title, items, lang }) => 
       {items.map((item, index) => (
         <article
           key={`extra-${index}`}
-          className={cn('border-border bg-card-hover/40 rounded-2xl border p-4', {
+          className={cn('border-border border-l-2 p-4', {
             'print:block': item.print,
             'print:hidden': !item.print,
           })}

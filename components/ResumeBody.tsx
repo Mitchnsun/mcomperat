@@ -9,6 +9,8 @@ import EducationSection from '@/components/education/EducationSection';
 import ExperiencesSection from '@/components/experience/ExperiencesSection';
 import ExtrasSection from '@/components/extras/ExtrasSection';
 import SkillsSection from '@/components/skills/SkillsSection';
+import { experienceReveal } from '@/lib/experienceReveal';
+import { countMatchingTags } from '@/lib/tagUtils';
 import { type Lang, type ResumeData } from '@/types';
 
 interface ResumeBodyProps {
@@ -60,6 +62,22 @@ const ResumeBody: React.FC<ResumeBodyProps> = ({ data, lang }) => {
   const handleClearFilters = useCallback(() => {
     withViewTransition(() => setActiveFilters([]));
   }, []);
+
+  // Register a plain (no view-transition) clear so Layout can call it synchronously
+  // via flushSync before scrolling to the target experience.
+  useEffect(() => {
+    experienceReveal.setClearFilters(() => setActiveFilters([]));
+  }, []);
+
+  // Keep the bridge's filtered-out set in sync so Layout can check before scrolling.
+  useEffect(() => {
+    const ids = new Set(
+      data.experiences
+        .filter((exp) => countMatchingTags(exp, activeFilters) === 0 && activeFilters.length > 0)
+        .map((exp) => exp.id)
+    );
+    experienceReveal.setFilteredOutIds(ids);
+  }, [data.experiences, activeFilters]);
 
   // Scroll to the experiences section only when the first filter is activated
   // (transition from 0 → ≥1). Subsequent tag additions do not re-scroll.

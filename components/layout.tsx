@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useCallback, useMemo, useRef, useState } from 'react';
+import { flushSync } from 'react-dom';
 
 import { ActiveExperienceProvider } from '@/components/layout/ActiveExperienceContext';
 import MainContent from '@/components/layout/MainContent';
@@ -8,6 +9,7 @@ import Sidebar from '@/components/layout/Sidebar';
 import SidebarIdentity from '@/components/layout/SidebarIdentity';
 import { useScrollTracking } from '@/hooks/useScrollTracking';
 import { cn } from '@/lib/cn';
+import { experienceReveal } from '@/lib/experienceReveal';
 import { LayoutProps } from '@/types';
 
 // Offset (px) applied when scrolling to a card so it is not hidden behind the
@@ -31,6 +33,9 @@ const Layout: React.FC<LayoutProps> = ({ person, experiences = [], sections = []
 
   const handleExpClick = useCallback(
     (id: string) => {
+      // Reveal the card synchronously (clear filter and/or expand "show more") so
+      // the DOM is fully updated before we measure its position for scrolling.
+      flushSync(() => experienceReveal.reveal(id));
       scrollToTarget(`[data-exp-id="${id}"]`);
       setIsDrawerOpen(false);
     },

@@ -38,10 +38,13 @@ const Sidebar: React.FC<SidebarProps> = ({
       {/* Experiences navigation */}
       {experiences.length > 0 ? (
         <nav aria-label={t('experiences')}>
-          <p className="text-body-muted mb-2 text-[0.65rem] font-semibold tracking-widest uppercase">
-            {t('experiences')}
-          </p>
-          <ExperienceRoulette experiences={experiences} activeExpId={activeExpId} onExpClick={onExpClick} />
+          <ExperienceRoulette
+            experiences={experiences}
+            activeExpId={activeExpId}
+            label={t('experiences')}
+            toggleLabel={t('toggleExperiences')}
+            onExpClick={onExpClick}
+          />
         </nav>
       ) : null}
 

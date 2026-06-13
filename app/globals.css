@@ -50,7 +50,7 @@
 }
 
 [data-theme='clean'] {
-  --color-bg: #f0f0ec;
+  --color-bg: oklch(98.4% 0.003 247.858);
   --color-sidebar: #ffffff;
   --color-card: #0e0e18;
   --color-card-hover: #f7f7f4;
