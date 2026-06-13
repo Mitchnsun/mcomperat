@@ -78,13 +78,10 @@ const ExperiencesSection: React.FC<ExperiencesSectionProps> = ({
   const expandList = showAll || hasFilters;
   const hasOverflow = experiences.length > INITIAL_VISIBLE;
 
-  // Tags to display in the FilterBar: only those with a known ref.
+  // Tags to display in the FilterBar. Unknown refs keep a neutral fallback color
+  // so users can still see and clear active filters that don't map back cleanly.
   const selectedTags = useMemo(
-    () =>
-      activeFilters.flatMap((name) => {
-        const ref = findTagRef(experiences, name);
-        return ref ? [{ name, ref }] : [];
-      }),
+    () => activeFilters.map((name) => ({ name, ref: findTagRef(experiences, name) ?? 'unknown' })),
     [activeFilters, experiences]
   );
 
@@ -95,7 +92,7 @@ const ExperiencesSection: React.FC<ExperiencesSectionProps> = ({
     <section id="work" className="scroll-mt-28 pb-4 print:pb-0">
       <SectionTitle>{title}</SectionTitle>
 
-      {selectedTags.length > 0 ? (
+      {hasFilters ? (
         <FilterBar
           tags={selectedTags}
           count={matchCount}

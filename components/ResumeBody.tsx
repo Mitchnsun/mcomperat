@@ -16,14 +16,26 @@ interface ResumeBodyProps {
   lang: Lang;
 }
 
+type ViewTransitionDocument = Document & {
+  startViewTransition?: (callback: () => void) => void;
+};
+
 // Wrap a state update in a View Transition when the API is available, so card
 // reordering is animated. Falls back to a plain setState on unsupported browsers.
 function withViewTransition(apply: () => void): void {
-  if (typeof document !== 'undefined' && document.startViewTransition) {
-    document.startViewTransition(() => flushSync(apply));
-  } else {
+  if (typeof document === 'undefined') {
     apply();
+    return;
   }
+
+  const startViewTransition = (document as ViewTransitionDocument).startViewTransition?.bind(document);
+
+  if (startViewTransition) {
+    startViewTransition(() => flushSync(apply));
+    return;
+  }
+
+  apply();
 }
 
 // Client container holding the cross-section filter state: clicking a tag (in a
@@ -55,7 +67,8 @@ const ResumeBody: React.FC<ResumeBodyProps> = ({ data, lang }) => {
     const prev = prevFilterCountRef.current;
     prevFilterCountRef.current = activeFilters.length;
     if (prev === 0 && activeFilters.length > 0) {
-      document.getElementById('work')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+      document.getElementById('work')?.scrollIntoView({ behavior, block: 'start' });
     }
   }, [activeFilters]);
 

@@ -1,3 +1,4 @@
+import { type TagRef } from '@/lib/tagMeta';
 import { type Experience } from '@/types';
 
 /**
@@ -15,7 +16,7 @@ export function countMatchingTags(exp: Experience, filters: string[]): number {
  * Used to look up the color/category of a tag when only its display name is known
  * (e.g. when building the FilterBar from the active filter state).
  */
-export function findTagRef(experiences: Experience[], tagName: string): string | undefined {
+export function findTagRef(experiences: Experience[], tagName: string): TagRef | undefined {
   for (const exp of experiences) {
     const found = exp.tags.find((t) => t.name === tagName);
     if (found) return found.ref;

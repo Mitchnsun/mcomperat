@@ -28,7 +28,7 @@ const FilterBar: React.FC<FilterBarProps> = ({ tags, count, total, onRemove, onC
     <div
       role="status"
       aria-live="polite"
-      className="border-border bg-card-hover/60 animate-filter-bar-in mb-4 flex flex-wrap items-center gap-x-3 gap-y-2 rounded-xl border px-4 py-2.5 text-sm print:hidden"
+      className="border-border bg-card-hover/60 animate-filter-bar-in mb-4 flex flex-wrap items-center gap-x-3 gap-y-2 rounded-xl border px-4 py-2.5 text-sm motion-reduce:animate-none print:hidden"
     >
       {/* Filter icon */}
       <svg
