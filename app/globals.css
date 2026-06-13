@@ -94,8 +94,14 @@ body,
   *,
   *::before,
   *::after {
+    animation: none !important;
     transition: none !important;
   }
+}
+
+/* @page cannot be expressed with Tailwind utility classes. */
+@page {
+  margin: 1.5cm;
 }
 
 .hero-surface::before {
@@ -186,12 +192,5 @@ body,
       opacity: 1;
       transform: translateY(0);
     }
-  }
-}
-
-@media print {
-  /* @page cannot be expressed with Tailwind utility classes. */
-  @page {
-    margin: 1.5cm;
   }
 }

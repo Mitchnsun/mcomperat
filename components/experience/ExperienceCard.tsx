@@ -52,7 +52,6 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
     <article
       id={exp.id}
       data-exp-id={exp.id}
-      aria-label={`${exp.company} — ${pick(exp.title, lang)}`}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       style={{ '--exp-accent': accent } as React.CSSProperties}
@@ -85,10 +84,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
               {pick(exp.title, lang)}
             </span>
             {exp.freelance ? (
-              <span
-                aria-label={t('badge.freelance')}
-                className="border-brand/40 text-brand rounded border px-2 py-0.5 text-xs font-medium print:mr-2 print:inline-block"
-              >
+              <span className="border-brand/40 text-brand rounded border px-2 py-0.5 text-xs font-medium print:mr-2 print:inline-block">
                 {t('badge.freelance')}
               </span>
             ) : null}

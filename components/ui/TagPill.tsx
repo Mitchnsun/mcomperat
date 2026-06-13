@@ -1,3 +1,6 @@
+'use client';
+
+import { useTranslations } from 'next-intl';
 import React from 'react';
 
 import { cn } from '@/lib/cn';
@@ -27,6 +30,7 @@ const IDLE = cn(DARK_IDLE, CLEAN_IDLE, BOLD_IDLE);
 // properties (`--tag-bg` / `--tag-fg`); the three `@custom-variant` entries in
 // `app/globals.css` handle per-theme rendering without any JS.
 const TagPill: React.FC<TagPillProps> = ({ name, tagRef, onClick, active = false, className }) => {
+  const t = useTranslations('tagFilter');
   const color = getTagColor(tagRef);
   const style = { '--tag-bg': color.bg, '--tag-fg': color.fg } as React.CSSProperties;
   const classes = cn(
@@ -49,7 +53,7 @@ const TagPill: React.FC<TagPillProps> = ({ name, tagRef, onClick, active = false
         style={style}
         className={classes}
         aria-pressed={active}
-        aria-label={active ? `Remove filter: ${name}` : `Filter by ${name}`}
+        aria-label={active ? t('removeFilter', { name }) : t('filterBy', { name })}
         onClick={() => onClick(name)}
       >
         {name}

@@ -42,5 +42,9 @@
   "locale": {
     "fr": "Français",
     "en": "Anglais"
+  },
+  "tagFilter": {
+    "filterBy": "Filtrer par {name}",
+    "removeFilter": "Retirer le filtre : {name}"
   }
 }

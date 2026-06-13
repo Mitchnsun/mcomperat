@@ -45,4 +45,8 @@ interface IntlMessages {
     fr: string;
     en: string;
   };
+  tagFilter: {
+    filterBy: string;
+    removeFilter: string;
+  };
 }
