@@ -42,7 +42,8 @@ const Sidebar: React.FC<SidebarProps> = ({
             experiences={experiences}
             activeExpId={activeExpId}
             label={t('experiences')}
-            toggleLabel={t('toggleExperiences')}
+            toggleExpandLabel={t('toggleExpandExperiences')}
+            toggleCollapseLabel={t('toggleCollapseExperiences')}
             onExpClick={onExpClick}
           />
         </nav>

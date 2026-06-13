@@ -9,15 +9,23 @@ import { type ExperienceNavItem } from '@/types';
 // Height of each roulette item in rem (must match h-8 = 2rem).
 const ITEM_HEIGHT_REM = 2;
 
-// Clamp the centering offset to min(1, activeIndex):
-//  – index=0: active at slot 0 (no empty slot above, no wasted space).
-//  – index≥1: active at slot 1 (center), n-1 visible above, n+1 visible below.
-const computeTranslateY = (activeIndex: number) => `${(Math.min(1, activeIndex) - activeIndex) * ITEM_HEIGHT_REM}rem`;
+// Clamp the centering offset so the active row is never pushed off the visible
+// 3-slot window, both at the top (index=0) and at the bottom (index=total-1).
+//  – index=0: active at slot 0 (no wasted space above).
+//  – 0<index<total-1: active at slot 1 (center).
+//  – index=total-1: active at slot 2 (no wasted space below).
+const computeSlot = (activeIndex: number, total: number) =>
+  Math.min(2, Math.max(0, Math.min(1, activeIndex), activeIndex + 3 - total));
+
+const computeTranslateY = (activeIndex: number, total: number) =>
+  `${(computeSlot(activeIndex, total) - activeIndex) * ITEM_HEIGHT_REM}rem`;
 
 // index=0 — active at top edge, no need for a top fade; just fade n+1 gently below.
 const MASK_FIRST = 'linear-gradient(to bottom, black 0%, black 50%, transparent 85%)';
-// index≥1 — symmetric: fade n-1 in at the top, fade n+1 out at the bottom.
+// index≥1 and not last — symmetric: fade n-1 in at the top, fade n+1 out at the bottom.
 const MASK_CENTER = 'linear-gradient(to bottom, transparent 0%, black 20%, black 65%, transparent 90%)';
+// last index — active at bottom edge, fade prev gently above; no fade below.
+const MASK_LAST = 'linear-gradient(to bottom, transparent 10%, black 35%, black 100%)';
 
 // ─── Shared button ────────────────────────────────────────────────────────────
 
@@ -37,6 +45,7 @@ const NavButton: React.FC<NavButtonProps> = ({ exp, isActive, distance, showYear
     <button
       type="button"
       aria-current={isActive ? 'true' : undefined}
+      aria-hidden={isHidden ? true : undefined}
       tabIndex={isHidden ? -1 : 0}
       onClick={onClick}
       className={cn(
@@ -72,8 +81,10 @@ interface ExperienceRouletteProps {
   activeExpId: string;
   /** Translated section label rendered in the header row. */
   label: string;
-  /** Translated aria-label for the expand/collapse toggle button. */
-  toggleLabel: string;
+  /** Translated aria-label for the toggle button when the list is collapsed (expand action). */
+  toggleExpandLabel: string;
+  /** Translated aria-label for the toggle button when the list is expanded (collapse action). */
+  toggleCollapseLabel: string;
   onExpClick: (id: string) => void;
 }
 
@@ -81,7 +92,8 @@ const ExperienceRoulette: React.FC<ExperienceRouletteProps> = ({
   experiences,
   activeExpId,
   label,
-  toggleLabel,
+  toggleExpandLabel,
+  toggleCollapseLabel,
   onExpClick,
 }) => {
   const [expanded, setExpanded] = useState(false);
@@ -91,8 +103,9 @@ const ExperienceRoulette: React.FC<ExperienceRouletteProps> = ({
     return idx === -1 ? 0 : idx;
   }, [experiences, activeExpId]);
 
-  const translateY = computeTranslateY(activeIndex);
-  const maskImage = activeIndex === 0 ? MASK_FIRST : MASK_CENTER;
+  const translateY = computeTranslateY(activeIndex, experiences.length);
+  const slot = computeSlot(activeIndex, experiences.length);
+  const maskImage = slot === 0 ? MASK_FIRST : slot === 2 ? MASK_LAST : MASK_CENTER;
 
   return (
     <>
@@ -104,7 +117,7 @@ const ExperienceRoulette: React.FC<ExperienceRouletteProps> = ({
           <button
             type="button"
             aria-expanded={expanded}
-            aria-label={toggleLabel}
+            aria-label={expanded ? toggleCollapseLabel : toggleExpandLabel}
             onClick={() => setExpanded((v) => !v)}
             className={cn(
               'text-body-muted hover:text-body focus-visible:ring-accent',

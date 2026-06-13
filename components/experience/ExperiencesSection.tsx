@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useLayoutEffect, useMemo, useRef, useState } from 'react';
 
 import ExperienceCard from '@/components/experience/ExperienceCard';
 import FilterBar from '@/components/experience/FilterBar';
@@ -83,7 +83,7 @@ const ExperiencesSection: React.FC<ExperiencesSectionProps> = ({
   // to an experience that is currently hidden by the overflow clamp (display:none).
   // The check uses the original data index, not the filtered order, so it remains
   // correct after the filter is cleared in the same flushSync call.
-  useEffect(() => {
+  useLayoutEffect(() => {
     experienceReveal.setOverflowState(
       (id) => !showAll && experiences.findIndex((e) => e.id === id) >= INITIAL_VISIBLE,
       () => setShowAll(true)

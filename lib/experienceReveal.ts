@@ -1,3 +1,5 @@
+'use client';
+
 // Module-level bridge that lets Layout's sidebar click handler reveal an
 // experience card that is currently hidden by either the tag filter or the
 // "show more" overflow mechanism — both causing scrollToTarget to fail because

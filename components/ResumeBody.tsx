@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { flushSync } from 'react-dom';
 
 import ContactSection from '@/components/contact/ContactSection';
@@ -65,12 +65,12 @@ const ResumeBody: React.FC<ResumeBodyProps> = ({ data, lang }) => {
 
   // Register a plain (no view-transition) clear so Layout can call it synchronously
   // via flushSync before scrolling to the target experience.
-  useEffect(() => {
+  useLayoutEffect(() => {
     experienceReveal.setClearFilters(() => setActiveFilters([]));
   }, []);
 
   // Keep the bridge's filtered-out set in sync so Layout can check before scrolling.
-  useEffect(() => {
+  useLayoutEffect(() => {
     const ids = new Set(
       data.experiences
         .filter((exp) => countMatchingTags(exp, activeFilters) === 0 && activeFilters.length > 0)

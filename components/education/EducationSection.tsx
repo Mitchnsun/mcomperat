@@ -23,7 +23,6 @@ const EducationSection: React.FC<EducationSectionProps> = ({ title, items, lang 
             key={`edu-${index}`}
             className={cn(
               'border-l-accent border-l-2 px-5 py-4',
-              'theme-bold:border-l-4 theme-bold:border-l-heading',
               'print:rounded-none print:border-0 print:bg-transparent print:p-0'
             )}
           >
