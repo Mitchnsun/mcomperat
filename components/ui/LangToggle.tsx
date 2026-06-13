@@ -23,19 +23,20 @@ const LangToggle: React.FC<{ className?: string }> = ({ className }) => {
   return (
     <div
       role="radiogroup"
-      aria-label="Language"
+      aria-label="Langue / Language"
       className={cn('border-border inline-flex items-center gap-1 rounded-full border p-1', className)}
     >
       {routing.locales.map((value) => {
         const isActive = locale === value;
         const label = value.toUpperCase();
+        const fullLabel = value === 'fr' ? 'Français' : 'English';
         return (
           <button
             key={value}
             type="button"
             role="radio"
             aria-checked={isActive}
-            aria-label={label}
+            aria-label={fullLabel}
             disabled={isPending}
             onClick={() => switchLocale(value)}
             className={cn(

@@ -52,13 +52,14 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
     <article
       id={exp.id}
       data-exp-id={exp.id}
+      aria-label={`${exp.company} — ${pick(exp.title, lang)}`}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       style={{ '--exp-accent': accent } as React.CSSProperties}
       className={cn(
         // border-l-2 border-l-transparent: always reserve 2px for the left accent border so
         // active/hover color changes never shift content. Bold overrides width to 3px.
-        'theme-bold:border-l-[3px] border-l-2 border-l-transparent px-5 py-4',
+        'exp-card theme-bold:border-l-[3px] border-l-2 border-l-transparent px-5 py-4',
         'print:rounded-none print:border-0 print:bg-transparent print:p-0',
         'scroll-mt-28',
         className,
@@ -85,7 +86,6 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
             </span>
             {exp.freelance ? (
               <span
-                role="status"
                 aria-label={t('badge.freelance')}
                 className="border-brand/40 text-brand rounded border px-2 py-0.5 text-xs font-medium print:mr-2 print:inline-block"
               >

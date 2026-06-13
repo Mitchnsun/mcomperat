@@ -44,7 +44,14 @@ const TagPill: React.FC<TagPillProps> = ({ name, tagRef, onClick, active = false
 
   if (onClick) {
     return (
-      <button type="button" style={style} className={classes} aria-pressed={active} onClick={() => onClick(name)}>
+      <button
+        type="button"
+        style={style}
+        className={classes}
+        aria-pressed={active}
+        aria-label={active ? `Remove filter: ${name}` : `Filter by ${name}`}
+        onClick={() => onClick(name)}
+      >
         {name}
       </button>
     );
