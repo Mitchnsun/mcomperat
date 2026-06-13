@@ -12,7 +12,7 @@ interface ContactSectionProps {
 }
 
 const linkClass =
-  'border-border bg-card-hover/40 hover:border-accent focus-visible:ring-accent flex items-center gap-3 rounded-2xl border p-4 transition-colors focus:outline-none focus-visible:ring-2';
+  'border-border hover:border-accent focus-visible:ring-accent flex items-center gap-3 border-l-2 p-4 transition-colors focus:outline-none focus-visible:ring-2';
 
 const ContactSection: React.FC<ContactSectionProps> = ({ title, person, labels }) => (
   <section id="contact" className="scroll-mt-28 pb-4 print:pb-0">

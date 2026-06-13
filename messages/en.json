@@ -8,6 +8,8 @@
   },
   "sidebar": {
     "experiences": "Experiences",
+    "toggleExpandExperiences": "Show all experiences",
+    "toggleCollapseExperiences": "Show fewer experiences",
     "sections": "Sections",
     "contact": "Contact"
   },

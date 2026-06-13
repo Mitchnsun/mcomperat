@@ -21,7 +21,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ title, groups, lang, acti
 
     <div className="grid gap-4 sm:grid-cols-2">
       {groups.map((group) => (
-        <div key={group.title.en} className="border-border bg-card-hover/40 rounded-2xl border p-4">
+        <div key={group.title.en} className="border-border border-l-2 p-4">
           <p className="text-body-muted mb-3 text-xs font-semibold tracking-widest uppercase">
             {pick(group.title, lang)}
           </p>

@@ -10,6 +10,8 @@ interface IntlMessages {
   };
   sidebar: {
     experiences: string;
+    toggleExpandExperiences: string;
+    toggleCollapseExperiences: string;
     sections: string;
     contact: string;
   };
