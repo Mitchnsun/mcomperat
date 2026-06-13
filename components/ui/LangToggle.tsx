@@ -1,6 +1,6 @@
 'use client';
 
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import React, { useTransition } from 'react';
 
 import { usePathname, useRouter } from '@/i18n/navigation';
@@ -12,6 +12,7 @@ const LangToggle: React.FC<{ className?: string }> = ({ className }) => {
   const pathname = usePathname();
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
+  const t = useTranslations('locale');
 
   const switchLocale = (next: Locale) => {
     if (next === locale) return;
@@ -29,14 +30,13 @@ const LangToggle: React.FC<{ className?: string }> = ({ className }) => {
       {routing.locales.map((value) => {
         const isActive = locale === value;
         const label = value.toUpperCase();
-        const fullLabel = value === 'fr' ? 'Français' : 'English';
         return (
           <button
             key={value}
             type="button"
             role="radio"
             aria-checked={isActive}
-            aria-label={fullLabel}
+            aria-label={t(value)}
             disabled={isPending}
             onClick={() => switchLocale(value)}
             className={cn(

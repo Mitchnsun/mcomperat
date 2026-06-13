@@ -95,23 +95,6 @@ body,
   *::before,
   *::after {
     transition: none !important;
-    animation: none !important;
-  }
-
-  /* Reveal animations: show content immediately. */
-  .animate-char-reveal,
-  .animate-skill-reveal {
-    opacity: 1 !important;
-    transform: none !important;
-  }
-
-  /* Cursor and status dot: show as static. */
-  .animate-blink-cursor {
-    opacity: 1 !important;
-  }
-
-  .animate-pulse-dot {
-    box-shadow: none !important;
   }
 }
 
@@ -207,26 +190,7 @@ body,
 }
 
 @media print {
-  /* Layout: let the page flow normally. */
-  .cv-layout {
-    display: block !important;
-    height: auto !important;
-    overflow: visible !important;
-  }
-
-  .cv-main {
-    height: auto !important;
-    overflow: visible !important;
-  }
-
-  /* Experience cards: always visible, no transforms, never split across pages. */
-  .exp-card {
-    opacity: 1 !important;
-    transform: none !important;
-    break-inside: avoid;
-  }
-
-  /* Page margins. */
+  /* @page cannot be expressed with Tailwind utility classes. */
   @page {
     margin: 1.5cm;
   }

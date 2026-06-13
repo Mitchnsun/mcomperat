@@ -38,5 +38,9 @@
     "badge": {
       "freelance": "Freelance"
     }
+  },
+  "locale": {
+    "fr": "Français",
+    "en": "Anglais"
   }
 }
