@@ -54,7 +54,10 @@ const Sidebar: React.FC<SidebarProps> = ({
                     className={cn(
                       'flex w-full cursor-pointer items-center gap-2 rounded px-2 py-1.5 text-left text-sm',
                       'focus-visible:ring-accent focus:outline-none focus-visible:ring-2',
-                      isActive ? 'text-heading bg-card-hover font-semibold' : 'text-body-muted hover:text-body'
+                      {
+                        'text-heading bg-card-hover font-semibold': isActive,
+                        'text-body-muted hover:text-body': !isActive,
+                      }
                     )}
                   >
                     <span

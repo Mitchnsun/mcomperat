@@ -41,7 +41,7 @@ const LangToggle: React.FC<{ className?: string }> = ({ className }) => {
             className={cn(
               'inline-flex h-8 min-w-8 cursor-pointer items-center justify-center rounded-full px-3 text-xs font-semibold',
               'focus-visible:ring-accent focus:outline-none focus-visible:ring-2',
-              isActive ? 'bg-accent text-white' : 'text-body-muted hover:bg-card-hover hover:text-body'
+              { 'bg-accent text-white': isActive, 'text-body-muted hover:bg-card-hover hover:text-body': !isActive }
             )}
           >
             {label}

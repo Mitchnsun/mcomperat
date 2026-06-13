@@ -75,9 +75,12 @@ The previous component design lives in `components/_archive` and is **excluded f
 - Pseudo-elements (`::before`, `::after`) with complex values (gradients, generated content)
 - Selectors that Tailwind cannot express (e.g., descendant combinators not reachable via variants)
 
+**Compose classes with `cn`** (`lib/cn.ts`, wraps clsx + tailwind-merge) — never `.join(' ')` or template strings to assemble class names.  
+**Put classes directly in JSX** — do not extract them into module-level `const` strings; keep the styling co-located with the markup.  
+**Conditionals** → use the object form `cn({ 'classes': condition })`, including two-branch toggles: `cn({ 'a b': cond, 'c d': !cond })`. **Avoid ternaries** inside `className`.  
+**Exception** — a module-level `const` is acceptable only for multi-theme chains that contain long arbitrary values (`color-mix(…)`, multi-layer `shadow-[…]`); add a comment explaining why.  
 **Per-theme overrides** → use `theme-dark:`, `theme-clean:`, `theme-bold:` variants.  
 **Per-instance dynamic values** → set a CSS custom property via `style` inline, reference it with an arbitrary Tailwind value (`border-(--exp-accent)`, `bg-[var(--skill-tint)]`).  
-**Long class lists** → extract into named `const` strings at module level (see `TagPill.tsx`, `ExperienceCard.tsx`).  
 **CSS variable shorthand** → prefer Tailwind v4 canonical form `(--var-name)` over `[var(--var-name)]` for single-variable values.
 
 ## AI Orchestration Workflow

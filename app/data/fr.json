@@ -22,8 +22,8 @@
         "start": "Oct. 2023",
         "end": "",
         "tags": [
-          { "name": "React 19", "ref": "js" },
-          { "name": "Next.js 15", "ref": "js" },
+          { "name": "React", "ref": "js" },
+          { "name": "Next.js", "ref": "js" },
           { "name": "TypeScript", "ref": "js" },
           { "name": "Tailwind CSS", "ref": "css" },
           { "name": "React Query", "ref": "js" },
@@ -57,7 +57,7 @@
           { "name": "TypeScript", "ref": "js" },
           { "name": "React", "ref": "js" },
           { "name": "Ts.ED", "ref": "js" },
-          { "name": "Node", "ref": "back" },
+          { "name": "Node.js", "ref": "back" },
           { "name": "Tailwind CSS", "ref": "css" },
           { "name": "Jest", "ref": "test" },
           { "name": "Cypress", "ref": "test" }
@@ -118,7 +118,7 @@
         "tags": [
           { "name": "React", "ref": "js" },
           { "name": "GraphQL", "ref": "js" },
-          { "name": "NodeJS", "ref": "back" },
+          { "name": "Node.js", "ref": "back" },
           { "name": "Firebase", "ref": "db" },
           { "name": "Jest", "ref": "test" },
           { "name": "Cypress", "ref": "test" }
@@ -128,7 +128,7 @@
             "text": "Site permettant de récupérer les cotisations des membres d'un syndicat (espace client avec paiement)",
             "list": [
               "Développement du site front avec un espace client et deux modes de paiement (CB & SEPA)",
-              "Développement backend avec NodeJS connecté à Firebase",
+              "Développement backend avec Node.js connecté à Firebase",
               "Mise en place des tests automatisés, de l'unitaire (Jest) à l'E2E (Cypress)",
               "Recueil du besoin et écriture des SFD"
             ]
@@ -147,7 +147,7 @@
         "start": "Juin 2017",
         "end": "Jan. 2020",
         "tags": [
-          { "name": "React 16", "ref": "js" },
+          { "name": "React", "ref": "js" },
           { "name": "GraphQL", "ref": "js" },
           { "name": "Next.js", "ref": "js" },
           { "name": "Flow", "ref": "js" },

@@ -1,10 +1,10 @@
 'use client';
 
-import cn from 'clsx';
 import { useTranslations } from 'next-intl';
 import React, { useState } from 'react';
 
 import TagPill from '@/components/ui/TagPill';
+import { cn } from '@/lib/cn';
 import { getCompanyAccent } from '@/lib/companyColors';
 import { pick, pickList } from '@/lib/localize';
 import { type Experience, type Lang } from '@/types';
@@ -19,31 +19,10 @@ export interface ExperienceCardProps {
   defaultExpanded?: boolean;
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
-  activeFilter?: string | null;
+  activeFilters?: string[];
   onTagClick?: (tagName: string) => void;
   className?: string;
 }
-
-// border-l-2 border-l-transparent: always reserve 2px for the left accent border so active/hover
-// color changes never shift content. Bold overrides width to 3px.
-const CARD_BASE = [
-  'px-5 py-4',
-  'border-l-2 border-l-transparent',
-  'theme-bold:border-l-[3px]',
-  'print:rounded-none print:border-0 print:bg-transparent print:p-0',
-].join(' ');
-
-const CARD_TOGGLE = 'flex w-full cursor-pointer items-start gap-3 text-left';
-
-const CARD_CHEVRON = 'shrink-0 text-body-muted transition-transform duration-200 print:hidden';
-
-const CARD_ACTIVE_BORDER = [
-  'theme-dark:border-l-2 theme-dark:border-l-(--exp-accent)',
-  'theme-clean:border-l-2 theme-clean:border-l-(--exp-accent)',
-  'theme-bold:border-l-(--exp-accent)',
-].join(' ');
-
-const CARD_IDLE_BOLD_BORDER = 'theme-bold:border-l-transparent';
 
 const ExperienceCard: React.FC<ExperienceCardProps> = ({
   exp,
@@ -55,12 +34,13 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
   defaultExpanded = false,
   onMouseEnter,
   onMouseLeave,
-  activeFilter = null,
+  activeFilters = [],
   onTagClick,
   className,
 }) => {
   const [expanded, setExpanded] = useState(defaultExpanded);
   const t = useTranslations('post');
+  const showActiveBorder = isActive || isHovered;
 
   const bodyId = `${exp.id}-body`;
   const desc = pick(exp.desc, lang);
@@ -76,12 +56,19 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
       onMouseLeave={onMouseLeave}
       style={{ '--exp-accent': accent } as React.CSSProperties}
       className={cn(
-        CARD_BASE,
+        // border-l-2 border-l-transparent: always reserve 2px for the left accent border so
+        // active/hover color changes never shift content. Bold overrides width to 3px.
+        'theme-bold:border-l-[3px] border-l-2 border-l-transparent px-5 py-4',
+        'print:rounded-none print:border-0 print:bg-transparent print:p-0',
         'scroll-mt-28',
         className,
-        isDimmed && 'opacity-45 print:opacity-100',
-        isRelated && 'border-l-(--exp-accent)',
-        isActive || isHovered ? CARD_ACTIVE_BORDER : CARD_IDLE_BOLD_BORDER
+        { 'opacity-45 print:opacity-100': isDimmed },
+        { 'border-l-(--exp-accent)': isRelated },
+        {
+          'theme-dark:border-l-2 theme-dark:border-l-(--exp-accent) theme-clean:border-l-2 theme-clean:border-l-(--exp-accent) theme-bold:border-l-(--exp-accent)':
+            showActiveBorder,
+          'theme-bold:border-l-transparent': !showActiveBorder,
+        }
       )}
     >
       <button
@@ -89,7 +76,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
         onClick={() => setExpanded((open) => !open)}
         aria-expanded={expanded}
         aria-controls={bodyId}
-        className={CARD_TOGGLE}
+        className="flex w-full cursor-pointer items-start gap-3 text-left"
       >
         <span className="min-w-0 flex-1">
           <span className="flex flex-wrap items-center gap-2 print:inline">
@@ -114,7 +101,12 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
             {pick(exp.start, lang)} – {pick(exp.end, lang)}
           </span>
         </span>
-        <span aria-hidden="true" className={cn(CARD_CHEVRON, expanded && 'rotate-180')}>
+        <span
+          aria-hidden="true"
+          className={cn('text-body-muted shrink-0 transition-transform duration-200 print:hidden', {
+            'rotate-180': expanded,
+          })}
+        >
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="m6 9 6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
@@ -129,13 +121,13 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
               name={tag.name}
               tagRef={tag.ref}
               onClick={onTagClick}
-              active={activeFilter === tag.name}
+              active={activeFilters.includes(tag.name)}
             />
           ))}
         </div>
       ) : null}
 
-      <div id={bodyId} className={cn(!expanded && 'hidden print:block')}>
+      <div id={bodyId} className={cn({ 'hidden print:block': !expanded })}>
         {desc ? <p className="text-body mt-3 whitespace-pre-line print:text-sm">{desc}</p> : null}
         {list.length > 0 ? (
           <ul className="text-body mt-2 list-disc pl-6 print:list-none print:pl-4">
