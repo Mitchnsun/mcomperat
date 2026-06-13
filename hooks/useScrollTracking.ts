@@ -45,7 +45,9 @@ export function useScrollTracking(mainRef: RefObject<HTMLElement | null>, expIds
             bestId = id;
           }
         });
-        if (bestId) setActiveId(bestId);
+        // Allow bestId to be '' so the highlight clears when no card is visible
+        // (e.g. scrolled past the experiences section into Skills / Contact).
+        setActiveId(bestId);
       },
       { root: container, rootMargin: '-15% 0px -50% 0px', threshold: [0, 0.1, 0.3, 0.5] }
     );

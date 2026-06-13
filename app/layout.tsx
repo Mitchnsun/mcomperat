@@ -5,6 +5,8 @@ import Script from 'next/script';
 import { getLocale } from 'next-intl/server';
 import React from 'react';
 
+import { cn } from '@/lib/cn';
+
 // Runs before React hydration to apply the stored theme and avoid a flash.
 // Must live in the root layout so it is never re-rendered during client navigation.
 const NO_FLASH_SCRIPT = `(() => {
@@ -63,15 +65,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     // No locale context (e.g., root not-found page) — fall back to default locale.
   }
 
-  const fontClasses = [
-    spaceGrotesk.variable,
-    jetbrainsMono.variable,
-    dmSans.variable,
-    dmMono.variable,
-    syne.variable,
-    inter.variable,
-  ].join(' ');
-
   return (
     <html lang={locale} data-theme="dark" suppressHydrationWarning>
       <head>
@@ -79,7 +72,19 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           {NO_FLASH_SCRIPT}
         </Script>
       </head>
-      <body className={`${fontClasses} bg-bg text-body font-sans`}>{children}</body>
+      <body
+        className={cn(
+          spaceGrotesk.variable,
+          jetbrainsMono.variable,
+          dmSans.variable,
+          dmMono.variable,
+          syne.variable,
+          inter.variable,
+          'bg-bg text-body font-sans'
+        )}
+      >
+        {children}
+      </body>
     </html>
   );
 }

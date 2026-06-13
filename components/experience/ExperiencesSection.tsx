@@ -6,6 +6,7 @@ import ExperienceCard from '@/components/experience/ExperienceCard';
 import FilterBar from '@/components/experience/FilterBar';
 import { useActiveExperience } from '@/components/layout/ActiveExperienceContext';
 import SectionTitle from '@/components/ui/SectionTitle';
+import { cn } from '@/lib/cn';
 import { countMatchingTags, findTagRef } from '@/lib/tagUtils';
 import { type Experience, type Lang } from '@/types';
 
@@ -134,7 +135,7 @@ const ExperiencesSection: React.FC<ExperiencesSectionProps> = ({
                 setHoveredId(exp.id);
               }}
               onMouseLeave={() => setHoveredId(null)}
-              className={isOverflow ? 'hidden print:block' : undefined}
+              className={cn({ 'hidden print:block': isOverflow })}
             />
           );
         })}

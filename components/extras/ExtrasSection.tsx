@@ -1,7 +1,7 @@
-import cn from 'clsx';
 import React from 'react';
 
 import SectionTitle from '@/components/ui/SectionTitle';
+import { cn } from '@/lib/cn';
 import { pick, pickList } from '@/lib/localize';
 import { type ExtraItem, type Lang } from '@/types';
 

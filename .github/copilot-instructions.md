@@ -122,7 +122,10 @@ Imports are automatically sorted by `simple-import-sort`:
 - `app/globals.css` is reserved for: `@theme`/`[data-theme]` token definitions, `@keyframes`/animation declarations, `::before`/`::after` pseudo-elements with complex values, and selectors Tailwind cannot express. Do not add component styles there.
 - **Per-theme overrides** → `theme-dark:`, `theme-clean:`, `theme-bold:` variants (defined via `@custom-variant` in `globals.css`).
 - **Per-instance dynamic values** → set a CSS custom property in `style` inline, reference it with an arbitrary Tailwind value: `border-(--exp-accent)`, `bg-[var(--skill-tint)]`.
-- **Long class lists** → extract into named `const` strings at module level (see `TagPill.tsx`, `ExperienceCard.tsx`).
+- **Compose classes with `cn`** (`lib/cn.ts`, wraps clsx + tailwind-merge) — never `.join(' ')` or template strings to assemble class names.
+- **Put classes directly in JSX** — do not extract them into module-level `const` strings; keep styling co-located with the markup.
+- **Conditionals** → use the object form `cn({ 'classes': condition })`, including two-branch toggles: `cn({ 'a b': cond, 'c d': !cond })`. **Avoid ternaries** inside `className`.
+- **Exception** — a module-level `const` is acceptable only for multi-theme chains that contain long arbitrary values (`color-mix(…)`, multi-layer `shadow-[…]`); add a comment explaining why.
 - **CSS variable shorthand** → prefer Tailwind v4 form `(--var-name)` over `[var(--var-name)]` for single-variable arbitrary values.
 - Custom theme via CSS `@theme` directive in `app/globals.css`
 - PostCSS integration with `@tailwindcss/postcss`

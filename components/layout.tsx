@@ -89,7 +89,7 @@ const Layout: React.FC<LayoutProps> = ({ person, experiences = [], sections = []
         className={cn(
           'cv-sidebar bg-sidebar border-border z-40 w-61 shrink-0 overflow-y-auto border-r',
           'fixed top-16 bottom-0 left-0 transition-transform duration-300 ease-in-out md:static md:inset-y-0 md:h-screen md:translate-x-0',
-          isDrawerOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0',
+          { 'translate-x-0': isDrawerOpen, '-translate-x-full md:translate-x-0': !isDrawerOpen },
           'print:hidden'
         )}
       >
