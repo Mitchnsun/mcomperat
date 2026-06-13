@@ -160,3 +160,17 @@ body,
     box-shadow: 0 0 0 0 oklch(0.66 0.18 145 / 0);
   }
 }
+
+/* ---- Monogram badge — glow keyframe (dark theme only) ---- */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes mono-dark-breathe {
+    0%,
+    100% {
+      box-shadow: 0 0 6px 1px oklch(0.6 0.22 290 / 0.3);
+    }
+
+    50% {
+      box-shadow: 0 0 12px 4px oklch(0.6 0.22 290 / 0.55);
+    }
+  }
+}
