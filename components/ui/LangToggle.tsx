@@ -1,6 +1,6 @@
 'use client';
 
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import React, { useTransition } from 'react';
 
 import { usePathname, useRouter } from '@/i18n/navigation';
@@ -12,6 +12,8 @@ const LangToggle: React.FC<{ className?: string }> = ({ className }) => {
   const pathname = usePathname();
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
+  const t = useTranslations('locale');
+  const localeNames: Record<Locale, string> = { fr: t('fr'), en: t('en') };
 
   const switchLocale = (next: Locale) => {
     if (next === locale) return;
@@ -23,19 +25,20 @@ const LangToggle: React.FC<{ className?: string }> = ({ className }) => {
   return (
     <div
       role="radiogroup"
-      aria-label="Language"
+      aria-label="Langue / Language"
       className={cn('border-border inline-flex items-center gap-1 rounded-full border p-1', className)}
     >
       {routing.locales.map((value) => {
         const isActive = locale === value;
-        const label = value.toUpperCase();
+        const localeName = value === 'fr' ? localeNames.fr : localeNames.en;
+        const shortLabel = value.toUpperCase();
         return (
           <button
             key={value}
             type="button"
             role="radio"
             aria-checked={isActive}
-            aria-label={label}
+            aria-label={`${shortLabel} – ${localeName}`}
             disabled={isPending}
             onClick={() => switchLocale(value)}
             className={cn(
@@ -44,7 +47,7 @@ const LangToggle: React.FC<{ className?: string }> = ({ className }) => {
               { 'bg-accent text-white': isActive, 'text-body-muted hover:bg-card-hover hover:text-body': !isActive }
             )}
           >
-            {label}
+            {shortLabel}
           </button>
         );
       })}

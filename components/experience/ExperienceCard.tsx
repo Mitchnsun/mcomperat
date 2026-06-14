@@ -59,7 +59,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
         // border-l-2 border-l-transparent: always reserve 2px for the left accent border so
         // active/hover color changes never shift content. Bold overrides width to 3px.
         'theme-bold:border-l-[3px] border-l-2 border-l-transparent px-5 py-4',
-        'print:rounded-none print:border-0 print:bg-transparent print:p-0',
+        'print:break-inside-avoid print:rounded-none print:border-0 print:bg-transparent print:p-0',
         'scroll-mt-28',
         className,
         { 'opacity-45 print:opacity-100': isDimmed },
@@ -84,11 +84,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
               {pick(exp.title, lang)}
             </span>
             {exp.freelance ? (
-              <span
-                role="status"
-                aria-label={t('badge.freelance')}
-                className="border-brand/40 text-brand rounded border px-2 py-0.5 text-xs font-medium print:mr-2 print:inline-block"
-              >
+              <span className="border-brand/40 text-brand rounded border px-2 py-0.5 text-xs font-medium print:mr-2 print:inline-block">
                 {t('badge.freelance')}
               </span>
             ) : null}

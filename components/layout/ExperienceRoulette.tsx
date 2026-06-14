@@ -47,6 +47,7 @@ const NavButton: React.FC<NavButtonProps> = ({ exp, isActive, distance, showYear
       aria-current={isActive ? 'true' : undefined}
       aria-hidden={isHidden ? true : undefined}
       tabIndex={isHidden ? -1 : 0}
+      aria-label={exp.year ? `${exp.company}, ${exp.year}` : exp.company}
       onClick={onClick}
       className={cn(
         'flex h-8 w-full cursor-pointer items-center gap-2 rounded px-2 text-left text-sm',

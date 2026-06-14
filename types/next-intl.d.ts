@@ -41,4 +41,12 @@ interface IntlMessages {
       freelance: string;
     };
   };
+  locale: {
+    fr: string;
+    en: string;
+  };
+  tagFilter: {
+    filterBy: string;
+    removeFilter: string;
+  };
 }

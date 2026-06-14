@@ -38,5 +38,13 @@
     "badge": {
       "freelance": "Freelance"
     }
+  },
+  "locale": {
+    "fr": "French",
+    "en": "English"
+  },
+  "tagFilter": {
+    "filterBy": "Filter by {name}",
+    "removeFilter": "Remove filter: {name}"
   }
 }
