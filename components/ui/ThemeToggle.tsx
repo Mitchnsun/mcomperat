@@ -88,6 +88,7 @@ const ThemeToggle: React.FC<{ className?: string }> = ({ className }) => {
           <button
             key={opt.value}
             type="button"
+            data-testid={`theme-btn-${opt.value}`}
             role="radio"
             aria-checked={isActive}
             aria-label={opt.label}

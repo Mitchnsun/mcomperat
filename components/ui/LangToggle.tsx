@@ -36,6 +36,7 @@ const LangToggle: React.FC<{ className?: string }> = ({ className }) => {
           <button
             key={value}
             type="button"
+            data-testid={`lang-btn-${value}`}
             role="radio"
             aria-checked={isActive}
             aria-label={`${shortLabel} – ${localeName}`}

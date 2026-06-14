@@ -35,15 +35,17 @@ interface NavButtonProps {
   /** Slot distance from active. Omit for the expanded list (all items fully interactive). */
   distance?: number;
   showYear: boolean;
+  testId?: string;
   onClick: () => void;
 }
 
-const NavButton: React.FC<NavButtonProps> = ({ exp, isActive, distance, showYear, onClick }) => {
+const NavButton: React.FC<NavButtonProps> = ({ exp, isActive, distance, showYear, testId, onClick }) => {
   const accent = getCompanyAccent(exp.company);
   const isHidden = distance !== undefined && distance > 1;
   return (
     <button
       type="button"
+      {...(testId ? { 'data-testid': testId } : {})}
       aria-current={isActive ? 'true' : undefined}
       aria-hidden={isHidden ? true : undefined}
       tabIndex={isHidden ? -1 : 0}
@@ -154,12 +156,13 @@ const ExperienceRoulette: React.FC<ExperienceRouletteProps> = ({
                 const isActive = exp.id === activeExpId;
                 const distance = Math.abs(index - activeIndex);
                 return (
-                  <li key={exp.id}>
+                  <li key={exp.id} data-testid={`timeline-chip-${exp.id}`}>
                     <NavButton
                       exp={exp}
                       isActive={isActive}
                       distance={distance}
                       showYear={isActive}
+                      testId={`sidebar-exp-btn-${exp.id}`}
                       onClick={() => onExpClick(exp.id)}
                     />
                   </li>
@@ -173,8 +176,14 @@ const ExperienceRoulette: React.FC<ExperienceRouletteProps> = ({
             {experiences.map((exp) => {
               const isActive = exp.id === activeExpId;
               return (
-                <li key={exp.id}>
-                  <NavButton exp={exp} isActive={isActive} showYear={isActive} onClick={() => onExpClick(exp.id)} />
+                <li key={exp.id} data-testid={`timeline-chip-${exp.id}`}>
+                  <NavButton
+                    exp={exp}
+                    isActive={isActive}
+                    showYear={isActive}
+                    testId={`sidebar-exp-btn-${exp.id}`}
+                    onClick={() => onExpClick(exp.id)}
+                  />
                 </li>
               );
             })}
