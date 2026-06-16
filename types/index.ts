@@ -25,10 +25,10 @@ export type LocalizedDate = string | Localized;
 export interface Person {
   firstname: string;
   lastname: string;
-  title: string;
+  title: Localized;
   email: string;
   link?: {
-    linkedin?: string;
+    linkedin?: Localized;
     github?: string;
   };
 }

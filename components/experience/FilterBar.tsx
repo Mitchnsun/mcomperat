@@ -57,6 +57,7 @@ const FilterBar: React.FC<FilterBarProps> = ({ tags, count, total, onRemove, onC
       {/* Explicit clear-all button */}
       <button
         type="button"
+        data-testid="filter-clear-btn"
         onClick={onClearAll}
         className="text-body-muted hover:text-body focus-visible:ring-accent rounded px-2 py-0.5 text-xs focus:outline-none focus-visible:ring-2"
       >

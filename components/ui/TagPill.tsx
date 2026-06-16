@@ -50,11 +50,15 @@ const TagPill: React.FC<TagPillProps> = ({ name, tagRef, onClick, active = false
     return (
       <button
         type="button"
+        data-testid={`tag-pill-${name}`}
         style={style}
         className={classes}
         aria-pressed={active}
         aria-label={active ? t('removeFilter', { name }) : t('filterBy', { name })}
-        onClick={() => onClick(name)}
+        onClick={(event) => {
+          event.stopPropagation();
+          onClick(name);
+        }}
       >
         {name}
       </button>

@@ -118,6 +118,7 @@ const ResumeBody: React.FC<ResumeBodyProps> = ({ data, lang }) => {
       <ContactSection
         title={tSections('contact')}
         person={data.person}
+        lang={lang}
         labels={{ email: tContact('email'), linkedin: tContact('linkedin'), github: tContact('github') }}
       />
     </div>

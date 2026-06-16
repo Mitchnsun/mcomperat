@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import React from 'react';
 
 import { type HeroLocale } from '@/app/data/heroSkills';
+import { pick } from '@/lib/localize';
 import { type Person } from '@/types';
 
 import HeroStats from './HeroStats';
@@ -65,8 +66,8 @@ const Hero: React.FC<HeroProps> = ({ person, locale = 'fr' }) => {
                 ));
               })()}
             </h1>
-            <h2 className="text-body mt-5 text-lg sm:text-xl lg:text-2xl">
-              {person.title}
+            <h2 data-testid="person-title" className="text-body mt-5 text-lg sm:text-xl lg:text-2xl">
+              {pick(person.title, heroLocale)}
               <span
                 aria-hidden="true"
                 className="text-brand animate-blink-cursor ml-2 inline-block font-mono motion-reduce:animate-none"

@@ -1,6 +1,6 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import React from 'react';
 
 import GithubLogo from '@/components/assets/icons/github-logo';
@@ -9,7 +9,8 @@ import ExperienceRoulette from '@/components/layout/ExperienceRoulette';
 import SidebarIdentity from '@/components/layout/SidebarIdentity';
 import LangToggle from '@/components/ui/LangToggle';
 import ThemeToggle from '@/components/ui/ThemeToggle';
-import { type ExperienceNavItem, type Person, type SectionNavItem } from '@/types';
+import { pick } from '@/lib/localize';
+import { type ExperienceNavItem, type Lang, type Person, type SectionNavItem } from '@/types';
 
 interface SidebarProps {
   person: Person;
@@ -29,6 +30,8 @@ const Sidebar: React.FC<SidebarProps> = ({
   onSectionClick,
 }) => {
   const t = useTranslations('sidebar');
+  const locale = useLocale();
+  const lang: Lang = locale === 'en' ? 'en' : 'fr';
 
   return (
     <div className="flex h-full flex-col gap-6 px-5 py-6">
@@ -97,7 +100,7 @@ const Sidebar: React.FC<SidebarProps> = ({
           ) : null}
           {person.link?.linkedin ? (
             <a
-              href={person.link.linkedin}
+              href={pick(person.link.linkedin, lang)}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`View ${person.firstname ?? ''} ${person.lastname ?? ''}'s LinkedIn profile`}

@@ -154,7 +154,7 @@
           { "name": "PostCSS", "ref": "css" },
           { "name": "ES6", "ref": "js" },
           { "name": "CSS3", "ref": "css" },
-          { "name": "Accessibilité", "ref": "a11y" }
+          { "name": "A11y", "ref": "a11y" }
         ],
         "description": [
           {

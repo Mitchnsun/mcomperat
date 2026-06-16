@@ -1,9 +1,11 @@
 'use client';
 
+import { useLocale } from 'next-intl';
 import React from 'react';
 
 import { cn } from '@/lib/cn';
-import { type Person } from '@/types';
+import { pick } from '@/lib/localize';
+import { type Lang, type Person } from '@/types';
 
 interface SidebarIdentityProps {
   person: Person;
@@ -13,6 +15,8 @@ interface SidebarIdentityProps {
 // Identity block (monogram + name + title) shared between the sidebar and the
 // mobile top bar so it stays visible even when the drawer is closed.
 const SidebarIdentity: React.FC<SidebarIdentityProps> = ({ person, className }) => {
+  const locale = useLocale();
+  const lang: Lang = locale === 'en' ? 'en' : 'fr';
   const letterM = person.firstname?.[0]?.toUpperCase() ?? '';
   const letterC = person.lastname?.[0]?.toUpperCase() ?? '';
   const monogram = `${letterM}${letterC}`;
@@ -38,7 +42,7 @@ const SidebarIdentity: React.FC<SidebarIdentityProps> = ({ person, className }) 
           </span>
         </span>
       </header>
-      <p className="text-body-muted block text-xs leading-tight">{person.title}</p>
+      <p className="text-body-muted block text-xs leading-tight">{pick(person.title, lang)}</p>
     </>
   );
 };

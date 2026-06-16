@@ -14,7 +14,7 @@ export const SKILL_GROUPS: SkillGroup[] = [
       { name: 'React Query', ref: 'js' },
       { name: 'Tailwind CSS', ref: 'css' },
       { name: 'HTML', ref: 'html' },
-      { name: 'Accessibilité', ref: 'a11y' },
+      { name: 'A11y', ref: 'a11y' },
     ],
   },
   {

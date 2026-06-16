@@ -73,6 +73,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
     >
       <button
         type="button"
+        data-testid={`exp-expand-btn-${exp.id}`}
         onClick={() => setExpanded((open) => !open)}
         aria-expanded={expanded}
         aria-controls={bodyId}
