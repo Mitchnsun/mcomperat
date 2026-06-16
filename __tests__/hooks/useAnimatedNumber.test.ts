@@ -25,7 +25,7 @@ describe('useAnimatedNumber', () => {
   });
 
   it('should start at 0', () => {
-    jest.spyOn(window, 'requestAnimationFrame').mockImplementation(() => 1);
+    jest.spyOn(globalThis, 'requestAnimationFrame').mockImplementation(() => 1);
 
     const { result } = renderHook(() => useAnimatedNumber(50, 1000));
 
@@ -34,7 +34,7 @@ describe('useAnimatedNumber', () => {
 
   it('should reach target after duration', () => {
     let timestamp = 0;
-    jest.spyOn(window, 'requestAnimationFrame').mockImplementation((callback) => {
+    jest.spyOn(globalThis, 'requestAnimationFrame').mockImplementation((callback) => {
       timestamp += 500;
       callback(timestamp);
       return timestamp;
