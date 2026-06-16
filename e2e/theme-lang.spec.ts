@@ -11,5 +11,5 @@ test('changing language shows EN content', async ({ page }) => {
   await page.goto('/fr');
 
   await page.getByTestId('lang-btn-en').click();
-  await expect(page.locator('h2')).toContainText('Senior Frontend Engineer');
+  await expect(page.getByTestId('person-title')).toContainText('Senior Frontend Engineer');
 });

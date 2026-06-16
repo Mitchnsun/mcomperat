@@ -4,7 +4,6 @@ import {
   type Experience,
   type ExtraItem,
   type Localized,
-  type Person,
   type ResumeData,
   type Tag,
 } from '@/types';
@@ -58,8 +57,16 @@ interface RawExtra {
   print?: boolean;
 }
 
+interface RawPerson {
+  firstname: string;
+  lastname: string;
+  title: string;
+  email: string;
+  link?: { linkedin?: string; github?: string };
+}
+
 interface RawResume {
-  person: Person;
+  person: RawPerson;
   work: { title: string; experiences: RawExperience[] };
   education: { title: string; schools: RawEducation[] };
   extra: { title: string; items: RawExtra[] };
@@ -148,7 +155,16 @@ function buildExtras(): ExtraItem[] {
 
 export function getResumeData(): ResumeData {
   return {
-    person: fr.person,
+    person: {
+      ...fr.person,
+      title: localized(fr.person.title, en.person.title),
+      link: {
+        github: fr.person.link?.github,
+        ...(fr.person.link?.linkedin
+          ? { linkedin: localized(fr.person.link.linkedin, en.person.link?.linkedin ?? fr.person.link.linkedin) }
+          : {}),
+      },
+    },
     experiences: buildExperiences(),
     skills: SKILL_GROUPS,
     education: buildEducation(),
