@@ -35,6 +35,7 @@ interface IntlMessages {
   };
   meta: {
     title: string;
+    description: string;
   };
   post: {
     badge: {

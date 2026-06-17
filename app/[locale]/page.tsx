@@ -6,7 +6,7 @@ import { getResumeData } from '@/app/data/resume';
 import Hero from '@/components/hero/Hero';
 import Layout from '@/components/layout';
 import ResumeBody from '@/components/ResumeBody';
-import { generateMetadata as generateSEOMetadata } from '@/components/seo';
+import { generateMetadata as generateSEOMetadata, generateStructuredData } from '@/components/seo';
 import { routing } from '@/i18n/routing';
 import { pick } from '@/lib/localize';
 import { type Lang } from '@/types';
@@ -17,8 +17,14 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
+  const lang: Lang = locale === 'en' ? 'en' : 'fr';
   const t = await getTranslations({ locale, namespace: 'meta' });
-  return generateSEOMetadata(t('title'));
+
+  return generateSEOMetadata({
+    locale: lang,
+    title: t('title'),
+    description: t('description'),
+  });
 }
 
 export default async function LocalePage({ params }: { params: Promise<{ locale: string }> }) {
@@ -27,6 +33,7 @@ export default async function LocalePage({ params }: { params: Promise<{ locale:
   const data = getResumeData();
   const t = await getTranslations({ locale, namespace: 'sections' });
   const tSidebar = await getTranslations({ locale, namespace: 'sidebar' });
+  const tMeta = await getTranslations({ locale, namespace: 'meta' });
 
   const experiences = data.experiences.map((exp) => ({
     id: exp.id,
@@ -40,9 +47,21 @@ export default async function LocalePage({ params }: { params: Promise<{ locale:
     { label: t('extras'), href: '#extras' },
     { label: tSidebar('contact'), href: '#contact' },
   ];
+  const structuredData = generateStructuredData({
+    locale: lang,
+    person: data.person,
+    description: tMeta('description'),
+  });
 
   return (
     <Layout person={data.person} experiences={experiences} sections={sections}>
+      {structuredData.map((entry, index) => (
+        <script
+          key={`structured-data-${index}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(entry) }}
+        />
+      ))}
       <Hero person={data.person} locale={locale} />
       <ResumeBody data={data} lang={lang} />
     </Layout>

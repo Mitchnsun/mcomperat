@@ -22,37 +22,37 @@ const NO_FLASH_SCRIPT = `(() => {
 // Load all theme fonts up-front so switching themes never causes a FOUT.
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
+  weight: ['400', '600'],
   variable: '--font-space-grotesk',
   display: 'swap',
 });
 const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
-  weight: ['400', '500'],
+  weight: ['400'],
   variable: '--font-jetbrains-mono',
   display: 'swap',
 });
 const dmSans = DM_Sans({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '700'],
+  weight: ['400', '700'],
   variable: '--font-dm-sans',
   display: 'swap',
 });
 const dmMono = DM_Mono({
   subsets: ['latin'],
-  weight: ['400', '500'],
+  weight: ['400'],
   variable: '--font-dm-mono',
   display: 'swap',
 });
 const syne = Syne({
   subsets: ['latin'],
-  weight: ['400', '600', '700', '800'],
+  weight: ['400', '700'],
   variable: '--font-syne',
   display: 'swap',
 });
 const inter = Inter({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600'],
+  weight: ['400', '600'],
   variable: '--font-inter',
   display: 'swap',
 });
