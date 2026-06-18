@@ -18,7 +18,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const lang: Lang = locale === 'en' ? 'en' : 'fr';
-  const t = await getTranslations({ locale, namespace: 'meta' });
+  const t = await getTranslations({ locale: lang, namespace: 'meta' });
 
   return generateSEOMetadata({
     locale: lang,
@@ -59,7 +59,7 @@ export default async function LocalePage({ params }: { params: Promise<{ locale:
         <script
           key={`structured-data-${index}`}
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(entry) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(entry).replace(/</g, '\\u003c') }}
         />
       ))}
       <Hero person={data.person} locale={locale} />

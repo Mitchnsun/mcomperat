@@ -27,10 +27,7 @@ export function generateMetadata({ locale, title, description }: MetadataOptions
 
   return {
     metadataBase: new URL(SITE_URL),
-    title: {
-      default: SITE_TITLE,
-      template: `%s | ${SITE_TITLE}`,
-    },
+    title,
     description,
     keywords: [
       'Matthieu Compérat',
