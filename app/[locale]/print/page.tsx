@@ -15,7 +15,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const lang: Lang = locale === 'en' ? 'en' : 'fr';
-  const t = await getTranslations({ locale: lang, namespace: 'meta.cv' });
+  const t = await getTranslations({ locale: lang, namespace: 'meta.print' });
 
   // The printable preview is a tool, not indexable content: keep it out of
   // search engines (it is also intentionally excluded from the sitemap).
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export default async function PrintCvPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function PrintPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const lang: Lang = locale === 'en' ? 'en' : 'fr';
   const data = getResumeData();

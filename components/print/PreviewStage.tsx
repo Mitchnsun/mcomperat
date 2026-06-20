@@ -31,7 +31,7 @@ const PreviewStage: React.FC<PreviewStageProps> = ({ data, lang, design, mode })
         data-testid="print-sheet"
         className={cn(
           'aspect-[210/297] w-[210mm] max-w-full bg-white p-[15mm] text-black shadow-lg',
-          'print:aspect-auto print:w-full print:max-w-none print:shadow-none'
+          'print:aspect-auto print:w-full print:max-w-none print:shadow-none print:[page:print-route]'
         )}
       >
         <header className="border-b border-black/10 pb-4">

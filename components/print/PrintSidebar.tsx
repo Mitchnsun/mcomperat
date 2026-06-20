@@ -106,7 +106,7 @@ const PrintSidebar: React.FC<PrintSidebarProps> = ({
         type="button"
         data-testid="print-trigger"
         onClick={onPrint}
-        className="bg-brand text-bg mt-auto rounded-md px-4 py-2 text-sm font-semibold"
+        className="bg-brand text-bg rounded-md px-4 py-2 text-sm font-semibold"
       >
         {t('print')}
       </button>

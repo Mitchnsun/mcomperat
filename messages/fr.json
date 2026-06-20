@@ -30,7 +30,7 @@
   "meta": {
     "title": "CV Développeur Frontend React & Next.js",
     "description": "CV de Matthieu Compérat, développeur frontend senior freelance spécialisé en React, Next.js, TypeScript, performance web et accessibilité.",
-    "cv": {
+    "print": {
       "title": "CV imprimable — Matthieu Compérat",
       "description": "Générez et imprimez un PDF du CV de Matthieu Compérat : choisissez un design, un niveau de détail et une langue."
     }

@@ -104,6 +104,13 @@ body,
   margin: 1.5cm;
 }
 
+/* Named page for /print route: zero margin so the browser omits its generated
+   header (date, title) and footer (URL). The sheet's p-[15mm] carries the
+   visual margin instead. */
+@page print-route {
+  margin: 0;
+}
+
 .hero-surface::before {
   content: '';
   position: absolute;

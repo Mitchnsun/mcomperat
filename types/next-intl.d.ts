@@ -36,7 +36,7 @@ interface IntlMessages {
   meta: {
     title: string;
     description: string;
-    cv: {
+    print: {
       title: string;
       description: string;
     };
