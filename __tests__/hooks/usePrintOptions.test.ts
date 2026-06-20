@@ -7,6 +7,7 @@ import {
   defaultCustomConfig,
   PRINT_CUSTOM_STORAGE_KEY,
   PRINT_DESIGN_STORAGE_KEY,
+  PRINT_LANG_STORAGE_KEY,
   PRINT_MODE_STORAGE_KEY,
   usePrintOptions,
 } from '@/hooks/usePrintOptions';
@@ -39,27 +40,30 @@ describe('usePrintOptions', () => {
     expect(result.current.custom.scope).toBe('all');
   });
 
-  it('should persist design, mode and custom to localStorage', () => {
+  it('should persist design, mode, custom and lang to localStorage', () => {
     const { result } = renderHook(() => usePrintOptions('fr'));
 
     act(() => {
       result.current.setDesign('editorial');
       result.current.setMode('condensed');
       result.current.setCustom((current) => ({ ...current, detail: 'summary' }));
+      result.current.setLang('en');
     });
 
     expect(localStorage.getItem(PRINT_DESIGN_STORAGE_KEY)).toBe('editorial');
     expect(localStorage.getItem(PRINT_MODE_STORAGE_KEY)).toBe('condensed');
     expect(JSON.parse(localStorage.getItem(PRINT_CUSTOM_STORAGE_KEY) ?? '{}').detail).toBe('summary');
+    expect(localStorage.getItem(PRINT_LANG_STORAGE_KEY)).toBe('en');
   });
 
-  it('should read persisted design, mode and custom from localStorage on mount', async () => {
+  it('should read persisted design, mode, custom and lang from localStorage on mount', async () => {
     localStorage.setItem(PRINT_DESIGN_STORAGE_KEY, 'timeline');
     localStorage.setItem(PRINT_MODE_STORAGE_KEY, 'custom');
     localStorage.setItem(
       PRINT_CUSTOM_STORAGE_KEY,
       JSON.stringify({ ...defaultCustomConfig(), detail: 'summary', scope: 'recent' })
     );
+    localStorage.setItem(PRINT_LANG_STORAGE_KEY, 'en');
 
     const { result } = renderHook(() => usePrintOptions('fr'));
 
@@ -67,22 +71,15 @@ describe('usePrintOptions', () => {
       expect(result.current.design).toBe('timeline');
     });
     expect(result.current.mode).toBe('custom');
-    expect(result.current.lang).toBe('fr');
+    expect(result.current.lang).toBe('en');
     expect(result.current.custom.detail).toBe('summary');
     expect(result.current.custom.scope).toBe('recent');
   });
 
-  it('should always use initialLang regardless of any persisted lang value', async () => {
+  it('should use initialLang when no persisted lang value exists', async () => {
     const { result } = renderHook(() => usePrintOptions('fr'));
-
-    act(() => {
-      result.current.setLang('en');
-    });
-
-    // Re-mount with locale 'fr': lang must reset to initialLang, not the in-session switch.
-    const { result: result2 } = renderHook(() => usePrintOptions('fr'));
     await waitFor(() => {
-      expect(result2.current.lang).toBe('fr');
+      expect(result.current.lang).toBe('fr');
     });
   });
 
