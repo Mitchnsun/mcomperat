@@ -71,7 +71,7 @@ const PrintSidebar: React.FC<PrintSidebarProps> = ({
   return (
     <aside
       data-testid="print-sidebar"
-      className="border-border bg-bg flex w-full shrink-0 flex-col gap-6 p-6 md:w-72 md:border-r print:hidden"
+      className="border-border bg-bg flex w-full shrink-0 flex-col gap-6 p-6 md:h-screen md:w-72 md:overflow-y-auto md:border-r print:hidden"
     >
       <h2 className="text-brand text-lg font-semibold">{t('title')}</h2>
 

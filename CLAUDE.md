@@ -52,6 +52,16 @@ Themes are `dark` (default), `clean`, `bold`, switched by setting `data-theme` o
 
 `components/layout.tsx` is a client shell: sticky sidebar nav, mobile drawer, and scroll-spy via `hooks/useScrollTracking.ts` feeding `ActiveExperienceContext`. Sidebar clicks smooth-scroll to `[data-exp-id]` / section anchors inside the scrollable `MainContent` (not the window).
 
+### Middleware matcher
+
+`proxy.ts` uses a generic catch-all that excludes Next.js internals and known root-level extension-less metadata routes:
+
+```ts
+matcher: ['/((?!_next|opengraph-image|twitter-image|.*\\..*).*)'];
+```
+
+**Adding a new `app/[locale]/<segment>/` route requires no matcher change** — the catch-all picks it up automatically. The only case that would require a matcher update is adding a new root-level route _without a file extension_ (like `opengraph-image`/`twitter-image`) that must not be locale-redirected.
+
 ### Print
 
 Print styles matter (this is a resume): components use `print:` Tailwind variants liberally and `ExtraItem.print` controls print-only inclusion. Verify print layout when touching sections.
@@ -89,7 +99,7 @@ The orchestration rules defined for Copilot agents in [`.github/copilot-instruct
 
 - **Plan first for non-trivial work** (3+ steps or architectural decisions). If something goes sideways, stop and re-plan instead of pushing through.
 - **Use subagents** to offload research, exploration, and parallel analysis and keep the main context clean — one focused task per subagent.
-- **Self-improvement loop**: after any correction from the user, record the pattern in `tasks/lessons.md`; review it at session start. Track plans/progress in `tasks/todo.md` with checkable items and add a review section when done.
+- **Self-improvement loop**: after any correction from the user, record the pattern in `docs/lessons.md`; review it at session start. Track plans/progress in `tasks/todo.md` with checkable items and add a review section when done.
 - **Verify before claiming done**: never mark a task complete without proving it works (run `yarn test`/`yarn build`, check behavior). "Would a staff engineer approve this?"
 - **Demand elegance (balanced)**: for non-trivial changes, pause and ask if there's a cleaner approach; skip this for simple obvious fixes — don't over-engineer.
 - **Autonomous bug fixing**: given a bug report with logs/failing checks, just fix the root cause — no temporary patches, no hand-holding.

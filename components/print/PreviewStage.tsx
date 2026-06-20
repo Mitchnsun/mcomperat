@@ -25,12 +25,12 @@ const PreviewStage: React.FC<PreviewStageProps> = ({ data, lang, design, mode })
       data-testid="print-preview"
       data-design={design}
       data-mode={mode}
-      className="bg-card flex flex-1 justify-center overflow-auto p-8 print:overflow-visible print:bg-transparent print:p-0"
+      className="flex min-h-0 flex-1 items-start justify-center overflow-auto bg-orange-50 p-8 print:overflow-visible print:bg-transparent print:p-0"
     >
       <article
         data-testid="print-sheet"
         className={cn(
-          'aspect-[210/297] w-[210mm] max-w-full bg-white p-[15mm] text-black shadow-lg',
+          'aspect-210/297 w-[210mm] bg-white p-[15mm] text-black shadow-lg',
           'print:aspect-auto print:w-full print:max-w-none print:shadow-none print:[page:print-route]'
         )}
       >
