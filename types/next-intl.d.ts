@@ -36,6 +36,31 @@ interface IntlMessages {
   meta: {
     title: string;
     description: string;
+    print: {
+      title: string;
+      description: string;
+    };
+  };
+  print: {
+    title: string;
+    design: {
+      label: string;
+      classic: string;
+      editorial: string;
+      timeline: string;
+    };
+    mode: {
+      label: string;
+      full: string;
+      condensed: string;
+      custom: string;
+    };
+    language: {
+      label: string;
+      fr: string;
+      en: string;
+    };
+    print: string;
   };
   post: {
     badge: {

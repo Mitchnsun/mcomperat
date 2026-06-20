@@ -8,5 +8,10 @@ import { routing } from './i18n/routing';
 export default createMiddleware(routing);
 
 export const config = {
-  matcher: ['/', '/(fr|en)/:path*'],
+  // Generic catch-all that excludes:
+  //   _next           — Next.js internals and static assets
+  //   opengraph-image — root-level image metadata route (no extension)
+  //   twitter-image   — idem
+  //   .*\..*          — any path with a file extension (robots.txt, sitemap.xml, favicon.ico…)
+  matcher: ['/((?!_next|opengraph-image|twitter-image|.*\\..*).*)'],
 };

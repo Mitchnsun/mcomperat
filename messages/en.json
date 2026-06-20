@@ -29,7 +29,32 @@
   },
   "meta": {
     "title": "Frontend React & Next.js Developer Resume",
-    "description": "Resume of Matthieu Compérat, senior freelance frontend developer specialized in React, Next.js, TypeScript, web performance, and accessibility."
+    "description": "Resume of Matthieu Compérat, senior freelance frontend developer specialized in React, Next.js, TypeScript, web performance, and accessibility.",
+    "print": {
+      "title": "Printable Resume — Matthieu Compérat",
+      "description": "Generate and print a tailored PDF of Matthieu Compérat's resume: pick a design, content depth, and language."
+    }
+  },
+  "print": {
+    "title": "Print options",
+    "design": {
+      "label": "Design",
+      "classic": "Classic",
+      "editorial": "Editorial",
+      "timeline": "Timeline"
+    },
+    "mode": {
+      "label": "Content",
+      "full": "Full",
+      "condensed": "Condensed",
+      "custom": "Custom"
+    },
+    "language": {
+      "label": "Language",
+      "fr": "French",
+      "en": "English"
+    },
+    "print": "Print"
   },
   "hero": {
     "availability": "Available · Freelance",
