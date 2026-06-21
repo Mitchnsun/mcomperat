@@ -108,7 +108,31 @@ body,
    header (date, title) and footer (URL). The sheet's p-[15mm] carries the
    visual margin instead. */
 @page print-route {
+  size: A4;
   margin: 0;
+}
+
+@media print {
+  .print-route .print-sidebar,
+  .print-route .preview-toolbar {
+    display: none !important;
+  }
+
+  .print-route .preview-stage {
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+    padding: 0;
+    background: #fff;
+  }
+
+  .print-route .paper {
+    page: print-route; /* zero-margin named page; p-[15mm] padding carries the visual margin */
+    min-height: 0;
+    margin: 0;
+    box-shadow: none !important;
+    zoom: 1 !important;
+  }
 }
 
 .hero-surface::before {
