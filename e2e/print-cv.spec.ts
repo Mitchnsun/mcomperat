@@ -13,7 +13,7 @@ for (const locale of ['fr', 'en'] as const) {
 test('selecting a language updates the previewed sheet', async ({ page }) => {
   await page.goto('/fr/print');
 
-  await page.getByTestId('print-lang-en').click();
-  await expect(page.getByTestId('print-lang-en')).toHaveAttribute('aria-checked', 'true');
+  await page.getByTestId('lang-btn-en').click();
+  await expect(page).toHaveURL(/\/en\/print$/);
   await expect(page.getByTestId('print-sheet')).toContainText('Senior Frontend Engineer');
 });

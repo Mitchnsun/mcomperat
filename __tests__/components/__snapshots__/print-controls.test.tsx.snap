@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SectionToggles renders distinct snapshots for dark, clean and bold: theme-bold 1`] = `
+<div
+  data-theme="bold"
+>
+  <fieldset
+    class="flex flex-col gap-3"
+  >
+    <legend
+      class="text-body-muted text-sm font-medium"
+    >
+      sections.label
+    </legend>
+    <div
+      class="bg-card border-border flex flex-col rounded-lg border"
+    >
+      <label
+        class="border-border flex items-center justify-between gap-3 border-b px-3 py-2 text-sm last:border-b-0 cursor-pointer"
+      >
+        <span
+          class="text-body"
+        >
+          sections.items.profile
+        </span>
+        <input
+          checked=""
+          class="accent-[var(--c-accent)]"
+          data-testid="print-section-profile"
+          type="checkbox"
+        />
+      </label>
+      <label
+        class="border-border flex items-center justify-between gap-3 border-b px-3 py-2 text-sm last:border-b-0 cursor-pointer"
+      >
+        <span
+          class="text-body"
+        >
+          sections.items.techSkills
+        </span>
+        <input
+          checked=""
+          class="accent-[var(--c-accent)]"
+          data-testid="print-section-techSkills"
+          type="checkbox"
+        />
+      </label>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`SectionToggles renders distinct snapshots for dark, clean and bold: theme-clean 1`] = `
+<div
+  data-theme="clean"
+>
+  <fieldset
+    class="flex flex-col gap-3"
+  >
+    <legend
+      class="text-body-muted text-sm font-medium"
+    >
+      sections.label
+    </legend>
+    <div
+      class="bg-card border-border flex flex-col rounded-lg border"
+    >
+      <label
+        class="border-border flex items-center justify-between gap-3 border-b px-3 py-2 text-sm last:border-b-0 cursor-pointer"
+      >
+        <span
+          class="text-body"
+        >
+          sections.items.profile
+        </span>
+        <input
+          checked=""
+          class="accent-[var(--c-accent)]"
+          data-testid="print-section-profile"
+          type="checkbox"
+        />
+      </label>
+      <label
+        class="border-border flex items-center justify-between gap-3 border-b px-3 py-2 text-sm last:border-b-0 cursor-pointer"
+      >
+        <span
+          class="text-body"
+        >
+          sections.items.techSkills
+        </span>
+        <input
+          checked=""
+          class="accent-[var(--c-accent)]"
+          data-testid="print-section-techSkills"
+          type="checkbox"
+        />
+      </label>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`SectionToggles renders distinct snapshots for dark, clean and bold: theme-dark 1`] = `
+<div
+  data-theme="dark"
+>
+  <fieldset
+    class="flex flex-col gap-3"
+  >
+    <legend
+      class="text-body-muted text-sm font-medium"
+    >
+      sections.label
+    </legend>
+    <div
+      class="bg-card border-border flex flex-col rounded-lg border"
+    >
+      <label
+        class="border-border flex items-center justify-between gap-3 border-b px-3 py-2 text-sm last:border-b-0 cursor-pointer"
+      >
+        <span
+          class="text-body"
+        >
+          sections.items.profile
+        </span>
+        <input
+          checked=""
+          class="accent-[var(--c-accent)]"
+          data-testid="print-section-profile"
+          type="checkbox"
+        />
+      </label>
+      <label
+        class="border-border flex items-center justify-between gap-3 border-b px-3 py-2 text-sm last:border-b-0 cursor-pointer"
+      >
+        <span
+          class="text-body"
+        >
+          sections.items.techSkills
+        </span>
+        <input
+          checked=""
+          class="accent-[var(--c-accent)]"
+          data-testid="print-section-techSkills"
+          type="checkbox"
+        />
+      </label>
+    </div>
+  </fieldset>
+</div>
+`;

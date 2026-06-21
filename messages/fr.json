@@ -36,25 +36,57 @@
     }
   },
   "print": {
-    "title": "Options d'impression",
+    "title": "CV imprimable",
+    "identity": {
+      "printable": "CV imprimable"
+    },
+    "back": "← Retour au CV interactif",
+    "drawer": {
+      "toggle": "Afficher les options",
+      "close": "Fermer les options"
+    },
     "design": {
       "label": "Design",
       "classic": "Classique",
       "editorial": "Éditorial",
       "timeline": "Chronologie"
     },
-    "mode": {
+    "content": {
       "label": "Contenu",
       "full": "Complet",
       "condensed": "Condensé",
-      "custom": "Personnalisé"
+      "custom": "Perso",
+      "help": {
+        "full": "Toutes les sections avec le niveau de détail maximal.",
+        "condensed": "Version courte optimisée pour une lecture rapide.",
+        "custom": "Ajustez le niveau de détail, la portée et les sections."
+      },
+      "detail": {
+        "label": "Détail",
+        "full": "Détaillé",
+        "summary": "Résumé"
+      },
+      "scope": {
+        "label": "Portée",
+        "all": "Toutes",
+        "recent": "Récentes"
+      }
     },
-    "language": {
-      "label": "Langue",
-      "fr": "Français",
-      "en": "Anglais"
+    "sections": {
+      "label": "Sections",
+      "lockedHelp": "Sections verrouillées en mode Complet/Condensé.",
+      "items": {
+        "profile": "Profil",
+        "techSkills": "Compétences techniques",
+        "funcSkills": "Compétences fonctionnelles",
+        "education": "Formation",
+        "languages": "Langues",
+        "interests": "Intérêts & projets",
+        "sports": "Sports",
+        "contact": "Coordonnées"
+      }
     },
-    "print": "Imprimer"
+    "print": "Imprimer / Export PDF"
   },
   "hero": {
     "availability": "Disponible · Freelance",

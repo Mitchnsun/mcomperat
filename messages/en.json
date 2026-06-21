@@ -36,25 +36,57 @@
     }
   },
   "print": {
-    "title": "Print options",
+    "title": "Printable resume",
+    "identity": {
+      "printable": "Printable resume"
+    },
+    "back": "← Back to interactive resume",
+    "drawer": {
+      "toggle": "Open options",
+      "close": "Close options"
+    },
     "design": {
       "label": "Design",
       "classic": "Classic",
       "editorial": "Editorial",
       "timeline": "Timeline"
     },
-    "mode": {
+    "content": {
       "label": "Content",
       "full": "Full",
       "condensed": "Condensed",
-      "custom": "Custom"
+      "custom": "Custom",
+      "help": {
+        "full": "All sections with maximum level of detail.",
+        "condensed": "Short version optimized for quick reading.",
+        "custom": "Adjust detail level, scope, and visible sections."
+      },
+      "detail": {
+        "label": "Detail",
+        "full": "Detailed",
+        "summary": "Summary"
+      },
+      "scope": {
+        "label": "Scope",
+        "all": "All",
+        "recent": "Recent"
+      }
     },
-    "language": {
-      "label": "Language",
-      "fr": "French",
-      "en": "English"
+    "sections": {
+      "label": "Sections",
+      "lockedHelp": "Sections are locked in Full/Condensed mode.",
+      "items": {
+        "profile": "Profile",
+        "techSkills": "Technical skills",
+        "funcSkills": "Functional skills",
+        "education": "Education",
+        "languages": "Languages",
+        "interests": "Interests & projects",
+        "sports": "Sports",
+        "contact": "Contact"
+      }
     },
-    "print": "Print"
+    "print": "Print / Export PDF"
   },
   "hero": {
     "availability": "Available · Freelance",
