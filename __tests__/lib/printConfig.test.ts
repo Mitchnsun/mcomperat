@@ -1,20 +1,7 @@
 import { describe, expect, it } from '@jest/globals';
 
 import { ALL_ON, CONDENSED, getExperiences, resolveConfig } from '@/lib/printConfig';
-import { type CustomConfig, type ResumeData, type SectionKey } from '@/types';
-
-// ---------------------------------------------------------------------------
-// Helpers
-// ---------------------------------------------------------------------------
-
-function makeCustom(overrides: Partial<CustomConfig> = {}): CustomConfig {
-  return {
-    sections: { ...ALL_ON },
-    detail: 'full',
-    scope: 'all',
-    ...overrides,
-  };
-}
+import { type ContentMode, type CustomConfig, type ResumeData, type SectionKey } from '@/types';
 
 function makeResumeData(count: number): Pick<ResumeData, 'experiences'> {
   return {
@@ -38,36 +25,36 @@ function makeResumeData(count: number): Pick<ResumeData, 'experiences'> {
 
 describe('resolveConfig — full', () => {
   it('returns all sections set to true', () => {
-    const cfg = resolveConfig('full', makeCustom());
+    const cfg = resolveConfig('full');
     const allTrue = Object.values(cfg.sections).every((v) => v === true);
     expect(allTrue).toBe(true);
   });
 
   it('returns detail "full"', () => {
-    expect(resolveConfig('full', makeCustom()).detail).toBe('full');
+    expect(resolveConfig('full').detail).toBe('full');
   });
 
   it('returns scope "all"', () => {
-    expect(resolveConfig('full', makeCustom()).scope).toBe('all');
+    expect(resolveConfig('full').scope).toBe('all');
   });
 
   it('does not mutate ALL_ON', () => {
     const before = { ...ALL_ON };
-    resolveConfig('full', makeCustom());
+    resolveConfig('full');
     expect(ALL_ON).toEqual(before);
   });
 });
 
 describe('resolveConfig — condensed', () => {
   it('sets funcSkills, interests, sports to false', () => {
-    const { sections } = resolveConfig('condensed', makeCustom());
+    const { sections } = resolveConfig('condensed');
     expect(sections.funcSkills).toBe(false);
     expect(sections.interests).toBe(false);
     expect(sections.sports).toBe(false);
   });
 
   it('keeps profile, techSkills, education, languages, contact as true', () => {
-    const { sections } = resolveConfig('condensed', makeCustom());
+    const { sections } = resolveConfig('condensed');
     const coreKeys: SectionKey[] = ['profile', 'techSkills', 'education', 'languages', 'contact'];
     coreKeys.forEach((key) => {
       // eslint-disable-next-line security/detect-object-injection -- SectionKey is a known literal union
@@ -76,16 +63,16 @@ describe('resolveConfig — condensed', () => {
   });
 
   it('returns detail "summary"', () => {
-    expect(resolveConfig('condensed', makeCustom()).detail).toBe('summary');
+    expect(resolveConfig('condensed').detail).toBe('summary');
   });
 
   it('returns scope "recent"', () => {
-    expect(resolveConfig('condensed', makeCustom()).scope).toBe('recent');
+    expect(resolveConfig('condensed').scope).toBe('recent');
   });
 
   it('does not mutate CONDENSED', () => {
     const before = { ...CONDENSED };
-    resolveConfig('condensed', makeCustom());
+    resolveConfig('condensed');
     expect(CONDENSED).toEqual(before);
   });
 });
@@ -102,18 +89,26 @@ describe('resolveConfig — custom', () => {
     expect(cfg.detail).toBe('summary');
     expect(cfg.scope).toBe('recent');
   });
+
+  it('throws when custom mode is used without a config', () => {
+    const unsafeResolveConfig = resolveConfig as (
+      mode: ContentMode,
+      custom?: CustomConfig
+    ) => ReturnType<typeof resolveConfig>;
+    expect(() => unsafeResolveConfig('custom')).toThrow('Custom config is required when mode is "custom".');
+  });
 });
 
 describe('resolveConfig — boolean flags', () => {
   it('all section flags are strictly boolean for full preset', () => {
-    const { sections } = resolveConfig('full', makeCustom());
+    const { sections } = resolveConfig('full');
     Object.values(sections).forEach((v) => {
       expect(typeof v).toBe('boolean');
     });
   });
 
   it('all section flags are strictly boolean for condensed preset', () => {
-    const { sections } = resolveConfig('condensed', makeCustom());
+    const { sections } = resolveConfig('condensed');
     Object.values(sections).forEach((v) => {
       expect(typeof v).toBe('boolean');
     });
@@ -131,7 +126,7 @@ describe('getExperiences — scope "recent"', () => {
     expect(result).toHaveLength(5);
   });
 
-  it('returns the first 5 (most recent, antéchronological order)', () => {
+  it('returns the first 5 (most recent, reverse-chronological order)', () => {
     const data = makeResumeData(13) as ResumeData;
     const result = getExperiences(data, { scope: 'recent' });
     expect(result[0]?.id).toBe('exp-0');
