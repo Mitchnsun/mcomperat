@@ -81,6 +81,47 @@ export interface ResumeData {
   extras: ExtraItem[];
 }
 
+// --- Print CV types ---
+
+// Keys for each section that can be toggled in the print CV.
+export type SectionKey =
+  | 'profile'
+  | 'techSkills'
+  | 'funcSkills'
+  | 'education'
+  | 'languages'
+  | 'interests'
+  | 'sports'
+  | 'contact';
+
+// Content preset mode for the print CV.
+export type ContentMode = 'full' | 'condensed' | 'custom';
+
+// User-supplied overrides when mode is 'custom'.
+export interface CustomConfig {
+  sections: Record<SectionKey, boolean>;
+  detail: 'full' | 'summary';
+  scope: 'all' | 'recent';
+}
+
+// Static content specific to the print CV (not part of the interactive resume).
+export interface PrintData {
+  headline: Localized;
+  tagline: Localized;
+  yearsLine: Localized;
+  profile: Localized;
+  // Each tuple is [category label, comma-separated values].
+  techSkills: { fr: [string, string][]; en: [string, string][] };
+  funcSkills: LocalizedList;
+  contact: {
+    email: string;
+    linkedin: string;
+    github: string;
+    site: string;
+    location: Localized;
+  };
+}
+
 // Component props types
 export interface SEOProps {
   description?: string;
