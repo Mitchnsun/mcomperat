@@ -62,7 +62,7 @@ export function getPrintData(): PrintData {
       linkedin: 'https://www.linkedin.com/in/matthieucomperat/',
       github: 'https://github.com/Mitchnsun',
       site: 'https://mcomper.at',
-      location: localized('Paris, France', 'Paris, France'),
+      location: localized('Annecy et Genève', 'Annecy & Geneva'),
     },
   };
 }
