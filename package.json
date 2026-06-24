@@ -15,10 +15,11 @@
     "build": "next build",
     "start": "next start",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "test": "yarn format && yarn lint && yarn type-check && yarn test:unit && yarn test:e2e",
+    "test": "yarn lint && yarn type-check",
     "test:unit": "jest --coverage",
     "test:snapshot": "jest --updateSnapshot",
     "test:e2e": "playwright test",
+    "test:all": "yarn format && yarn lint && yarn type-check && yarn test:unit && yarn test:e2e",
     "lint": "eslint --cache --ext .js,.jsx,.ts,.tsx .",
     "type-check": "tsc --noEmit",
     "prepare": "husky"

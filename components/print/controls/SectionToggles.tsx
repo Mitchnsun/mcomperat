@@ -23,7 +23,7 @@ const SectionToggles: React.FC<SectionTogglesProps> = ({ sections, locked, onTog
   return (
     <fieldset className="flex flex-col gap-3">
       <legend className="text-body-muted text-sm font-medium">{t('sections.label')}</legend>
-      <div className="border-border flex flex-col rounded-lg border bg-white">
+      <div className="border-border bg-bg flex flex-col rounded-lg border">
         {sections.map((section) => (
           <label
             key={section.key}
@@ -35,14 +35,14 @@ const SectionToggles: React.FC<SectionTogglesProps> = ({ sections, locked, onTog
               }
             )}
           >
-            <span className="text-mauve-900">{t(`sections.items.${section.key}`)}</span>
+            <span className="text-body">{t(`sections.items.${section.key}`)}</span>
             <input
               type="checkbox"
               checked={section.enabled}
               disabled={locked}
               data-testid={`print-section-${section.key}`}
               onChange={() => onToggle(section.key)}
-              className="accent-(--c-accent)"
+              className="accent-accent"
             />
           </label>
         ))}

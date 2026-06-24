@@ -16,10 +16,7 @@ interface SegmentedProps<T extends string> {
 
 function Segmented<T extends string>({ testId, options, value, onChange, renderLabel }: SegmentedProps<T>) {
   return (
-    <div
-      role="radiogroup"
-      className="border-border flex items-center justify-center gap-1 rounded-lg border bg-white p-1"
-    >
+    <div role="radiogroup" className="border-border bg-bg flex items-center justify-center gap-1 rounded-lg border p-1">
       {options.map((option) => (
         <button
           key={option}
@@ -28,9 +25,9 @@ function Segmented<T extends string>({ testId, options, value, onChange, renderL
           data-testid={`${testId}-${option}`}
           aria-checked={value === option}
           onClick={() => onChange(option)}
-          className={cn('basis-1/3 rounded-md px-3 py-1.5 text-xs font-semibold', {
+          className={cn('flex-1 rounded-md px-3 py-1.5 text-xs font-semibold', {
             'bg-brand text-bg': value === option,
-            'hover:bg-card-hover hover:text-body text-mauve-900': value !== option,
+            'hover:bg-card-hover hover:text-body text-body': value !== option,
           })}
         >
           {renderLabel(option)}
@@ -78,7 +75,7 @@ const ContentModeSeg: React.FC<ContentModeSegProps> = ({
       <p className="text-body-muted text-xs">{t(`content.help.${mode}`)}</p>
 
       {custom ? (
-        <div className="border-border flex flex-col gap-3 rounded-lg border bg-white p-3">
+        <div className="border-border bg-card-hover flex flex-col gap-3 rounded-lg border p-3">
           <div className="flex flex-col gap-2">
             <p className="text-body text-xs font-medium">{t('content.detail.label')}</p>
             <Segmented

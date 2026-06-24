@@ -83,7 +83,7 @@ const PrintSidebar: React.FC<PrintSidebarProps> = ({
           aria-label={t('drawer.toggle')}
           aria-expanded={isDrawerOpen}
           onClick={() => setIsDrawerOpen((open) => !open)}
-          className="border-border focus-visible:ring-accent inline-flex h-10 w-10 items-center justify-center rounded-md border"
+          className="border-border focus-visible:ring-accent inline-flex h-10 w-10 items-center justify-center rounded-md border focus:outline-none focus-visible:ring-2"
         >
           <svg
             aria-hidden="true"

@@ -13,19 +13,19 @@ exports[`SectionToggles renders distinct snapshots for dark, clean and bold: the
       sections.label
     </legend>
     <div
-      class="border-border flex flex-col rounded-lg border bg-white"
+      class="border-border bg-bg flex flex-col rounded-lg border"
     >
       <label
         class="border-body-muted flex items-center justify-between gap-3 border-b px-3 py-2 text-sm last:border-b-0 cursor-pointer"
       >
         <span
-          class="text-mauve-900"
+          class="text-body"
         >
           sections.items.profile
         </span>
         <input
           checked=""
-          class="accent-(--c-accent)"
+          class="accent-accent"
           data-testid="print-section-profile"
           type="checkbox"
         />
@@ -34,13 +34,13 @@ exports[`SectionToggles renders distinct snapshots for dark, clean and bold: the
         class="border-body-muted flex items-center justify-between gap-3 border-b px-3 py-2 text-sm last:border-b-0 cursor-pointer"
       >
         <span
-          class="text-mauve-900"
+          class="text-body"
         >
           sections.items.techSkills
         </span>
         <input
           checked=""
-          class="accent-(--c-accent)"
+          class="accent-accent"
           data-testid="print-section-techSkills"
           type="checkbox"
         />
@@ -63,19 +63,19 @@ exports[`SectionToggles renders distinct snapshots for dark, clean and bold: the
       sections.label
     </legend>
     <div
-      class="border-border flex flex-col rounded-lg border bg-white"
+      class="border-border bg-bg flex flex-col rounded-lg border"
     >
       <label
         class="border-body-muted flex items-center justify-between gap-3 border-b px-3 py-2 text-sm last:border-b-0 cursor-pointer"
       >
         <span
-          class="text-mauve-900"
+          class="text-body"
         >
           sections.items.profile
         </span>
         <input
           checked=""
-          class="accent-(--c-accent)"
+          class="accent-accent"
           data-testid="print-section-profile"
           type="checkbox"
         />
@@ -84,13 +84,13 @@ exports[`SectionToggles renders distinct snapshots for dark, clean and bold: the
         class="border-body-muted flex items-center justify-between gap-3 border-b px-3 py-2 text-sm last:border-b-0 cursor-pointer"
       >
         <span
-          class="text-mauve-900"
+          class="text-body"
         >
           sections.items.techSkills
         </span>
         <input
           checked=""
-          class="accent-(--c-accent)"
+          class="accent-accent"
           data-testid="print-section-techSkills"
           type="checkbox"
         />
@@ -113,19 +113,19 @@ exports[`SectionToggles renders distinct snapshots for dark, clean and bold: the
       sections.label
     </legend>
     <div
-      class="border-border flex flex-col rounded-lg border bg-white"
+      class="border-border bg-bg flex flex-col rounded-lg border"
     >
       <label
         class="border-body-muted flex items-center justify-between gap-3 border-b px-3 py-2 text-sm last:border-b-0 cursor-pointer"
       >
         <span
-          class="text-mauve-900"
+          class="text-body"
         >
           sections.items.profile
         </span>
         <input
           checked=""
-          class="accent-(--c-accent)"
+          class="accent-accent"
           data-testid="print-section-profile"
           type="checkbox"
         />
@@ -134,13 +134,13 @@ exports[`SectionToggles renders distinct snapshots for dark, clean and bold: the
         class="border-body-muted flex items-center justify-between gap-3 border-b px-3 py-2 text-sm last:border-b-0 cursor-pointer"
       >
         <span
-          class="text-mauve-900"
+          class="text-body"
         >
           sections.items.techSkills
         </span>
         <input
           checked=""
-          class="accent-(--c-accent)"
+          class="accent-accent"
           data-testid="print-section-techSkills"
           type="checkbox"
         />
