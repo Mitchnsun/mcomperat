@@ -43,22 +43,54 @@ interface IntlMessages {
   };
   print: {
     title: string;
+    identity: {
+      printable: string;
+    };
+    back: string;
+    drawer: {
+      toggle: string;
+      close: string;
+    };
     design: {
       label: string;
       classic: string;
       editorial: string;
       timeline: string;
     };
-    mode: {
+    content: {
       label: string;
       full: string;
       condensed: string;
       custom: string;
+      help: {
+        full: string;
+        condensed: string;
+        custom: string;
+      };
+      detail: {
+        label: string;
+        full: string;
+        summary: string;
+      };
+      scope: {
+        label: string;
+        all: string;
+        recent: string;
+      };
     };
-    language: {
+    sections: {
       label: string;
-      fr: string;
-      en: string;
+      lockedHelp: string;
+      items: {
+        profile: string;
+        techSkills: string;
+        funcSkills: string;
+        education: string;
+        languages: string;
+        interests: string;
+        sports: string;
+        contact: string;
+      };
     };
     print: string;
   };

@@ -29,8 +29,11 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
 
-      - name: Run tests
-        run: yarn test
+      - name: Run lint
+        run: yarn lint
+
+      - name: Run type check
+        run: yarn type-check
 
   unit-tests:
     runs-on: ubuntu-latest

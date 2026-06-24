@@ -16,7 +16,7 @@ interface PrintAppProps {
 // option state via usePrintOptions and composes the sidebar (controls) with the
 // preview stage (the rendered sheet).
 const PrintApp: React.FC<PrintAppProps> = ({ data, initialLang }) => {
-  const { design, setDesign, mode, setMode, lang, setLang } = usePrintOptions(initialLang);
+  const { design, setDesign, mode, setMode, custom, setCustom } = usePrintOptions(initialLang);
 
   const handlePrint = useCallback(() => {
     if (typeof window !== 'undefined') {
@@ -25,17 +25,17 @@ const PrintApp: React.FC<PrintAppProps> = ({ data, initialLang }) => {
   }, []);
 
   return (
-    <main className="flex min-h-screen flex-col md:h-screen md:flex-row md:overflow-hidden print:block print:h-auto print:overflow-visible">
+    <main className="flex min-h-screen flex-col pt-16 md:h-screen md:flex-row md:overflow-hidden md:pt-0 print:block print:h-auto print:overflow-visible">
       <PrintSidebar
         design={design}
         onDesignChange={setDesign}
         mode={mode}
         onModeChange={setMode}
-        lang={lang}
-        onLangChange={setLang}
+        custom={custom}
+        onCustomChange={setCustom}
         onPrint={handlePrint}
       />
-      <PreviewStage data={data} lang={lang} design={design} mode={mode} />
+      <PreviewStage data={data} lang={initialLang} design={design} mode={mode} />
     </main>
   );
 };

@@ -1,57 +1,31 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
-import React from 'react';
+import Link from 'next/link';
+import { useLocale, useTranslations } from 'next-intl';
+import React, { useMemo, useState } from 'react';
 
-import { CONTENT_MODES, type ContentMode, type Design, DESIGNS } from '@/hooks/usePrintOptions';
+import ContentModeSeg from '@/components/print/controls/ContentModeSeg';
+import DesignPicker from '@/components/print/controls/DesignPicker';
+import SectionToggles from '@/components/print/controls/SectionToggles';
+import LangToggle from '@/components/ui/LangToggle';
+import {
+  type ContentMode,
+  type CustomConfig,
+  type Design,
+  SECTION_KEYS,
+  type SectionKey,
+} from '@/hooks/usePrintOptions';
 import { cn } from '@/lib/cn';
-import { type Lang } from '@/types';
+import { resolveConfig } from '@/lib/printConfig';
 
 interface PrintSidebarProps {
   design: Design;
   onDesignChange: (design: Design) => void;
   mode: ContentMode;
   onModeChange: (mode: ContentMode) => void;
-  lang: Lang;
-  onLangChange: (lang: Lang) => void;
+  custom: CustomConfig;
+  onCustomChange: (updater: (current: CustomConfig) => CustomConfig) => void;
   onPrint: () => void;
-}
-
-const LANGS: Lang[] = ['fr', 'en'];
-
-interface OptionGroupProps<T extends string> {
-  name: string;
-  label: string;
-  options: readonly T[];
-  selected: T;
-  onSelect: (value: T) => void;
-  renderLabel: (value: T) => string;
-}
-
-function OptionGroup<T extends string>({ name, label, options, selected, onSelect, renderLabel }: OptionGroupProps<T>) {
-  return (
-    <fieldset className="flex flex-col gap-2">
-      <legend className="text-body-muted mb-2 text-sm font-medium">{label}</legend>
-      <div role="radiogroup" className="flex flex-wrap gap-2">
-        {options.map((value) => (
-          <button
-            key={value}
-            type="button"
-            role="radio"
-            aria-checked={selected === value}
-            data-testid={`print-${name}-${value}`}
-            onClick={() => onSelect(value)}
-            className={cn('border-border rounded-md border px-3 py-1.5 text-sm', {
-              'bg-brand text-bg': selected === value,
-              'text-body bg-transparent': selected !== value,
-            })}
-          >
-            {renderLabel(value)}
-          </button>
-        ))}
-      </div>
-    </fieldset>
-  );
 }
 
 // Foundation sidebar (TICKET-011): exposes the core print options wired to
@@ -62,55 +36,137 @@ const PrintSidebar: React.FC<PrintSidebarProps> = ({
   onDesignChange,
   mode,
   onModeChange,
-  lang,
-  onLangChange,
+  custom,
+  onCustomChange,
   onPrint,
 }) => {
   const t = useTranslations('print');
+  const locale = useLocale();
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const locked = mode !== 'custom';
+  const cfg = useMemo(() => (mode === 'custom' ? resolveConfig(mode, custom) : resolveConfig(mode)), [custom, mode]);
+
+  const handleSectionToggle = (key: SectionKey) => {
+    if (locked) return;
+    onCustomChange((current) => ({
+      ...current,
+      sections: {
+        ...current.sections,
+        // eslint-disable-next-line security/detect-object-injection -- key is a fixed SectionKey union
+        [key]: !current.sections[key],
+      },
+    }));
+  };
+
+  const handleDetailChange = (value: CustomConfig['detail']) => {
+    onCustomChange((current) => ({ ...current, detail: value }));
+  };
+
+  const handleScopeChange = (value: CustomConfig['scope']) => {
+    onCustomChange((current) => ({ ...current, scope: value }));
+  };
 
   return (
-    <aside
-      data-testid="print-sidebar"
-      className="border-border bg-bg flex w-full shrink-0 flex-col gap-6 p-6 md:h-screen md:w-72 md:overflow-y-auto md:border-r print:hidden"
-    >
-      <h2 className="text-brand text-lg font-semibold">{t('title')}</h2>
+    <>
+      <div className="bg-sidebar border-border fixed inset-x-0 top-0 z-40 flex h-16 items-center justify-between border-b px-4 md:hidden print:hidden">
+        <div className="flex items-center gap-3">
+          <span className="bg-brand text-bg inline-flex h-9 w-9 items-center justify-center rounded-full text-xs font-semibold tracking-wide">
+            MC
+          </span>
+          <div className="leading-tight">
+            <p className="text-body text-sm font-semibold">Matthieu Compérat</p>
+            <p className="text-body-muted text-xs">{t('identity.printable')}</p>
+          </div>
+        </div>
+        <button
+          type="button"
+          aria-label={t('drawer.toggle')}
+          aria-expanded={isDrawerOpen}
+          onClick={() => setIsDrawerOpen((open) => !open)}
+          className="border-border focus-visible:ring-accent inline-flex h-10 w-10 items-center justify-center rounded-md border focus:outline-none focus-visible:ring-2"
+        >
+          <svg
+            aria-hidden="true"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
+            {isDrawerOpen ? <path d="M18 6 6 18M6 6l12 12" /> : <path d="M3 12h18M3 6h18M3 18h18" />}
+          </svg>
+        </button>
+      </div>
 
-      <OptionGroup
-        name="design"
-        label={t('design.label')}
-        options={DESIGNS}
-        selected={design}
-        onSelect={onDesignChange}
-        renderLabel={(value) => t(`design.${value}`)}
-      />
+      {isDrawerOpen ? (
+        <button
+          type="button"
+          aria-label={t('drawer.close')}
+          tabIndex={-1}
+          onClick={() => setIsDrawerOpen(false)}
+          className="fixed inset-0 z-30 bg-black/40 md:hidden print:hidden"
+        />
+      ) : null}
 
-      <OptionGroup
-        name="mode"
-        label={t('mode.label')}
-        options={CONTENT_MODES}
-        selected={mode}
-        onSelect={onModeChange}
-        renderLabel={(value) => t(`mode.${value}`)}
-      />
-
-      <OptionGroup
-        name="lang"
-        label={t('language.label')}
-        options={LANGS}
-        selected={lang}
-        onSelect={onLangChange}
-        renderLabel={(value) => t(`language.${value}`)}
-      />
-
-      <button
-        type="button"
-        data-testid="print-trigger"
-        onClick={onPrint}
-        className="bg-brand text-bg rounded-md px-4 py-2 text-sm font-semibold"
+      <aside
+        data-testid="print-sidebar"
+        className={cn(
+          'bg-sidebar border-border fixed top-16 bottom-0 left-0 z-40 flex w-[20rem] max-w-[90vw] shrink-0 flex-col border-r transition-transform duration-300 ease-in-out md:static md:top-0 md:h-screen md:w-80 md:max-w-none md:translate-x-0 print:hidden',
+          { 'translate-x-0': isDrawerOpen, '-translate-x-full md:translate-x-0': !isDrawerOpen }
+        )}
       >
-        {t('print')}
-      </button>
-    </aside>
+        <div className="flex min-h-0 flex-1 flex-col gap-6 overflow-y-auto p-6">
+          <div className="hidden items-center gap-3 md:flex">
+            <span className="bg-brand text-bg inline-flex h-10 w-10 items-center justify-center rounded-full text-sm font-semibold tracking-wide">
+              MC
+            </span>
+            <div className="leading-tight">
+              <p className="text-body text-sm font-semibold">Matthieu Compérat</p>
+              <p className="text-body-muted text-xs">{t('identity.printable')}</p>
+            </div>
+          </div>
+
+          <Link
+            href={`/${locale}`}
+            className="text-body text-sm font-medium hover:underline"
+            onClick={() => setIsDrawerOpen(false)}
+          >
+            {t('back')}
+          </Link>
+
+          <DesignPicker value={design} onChange={onDesignChange} />
+
+          <ContentModeSeg
+            mode={mode}
+            onModeChange={onModeChange}
+            detail={cfg.detail}
+            scope={cfg.scope}
+            onDetailChange={handleDetailChange}
+            onScopeChange={handleScopeChange}
+          />
+
+          <SectionToggles
+            // eslint-disable-next-line security/detect-object-injection -- key is from SECTION_KEYS fixed literals
+            sections={SECTION_KEYS.map((key) => ({ key, enabled: cfg.sections[key] }))}
+            locked={locked}
+            onToggle={handleSectionToggle}
+          />
+        </div>
+
+        <footer className="border-border flex items-center justify-between gap-3 border-t p-4">
+          <LangToggle className="shrink-0" />
+          <button
+            type="button"
+            data-testid="print-trigger"
+            onClick={onPrint}
+            className="bg-brand text-bg rounded-md px-4 py-2 text-sm font-semibold"
+          >
+            {t('print')}
+          </button>
+        </footer>
+      </aside>
+    </>
   );
 };
 
