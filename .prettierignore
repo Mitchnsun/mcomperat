@@ -1,4 +1,5 @@
 .cache
+.claude
 package.json
 package-lock.json
 public

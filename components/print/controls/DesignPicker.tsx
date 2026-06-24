@@ -13,7 +13,7 @@ interface DesignPickerProps {
 
 const swatchByDesign: Record<Design, React.ReactNode> = {
   classic: (
-    <div className="border-border bg-card relative h-14 w-full overflow-hidden rounded border p-2">
+    <div className="border-border relative h-14 w-full overflow-hidden rounded border bg-white p-2">
       <div className="bg-body/70 h-1.5 w-2/3 rounded" />
       <div className="mt-2 grid grid-cols-2 gap-1">
         <div className="space-y-1">
@@ -30,7 +30,7 @@ const swatchByDesign: Record<Design, React.ReactNode> = {
     </div>
   ),
   editorial: (
-    <div className="border-border bg-card h-14 w-full rounded border p-2">
+    <div className="border-border h-14 w-full rounded border bg-white p-2">
       <div className="bg-body/70 mx-auto h-1.5 w-1/2 rounded" />
       <div className="mt-2 space-y-1.5">
         <div className="bg-body/25 mx-auto h-1 w-3/4 rounded" />
@@ -40,7 +40,7 @@ const swatchByDesign: Record<Design, React.ReactNode> = {
     </div>
   ),
   timeline: (
-    <div className="border-border bg-card relative h-14 w-full rounded border p-2 pl-5">
+    <div className="border-border relative h-14 w-full rounded border bg-white p-2 pl-5">
       <div className="bg-accent absolute top-2 bottom-2 left-2 w-0.5" />
       <div className="space-y-2">
         <div className="flex items-center gap-1.5">

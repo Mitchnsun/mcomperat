@@ -129,7 +129,7 @@ const PrintSidebar: React.FC<PrintSidebarProps> = ({
 
           <Link
             href={`/${locale}`}
-            className="text-brand text-sm font-medium hover:underline"
+            className="text-body text-sm font-medium hover:underline"
             onClick={() => setIsDrawerOpen(false)}
           >
             {t('back')}

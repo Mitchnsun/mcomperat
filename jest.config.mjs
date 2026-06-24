@@ -12,7 +12,8 @@ const customJestConfig = {
     '^@/(.*)$': '<rootDir>/$1',
     '^next-intl$': '<rootDir>/test-utils/next-intl.ts',
   },
-  testPathIgnorePatterns: ['<rootDir>/e2e/'],
+  testPathIgnorePatterns: ['<rootDir>/e2e/', '<rootDir>/.claude/'],
+  modulePathIgnorePatterns: ['<rootDir>/.claude/'],
   coverageProvider: 'v8',
   collectCoverageFrom: ['hooks/**/*.ts', 'lib/**/*.ts'],
 };
