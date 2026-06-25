@@ -3,10 +3,11 @@
 import { useTranslations } from 'next-intl';
 import React from 'react';
 
+import { getPrintData } from '@/app/data/printContent';
+import ClassicCV from '@/components/print/designs/ClassicCV';
 import { useFitToWidth } from '@/hooks/useFitToWidth';
-import { type ContentMode, type Design } from '@/hooks/usePrintOptions';
-import { cn } from '@/lib/cn';
-import { pick } from '@/lib/localize';
+import { type ContentMode, type CustomConfig, type Design } from '@/hooks/usePrintOptions';
+import { resolveConfig } from '@/lib/printConfig';
 import { type Lang, type ResumeData } from '@/types';
 
 interface PreviewStageProps {
@@ -14,16 +15,18 @@ interface PreviewStageProps {
   lang: Lang;
   design: Design;
   mode: ContentMode;
+  custom: CustomConfig;
   onPrint: () => void;
 }
 
 // Foundation preview (TICKET-011): renders a single A4 sheet wrapper that the
 // design-specific layouts (TICKET-013+) will populate. It already reflects the
 // active language so the option state is observable end-to-end.
-const PreviewStage: React.FC<PreviewStageProps> = ({ data, lang, design, mode, onPrint }) => {
-  const { person } = data;
+const PreviewStage: React.FC<PreviewStageProps> = ({ data, lang, design, mode, custom, onPrint }) => {
   const { paperRef, stageRef } = useFitToWidth();
   const t = useTranslations('print');
+  const cfg = mode === 'custom' ? resolveConfig(mode, custom) : resolveConfig(mode);
+  const printData = getPrintData();
 
   return (
     <section
@@ -58,21 +61,13 @@ const PreviewStage: React.FC<PreviewStageProps> = ({ data, lang, design, mode, o
           </button>
         </div>
 
-        <article
-          ref={paperRef}
-          data-testid="print-sheet"
-          className={cn(
-            'paper min-h-[297mm] w-[210mm] bg-white p-[15mm] text-black shadow-[0_16px_40px_rgba(15,23,42,0.18)]',
-            'print:min-h-0 print:shadow-none print:[zoom:1]!'
-          )}
+        <div
+          ref={(node) => {
+            paperRef.current = node;
+          }}
         >
-          <header className="border-b border-black/10 pb-4">
-            <h1 className="text-2xl font-bold">
-              {person.firstname} {person.lastname}
-            </h1>
-            <p className="mt-1 text-sm text-black/70">{pick(person.title, lang)}</p>
-          </header>
-        </article>
+          <ClassicCV data={data} print={printData} cfg={cfg} lang={lang} />
+        </div>
       </div>
     </section>
   );
