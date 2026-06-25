@@ -25,7 +25,7 @@ const PrintApp: React.FC<PrintAppProps> = ({ data, initialLang }) => {
   }, []);
 
   return (
-    <main className="flex min-h-screen flex-col pt-16 md:h-screen md:flex-row md:overflow-hidden md:pt-0 print:block print:h-auto print:overflow-visible">
+    <main className="print-route flex min-h-screen flex-col pt-16 md:h-screen md:flex-row md:overflow-hidden md:pt-0 print:block print:h-auto print:overflow-visible print:pt-0 print:[page:print-route]">
       <PrintSidebar
         design={design}
         onDesignChange={setDesign}
@@ -35,7 +35,7 @@ const PrintApp: React.FC<PrintAppProps> = ({ data, initialLang }) => {
         onCustomChange={setCustom}
         onPrint={handlePrint}
       />
-      <PreviewStage data={data} lang={initialLang} design={design} mode={mode} />
+      <PreviewStage data={data} lang={initialLang} design={design} mode={mode} onPrint={handlePrint} />
     </main>
   );
 };

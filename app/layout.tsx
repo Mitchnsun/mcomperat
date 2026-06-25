@@ -80,7 +80,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           dmMono.variable,
           syne.variable,
           inter.variable,
-          'bg-bg text-body font-sans'
+          'bg-bg text-body font-sans print:bg-white'
         )}
       >
         {children}
