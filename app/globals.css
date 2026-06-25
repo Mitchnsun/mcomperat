@@ -112,6 +112,17 @@ body,
   margin: 0;
 }
 
+/* ── Editorial CV ────────────────────────────────────────────────────────────
+   Centred single-column layout: max-width ≈ 155 mm inside the 180 mm content
+   area (210 mm A4 − 2 × 15 mm padding). The .cv-editorial selector is the
+   design's root class; individual sub-selectors below address rules that
+   Tailwind can't express (e.g. font-size in pt units with line-height ratios
+   specific to print). */
+.cv-editorial {
+  max-width: 155mm;
+  margin-inline: auto;
+}
+
 .hero-surface::before {
   content: '';
   position: absolute;

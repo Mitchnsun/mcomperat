@@ -3,10 +3,13 @@
 import { useTranslations } from 'next-intl';
 import React from 'react';
 
+import { getPrintData } from '@/app/data/printContent';
+import EditorialCV from '@/components/print/designs/EditorialCV';
 import { useFitToWidth } from '@/hooks/useFitToWidth';
 import { type ContentMode, type Design } from '@/hooks/usePrintOptions';
 import { cn } from '@/lib/cn';
 import { pick } from '@/lib/localize';
+import { resolveConfig } from '@/lib/printConfig';
 import { type Lang, type ResumeData } from '@/types';
 
 interface PreviewStageProps {
@@ -24,6 +27,9 @@ const PreviewStage: React.FC<PreviewStageProps> = ({ data, lang, design, mode, o
   const { person } = data;
   const { paperRef, stageRef } = useFitToWidth();
   const t = useTranslations('print');
+
+  const cfg = resolveConfig(mode === 'custom' ? 'full' : mode);
+  const print = getPrintData();
 
   return (
     <section
@@ -66,12 +72,16 @@ const PreviewStage: React.FC<PreviewStageProps> = ({ data, lang, design, mode, o
             'print:min-h-0 print:shadow-none print:[zoom:1]!'
           )}
         >
-          <header className="border-b border-black/10 pb-4">
-            <h1 className="text-2xl font-bold">
-              {person.firstname} {person.lastname}
-            </h1>
-            <p className="mt-1 text-sm text-black/70">{pick(person.title, lang)}</p>
-          </header>
+          {design === 'editorial' ? (
+            <EditorialCV data={data} print={print} cfg={cfg} lang={lang} />
+          ) : (
+            <header className="border-b border-black/10 pb-4">
+              <h1 className="text-2xl font-bold">
+                {person.firstname} {person.lastname}
+              </h1>
+              <p className="mt-1 text-sm text-black/70">{pick(person.title, lang)}</p>
+            </header>
+          )}
         </article>
       </div>
     </section>

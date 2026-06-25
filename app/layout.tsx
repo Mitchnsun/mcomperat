@@ -1,6 +1,6 @@
 import './globals.css';
 
-import { DM_Mono, DM_Sans, Inter, JetBrains_Mono, Space_Grotesk, Syne } from 'next/font/google';
+import { DM_Mono, DM_Sans, Inter, JetBrains_Mono, Source_Serif_4, Space_Grotesk, Syne } from 'next/font/google';
 import Script from 'next/script';
 import { getLocale } from 'next-intl/server';
 import React from 'react';
@@ -56,6 +56,12 @@ const inter = Inter({
   variable: '--font-inter',
   display: 'swap',
 });
+const sourceSerif4 = Source_Serif_4({
+  subsets: ['latin'],
+  weight: ['400', '600', '700'],
+  variable: '--font-source-serif-4',
+  display: 'swap',
+});
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   let locale = 'fr';
@@ -80,6 +86,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           dmMono.variable,
           syne.variable,
           inter.variable,
+          sourceSerif4.variable,
           'bg-bg text-body font-sans print:bg-white'
         )}
       >
