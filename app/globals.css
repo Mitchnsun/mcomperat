@@ -190,6 +190,19 @@ body,
     }
   }
 
+  /* Print design: Classic */
+  .cv-classic {
+    color: #15151c;
+  }
+
+  .cv-classic .c-bullets {
+    color: #3a3a44;
+  }
+
+  .cv-classic .c-bullets li::marker {
+    color: #70707c;
+  }
+
   @keyframes filter-bar-in {
     from {
       opacity: 0;

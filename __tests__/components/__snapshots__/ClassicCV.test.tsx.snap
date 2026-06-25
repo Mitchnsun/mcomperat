@@ -1,0 +1,949 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClassicCV matches FR and EN snapshots: en 1`] = `
+<article
+  class="paper paper-page cv-classic min-h-[297mm] w-[210mm] bg-white p-[15mm] font-[var(--font-dm-sans)] text-[#15151c] shadow-[0_16px_40px_rgba(15,23,42,0.18)] print:min-h-0 print:shadow-none print:[zoom:1]!"
+  data-testid="print-sheet"
+>
+  <header
+    class="border-b border-[#d7d7de] pb-4"
+  >
+    <h1
+      class="text-[1.75rem] leading-tight font-bold"
+    >
+      Matthieu
+       
+      Compérat
+    </h1>
+    <p
+      class="mt-1 text-base font-medium text-[#15151c]"
+    >
+      Senior Frontend Engineer & Tech Lead React · Next.js
+    </p>
+    <p
+      class="mt-1 text-sm text-[#3a3a44]"
+    >
+      Freelance · Available
+    </p>
+    <p
+      class="mt-1 text-xs tracking-[0.08em] text-[#70707c] uppercase"
+    >
+      15 years of experience
+    </p>
+    <p
+      class="mt-3 text-xs text-[#3a3a44]"
+    >
+      Annecy & Geneva
+       · 
+      matthieu.comperat@gmail.com
+       · 
+      https://www.linkedin.com/in/matthieucomperat/
+       ·
+       
+      https://github.com/Mitchnsun
+       · 
+      https://mcomper.at
+    </p>
+  </header>
+  <div
+    class="mt-5 grid grid-cols-[32%_1fr] gap-6"
+  >
+    <aside
+      class="space-y-4"
+    >
+      <section>
+        <h2
+          class="mb-2 border-b border-[#d7d7de] pb-1 text-[10px] font-bold tracking-[0.16em] text-[#15151c] uppercase"
+        >
+          Technical skills
+        </h2>
+        <ul
+          class="space-y-1"
+        >
+          <li
+            class="text-[0.7rem] leading-4 text-[#3a3a44]"
+          >
+            <span
+              class="font-semibold text-[#15151c]"
+            >
+              Languages
+            </span>
+             — 
+            TypeScript, JavaScript (ES2022+), HTML5, CSS3
+          </li>
+          <li
+            class="text-[0.7rem] leading-4 text-[#3a3a44]"
+          >
+            <span
+              class="font-semibold text-[#15151c]"
+            >
+              Frontend
+            </span>
+             — 
+            React 19, Next.js 16, Redux, React Query, Tailwind CSS, Storybook
+          </li>
+          <li
+            class="text-[0.7rem] leading-4 text-[#3a3a44]"
+          >
+            <span
+              class="font-semibold text-[#15151c]"
+            >
+              Testing & Quality
+            </span>
+             — 
+            Jest, React Testing Library, Playwright, Cypress
+          </li>
+          <li
+            class="text-[0.7rem] leading-4 text-[#3a3a44]"
+          >
+            <span
+              class="font-semibold text-[#15151c]"
+            >
+              Tooling
+            </span>
+             — 
+            Git, GitHub Actions, Webpack, Vite, Turborepo, Docker
+          </li>
+          <li
+            class="text-[0.7rem] leading-4 text-[#3a3a44]"
+          >
+            <span
+              class="font-semibold text-[#15151c]"
+            >
+              Methodologies
+            </span>
+             — 
+            Agile / Scrum, Component Architecture, Design System, A11y
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2
+          class="mb-2 border-b border-[#d7d7de] pb-1 text-[10px] font-bold tracking-[0.16em] text-[#15151c] uppercase"
+        >
+          Functional skills
+        </h2>
+        <ul
+          class="space-y-1"
+        >
+          <li
+            class="text-[0.7rem] leading-4 text-[#3a3a44]"
+          >
+            Development · Writing STDs
+          </li>
+          <li
+            class="text-[0.7rem] leading-4 text-[#3a3a44]"
+          >
+            Scoping Workshop · SFD Review
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2
+          class="mb-2 border-b border-[#d7d7de] pb-1 text-[10px] font-bold tracking-[0.16em] text-[#15151c] uppercase"
+        >
+          Education
+        </h2>
+        <ul
+          class="space-y-2"
+        >
+          <li
+            class="text-[0.7rem] leading-4 text-[#3a3a44]"
+          >
+            <p
+              class="font-semibold text-[#15151c]"
+            >
+              School A
+            </p>
+            <p>
+              Master
+            </p>
+            <p>
+              2008
+               – 
+              2010
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2
+          class="mb-2 border-b border-[#d7d7de] pb-1 text-[10px] font-bold tracking-[0.16em] text-[#15151c] uppercase"
+        >
+          Languages
+        </h2>
+        <ul
+          class="space-y-1"
+        >
+          <li
+            class="text-[0.7rem] leading-4 text-[#3a3a44]"
+          >
+            French
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2
+          class="mb-2 border-b border-[#d7d7de] pb-1 text-[10px] font-bold tracking-[0.16em] text-[#15151c] uppercase"
+        >
+          Interests
+        </h2>
+        <ul
+          class="space-y-1"
+        >
+          <li
+            class="text-[0.7rem] leading-4 text-[#3a3a44]"
+          >
+            React
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2
+          class="mb-2 border-b border-[#d7d7de] pb-1 text-[10px] font-bold tracking-[0.16em] text-[#15151c] uppercase"
+        >
+          Sports
+        </h2>
+        <ul
+          class="space-y-1"
+        >
+          <li
+            class="text-[0.7rem] leading-4 text-[#3a3a44]"
+          >
+            Surf
+          </li>
+        </ul>
+      </section>
+    </aside>
+    <main
+      class="space-y-4"
+    >
+      <section>
+        <h2
+          class="mb-2 border-b border-[#d7d7de] pb-1 text-[10px] font-bold tracking-[0.16em] text-[#15151c] uppercase"
+        >
+          Profile
+        </h2>
+        <p
+          class="text-sm leading-5 text-[#3a3a44]"
+        >
+          Senior Frontend Engineer and Tech Lead with 15 years of experience, specializing in React, Next.js, and TypeScript. I support product teams in defining front-end architecture, establishing best practices, and upskilling developers. Freelance since 2017, I have worked on high-traffic projects (Club Med, Rakuten, Greenweez), delivering performance, accessibility, and quality.
+        </p>
+      </section>
+      <section>
+        <h2
+          class="mb-2 border-b border-[#d7d7de] pb-1 text-[10px] font-bold tracking-[0.16em] text-[#15151c] uppercase"
+        >
+          Experience
+        </h2>
+        <div
+          class="space-y-4"
+        >
+          <article
+            class="[break-inside:avoid]"
+            data-testid="classic-exp"
+          >
+            <div
+              class="flex items-baseline justify-between gap-3"
+            >
+              <h3
+                class="text-sm font-bold text-[#15151c]"
+              >
+                Company 0
+              </h3>
+              <p
+                class="shrink-0 text-[0.72rem] text-[#70707c]"
+              >
+                2010 – Present
+              </p>
+            </div>
+            <p
+              class="mt-0.5 text-[0.72rem] font-semibold text-[#3a3a44]"
+            >
+              Title 0
+               · 
+              Annecy, France
+            </p>
+            <p
+              class="mt-1 text-[0.78rem] leading-5 text-[#3a3a44]"
+            >
+              Summary 0
+            </p>
+            <ul
+              class="c-bullets mt-1.5 list-disc space-y-1 pl-4 text-[0.74rem] leading-4 text-[#3a3a44]"
+            >
+              <li>
+                Bullet EN 0
+              </li>
+            </ul>
+          </article>
+          <article
+            class="[break-inside:avoid]"
+            data-testid="classic-exp"
+          >
+            <div
+              class="flex items-baseline justify-between gap-3"
+            >
+              <h3
+                class="text-sm font-bold text-[#15151c]"
+              >
+                Company 1
+              </h3>
+              <p
+                class="shrink-0 text-[0.72rem] text-[#70707c]"
+              >
+                2011 – Present
+              </p>
+            </div>
+            <p
+              class="mt-0.5 text-[0.72rem] font-semibold text-[#3a3a44]"
+            >
+              Title 1
+               · 
+              Annecy, France
+            </p>
+            <p
+              class="mt-1 text-[0.78rem] leading-5 text-[#3a3a44]"
+            >
+              Summary 1
+            </p>
+            <ul
+              class="c-bullets mt-1.5 list-disc space-y-1 pl-4 text-[0.74rem] leading-4 text-[#3a3a44]"
+            >
+              <li>
+                Bullet EN 1
+              </li>
+            </ul>
+          </article>
+          <article
+            class="[break-inside:avoid]"
+            data-testid="classic-exp"
+          >
+            <div
+              class="flex items-baseline justify-between gap-3"
+            >
+              <h3
+                class="text-sm font-bold text-[#15151c]"
+              >
+                Company 2
+              </h3>
+              <p
+                class="shrink-0 text-[0.72rem] text-[#70707c]"
+              >
+                2012 – Present
+              </p>
+            </div>
+            <p
+              class="mt-0.5 text-[0.72rem] font-semibold text-[#3a3a44]"
+            >
+              Title 2
+               · 
+              Annecy, France
+            </p>
+            <p
+              class="mt-1 text-[0.78rem] leading-5 text-[#3a3a44]"
+            >
+              Summary 2
+            </p>
+            <ul
+              class="c-bullets mt-1.5 list-disc space-y-1 pl-4 text-[0.74rem] leading-4 text-[#3a3a44]"
+            >
+              <li>
+                Bullet EN 2
+              </li>
+            </ul>
+          </article>
+          <article
+            class="[break-inside:avoid]"
+            data-testid="classic-exp"
+          >
+            <div
+              class="flex items-baseline justify-between gap-3"
+            >
+              <h3
+                class="text-sm font-bold text-[#15151c]"
+              >
+                Company 3
+              </h3>
+              <p
+                class="shrink-0 text-[0.72rem] text-[#70707c]"
+              >
+                2013 – Present
+              </p>
+            </div>
+            <p
+              class="mt-0.5 text-[0.72rem] font-semibold text-[#3a3a44]"
+            >
+              Title 3
+               · 
+              Annecy, France
+            </p>
+            <p
+              class="mt-1 text-[0.78rem] leading-5 text-[#3a3a44]"
+            >
+              Summary 3
+            </p>
+            <ul
+              class="c-bullets mt-1.5 list-disc space-y-1 pl-4 text-[0.74rem] leading-4 text-[#3a3a44]"
+            >
+              <li>
+                Bullet EN 3
+              </li>
+            </ul>
+          </article>
+          <article
+            class="[break-inside:avoid]"
+            data-testid="classic-exp"
+          >
+            <div
+              class="flex items-baseline justify-between gap-3"
+            >
+              <h3
+                class="text-sm font-bold text-[#15151c]"
+              >
+                Company 4
+              </h3>
+              <p
+                class="shrink-0 text-[0.72rem] text-[#70707c]"
+              >
+                2014 – Present
+              </p>
+            </div>
+            <p
+              class="mt-0.5 text-[0.72rem] font-semibold text-[#3a3a44]"
+            >
+              Title 4
+               · 
+              Annecy, France
+            </p>
+            <p
+              class="mt-1 text-[0.78rem] leading-5 text-[#3a3a44]"
+            >
+              Summary 4
+            </p>
+            <ul
+              class="c-bullets mt-1.5 list-disc space-y-1 pl-4 text-[0.74rem] leading-4 text-[#3a3a44]"
+            >
+              <li>
+                Bullet EN 4
+              </li>
+            </ul>
+          </article>
+          <article
+            class="[break-inside:avoid]"
+            data-testid="classic-exp"
+          >
+            <div
+              class="flex items-baseline justify-between gap-3"
+            >
+              <h3
+                class="text-sm font-bold text-[#15151c]"
+              >
+                Company 5
+              </h3>
+              <p
+                class="shrink-0 text-[0.72rem] text-[#70707c]"
+              >
+                2015 – Present
+              </p>
+            </div>
+            <p
+              class="mt-0.5 text-[0.72rem] font-semibold text-[#3a3a44]"
+            >
+              Title 5
+               · 
+              Annecy, France
+            </p>
+            <p
+              class="mt-1 text-[0.78rem] leading-5 text-[#3a3a44]"
+            >
+              Summary 5
+            </p>
+            <ul
+              class="c-bullets mt-1.5 list-disc space-y-1 pl-4 text-[0.74rem] leading-4 text-[#3a3a44]"
+            >
+              <li>
+                Bullet EN 5
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+</article>
+`;
+
+exports[`ClassicCV matches FR and EN snapshots: fr 1`] = `
+<article
+  class="paper paper-page cv-classic min-h-[297mm] w-[210mm] bg-white p-[15mm] font-[var(--font-dm-sans)] text-[#15151c] shadow-[0_16px_40px_rgba(15,23,42,0.18)] print:min-h-0 print:shadow-none print:[zoom:1]!"
+  data-testid="print-sheet"
+>
+  <header
+    class="border-b border-[#d7d7de] pb-4"
+  >
+    <h1
+      class="text-[1.75rem] leading-tight font-bold"
+    >
+      Matthieu
+       
+      Compérat
+    </h1>
+    <p
+      class="mt-1 text-base font-medium text-[#15151c]"
+    >
+      Développeur Frontend Senior & Lead Tech React · Next.js
+    </p>
+    <p
+      class="mt-1 text-sm text-[#3a3a44]"
+    >
+      Freelance · Disponible
+    </p>
+    <p
+      class="mt-1 text-xs tracking-[0.08em] text-[#70707c] uppercase"
+    >
+      15 ans d'expérience
+    </p>
+    <p
+      class="mt-3 text-xs text-[#3a3a44]"
+    >
+      Annecy et Genève
+       · 
+      matthieu.comperat@gmail.com
+       · 
+      https://www.linkedin.com/in/matthieucomperat/
+       ·
+       
+      https://github.com/Mitchnsun
+       · 
+      https://mcomper.at
+    </p>
+  </header>
+  <div
+    class="mt-5 grid grid-cols-[32%_1fr] gap-6"
+  >
+    <aside
+      class="space-y-4"
+    >
+      <section>
+        <h2
+          class="mb-2 border-b border-[#d7d7de] pb-1 text-[10px] font-bold tracking-[0.16em] text-[#15151c] uppercase"
+        >
+          Compétences techniques
+        </h2>
+        <ul
+          class="space-y-1"
+        >
+          <li
+            class="text-[0.7rem] leading-4 text-[#3a3a44]"
+          >
+            <span
+              class="font-semibold text-[#15151c]"
+            >
+              Langages
+            </span>
+             — 
+            TypeScript, JavaScript (ES2022+), HTML5, CSS3
+          </li>
+          <li
+            class="text-[0.7rem] leading-4 text-[#3a3a44]"
+          >
+            <span
+              class="font-semibold text-[#15151c]"
+            >
+              Frontend
+            </span>
+             — 
+            React 19, Next.js 16, Redux, React Query, Tailwind CSS, Storybook
+          </li>
+          <li
+            class="text-[0.7rem] leading-4 text-[#3a3a44]"
+          >
+            <span
+              class="font-semibold text-[#15151c]"
+            >
+              Tests & Qualité
+            </span>
+             — 
+            Jest, React Testing Library, Playwright, Cypress
+          </li>
+          <li
+            class="text-[0.7rem] leading-4 text-[#3a3a44]"
+          >
+            <span
+              class="font-semibold text-[#15151c]"
+            >
+              Outillage
+            </span>
+             — 
+            Git, GitHub Actions, Webpack, Vite, Turborepo, Docker
+          </li>
+          <li
+            class="text-[0.7rem] leading-4 text-[#3a3a44]"
+          >
+            <span
+              class="font-semibold text-[#15151c]"
+            >
+              Méthodes
+            </span>
+             — 
+            Agile / Scrum, Architecture composants, Design System, A11y
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2
+          class="mb-2 border-b border-[#d7d7de] pb-1 text-[10px] font-bold tracking-[0.16em] text-[#15151c] uppercase"
+        >
+          Compétences fonctionnelles
+        </h2>
+        <ul
+          class="space-y-1"
+        >
+          <li
+            class="text-[0.7rem] leading-4 text-[#3a3a44]"
+          >
+            Développement · Écriture de STD
+          </li>
+          <li
+            class="text-[0.7rem] leading-4 text-[#3a3a44]"
+          >
+            Atelier de cadrage · Relecture de SFD
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2
+          class="mb-2 border-b border-[#d7d7de] pb-1 text-[10px] font-bold tracking-[0.16em] text-[#15151c] uppercase"
+        >
+          Formation
+        </h2>
+        <ul
+          class="space-y-2"
+        >
+          <li
+            class="text-[0.7rem] leading-4 text-[#3a3a44]"
+          >
+            <p
+              class="font-semibold text-[#15151c]"
+            >
+              École A
+            </p>
+            <p>
+              Master
+            </p>
+            <p>
+              2008
+               – 
+              2010
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2
+          class="mb-2 border-b border-[#d7d7de] pb-1 text-[10px] font-bold tracking-[0.16em] text-[#15151c] uppercase"
+        >
+          Langues
+        </h2>
+        <ul
+          class="space-y-1"
+        >
+          <li
+            class="text-[0.7rem] leading-4 text-[#3a3a44]"
+          >
+            Français
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2
+          class="mb-2 border-b border-[#d7d7de] pb-1 text-[10px] font-bold tracking-[0.16em] text-[#15151c] uppercase"
+        >
+          Intérêts
+        </h2>
+        <ul
+          class="space-y-1"
+        >
+          <li
+            class="text-[0.7rem] leading-4 text-[#3a3a44]"
+          >
+            React
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2
+          class="mb-2 border-b border-[#d7d7de] pb-1 text-[10px] font-bold tracking-[0.16em] text-[#15151c] uppercase"
+        >
+          Sports
+        </h2>
+        <ul
+          class="space-y-1"
+        >
+          <li
+            class="text-[0.7rem] leading-4 text-[#3a3a44]"
+          >
+            Surf
+          </li>
+        </ul>
+      </section>
+    </aside>
+    <main
+      class="space-y-4"
+    >
+      <section>
+        <h2
+          class="mb-2 border-b border-[#d7d7de] pb-1 text-[10px] font-bold tracking-[0.16em] text-[#15151c] uppercase"
+        >
+          Profil
+        </h2>
+        <p
+          class="text-sm leading-5 text-[#3a3a44]"
+        >
+          Développeur Frontend Senior et Lead Tech avec 15 ans d'expérience, spécialisé en React, Next.js et TypeScript. J'accompagne les équipes produit dans la définition de l'architecture front, la mise en place de bonnes pratiques et la montée en compétence. Intervenant en freelance depuis 2017, j'ai travaillé sur des projets à forte audience (Club Med, Rakuten, Greenweez) en apportant performance, accessibilité et qualité.
+        </p>
+      </section>
+      <section>
+        <h2
+          class="mb-2 border-b border-[#d7d7de] pb-1 text-[10px] font-bold tracking-[0.16em] text-[#15151c] uppercase"
+        >
+          Expériences
+        </h2>
+        <div
+          class="space-y-4"
+        >
+          <article
+            class="[break-inside:avoid]"
+            data-testid="classic-exp"
+          >
+            <div
+              class="flex items-baseline justify-between gap-3"
+            >
+              <h3
+                class="text-sm font-bold text-[#15151c]"
+              >
+                Company 0
+              </h3>
+              <p
+                class="shrink-0 text-[0.72rem] text-[#70707c]"
+              >
+                2010 – Aujourd'hui
+              </p>
+            </div>
+            <p
+              class="mt-0.5 text-[0.72rem] font-semibold text-[#3a3a44]"
+            >
+              Titre 0
+               · 
+              Annecy, France
+            </p>
+            <p
+              class="mt-1 text-[0.78rem] leading-5 text-[#3a3a44]"
+            >
+              Résumé 0
+            </p>
+            <ul
+              class="c-bullets mt-1.5 list-disc space-y-1 pl-4 text-[0.74rem] leading-4 text-[#3a3a44]"
+            >
+              <li>
+                Bullet FR 0
+              </li>
+            </ul>
+          </article>
+          <article
+            class="[break-inside:avoid]"
+            data-testid="classic-exp"
+          >
+            <div
+              class="flex items-baseline justify-between gap-3"
+            >
+              <h3
+                class="text-sm font-bold text-[#15151c]"
+              >
+                Company 1
+              </h3>
+              <p
+                class="shrink-0 text-[0.72rem] text-[#70707c]"
+              >
+                2011 – Aujourd'hui
+              </p>
+            </div>
+            <p
+              class="mt-0.5 text-[0.72rem] font-semibold text-[#3a3a44]"
+            >
+              Titre 1
+               · 
+              Annecy, France
+            </p>
+            <p
+              class="mt-1 text-[0.78rem] leading-5 text-[#3a3a44]"
+            >
+              Résumé 1
+            </p>
+            <ul
+              class="c-bullets mt-1.5 list-disc space-y-1 pl-4 text-[0.74rem] leading-4 text-[#3a3a44]"
+            >
+              <li>
+                Bullet FR 1
+              </li>
+            </ul>
+          </article>
+          <article
+            class="[break-inside:avoid]"
+            data-testid="classic-exp"
+          >
+            <div
+              class="flex items-baseline justify-between gap-3"
+            >
+              <h3
+                class="text-sm font-bold text-[#15151c]"
+              >
+                Company 2
+              </h3>
+              <p
+                class="shrink-0 text-[0.72rem] text-[#70707c]"
+              >
+                2012 – Aujourd'hui
+              </p>
+            </div>
+            <p
+              class="mt-0.5 text-[0.72rem] font-semibold text-[#3a3a44]"
+            >
+              Titre 2
+               · 
+              Annecy, France
+            </p>
+            <p
+              class="mt-1 text-[0.78rem] leading-5 text-[#3a3a44]"
+            >
+              Résumé 2
+            </p>
+            <ul
+              class="c-bullets mt-1.5 list-disc space-y-1 pl-4 text-[0.74rem] leading-4 text-[#3a3a44]"
+            >
+              <li>
+                Bullet FR 2
+              </li>
+            </ul>
+          </article>
+          <article
+            class="[break-inside:avoid]"
+            data-testid="classic-exp"
+          >
+            <div
+              class="flex items-baseline justify-between gap-3"
+            >
+              <h3
+                class="text-sm font-bold text-[#15151c]"
+              >
+                Company 3
+              </h3>
+              <p
+                class="shrink-0 text-[0.72rem] text-[#70707c]"
+              >
+                2013 – Aujourd'hui
+              </p>
+            </div>
+            <p
+              class="mt-0.5 text-[0.72rem] font-semibold text-[#3a3a44]"
+            >
+              Titre 3
+               · 
+              Annecy, France
+            </p>
+            <p
+              class="mt-1 text-[0.78rem] leading-5 text-[#3a3a44]"
+            >
+              Résumé 3
+            </p>
+            <ul
+              class="c-bullets mt-1.5 list-disc space-y-1 pl-4 text-[0.74rem] leading-4 text-[#3a3a44]"
+            >
+              <li>
+                Bullet FR 3
+              </li>
+            </ul>
+          </article>
+          <article
+            class="[break-inside:avoid]"
+            data-testid="classic-exp"
+          >
+            <div
+              class="flex items-baseline justify-between gap-3"
+            >
+              <h3
+                class="text-sm font-bold text-[#15151c]"
+              >
+                Company 4
+              </h3>
+              <p
+                class="shrink-0 text-[0.72rem] text-[#70707c]"
+              >
+                2014 – Aujourd'hui
+              </p>
+            </div>
+            <p
+              class="mt-0.5 text-[0.72rem] font-semibold text-[#3a3a44]"
+            >
+              Titre 4
+               · 
+              Annecy, France
+            </p>
+            <p
+              class="mt-1 text-[0.78rem] leading-5 text-[#3a3a44]"
+            >
+              Résumé 4
+            </p>
+            <ul
+              class="c-bullets mt-1.5 list-disc space-y-1 pl-4 text-[0.74rem] leading-4 text-[#3a3a44]"
+            >
+              <li>
+                Bullet FR 4
+              </li>
+            </ul>
+          </article>
+          <article
+            class="[break-inside:avoid]"
+            data-testid="classic-exp"
+          >
+            <div
+              class="flex items-baseline justify-between gap-3"
+            >
+              <h3
+                class="text-sm font-bold text-[#15151c]"
+              >
+                Company 5
+              </h3>
+              <p
+                class="shrink-0 text-[0.72rem] text-[#70707c]"
+              >
+                2015 – Aujourd'hui
+              </p>
+            </div>
+            <p
+              class="mt-0.5 text-[0.72rem] font-semibold text-[#3a3a44]"
+            >
+              Titre 5
+               · 
+              Annecy, France
+            </p>
+            <p
+              class="mt-1 text-[0.78rem] leading-5 text-[#3a3a44]"
+            >
+              Résumé 5
+            </p>
+            <ul
+              class="c-bullets mt-1.5 list-disc space-y-1 pl-4 text-[0.74rem] leading-4 text-[#3a3a44]"
+            >
+              <li>
+                Bullet FR 5
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+</article>
+`;
