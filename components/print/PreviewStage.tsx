@@ -1,29 +1,39 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import React from 'react';
+import React, { useMemo } from 'react';
 
+import { getPrintData } from '@/app/data/printContent';
+import TimelineCV from '@/components/print/designs/TimelineCV';
 import { useFitToWidth } from '@/hooks/useFitToWidth';
 import { type ContentMode, type Design } from '@/hooks/usePrintOptions';
 import { cn } from '@/lib/cn';
 import { pick } from '@/lib/localize';
-import { type Lang, type ResumeData } from '@/types';
+import { resolveConfig } from '@/lib/printConfig';
+import { type CustomConfig, type Lang, type ResumeData } from '@/types';
 
 interface PreviewStageProps {
   data: ResumeData;
   lang: Lang;
   design: Design;
   mode: ContentMode;
+  custom: CustomConfig;
   onPrint: () => void;
 }
 
 // Foundation preview (TICKET-011): renders a single A4 sheet wrapper that the
 // design-specific layouts (TICKET-013+) will populate. It already reflects the
 // active language so the option state is observable end-to-end.
-const PreviewStage: React.FC<PreviewStageProps> = ({ data, lang, design, mode, onPrint }) => {
+const PreviewStage: React.FC<PreviewStageProps> = ({ data, lang, design, mode, custom, onPrint }) => {
   const { person } = data;
   const { paperRef, stageRef } = useFitToWidth();
   const t = useTranslations('print');
+
+  const printData = useMemo(() => getPrintData(), []);
+  const cfg = useMemo(
+    () => (mode === 'custom' ? resolveConfig('custom', custom) : resolveConfig(mode)),
+    [mode, custom]
+  );
 
   return (
     <section
@@ -66,12 +76,16 @@ const PreviewStage: React.FC<PreviewStageProps> = ({ data, lang, design, mode, o
             'print:min-h-0 print:shadow-none print:[zoom:1]!'
           )}
         >
-          <header className="border-b border-black/10 pb-4">
-            <h1 className="text-2xl font-bold">
-              {person.firstname} {person.lastname}
-            </h1>
-            <p className="mt-1 text-sm text-black/70">{pick(person.title, lang)}</p>
-          </header>
+          {design === 'timeline' ? (
+            <TimelineCV data={data} print={printData} cfg={cfg} lang={lang} />
+          ) : (
+            <header className="border-b border-black/10 pb-4">
+              <h1 className="text-2xl font-bold">
+                {person.firstname} {person.lastname}
+              </h1>
+              <p className="mt-1 text-sm text-black/70">{pick(person.title, lang)}</p>
+            </header>
+          )}
         </article>
       </div>
     </section>
