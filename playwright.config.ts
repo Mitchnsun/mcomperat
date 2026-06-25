@@ -2,6 +2,9 @@ import { defineConfig } from '@playwright/test';
 
 export default defineConfig({
   testDir: './e2e',
+  // Run tests sequentially: the Next.js dev server compiles routes on demand and
+  // cannot reliably handle multiple parallel workers without timing failures.
+  workers: 1,
   use: {
     baseURL: 'http://127.0.0.1:3000',
     locale: 'fr',

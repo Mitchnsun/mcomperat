@@ -31,12 +31,12 @@ const PreviewStage: React.FC<PreviewStageProps> = ({ data, lang, design, mode, o
       data-testid="print-preview"
       data-design={design}
       data-mode={mode}
-      className="preview-stage min-h-0 flex-1 overflow-y-auto bg-slate-200 px-4 py-6 md:px-8 print:overflow-visible print:bg-white print:p-0"
+      className="preview-stage min-h-0 flex-1 overflow-y-auto bg-orange-50 px-4 py-6 md:px-8 print:h-auto print:min-h-0 print:overflow-visible print:bg-white print:p-0"
     >
       <div className="mx-auto flex w-fit max-w-full flex-col items-center gap-4">
         <div
           data-testid="print-toolbar"
-          className="preview-toolbar flex w-full max-w-[210mm] flex-wrap items-center justify-between gap-3 rounded-xl border border-black/10 bg-white/90 px-4 py-3 text-sm text-slate-700 shadow-sm backdrop-blur print:hidden"
+          className="flex w-full max-w-[210mm] flex-wrap items-center justify-between gap-3 rounded-xl border border-black/10 bg-white/90 px-4 py-3 text-sm text-slate-700 shadow-sm backdrop-blur print:hidden"
         >
           <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
             <span className="font-semibold text-slate-950">A4 · 210 × 297 mm</span>
@@ -63,7 +63,7 @@ const PreviewStage: React.FC<PreviewStageProps> = ({ data, lang, design, mode, o
           data-testid="print-sheet"
           className={cn(
             'paper min-h-[297mm] w-[210mm] bg-white p-[15mm] text-black shadow-[0_16px_40px_rgba(15,23,42,0.18)]',
-            'print:min-h-0 print:shadow-none'
+            'print:min-h-0 print:shadow-none print:[zoom:1]!'
           )}
         >
           <header className="border-b border-black/10 pb-4">

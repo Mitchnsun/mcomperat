@@ -22,11 +22,11 @@ function TestComponent() {
   const { paperRef, stageRef } = useFitToWidth();
 
   return (
-    <div ref={stageRef} data-testid="stage">
+    <section ref={stageRef} data-testid="stage">
       <article ref={paperRef} data-testid="paper">
         Sheet
       </article>
-    </div>
+    </section>
   );
 }
 

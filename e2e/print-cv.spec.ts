@@ -17,7 +17,7 @@ test('selecting a language updates the previewed sheet', async ({ page }) => {
 
   await page.getByTestId('lang-btn-en').click();
   await expect(page).toHaveURL(/\/en\/print$/);
-  await expect(page.getByTestId('print-sheet')).toContainText('Senior Frontend Engineer');
+  await expect(page.getByTestId(PRINT_SHEET_TEST_ID)).toContainText('Senior Frontend Engineer');
 });
 
 test('print media hides preview chrome and keeps a single sheet', async ({ page }) => {

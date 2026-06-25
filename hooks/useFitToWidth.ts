@@ -18,7 +18,7 @@ export function fit(stage: HTMLElement, paper: HTMLElement) {
 }
 
 export function useFitToWidth() {
-  const stageRef = useRef<HTMLDivElement>(null);
+  const stageRef = useRef<HTMLElement>(null);
   const paperRef = useRef<HTMLElement>(null);
 
   useEffect(() => {

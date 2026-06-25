@@ -25,7 +25,7 @@ const PrintApp: React.FC<PrintAppProps> = ({ data, initialLang }) => {
   }, []);
 
   return (
-    <main className="print-route flex min-h-screen flex-col pt-16 md:h-screen md:flex-row md:overflow-hidden md:pt-0 print:block print:h-auto print:overflow-visible">
+    <main className="print-route flex min-h-screen flex-col pt-16 md:h-screen md:flex-row md:overflow-hidden md:pt-0 print:block print:h-auto print:overflow-visible print:pt-0 print:[page:print-route]">
       <PrintSidebar
         design={design}
         onDesignChange={setDesign}

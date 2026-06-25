@@ -99,40 +99,17 @@ body,
   }
 }
 
-/* @page cannot be expressed with Tailwind utility classes. */
+/* @page rules cannot be expressed with Tailwind utility classes;
+   all print layout lives on the elements as print:* utilities. */
 @page {
-  margin: 1.5cm;
+  margin: 1.5cm; /* resume CV main route (/[locale]) */
 }
 
-/* Named page for /print route: zero margin so the browser omits its generated
-   header (date, title) and footer (URL). The sheet's p-[15mm] carries the
-   visual margin instead. */
+/* Route /print: zero margin — the browser omits header/footer chrome.
+   The sheet's p-[15mm] carries the visual margin instead. */
 @page print-route {
   size: A4;
   margin: 0;
-}
-
-@media print {
-  .print-route .print-sidebar,
-  .print-route .preview-toolbar {
-    display: none !important;
-  }
-
-  .print-route .preview-stage {
-    height: auto;
-    min-height: 0;
-    overflow: visible;
-    padding: 0;
-    background: #fff;
-  }
-
-  .print-route .paper {
-    page: print-route; /* zero-margin named page; p-[15mm] padding carries the visual margin */
-    min-height: 0;
-    margin: 0;
-    box-shadow: none !important;
-    zoom: 1 !important;
-  }
 }
 
 .hero-surface::before {
