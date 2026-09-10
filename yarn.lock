@@ -2833,7 +2833,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"baseline-browser-mapping@npm:^2.10.0, baseline-browser-mapping@npm:^2.9.0":
+"baseline-browser-mapping@npm:^2.11.0":
+  version: 2.11.0
+  resolution: "baseline-browser-mapping@npm:2.11.0"
+  bin:
+    baseline-browser-mapping: dist/cli.cjs
+  checksum: 10c0/03176d4d1c85a156971ae328241e9216288d59f46a5195acc95c41f1477b2e791185d0f68128788c311fd0fb0b93b321170d65c1ef7d9bcab096677c844365de
+  languageName: node
+  linkType: hard
+
+"baseline-browser-mapping@npm:^2.9.0":
   version: 2.10.0
   resolution: "baseline-browser-mapping@npm:2.10.0"
   bin:
@@ -6316,7 +6325,7 @@ __metadata:
     "@types/react-dom": "npm:^19.2.0"
     "@typescript-eslint/eslint-plugin": "npm:^8.45.0"
     "@typescript-eslint/parser": "npm:^8.45.0"
-    baseline-browser-mapping: "npm:^2.10.0"
+    baseline-browser-mapping: "npm:^2.11.0"
     clsx: "npm:^2.1.1"
     eslint: "npm:^9.36.0"
     eslint-config-next: "npm:^16.1.6"
