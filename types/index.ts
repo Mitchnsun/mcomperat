@@ -85,14 +85,7 @@ export interface ResumeData {
 
 // Keys for each section that can be toggled in the print CV.
 export type SectionKey =
-  | 'profile'
-  | 'techSkills'
-  | 'funcSkills'
-  | 'education'
-  | 'languages'
-  | 'interests'
-  | 'sports'
-  | 'contact';
+  'profile' | 'techSkills' | 'funcSkills' | 'education' | 'languages' | 'interests' | 'sports' | 'contact';
 
 // Content preset mode for the print CV.
 export type ContentMode = 'full' | 'condensed' | 'custom';
