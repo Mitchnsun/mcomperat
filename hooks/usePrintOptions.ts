@@ -7,14 +7,7 @@ import { type Lang } from '@/types';
 export type Design = 'classic' | 'editorial' | 'timeline';
 export type ContentMode = 'full' | 'condensed' | 'custom';
 export type SectionKey =
-  | 'profile'
-  | 'techSkills'
-  | 'funcSkills'
-  | 'education'
-  | 'languages'
-  | 'interests'
-  | 'sports'
-  | 'contact';
+  'profile' | 'techSkills' | 'funcSkills' | 'education' | 'languages' | 'interests' | 'sports' | 'contact';
 
 export interface CustomConfig {
   sections: Record<SectionKey, boolean>;

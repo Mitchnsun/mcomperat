@@ -63,7 +63,7 @@ const PreviewStage: React.FC<PreviewStageProps> = ({ data, lang, design, mode, o
           data-testid="print-sheet"
           className={cn(
             'paper min-h-[297mm] w-[210mm] bg-white p-[15mm] text-black shadow-[0_16px_40px_rgba(15,23,42,0.18)]',
-            'print:min-h-0 print:shadow-none print:[zoom:1]!'
+            'print:min-h-0 print:[zoom:1]! print:shadow-none'
           )}
         >
           <header className="border-b border-black/10 pb-4">
