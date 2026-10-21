@@ -28,13 +28,13 @@ A modern, responsive web resume built with Next.js App Router, TypeScript, and T
 - **Internationalization**: next-intl 4.x
 - **Runtime**: React 19
 - **Package Manager**: Yarn 4+ (managed via corepack)
-- **Node.js**: 22+
+- **Node.js**: 24+
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js 22+
+- Node.js 24+
 - Yarn 4+ (automatically managed via corepack)
 
 ### Installation
@@ -186,7 +186,7 @@ The project uses [next-intl](https://next-intl.dev/) for internationalization wi
 
 ### Environment Requirements
 
-- Node.js 22+ (specified in `engines`)
+- Node.js 24+ (specified in `engines` and `.nvmrc`)
 - Yarn 4+ managed via `packageManager` field
 
 ## 🚀 Deployment
