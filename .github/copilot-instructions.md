@@ -12,7 +12,7 @@ This is a modern, responsive web resume built with Next.js App Router, TypeScrip
 - **Internationalization**: next-intl 4.x (type-safe i18n)
 - **Runtime**: React 19
 - **Package Manager**: Yarn 4+ (managed via corepack)
-- **Node.js**: 22+
+- **Node.js**: 24+
 
 ## Project Structure
 

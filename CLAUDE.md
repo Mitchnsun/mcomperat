@@ -13,7 +13,7 @@ yarn type-check   # tsc --noEmit
 yarn format       # Prettier across the repo
 ```
 
-There is no test runner (no Jest/Vitest); `yarn test` means lint + type-check only. Node 22+ and Yarn 4 (via corepack) are required. Pre-commit hooks (Husky + lint-staged) auto-fix and format staged files.
+There is no test runner (no Jest/Vitest); `yarn test` means lint + type-check only. Node 24+ and Yarn 4 (via corepack) are required. Pre-commit hooks (Husky + lint-staged) auto-fix and format staged files.
 
 ## Architecture
 
