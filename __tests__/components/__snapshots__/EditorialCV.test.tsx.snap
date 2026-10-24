@@ -1,0 +1,505 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditorialCV renders matching FR and EN snapshots: editorial-en 1`] = `
+<div
+  class="cv-editorial font-[family-name:var(--font-dm-sans)] text-[9.5pt] text-black"
+>
+  <header
+    class="mb-6 text-center"
+  >
+    <h1
+      class="font-[family-name:var(--font-source-serif-4)] text-[22pt] leading-tight font-bold text-black"
+    >
+      Jane
+       
+      Doe
+    </h1>
+    <p
+      class="mt-1 text-[8pt] font-semibold tracking-[0.18em] text-black/60 uppercase"
+    >
+      Title EN
+    </p>
+    <p
+      class="mt-2 text-[8pt] text-black/70"
+    >
+      jane@example.com
+      <span
+        class="mx-1.5 text-black/30"
+      >
+        ·
+      </span>
+      https://jane.dev
+      <span
+        class="mx-1.5 text-black/30"
+      >
+        ·
+      </span>
+      Lyon
+    </p>
+    <div
+      class="mt-4 border-t border-black/20"
+    />
+  </header>
+  <div
+    class="mb-6 text-center"
+  >
+    <p
+      class="mx-auto max-w-[130mm] font-[family-name:var(--font-source-serif-4)] text-[10.5pt] leading-[1.7] text-black/85"
+    >
+      Profile EN long.
+    </p>
+  </div>
+  <section
+    class="mt-6 first:mt-0"
+  >
+    <h2
+      class="e-sec-title mb-1 text-center text-[9.5pt] font-semibold tracking-[0.14em] text-black/80 uppercase"
+    >
+      Technical Skills
+    </h2>
+    <div
+      class="e-sec-rule mb-4 border-t border-black/20"
+    />
+    <div
+      class="grid grid-cols-2 gap-x-6 gap-y-1"
+    >
+      <div
+        class="flex gap-1.5"
+      >
+        <span
+          class="shrink-0 font-semibold text-black/80"
+        >
+          Languages
+           :
+        </span>
+        <span
+          class="text-black/70"
+        >
+          TypeScript, JavaScript
+        </span>
+      </div>
+    </div>
+    <div
+      class="mt-2 flex flex-wrap justify-center gap-x-4 gap-y-0.5 text-[8.5pt] text-black/60"
+    >
+      <span>
+        Functional skill
+      </span>
+    </div>
+  </section>
+  <section
+    class="mt-6 first:mt-0"
+  >
+    <h2
+      class="e-sec-title mb-1 text-center text-[9.5pt] font-semibold tracking-[0.14em] text-black/80 uppercase"
+    >
+      Work Experience
+    </h2>
+    <div
+      class="e-sec-rule mb-4 border-t border-black/20"
+    />
+    <div
+      class="space-y-4"
+    >
+      <div>
+        <div
+          class="flex items-baseline justify-between"
+        >
+          <span
+            class="font-[family-name:var(--font-source-serif-4)] font-semibold text-black"
+          >
+            Lead Dev
+          </span>
+          <span
+            class="shrink-0 text-[8pt] text-black/50"
+          >
+            2022
+             – 
+            Present
+          </span>
+        </div>
+        <p
+          class="text-[8.5pt] font-semibold text-black/60"
+        >
+          Acme Corp
+           · Paris, France
+        </p>
+        <p
+          class="mt-1 leading-[1.55] text-black/80"
+        >
+          Description EN
+        </p>
+        <ul
+          class="mt-1 space-y-0.5 text-black/75"
+        >
+          <li
+            class="flex gap-1.5"
+          >
+            <span
+              aria-hidden="true"
+              class="shrink-0 select-none"
+            >
+              —
+            </span>
+            <span>
+              Task A
+            </span>
+          </li>
+          <li
+            class="flex gap-1.5"
+          >
+            <span
+              aria-hidden="true"
+              class="shrink-0 select-none"
+            >
+              —
+            </span>
+            <span>
+              Task B
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section
+    class="mt-6 first:mt-0"
+  >
+    <h2
+      class="e-sec-title mb-1 text-center text-[9.5pt] font-semibold tracking-[0.14em] text-black/80 uppercase"
+    >
+      Education
+    </h2>
+    <div
+      class="e-sec-rule mb-4 border-t border-black/20"
+    />
+    <div
+      class="space-y-2"
+    >
+      <div
+        class="flex items-baseline justify-between"
+      >
+        <div>
+          <span
+            class="font-[family-name:var(--font-source-serif-4)] font-semibold text-black"
+          >
+            Engineer
+          </span>
+          <span
+            class="text-black/60"
+          >
+             · 
+            Computer Science
+          </span>
+          <p
+            class="text-[8.5pt] text-black/60"
+          >
+            INSA Lyon
+             · 
+            Lyon, France
+          </p>
+        </div>
+        <span
+          class="shrink-0 text-[8pt] text-black/50"
+        >
+          2007
+           – 
+          2012
+        </span>
+      </div>
+    </div>
+  </section>
+  <section
+    class="mt-6 first:mt-0"
+  >
+    <h2
+      class="e-sec-title mb-1 text-center text-[9.5pt] font-semibold tracking-[0.14em] text-black/80 uppercase"
+    >
+      Miscellaneous
+    </h2>
+    <div
+      class="e-sec-rule mb-4 border-t border-black/20"
+    />
+    <div
+      class="flex flex-wrap justify-center gap-x-8 gap-y-2 text-center text-[8.5pt]"
+    >
+      <div>
+        <p
+          class="font-semibold text-black/80"
+        >
+          Languages
+        </p>
+        <p
+          class="text-black/60"
+        >
+          French, English
+        </p>
+      </div>
+      <div>
+        <p
+          class="font-semibold text-black/80"
+        >
+          Sports
+        </p>
+        <p
+          class="text-black/60"
+        >
+          Ski, Trail running
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`EditorialCV renders matching FR and EN snapshots: editorial-fr 1`] = `
+<div
+  class="cv-editorial font-[family-name:var(--font-dm-sans)] text-[9.5pt] text-black"
+>
+  <header
+    class="mb-6 text-center"
+  >
+    <h1
+      class="font-[family-name:var(--font-source-serif-4)] text-[22pt] leading-tight font-bold text-black"
+    >
+      Jane
+       
+      Doe
+    </h1>
+    <p
+      class="mt-1 text-[8pt] font-semibold tracking-[0.18em] text-black/60 uppercase"
+    >
+      Titre FR
+    </p>
+    <p
+      class="mt-2 text-[8pt] text-black/70"
+    >
+      jane@example.com
+      <span
+        class="mx-1.5 text-black/30"
+      >
+        ·
+      </span>
+      https://jane.dev
+      <span
+        class="mx-1.5 text-black/30"
+      >
+        ·
+      </span>
+      Lyon
+    </p>
+    <div
+      class="mt-4 border-t border-black/20"
+    />
+  </header>
+  <div
+    class="mb-6 text-center"
+  >
+    <p
+      class="mx-auto max-w-[130mm] font-[family-name:var(--font-source-serif-4)] text-[10.5pt] leading-[1.7] text-black/85"
+    >
+      Profil FR long.
+    </p>
+  </div>
+  <section
+    class="mt-6 first:mt-0"
+  >
+    <h2
+      class="e-sec-title mb-1 text-center text-[9.5pt] font-semibold tracking-[0.14em] text-black/80 uppercase"
+    >
+      Compétences techniques
+    </h2>
+    <div
+      class="e-sec-rule mb-4 border-t border-black/20"
+    />
+    <div
+      class="grid grid-cols-2 gap-x-6 gap-y-1"
+    >
+      <div
+        class="flex gap-1.5"
+      >
+        <span
+          class="shrink-0 font-semibold text-black/80"
+        >
+          Langages
+           :
+        </span>
+        <span
+          class="text-black/70"
+        >
+          TypeScript, JavaScript
+        </span>
+      </div>
+    </div>
+    <div
+      class="mt-2 flex flex-wrap justify-center gap-x-4 gap-y-0.5 text-[8.5pt] text-black/60"
+    >
+      <span>
+        Compétence fonctionnelle
+      </span>
+    </div>
+  </section>
+  <section
+    class="mt-6 first:mt-0"
+  >
+    <h2
+      class="e-sec-title mb-1 text-center text-[9.5pt] font-semibold tracking-[0.14em] text-black/80 uppercase"
+    >
+      Expériences professionnelles
+    </h2>
+    <div
+      class="e-sec-rule mb-4 border-t border-black/20"
+    />
+    <div
+      class="space-y-4"
+    >
+      <div>
+        <div
+          class="flex items-baseline justify-between"
+        >
+          <span
+            class="font-[family-name:var(--font-source-serif-4)] font-semibold text-black"
+          >
+            Lead Dev
+          </span>
+          <span
+            class="shrink-0 text-[8pt] text-black/50"
+          >
+            2022
+             – 
+            Aujourd'hui
+          </span>
+        </div>
+        <p
+          class="text-[8.5pt] font-semibold text-black/60"
+        >
+          Acme Corp
+           · Paris, France
+        </p>
+        <p
+          class="mt-1 leading-[1.55] text-black/80"
+        >
+          Description FR
+        </p>
+        <ul
+          class="mt-1 space-y-0.5 text-black/75"
+        >
+          <li
+            class="flex gap-1.5"
+          >
+            <span
+              aria-hidden="true"
+              class="shrink-0 select-none"
+            >
+              —
+            </span>
+            <span>
+              Tâche A
+            </span>
+          </li>
+          <li
+            class="flex gap-1.5"
+          >
+            <span
+              aria-hidden="true"
+              class="shrink-0 select-none"
+            >
+              —
+            </span>
+            <span>
+              Tâche B
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section
+    class="mt-6 first:mt-0"
+  >
+    <h2
+      class="e-sec-title mb-1 text-center text-[9.5pt] font-semibold tracking-[0.14em] text-black/80 uppercase"
+    >
+      Formation
+    </h2>
+    <div
+      class="e-sec-rule mb-4 border-t border-black/20"
+    />
+    <div
+      class="space-y-2"
+    >
+      <div
+        class="flex items-baseline justify-between"
+      >
+        <div>
+          <span
+            class="font-[family-name:var(--font-source-serif-4)] font-semibold text-black"
+          >
+            Ingénieur
+          </span>
+          <span
+            class="text-black/60"
+          >
+             · 
+            Informatique
+          </span>
+          <p
+            class="text-[8.5pt] text-black/60"
+          >
+            INSA Lyon
+             · 
+            Lyon, France
+          </p>
+        </div>
+        <span
+          class="shrink-0 text-[8pt] text-black/50"
+        >
+          2007
+           – 
+          2012
+        </span>
+      </div>
+    </div>
+  </section>
+  <section
+    class="mt-6 first:mt-0"
+  >
+    <h2
+      class="e-sec-title mb-1 text-center text-[9.5pt] font-semibold tracking-[0.14em] text-black/80 uppercase"
+    >
+      Divers
+    </h2>
+    <div
+      class="e-sec-rule mb-4 border-t border-black/20"
+    />
+    <div
+      class="flex flex-wrap justify-center gap-x-8 gap-y-2 text-center text-[8.5pt]"
+    >
+      <div>
+        <p
+          class="font-semibold text-black/80"
+        >
+          Langues
+        </p>
+        <p
+          class="text-black/60"
+        >
+          Français, Anglais
+        </p>
+      </div>
+      <div>
+        <p
+          class="font-semibold text-black/80"
+        >
+          Sports
+        </p>
+        <p
+          class="text-black/60"
+        >
+          Ski, Trail
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+`;
