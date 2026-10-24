@@ -202,3 +202,43 @@ body,
     }
   }
 }
+
+/* ── Timeline CV print design (.cv-timeline) ───────────────────────────────── */
+/* Theme-independent styles using a fixed tech-violet accent (#6f6fc8).        */
+/* Only pseudo-elements and CSS-var-based rules live here; layout uses Tailwind */
+/* classes applied directly in TimelineCV.tsx.                                  */
+
+/* Section title: the ::after creates the extending rule at the end of the line.
+   Works because SectionTitle renders with Tailwind's `flex items-center gap-2`. */
+.cv-timeline .t-section-title::after {
+  content: '';
+  flex: 1;
+  border-top: 1px solid #d8d8ef;
+}
+
+/* Experience dot: colored circle on the left rail, tinted by --exp-accent. */
+.cv-timeline .t-entry::before {
+  content: '';
+  position: absolute;
+  left: -1.3125rem; /* aligns with the 2px border-l-2 + 1rem pl-4 of .t-rail */
+  top: 0.3rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background-color: var(--exp-accent, #6f6fc8);
+  border: 1.5px solid white;
+  box-shadow: 0 0 0 1px var(--exp-accent, #6f6fc8);
+}
+
+/* Technology pill: color from --pill-fg injected inline per tag. */
+.cv-timeline .t-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 6pt;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  line-height: 1.6;
+  color: var(--pill-fg, #6f6fc8);
+  background-color: color-mix(in srgb, var(--pill-fg, #6f6fc8) 12%, #f5f5fc);
+}

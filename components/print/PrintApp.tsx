@@ -35,7 +35,7 @@ const PrintApp: React.FC<PrintAppProps> = ({ data, initialLang }) => {
         onCustomChange={setCustom}
         onPrint={handlePrint}
       />
-      <PreviewStage data={data} lang={initialLang} design={design} mode={mode} onPrint={handlePrint} />
+      <PreviewStage data={data} lang={initialLang} design={design} mode={mode} custom={custom} onPrint={handlePrint} />
     </main>
   );
 };

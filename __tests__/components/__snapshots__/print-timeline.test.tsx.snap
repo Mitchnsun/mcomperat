@@ -1,0 +1,1131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TimelineCV — EN snapshot renders a stable snapshot in English: en-full 1`] = `
+<div
+  class="cv-timeline text-[9pt] leading-snug text-[#1a1a2e]"
+>
+  <header
+    class="mb-4 flex items-start justify-between border-b border-[#d0d0e8] pb-3"
+  >
+    <div>
+      <h1
+        class="text-[16pt] leading-tight font-bold"
+      >
+        Jean
+         
+        Dupont
+      </h1>
+      <p
+        class="mt-0.5 text-[10pt] font-semibold"
+        style="color: rgb(111, 111, 200);"
+      >
+        Senior Frontend Developer
+      </p>
+      <p
+        class="mt-0.5 font-mono text-[7.5pt] text-[#5a5a8a]"
+      >
+        Freelance · Available
+      </p>
+    </div>
+    <div
+      class="space-y-0.5 text-right"
+    >
+      <p
+        class="font-mono text-[7pt] text-[#5a5a8a]"
+      >
+        jean@example.com
+      </p>
+      <p
+        class="font-mono text-[7pt] text-[#5a5a8a]"
+      >
+        https://linkedin.com/in/jean
+      </p>
+      <p
+        class="font-mono text-[7pt] text-[#5a5a8a]"
+      >
+        https://github.com/jean
+      </p>
+      <p
+        class="font-mono text-[7pt] text-[#5a5a8a]"
+      >
+        https://jean.dev
+      </p>
+      <p
+        class="font-mono text-[7pt] text-[#5a5a8a]"
+      >
+        Paris
+      </p>
+    </div>
+  </header>
+  <section
+    class="mb-3"
+  >
+    <h2
+      class="t-section-title mb-1.5 flex items-center gap-2 font-mono text-[6.5pt] font-semibold tracking-[0.08em] text-[#3a3a6a] uppercase"
+    >
+      Profile
+    </h2>
+    <p
+      class="text-[8pt] leading-relaxed"
+    >
+      Profile EN
+    </p>
+  </section>
+  <section
+    class="mb-3"
+  >
+    <h2
+      class="t-section-title mb-1.5 flex items-center gap-2 font-mono text-[6.5pt] font-semibold tracking-[0.08em] text-[#3a3a6a] uppercase"
+    >
+      Technical Skills
+    </h2>
+    <div
+      class="flex flex-col gap-1.5"
+    >
+      <div
+        class="flex flex-wrap items-baseline gap-1"
+      >
+        <span
+          class="mr-1 font-mono text-[6.5pt] text-[#5a5a8a]"
+        >
+          Frontend
+        </span>
+        <span
+          class="t-pill"
+          style="--pill-fg: #d39900;"
+        >
+          React
+        </span>
+        <span
+          class="t-pill"
+          style="--pill-fg: #00a6f4;"
+        >
+          CSS
+        </span>
+      </div>
+    </div>
+  </section>
+  <section
+    class="mb-3"
+  >
+    <h2
+      class="t-section-title mb-1.5 flex items-center gap-2 font-mono text-[6.5pt] font-semibold tracking-[0.08em] text-[#3a3a6a] uppercase"
+    >
+      Functional Skills
+    </h2>
+    <div
+      class="flex flex-wrap gap-1"
+    >
+      <span
+        class="t-pill"
+        style="--pill-fg: #6f6fc8;"
+      >
+        Development
+      </span>
+    </div>
+  </section>
+  <section
+    class="mb-3"
+  >
+    <h2
+      class="t-section-title mb-1.5 flex items-center gap-2 font-mono text-[6.5pt] font-semibold tracking-[0.08em] text-[#3a3a6a] uppercase"
+    >
+      Experience
+    </h2>
+    <div
+      class="t-rail ml-1.5 flex flex-col gap-2.5 border-l-2 border-[#6f6fc8] pl-4"
+    >
+      <div
+        class="t-entry relative"
+        style="--exp-accent: oklch(0.50 0.15 145);"
+      >
+        <div
+          class="flex items-start justify-between gap-2"
+        >
+          <div
+            class="min-w-0 flex-1"
+          >
+            <div
+              class="flex flex-wrap items-baseline gap-1.5"
+            >
+              <h3
+                class="text-[8.5pt] font-semibold"
+              >
+                Lead Dev
+              </h3>
+              <span
+                class="text-[7pt] text-[#5a5a8a]"
+              >
+                Greenweez
+                 · 
+                Paris, France
+              </span>
+              <span
+                class="t-pill"
+                style="--pill-fg: #6f6fc8;"
+              >
+                Freelance
+              </span>
+            </div>
+            <ul
+              class="mt-1 space-y-0.5"
+            >
+              <li
+                class="flex gap-1.5 text-[7.5pt]"
+              >
+                <span
+                  class="shrink-0"
+                >
+                  →
+                </span>
+                <span>
+                  Technical leadership
+                </span>
+              </li>
+              <li
+                class="flex gap-1.5 text-[7.5pt]"
+              >
+                <span
+                  class="shrink-0"
+                >
+                  →
+                </span>
+                <span>
+                  Code review
+                </span>
+              </li>
+            </ul>
+            <div
+              class="mt-1 flex flex-wrap gap-1"
+            >
+              <span
+                class="t-pill"
+                style="--pill-fg: #d39900;"
+              >
+                React
+              </span>
+              <span
+                class="t-pill"
+                style="--pill-fg: #00a6f4;"
+              >
+                Tailwind CSS
+              </span>
+            </div>
+          </div>
+          <div
+            class="shrink-0 text-right"
+          >
+            <p
+              class="font-mono text-[7pt] text-[#5a5a8a]"
+            >
+              Oct. 2023
+            </p>
+            <p
+              class="font-mono text-[7pt] text-[#5a5a8a]"
+            >
+              Present
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="t-entry relative"
+        style="--exp-accent: oklch(0.48 0.18 22);"
+      >
+        <div
+          class="flex items-start justify-between gap-2"
+        >
+          <div
+            class="min-w-0 flex-1"
+          >
+            <div
+              class="flex flex-wrap items-baseline gap-1.5"
+            >
+              <h3
+                class="text-[8.5pt] font-semibold"
+              >
+                Frontend Dev
+              </h3>
+              <span
+                class="text-[7pt] text-[#5a5a8a]"
+              >
+                Rakuten
+                 · 
+                Lyon, France
+              </span>
+            </div>
+            <ul
+              class="mt-1 space-y-0.5"
+            >
+              <li
+                class="flex gap-1.5 text-[7.5pt]"
+              >
+                <span
+                  class="shrink-0"
+                >
+                  →
+                </span>
+                <span>
+                  React development
+                </span>
+              </li>
+            </ul>
+            <div
+              class="mt-1 flex flex-wrap gap-1"
+            >
+              <span
+                class="t-pill"
+                style="--pill-fg: #d39900;"
+              >
+                TypeScript
+              </span>
+            </div>
+          </div>
+          <div
+            class="shrink-0 text-right"
+          >
+            <p
+              class="font-mono text-[7pt] text-[#5a5a8a]"
+            >
+              Jan. 2021
+            </p>
+            <p
+              class="font-mono text-[7pt] text-[#5a5a8a]"
+            >
+              Sep. 2023
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div
+    class="grid grid-cols-2 gap-x-6 gap-y-3"
+  >
+    <section>
+      <h2
+        class="t-section-title mb-1.5 flex items-center gap-2 font-mono text-[6.5pt] font-semibold tracking-[0.08em] text-[#3a3a6a] uppercase"
+      >
+        Education
+      </h2>
+      <div
+        class="mb-2"
+      >
+        <p
+          class="text-[8pt] font-semibold"
+        >
+          Master Computer Science
+        </p>
+        <p
+          class="text-[7pt] text-[#5a5a8a]"
+        >
+          Software Engineering
+        </p>
+        <p
+          class="text-[7pt] text-[#5a5a8a]"
+        >
+          University of Paris
+           · 
+          Paris, France
+        </p>
+        <p
+          class="font-mono text-[6.5pt] text-[#5a5a8a]"
+        >
+          2005
+           – 
+          2008
+        </p>
+      </div>
+    </section>
+    <div
+      class="space-y-3"
+    >
+      <section>
+        <h2
+          class="t-section-title mb-1.5 flex items-center gap-2 font-mono text-[6.5pt] font-semibold tracking-[0.08em] text-[#3a3a6a] uppercase"
+        >
+          Languages
+        </h2>
+        <ul
+          class="space-y-0.5 text-[7.5pt]"
+        >
+          <li>
+            French: native
+          </li>
+          <li>
+            English: B2
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2
+          class="t-section-title mb-1.5 flex items-center gap-2 font-mono text-[6.5pt] font-semibold tracking-[0.08em] text-[#3a3a6a] uppercase"
+        >
+          Interests
+        </h2>
+        <div
+          class="flex flex-wrap gap-1"
+        >
+          <span
+            class="font-mono text-[7pt] text-[#5a5a8a]"
+          >
+            Next.js
+          </span>
+          <span
+            class="font-mono text-[7pt] text-[#5a5a8a]"
+          >
+            TypeScript
+          </span>
+        </div>
+      </section>
+      <section>
+        <h2
+          class="t-section-title mb-1.5 flex items-center gap-2 font-mono text-[6.5pt] font-semibold tracking-[0.08em] text-[#3a3a6a] uppercase"
+        >
+          Sports
+        </h2>
+        <ul
+          class="space-y-0.5 text-[7.5pt]"
+        >
+          <li>
+            Triathlon
+          </li>
+          <li>
+            Surf
+          </li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TimelineCV — FR snapshot renders a stable snapshot in French: fr-full 1`] = `
+<div
+  class="cv-timeline text-[9pt] leading-snug text-[#1a1a2e]"
+>
+  <header
+    class="mb-4 flex items-start justify-between border-b border-[#d0d0e8] pb-3"
+  >
+    <div>
+      <h1
+        class="text-[16pt] leading-tight font-bold"
+      >
+        Jean
+         
+        Dupont
+      </h1>
+      <p
+        class="mt-0.5 text-[10pt] font-semibold"
+        style="color: rgb(111, 111, 200);"
+      >
+        Développeur Frontend Senior
+      </p>
+      <p
+        class="mt-0.5 font-mono text-[7.5pt] text-[#5a5a8a]"
+      >
+        Freelance · Disponible
+      </p>
+    </div>
+    <div
+      class="space-y-0.5 text-right"
+    >
+      <p
+        class="font-mono text-[7pt] text-[#5a5a8a]"
+      >
+        jean@example.com
+      </p>
+      <p
+        class="font-mono text-[7pt] text-[#5a5a8a]"
+      >
+        https://linkedin.com/in/jean
+      </p>
+      <p
+        class="font-mono text-[7pt] text-[#5a5a8a]"
+      >
+        https://github.com/jean
+      </p>
+      <p
+        class="font-mono text-[7pt] text-[#5a5a8a]"
+      >
+        https://jean.dev
+      </p>
+      <p
+        class="font-mono text-[7pt] text-[#5a5a8a]"
+      >
+        Paris
+      </p>
+    </div>
+  </header>
+  <section
+    class="mb-3"
+  >
+    <h2
+      class="t-section-title mb-1.5 flex items-center gap-2 font-mono text-[6.5pt] font-semibold tracking-[0.08em] text-[#3a3a6a] uppercase"
+    >
+      Profil
+    </h2>
+    <p
+      class="text-[8pt] leading-relaxed"
+    >
+      Profil FR
+    </p>
+  </section>
+  <section
+    class="mb-3"
+  >
+    <h2
+      class="t-section-title mb-1.5 flex items-center gap-2 font-mono text-[6.5pt] font-semibold tracking-[0.08em] text-[#3a3a6a] uppercase"
+    >
+      Compétences techniques
+    </h2>
+    <div
+      class="flex flex-col gap-1.5"
+    >
+      <div
+        class="flex flex-wrap items-baseline gap-1"
+      >
+        <span
+          class="mr-1 font-mono text-[6.5pt] text-[#5a5a8a]"
+        >
+          Frontend
+        </span>
+        <span
+          class="t-pill"
+          style="--pill-fg: #d39900;"
+        >
+          React
+        </span>
+        <span
+          class="t-pill"
+          style="--pill-fg: #00a6f4;"
+        >
+          CSS
+        </span>
+      </div>
+    </div>
+  </section>
+  <section
+    class="mb-3"
+  >
+    <h2
+      class="t-section-title mb-1.5 flex items-center gap-2 font-mono text-[6.5pt] font-semibold tracking-[0.08em] text-[#3a3a6a] uppercase"
+    >
+      Compétences fonctionnelles
+    </h2>
+    <div
+      class="flex flex-wrap gap-1"
+    >
+      <span
+        class="t-pill"
+        style="--pill-fg: #6f6fc8;"
+      >
+        Développement
+      </span>
+    </div>
+  </section>
+  <section
+    class="mb-3"
+  >
+    <h2
+      class="t-section-title mb-1.5 flex items-center gap-2 font-mono text-[6.5pt] font-semibold tracking-[0.08em] text-[#3a3a6a] uppercase"
+    >
+      Expériences
+    </h2>
+    <div
+      class="t-rail ml-1.5 flex flex-col gap-2.5 border-l-2 border-[#6f6fc8] pl-4"
+    >
+      <div
+        class="t-entry relative"
+        style="--exp-accent: oklch(0.50 0.15 145);"
+      >
+        <div
+          class="flex items-start justify-between gap-2"
+        >
+          <div
+            class="min-w-0 flex-1"
+          >
+            <div
+              class="flex flex-wrap items-baseline gap-1.5"
+            >
+              <h3
+                class="text-[8.5pt] font-semibold"
+              >
+                Lead Dev
+              </h3>
+              <span
+                class="text-[7pt] text-[#5a5a8a]"
+              >
+                Greenweez
+                 · 
+                Paris, France
+              </span>
+              <span
+                class="t-pill"
+                style="--pill-fg: #6f6fc8;"
+              >
+                Freelance
+              </span>
+            </div>
+            <ul
+              class="mt-1 space-y-0.5"
+            >
+              <li
+                class="flex gap-1.5 text-[7.5pt]"
+              >
+                <span
+                  class="shrink-0"
+                >
+                  →
+                </span>
+                <span>
+                  Pilotage technique
+                </span>
+              </li>
+              <li
+                class="flex gap-1.5 text-[7.5pt]"
+              >
+                <span
+                  class="shrink-0"
+                >
+                  →
+                </span>
+                <span>
+                  Revue de code
+                </span>
+              </li>
+            </ul>
+            <div
+              class="mt-1 flex flex-wrap gap-1"
+            >
+              <span
+                class="t-pill"
+                style="--pill-fg: #d39900;"
+              >
+                React
+              </span>
+              <span
+                class="t-pill"
+                style="--pill-fg: #00a6f4;"
+              >
+                Tailwind CSS
+              </span>
+            </div>
+          </div>
+          <div
+            class="shrink-0 text-right"
+          >
+            <p
+              class="font-mono text-[7pt] text-[#5a5a8a]"
+            >
+              Oct. 2023
+            </p>
+            <p
+              class="font-mono text-[7pt] text-[#5a5a8a]"
+            >
+              Aujourd'hui
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="t-entry relative"
+        style="--exp-accent: oklch(0.48 0.18 22);"
+      >
+        <div
+          class="flex items-start justify-between gap-2"
+        >
+          <div
+            class="min-w-0 flex-1"
+          >
+            <div
+              class="flex flex-wrap items-baseline gap-1.5"
+            >
+              <h3
+                class="text-[8.5pt] font-semibold"
+              >
+                Dev Frontend
+              </h3>
+              <span
+                class="text-[7pt] text-[#5a5a8a]"
+              >
+                Rakuten
+                 · 
+                Lyon, France
+              </span>
+            </div>
+            <ul
+              class="mt-1 space-y-0.5"
+            >
+              <li
+                class="flex gap-1.5 text-[7.5pt]"
+              >
+                <span
+                  class="shrink-0"
+                >
+                  →
+                </span>
+                <span>
+                  Développement React
+                </span>
+              </li>
+            </ul>
+            <div
+              class="mt-1 flex flex-wrap gap-1"
+            >
+              <span
+                class="t-pill"
+                style="--pill-fg: #d39900;"
+              >
+                TypeScript
+              </span>
+            </div>
+          </div>
+          <div
+            class="shrink-0 text-right"
+          >
+            <p
+              class="font-mono text-[7pt] text-[#5a5a8a]"
+            >
+              Janv. 2021
+            </p>
+            <p
+              class="font-mono text-[7pt] text-[#5a5a8a]"
+            >
+              Sept. 2023
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div
+    class="grid grid-cols-2 gap-x-6 gap-y-3"
+  >
+    <section>
+      <h2
+        class="t-section-title mb-1.5 flex items-center gap-2 font-mono text-[6.5pt] font-semibold tracking-[0.08em] text-[#3a3a6a] uppercase"
+      >
+        Formation
+      </h2>
+      <div
+        class="mb-2"
+      >
+        <p
+          class="text-[8pt] font-semibold"
+        >
+          Master Informatique
+        </p>
+        <p
+          class="text-[7pt] text-[#5a5a8a]"
+        >
+          Génie Logiciel
+        </p>
+        <p
+          class="text-[7pt] text-[#5a5a8a]"
+        >
+          Université de Paris
+           · 
+          Paris, France
+        </p>
+        <p
+          class="font-mono text-[6.5pt] text-[#5a5a8a]"
+        >
+          2005
+           – 
+          2008
+        </p>
+      </div>
+    </section>
+    <div
+      class="space-y-3"
+    >
+      <section>
+        <h2
+          class="t-section-title mb-1.5 flex items-center gap-2 font-mono text-[6.5pt] font-semibold tracking-[0.08em] text-[#3a3a6a] uppercase"
+        >
+          Langues
+        </h2>
+        <ul
+          class="space-y-0.5 text-[7.5pt]"
+        >
+          <li>
+            Français : natif
+          </li>
+          <li>
+            Anglais : B2
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2
+          class="t-section-title mb-1.5 flex items-center gap-2 font-mono text-[6.5pt] font-semibold tracking-[0.08em] text-[#3a3a6a] uppercase"
+        >
+          Intérêts
+        </h2>
+        <div
+          class="flex flex-wrap gap-1"
+        >
+          <span
+            class="font-mono text-[7pt] text-[#5a5a8a]"
+          >
+            Next.js
+          </span>
+          <span
+            class="font-mono text-[7pt] text-[#5a5a8a]"
+          >
+            TypeScript
+          </span>
+        </div>
+      </section>
+      <section>
+        <h2
+          class="t-section-title mb-1.5 flex items-center gap-2 font-mono text-[6.5pt] font-semibold tracking-[0.08em] text-[#3a3a6a] uppercase"
+        >
+          Sports
+        </h2>
+        <ul
+          class="space-y-0.5 text-[7.5pt]"
+        >
+          <li>
+            Triathlon
+          </li>
+          <li>
+            Surf
+          </li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TimelineCV — FR snapshot renders a stable snapshot in condensed (summary) mode: fr-summary 1`] = `
+<div
+  class="cv-timeline text-[9pt] leading-snug text-[#1a1a2e]"
+>
+  <header
+    class="mb-4 flex items-start justify-between border-b border-[#d0d0e8] pb-3"
+  >
+    <div>
+      <h1
+        class="text-[16pt] leading-tight font-bold"
+      >
+        Jean
+         
+        Dupont
+      </h1>
+      <p
+        class="mt-0.5 text-[10pt] font-semibold"
+        style="color: rgb(111, 111, 200);"
+      >
+        Développeur Frontend Senior
+      </p>
+      <p
+        class="mt-0.5 font-mono text-[7.5pt] text-[#5a5a8a]"
+      >
+        Freelance · Disponible
+      </p>
+    </div>
+    <div
+      class="space-y-0.5 text-right"
+    >
+      <p
+        class="font-mono text-[7pt] text-[#5a5a8a]"
+      >
+        jean@example.com
+      </p>
+      <p
+        class="font-mono text-[7pt] text-[#5a5a8a]"
+      >
+        https://linkedin.com/in/jean
+      </p>
+      <p
+        class="font-mono text-[7pt] text-[#5a5a8a]"
+      >
+        https://github.com/jean
+      </p>
+      <p
+        class="font-mono text-[7pt] text-[#5a5a8a]"
+      >
+        https://jean.dev
+      </p>
+      <p
+        class="font-mono text-[7pt] text-[#5a5a8a]"
+      >
+        Paris
+      </p>
+    </div>
+  </header>
+  <section
+    class="mb-3"
+  >
+    <h2
+      class="t-section-title mb-1.5 flex items-center gap-2 font-mono text-[6.5pt] font-semibold tracking-[0.08em] text-[#3a3a6a] uppercase"
+    >
+      Profil
+    </h2>
+    <p
+      class="text-[8pt] leading-relaxed"
+    >
+      Profil FR
+    </p>
+  </section>
+  <section
+    class="mb-3"
+  >
+    <h2
+      class="t-section-title mb-1.5 flex items-center gap-2 font-mono text-[6.5pt] font-semibold tracking-[0.08em] text-[#3a3a6a] uppercase"
+    >
+      Compétences techniques
+    </h2>
+    <div
+      class="flex flex-col gap-1.5"
+    >
+      <div
+        class="flex flex-wrap items-baseline gap-1"
+      >
+        <span
+          class="mr-1 font-mono text-[6.5pt] text-[#5a5a8a]"
+        >
+          Frontend
+        </span>
+        <span
+          class="t-pill"
+          style="--pill-fg: #d39900;"
+        >
+          React
+        </span>
+        <span
+          class="t-pill"
+          style="--pill-fg: #00a6f4;"
+        >
+          CSS
+        </span>
+      </div>
+    </div>
+  </section>
+  <section
+    class="mb-3"
+  >
+    <h2
+      class="t-section-title mb-1.5 flex items-center gap-2 font-mono text-[6.5pt] font-semibold tracking-[0.08em] text-[#3a3a6a] uppercase"
+    >
+      Compétences fonctionnelles
+    </h2>
+    <div
+      class="flex flex-wrap gap-1"
+    >
+      <span
+        class="t-pill"
+        style="--pill-fg: #6f6fc8;"
+      >
+        Développement
+      </span>
+    </div>
+  </section>
+  <section
+    class="mb-3"
+  >
+    <h2
+      class="t-section-title mb-1.5 flex items-center gap-2 font-mono text-[6.5pt] font-semibold tracking-[0.08em] text-[#3a3a6a] uppercase"
+    >
+      Expériences
+    </h2>
+    <div
+      class="t-rail ml-1.5 flex flex-col gap-2.5 border-l-2 border-[#6f6fc8] pl-4"
+    >
+      <div
+        class="t-entry relative"
+        style="--exp-accent: oklch(0.50 0.15 145);"
+      >
+        <div
+          class="flex items-start justify-between gap-2"
+        >
+          <div
+            class="min-w-0 flex-1"
+          >
+            <div
+              class="flex flex-wrap items-baseline gap-1.5"
+            >
+              <h3
+                class="text-[8.5pt] font-semibold"
+              >
+                Lead Dev
+              </h3>
+              <span
+                class="text-[7pt] text-[#5a5a8a]"
+              >
+                Greenweez
+                 · 
+                Paris, France
+              </span>
+              <span
+                class="t-pill"
+                style="--pill-fg: #6f6fc8;"
+              >
+                Freelance
+              </span>
+            </div>
+          </div>
+          <div
+            class="shrink-0 text-right"
+          >
+            <p
+              class="font-mono text-[7pt] text-[#5a5a8a]"
+            >
+              Oct. 2023
+            </p>
+            <p
+              class="font-mono text-[7pt] text-[#5a5a8a]"
+            >
+              Aujourd'hui
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="t-entry relative"
+        style="--exp-accent: oklch(0.48 0.18 22);"
+      >
+        <div
+          class="flex items-start justify-between gap-2"
+        >
+          <div
+            class="min-w-0 flex-1"
+          >
+            <div
+              class="flex flex-wrap items-baseline gap-1.5"
+            >
+              <h3
+                class="text-[8.5pt] font-semibold"
+              >
+                Dev Frontend
+              </h3>
+              <span
+                class="text-[7pt] text-[#5a5a8a]"
+              >
+                Rakuten
+                 · 
+                Lyon, France
+              </span>
+            </div>
+          </div>
+          <div
+            class="shrink-0 text-right"
+          >
+            <p
+              class="font-mono text-[7pt] text-[#5a5a8a]"
+            >
+              Janv. 2021
+            </p>
+            <p
+              class="font-mono text-[7pt] text-[#5a5a8a]"
+            >
+              Sept. 2023
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div
+    class="grid grid-cols-2 gap-x-6 gap-y-3"
+  >
+    <section>
+      <h2
+        class="t-section-title mb-1.5 flex items-center gap-2 font-mono text-[6.5pt] font-semibold tracking-[0.08em] text-[#3a3a6a] uppercase"
+      >
+        Formation
+      </h2>
+      <div
+        class="mb-2"
+      >
+        <p
+          class="text-[8pt] font-semibold"
+        >
+          Master Informatique
+        </p>
+        <p
+          class="text-[7pt] text-[#5a5a8a]"
+        >
+          Génie Logiciel
+        </p>
+        <p
+          class="text-[7pt] text-[#5a5a8a]"
+        >
+          Université de Paris
+           · 
+          Paris, France
+        </p>
+        <p
+          class="font-mono text-[6.5pt] text-[#5a5a8a]"
+        >
+          2005
+           – 
+          2008
+        </p>
+      </div>
+    </section>
+    <div
+      class="space-y-3"
+    >
+      <section>
+        <h2
+          class="t-section-title mb-1.5 flex items-center gap-2 font-mono text-[6.5pt] font-semibold tracking-[0.08em] text-[#3a3a6a] uppercase"
+        >
+          Langues
+        </h2>
+        <ul
+          class="space-y-0.5 text-[7.5pt]"
+        >
+          <li>
+            Français : natif
+          </li>
+          <li>
+            Anglais : B2
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2
+          class="t-section-title mb-1.5 flex items-center gap-2 font-mono text-[6.5pt] font-semibold tracking-[0.08em] text-[#3a3a6a] uppercase"
+        >
+          Intérêts
+        </h2>
+        <div
+          class="flex flex-wrap gap-1"
+        >
+          <span
+            class="font-mono text-[7pt] text-[#5a5a8a]"
+          >
+            Next.js
+          </span>
+          <span
+            class="font-mono text-[7pt] text-[#5a5a8a]"
+          >
+            TypeScript
+          </span>
+        </div>
+      </section>
+      <section>
+        <h2
+          class="t-section-title mb-1.5 flex items-center gap-2 font-mono text-[6.5pt] font-semibold tracking-[0.08em] text-[#3a3a6a] uppercase"
+        >
+          Sports
+        </h2>
+        <ul
+          class="space-y-0.5 text-[7.5pt]"
+        >
+          <li>
+            Triathlon
+          </li>
+          <li>
+            Surf
+          </li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</div>
+`;
